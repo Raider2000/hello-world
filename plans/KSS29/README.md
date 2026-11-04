@@ -67,6 +67,12 @@ Neu erzeugter Dashboard-Hintergrund aus der Neuzeichnung: [`dashboard/`](dashboa
 - Die Dusche gehört zum Badezimmer und ist durch eine Trockenbauwand vom WC getrennt.
 - Der Scan entspricht dem heutigen Stand; Baujahr 2020/2021.
 
+## 3D-Modell
+
+Begehbares Modell mit Möbeln, Bildern und Sonnenstand: [`3d/`](3d/README.md)
+(`3d/KSS29_OG1.html` im Browser öffnen, `3d/KSS29_OG1.glb` für Blender).
+Erzeugt mit `python3 tools/build_3d.py plans/KSS29/geometrie/OG1.json --viewer`.
+
 ## Offene Punkte
 
 - Weitere Geschosse: keine Quellen vorhanden.
