@@ -23,7 +23,8 @@
 
 ## Offene Punkte
 
-- Wohnung rechts: Nummer im Plan nicht genannt, Präfix „WE-R“ vorläufig.
-- Maßkette 11,805 m links um 0,03 m gegenüber den Wandecken versetzt; Nordfassade um 0,09 m schräg (aus Quelle übernommen).
+- Wohnung rechts: Nummer im Plan nicht genannt, Präfix „WE-R“ vorläufig. Die Nummer steht laut Eigentümer in der Teilungserklärung – bitte nachreichen.
+- Maßkette 11,805 m links um 0,03 m gegenüber den Wandecken versetzt; Nordfassade um 0,09 m schräg (aus Quelle übernommen). Der historische Grundriss der Teilungserklärung ist laut Eigentümer zu schlecht lesbar, um das zu klären – offen bis zu einem Aufmaß.
+- Aussparung in der rechten Außenwand (0,175 × 0,19 m): laut Eigentümer vermutlich ein Wand-Einbauschrank mit Tür.
 
 - Weitere Geschosse: keine Quellen vorhanden.

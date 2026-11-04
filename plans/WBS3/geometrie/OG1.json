@@ -243,9 +243,9 @@
     {"pos": [0.291, 12.439], "text": "N", "size": 2.7, "bold": true}
   ],
   "unverified": [
-    {"pos": [-1.445, 5.902], "text": "Maßkette links außen (x=1250): 11,805 m laut Plan, Messpunkte Quell-y 4395 und 16200. Die Wandaußenkante links liegt in der Quelle bei y=4365 (Kette x=1950 beginnt dort), geometrisch also 11,835 m. Kette in der Quelle um 0,03 m versetzt; Wand nach Geometrie gezeichnet, Kette nach Quelle beschriftet.", "short": ""},
+    {"pos": [-1.445, 5.902], "text": "Maßkette links außen (x=1250): 11,805 m laut Plan, Messpunkte Quell-y 4395 und 16200. Die Wandaußenkante links liegt in der Quelle bei y=4365 (Kette x=1950 beginnt dort), geometrisch also 11,835 m. Kette in der Quelle um 0,03 m versetzt; Wand nach Geometrie gezeichnet, Kette nach Quelle beschriftet. Laut Eigentümer lassen sich die Maße aus dem historischen Grundriss (Teilungserklärung) wegen schlechter Qualität nicht sauber ablesen; Differenz bleibt bis zu einem Aufmaß offen.", "short": ""},
     {"pos": [5.3, 13.75], "text": "Nordfassade nicht rechtwinklig: Wandaußenkante links bei Quell-y 4365, rechts bei 4455 (0,09 m Versatz auf 14,535 m), ebenso Treppenhaus-Fassade. Unverändert aus der Quelle übernommen; ob Aufmaß oder Zeichenartefakt, ist offen.", "short": ""},
-    {"pos": [14.4, 6.175], "text": "Schornstein/Schacht mit Nische (0,175 x 0,19 m) in der rechten Außenwand: nur als Aussparung ohne Beschriftung, Funktion unbekannt.", "short": ""},
+    {"pos": [14.4, 6.175], "text": "Aussparung mit Nische (0,175 x 0,19 m) in der rechten Außenwand: laut Eigentümer vermutlich ein Wand-Einbauschrank mit Tür (nicht bestätigt, Tür nicht gezeichnet).", "short": ""},
     {"pos": [5.2, 11.51], "text": "Nische im Pfeiler neben der Küche WE3 (0,50 x 0,45 m) von Quell-y 4465 bis 4915; darunter bleibt in der Quelle ein Restsaum von 0,026 m Wand stehen. Unverändert übernommen.", "short": ""},
     {"pos": [6.6, 10.3], "text": "Treppenhaus: Treppe nach Ebene 23 der Quelle gezeichnet (zwei gegenläufige Läufe mit Mittelwand, 9 + 10 Stufen, Lauflinien mit Pfeil). Weder Stufenhöhe noch Raumfläche des Treppenhauses sind im Plan bemaßt.", "short": ""},
     {"pos": [9.05, 11.2], "text": "Wandtypen (Außenwand / tragend / nichttragend) nach Quell-Ebenen 10 (tragend), 11 (leicht), 12 (aufgemessen) und Lage zugeordnet; die Quelle unterscheidet Außen- und Innentragwände nicht ausdrücklich.", "short": ""},
@@ -254,6 +254,6 @@
     {"pos": [3.4, 12.8], "text": "Balkon WE3: Fläche im Plan als Hälfte (1,23 m²) angegeben; Lichtmaß-Polygon 2,453 m², Hälfte = 1,226 m² passt. Brüstung als graues Wandpolygon (Ebene 22) übernommen, Geländerhöhe unbekannt.", "short": ""},
     {"pos": [11.1, 12.7], "text": "Balkon rechte Wohnung: Fläche im Plan als Hälfte (1,21 m²) angegeben; Lichtmaß-Polygon 2,425 m², Hälfte = 1,213 m² passt. Brüstung wie links.", "short": ""},
     {"pos": [6.9, -1.95], "text": "Maßkette unten (y=18250): die Teilmaße 15 und 8 (Quell-x 9340/9490/9570) liegen eng beieinander, die Zahlen überlagern sich im Plan wie in der Quelle.", "short": ""},
-    {"pos": [9.3, 6.72], "text": "Wohnung rechts: Wohnungsnummer im Plan nicht genannt (nur WE3 ist als Ebene 05 markiert). Räume mit Präfix „WE-R“ (Wohnung rechts) bezeichnet.", "short": ""}
+    {"pos": [9.3, 6.72], "text": "Wohnung rechts: Wohnungsnummer im Plan nicht genannt (nur WE3 ist als Ebene 05 markiert); sie ergibt sich laut Eigentümer aus der Teilungserklärung (liegt noch nicht vor). Bis dahin Präfix „WE-R“ (Wohnung rechts).", "short": ""}
   ]
 }

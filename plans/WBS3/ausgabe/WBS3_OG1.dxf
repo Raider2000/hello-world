@@ -493,7 +493,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461349.094872685
+2461349.0989930555
   9
 $TDUCREATE
  40
@@ -501,7 +501,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461349.094872685
+2461349.0989930555
   9
 $TDUUPDATE
  40
@@ -933,11 +933,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{F8FCF10F-FA3C-4C87-B9D7-7A753C51A14B}
+{CFA7F970-B983-4466-BF16-610AE3E69C1F}
   9
 $VERSIONGUID
   2
-{3C93A289-23A6-4D84-9830-70338021AD08}
+{CA1DEF1C-4A39-4434-BEF9-C8DB5458B5B0}
   9
 $EXTNAMES
 290
@@ -49907,7 +49907,7 @@ AcDbText
  40
 0.2
   1
-Maßkette links außen (x=1250): 11,805 m laut Plan, Messpunkte Quell-y 4395 und 16200. Die Wandaußenkante links liegt in der Quelle bei y=4365 (Kette x=1950 beginnt dort), geometrisch also 11,835 m. Kette in der Quelle um 0,03 m versetzt; Wand nach Geometrie gezeichnet, Kette nach Quelle beschriftet.
+Maßkette links außen (x=1250): 11,805 m laut Plan, Messpunkte Quell-y 4395 und 16200. Die Wandaußenkante links liegt in der Quelle bei y=4365 (Kette x=1950 beginnt dort), geometrisch also 11,835 m. Kette in der Quelle um 0,03 m versetzt; Wand nach Geometrie gezeichnet, Kette nach Quelle beschriftet. Laut Eigentümer lassen sich die Maße aus dem historischen Grundriss (Teilungserklärung) wegen schlechter Qualität nicht sauber ablesen; Differenz bleibt bis zu einem Aufmaß offen.
  11
 -1.145
  21
@@ -50007,7 +50007,7 @@ AcDbText
  40
 0.2
   1
-Schornstein/Schacht mit Nische (0,175 x 0,19 m) in der rechten Außenwand: nur als Aussparung ohne Beschriftung, Funktion unbekannt.
+Aussparung mit Nische (0,175 x 0,19 m) in der rechten Außenwand: laut Eigentümer vermutlich ein Wand-Einbauschrank mit Tür (nicht bestätigt, Tür nicht gezeichnet).
  11
 14.700000000000001
  21
@@ -50457,7 +50457,7 @@ AcDbText
  40
 0.2
   1
-Wohnung rechts: Wohnungsnummer im Plan nicht genannt (nur WE3 ist als Ebene 05 markiert). Räume mit Präfix „WE-R“ (Wohnung rechts) bezeichnet.
+Wohnung rechts: Wohnungsnummer im Plan nicht genannt (nur WE3 ist als Ebene 05 markiert); sie ergibt sich laut Eigentümer aus der Teilungserklärung (liegt noch nicht vor). Bis dahin Präfix „WE-R“ (Wohnung rechts).
  11
 9.600000000000001
  21
@@ -51569,7 +51569,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T02:16:37.222802+00:00
+1.4.5 @ 2026-11-04T02:22:33.319310+00:00
   0
 VISUALSTYLE
   5
@@ -58131,7 +58131,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T02:16:37.283799+00:00
+1.4.5 @ 2026-11-04T02:22:33.387069+00:00
   0
 ENDSEC
   0
