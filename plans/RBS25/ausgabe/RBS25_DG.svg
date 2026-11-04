@@ -902,7 +902,7 @@
 <text x="165.70" y="130.86" font-size="2.2">22,11 m²</text>
 <text x="138.30" y="148.16" font-weight="bold" font-size="1.80">Treppenhaus</text>
 <text x="74.90" y="45.66" font-weight="bold" font-size="2.20">WE7 – Balkon</text>
-<text x="74.90" y="48.37" font-size="1.86">7,51 m²</text>
+<text x="74.90" y="48.37" font-size="1.86">½ 3,75 m² (Mietfläche)</text>
 <text x="131.80" y="117.16" font-size="1.5" text-anchor="middle">+8,25</text>
 <text x="144.30" y="112.16" font-size="1.6" text-anchor="middle">WE 7</text>
 <text x="144.30" y="115.66" font-size="1.5" text-anchor="middle">+8,32</text>
@@ -931,7 +931,7 @@
 <text x="34.0" y="228.3">2 Raumgrenzen an den Kniestock-/Abseitenwänden (Doppellinie 5 cm). Gepunktete Höhenlinien der Dachschräge, Dachflächenfenster und Kamine (gelb, Abbruch) nicht übernommen. Flächen = Grundfläche ohne Abzug nach WoFlV (Dachschräge).</text>
 <text x="34.0" y="231.0">3 Grenze Wohnen/Essen/Kochen zu Diele in der Flucht der Treppenhauswand angenommen; die Tür dort ist im Plan gestrichelt (geplant).</text>
 <text x="34.0" y="233.7">4 Rechte Abseitenwand im Bereich y 4,15–5,35 m im Plan gelb (Abbruch/Durchbruch?); als durchgehende Wand gezeichnet.</text>
-<text x="34.0" y="236.4">5 Balkon WE7: Fläche aus der Geometrie; Mietflächenanteil nicht belegt.</text>
+<text x="34.0" y="236.4">5 Balkon WE7: Fläche aus der Geometrie; Mietflächenanteil ½ wie bei WE05 angesetzt (gleiche Balkonkonstruktion, Eigentümerangabe für WE05).</text>
 <text x="34.0" y="239.1">6 Treppenhauswand rechts bei y 4,04–4,40 m im Plan gelb (Abbruch) – Lücke zwischen Treppenhaus und Schlafen; Raumgrenze in der Wandflucht angenommen, Zweck unklar.</text>
 </g>
 </svg>

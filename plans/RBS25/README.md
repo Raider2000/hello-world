@@ -88,6 +88,7 @@ rechts: Kind, WC, Bad, Kochen, Flur, Schlafen, Wohnen/Essen, Balkon (Ostseite, 3
 - **Balkon WE05**: 3,00 × 2,50 m = 7,50 m² ist korrekt; für die Miete wird er zur Hälfte (3,75 m²) angesetzt.
 - **Flächen Essen, Kochen, Bad**: kein neues Aufmaß; Flächen werden aus der Neuzeichnung berechnet und als „berechnet“ gekennzeichnet.
 - **Tragende Wände**: nicht belegt; wahrscheinlich tragend sind die Wand Wohnen/Schlafen und die Flurwände – als tragend gezeichnet, in `unverified` vermerkt.
+- **Balkone**: alle ca. 3,00 × 2,50 m (Nordseite 4, Ostseite 3 übereinander) – Mietfläche ½ wie bei WE05 angesetzt (Übertragung der Eigentümerangabe).
 - **Umbauten 2014** (Aufteilungsplan rot/gelb) in WE1–WE4, WE6 und DG: ausgeführt (Eigentümer, 04.11.2026).
 
 ## Offene Punkte
@@ -95,6 +96,5 @@ rechts: Kind, WC, Bad, Kochen, Flur, Schlafen, Wohnen/Essen, Balkon (Ostseite, 3
 - Die „ca.“-Maße aus dem Vorgänger (WE05) stimmen mit dem Aufteilungsplan 2014 auf ≤ 1 cm überein (Wohnen 4,97⁵, Essen 3,44, Schlafen 3,64);
   sie bleiben in `unverified`, weil kein Aufmaß vorliegt.
 - WE6: Kochen (8,57 m² berechnet / 9,12 m² bemaßt) und WC (2,63 m² / „Flur 2“ 2,92 m²) weichen ab – bemaßter Plan zeigt einen anderen Zustand.
-- Balkone außer WE05/WE06: Mietflächenanteil (½?) nicht belegt.
 - Zuordnung der Kellerabteile K1–K8 zu den Wohnungen fehlt – steht laut Eigentümer in der Teilungserklärung (noch nicht hochgeladen, ca. 33 MB).
 - Sanitärobjekte und Waschmaschinenstellplatz nur schematisch; Fensterbänke und Balkongeländer nicht gezeichnet.
