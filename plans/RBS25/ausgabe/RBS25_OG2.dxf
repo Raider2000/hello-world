@@ -493,7 +493,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461349.1183564817
+2461349.121909722
   9
 $TDUCREATE
  40
@@ -501,7 +501,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461349.1183564817
+2461349.121909722
   9
 $TDUUPDATE
  40
@@ -933,11 +933,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{A775BD11-44E3-4F01-8BA3-40989D93E137}
+{94609763-391C-464E-90B9-C934DB1A1313}
   9
 $VERSIONGUID
   2
-{8EDBF276-EB7B-49C0-A4E1-F9AAA0CB1E32}
+{70CF1466-341B-43A9-95EB-16E10562CFB9}
   9
 $EXTNAMES
 290
@@ -1327,9 +1327,9 @@ ISM
   0
 CLASS
   1
-LAYOUT
+ACDBPLACEHOLDER
   2
-AcDbLayout
+AcDbPlaceHolder
   3
 ObjectDBX Classes
  90
@@ -1343,9 +1343,9 @@ ObjectDBX Classes
   0
 CLASS
   1
-ACDBPLACEHOLDER
+LAYOUT
   2
-AcDbPlaceHolder
+AcDbLayout
   3
 ObjectDBX Classes
  90
@@ -32019,11 +32019,11 @@ AcDbPolyline
  10
 12.84
  20
-9.3
+9.2
  10
 13.712
  20
-9.3
+9.2
  10
 13.708
  20
@@ -32119,7 +32119,7 @@ AcDbText
  40
 0.12307692307692308
   1
-2,71 m²
+2,63 m²
  72
 1
  11
@@ -32203,11 +32203,11 @@ AcDbPolyline
  10
 13.712
  20
-9.3
+9.2
  10
 12.84
  20
-9.3
+9.2
   0
 TEXT
   5
@@ -35859,7 +35859,7 @@ AcDbText
  40
 0.2
   1
-WE6 – WC: im Aufteilungsplan 2014 „WC 6“ mit Vorraum zum Bad (2,71 m² berechnet); der bemaßte Plan zeigt hier „Flur 2“ mit 2,92 m² (anderer Zustand, Wand WC/Vorraum ohne Abschluss). Keine Planfläche übernommen.
+WE6 – WC: im Aufteilungsplan 2014 „WC 6“ mit Vorraum zum Bad (2,63 m² berechnet); der bemaßte Plan zeigt hier „Flur 2“ mit 2,92 m² (anderer Zustand, Wand WC/Vorraum ohne Abschluss). Keine Planfläche übernommen.
  11
 12.59
  21
@@ -37321,7 +37321,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T02:50:26.771729+00:00
+1.4.5 @ 2026-11-04T02:55:33.362540+00:00
   0
 VISUALSTYLE
   5
@@ -43883,7 +43883,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T02:50:26.806819+00:00
+1.4.5 @ 2026-11-04T02:55:33.395738+00:00
   0
 ENDSEC
   0

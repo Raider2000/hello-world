@@ -25,8 +25,13 @@ Aufteilungsplan 2014 (Vektor-PDF, M 1:100 → 1 m = 28,3465 pt); je Geschoss nur
 
 | Geschoss | Geometrie | SVG / DXF | Wohnungen | Flächenprüfung |
 |----------|-----------|-----------|-----------|----------------|
+| EG (gesamte Etage) | `geometrie/EG.json` | `ausgabe/RBS25_EG.svg` / `.dxf` | WE1, WE2 (+ Hauseingang) | keine Planflächen (nur berechnet); Außenanlagen nicht übernommen |
 | OG1 (gesamte Etage) | `geometrie/OG1.json` | `ausgabe/RBS25_OG1.svg` / `.dxf` | WE3, WE4 | keine Planflächen (nur berechnet); Achsen wie OG2: Kette unten 3,24⁵ / 3,21 / 2,20 / 3,22 / 3,16⁵, Gesamt 16,51⁵ |
 | OG2 (gesamte Etage) | `geometrie/OG2.json` | `ausgabe/RBS25_OG2.svg` / `.dxf` | WE5 (nach Sanierung), WE6 | WE5 Wohnen +0,2 %, Schlafen +0,3 %, Flur +0,5 %; WE6 Kind +0,1 %, Bad −1,2 %, Flur −0,7 %, Schlafen ±0,0 %, Wohnen/Essen +0,2 % (Sollwerte bemaßter Plan) |
+
+### EG – Transformation
+
+- `x_m = (x_pt − 271,80) / 28,3465`, `y_m = (1318,56 − y_pt) / 28,3465`. Treppenhauswände im EG 0,27 statt 0,24 m stark (laut Plan).
 
 ### OG1 – Transformation
 
