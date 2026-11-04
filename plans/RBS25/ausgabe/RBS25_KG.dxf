@@ -493,19 +493,19 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461349.1294444446
+2451545.0
   9
 $TDUCREATE
  40
-2458532.153996898
+2451545.0
   9
 $TDUPDATE
  40
-2461349.1294444446
+2451545.0
   9
 $TDUUPDATE
  40
-2458532.1544311
+2451545.0
   9
 $TDINDWG
  40
@@ -933,11 +933,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{2C374E67-C23B-4D36-A37C-ED1B87B43519}
+{00000000-0000-0000-0000-000000000000}
   9
 $VERSIONGUID
   2
-{B362FBE0-423C-4670-AE25-5CE9ABC44CD7}
+{00000000-0000-0000-0000-000000000000}
   9
 $EXTNAMES
 290
@@ -1327,9 +1327,9 @@ ISM
   0
 CLASS
   1
-LAYOUT
+ACDBPLACEHOLDER
   2
-AcDbLayout
+AcDbPlaceHolder
   3
 ObjectDBX Classes
  90
@@ -1343,9 +1343,9 @@ ObjectDBX Classes
   0
 CLASS
   1
-ACDBPLACEHOLDER
+LAYOUT
   2
-AcDbPlaceHolder
+AcDbLayout
   3
 ObjectDBX Classes
  90
@@ -32531,7 +32531,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -32545,17 +32545,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-13.010000000000002
+12.91
  20
 2.3
  30
 0.0
  40
-0.2
+0.12
   1
-Wandtyp „tragend“ (load-bearing) nicht belegt: Wände, die im Aufteilungsplan 2014 in KG, EG, 1. OG und 2. OG übereinanderstehen (Überdeckung ≥ 60 %, Toleranz 6 cm), sind als tragend gezeichnet – plausibel, aber ohne Statik/Aufmaß nicht geprüft.
+1 Wandtyp „tragend“ (load-bearing) nicht belegt: Wände, die im Aufteilungsplan 2014 in KG, EG, 1. OG und 2. OG übereinanderstehen (Überdeckung ≥ 60 %, Toleranz 6 cm), sind als tragend gezeichnet – plausibel, aber ohne Statik/Aufmaß nicht geprüft.
  11
-13.010000000000002
+12.91
  21
 2.3
  31
@@ -32581,7 +32581,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -32595,17 +32595,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-8.350000000000001
+8.25
  20
 1.6
  30
 0.0
  40
-0.2
+0.12
   1
-Kein bemaßter Plan für das Kellergeschoss: Maße aus dem Aufteilungsplan (M 1:100), Flächen berechnet. Die Außenwände des KG liegen im Plan 5–10 cm innerhalb der Obergeschoss-Fassaden (Zeichenungenauigkeit oder dickere Kellerwände); unverändert übernommen.
+2 Kein bemaßter Plan für das Kellergeschoss: Maße aus dem Aufteilungsplan (M 1:100), Flächen berechnet. Die Außenwände des KG liegen im Plan 5–10 cm innerhalb der Obergeschoss-Fassaden (Zeichenungenauigkeit oder dickere Kellerwände); unverändert übernommen.
  11
-8.350000000000001
+8.25
  21
 1.6
  31
@@ -32631,7 +32631,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -32645,17 +32645,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-2.4299999999999997
+2.33
  20
 6.9
  30
 0.0
  40
-0.2
+0.12
   1
-Zuordnung der Kellerabteile K1–K8 zu den Wohnungen ist im Aufteilungsplan nicht angegeben.
+3 Zuordnung der Kellerabteile K1–K8 zu den Wohnungen ist im Aufteilungsplan nicht angegeben.
  11
-2.4299999999999997
+2.33
  21
 6.9
  31
@@ -32681,7 +32681,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -32695,17 +32695,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-14.700000000000001
+14.6
  20
 8.187
  30
 0.0
  40
-0.2
+0.12
   1
-Trennung Keller K6/K7 im Plan nur als Linie (Lattenverschlag o. ä.), hier als 4-cm-Wand gezeichnet; Art und Stärke unbekannt.
+4 Trennung Keller K6/K7 im Plan nur als Linie (Lattenverschlag o. ä.), hier als 4-cm-Wand gezeichnet; Art und Stärke unbekannt.
  11
-14.700000000000001
+14.6
  21
 8.187
  31
@@ -32731,7 +32731,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -32745,17 +32745,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-1.05
+0.95
  20
 5.0
  30
 0.0
  40
-0.2
+0.12
   1
-Vorraum vor Keller K8 ohne Bezeichnung, Flur 1 zugeschlagen. Kellerzugang außen (−1,70, Außentreppe) nur als Umriss.
+5 Vorraum vor Keller K8 ohne Bezeichnung, Flur 1 zugeschlagen. Kellerzugang außen (−1,70, Außentreppe) nur als Umriss.
  11
-1.05
+0.95
  21
 5.0
  31
@@ -32781,7 +32781,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -32795,17 +32795,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-5.1
+5.0
  20
 4.15
  30
 0.0
  40
-0.2
+0.12
   1
-Keller K3: Tür im Plan gestrichelt, Öffnung ohne Türblatt; Raumgrenze in der Wandflucht.
+6 Keller K3: Tür im Plan gestrichelt, Öffnung ohne Türblatt; Raumgrenze in der Wandflucht.
  11
-5.1
+5.0
  21
 4.15
  31
@@ -32831,7 +32831,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -32845,17 +32845,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-14.600000000000001
+14.5
  20
 5.0
  30
 0.0
  40
-0.2
+0.12
   1
-Keller K5: Zugang über die Tür an der Flucht x = 12,76 m; Öffnung (1,18 m) breiter als das Türblatt (0,90 m).
+7 Keller K5: Zugang über die Tür an der Flucht x = 12,76 m; Öffnung (1,18 m) breiter als das Türblatt (0,90 m).
  11
-14.600000000000001
+14.5
  21
 5.0
  31
@@ -33965,7 +33965,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T03:06:24.434596+00:00
+0.0 @ 2000-01-01T00:00:00.000000+00:00
   0
 VISUALSTYLE
   5
@@ -40527,7 +40527,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T03:06:24.475396+00:00
+0.0 @ 2000-01-01T00:00:00.000000+00:00
   0
 ENDSEC
   0

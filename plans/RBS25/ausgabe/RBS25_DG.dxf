@@ -493,19 +493,19 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461349.1294675926
+2451545.0
   9
 $TDUCREATE
  40
-2458532.153996898
+2451545.0
   9
 $TDUPDATE
  40
-2461349.1294675926
+2451545.0
   9
 $TDUUPDATE
  40
-2458532.1544311
+2451545.0
   9
 $TDINDWG
  40
@@ -933,11 +933,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{DD159CA8-BB95-4177-BDF6-A5A02FCEA87B}
+{00000000-0000-0000-0000-000000000000}
   9
 $VERSIONGUID
   2
-{56B722F8-A326-4001-8322-6FCF08E43205}
+{00000000-0000-0000-0000-000000000000}
   9
 $EXTNAMES
 290
@@ -31297,7 +31297,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -31311,17 +31311,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-3.5999999999999996
+3.5
  20
 2.0
  30
 0.0
  40
-0.2
+0.12
   1
-Darstellung = Zielzustand des Aufteilungsplans 2014: rote Wände (Neubau 2014) schraffiert als „neu“, gelbe Wände (Abbruch 2014) weggelassen, gestrichelte Türen (geplant/entfallend) nicht gezeichnet. Ob die Maßnahmen ausgeführt wurden, ist außer für WE05 (Sanierung 2026) nicht belegt. Für das DG bedeutet das: Ausbau (rote Wände) laut Plan 2014; ob und wie ausgeführt, ist nicht belegt.
+1 Darstellung = Zielzustand des Aufteilungsplans 2014: rote Wände (Neubau 2014) schraffiert als „neu“, gelbe Wände (Abbruch 2014) weggelassen, gestrichelte Türen (geplant/entfallend) nicht gezeichnet. Ob die Maßnahmen ausgeführt wurden, ist außer für WE05 (Sanierung 2026) nicht belegt. Für das DG bedeutet das: Ausbau (rote Wände) laut Plan 2014; ob und wie ausgeführt, ist nicht belegt.
  11
-3.5999999999999996
+3.5
  21
 2.0
  31
@@ -31347,7 +31347,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -31361,17 +31361,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-8.5
+8.399999999999999
  20
 1.6
  30
 0.0
  40
-0.2
+0.12
   1
-Treppenhauswände im DG-Ausschnitt ca. 0,08–0,10 m gegenüber den Obergeschossen nach rechts versetzt und 0,28 m stark (Zeichenungenauigkeit oder Bestand); unverändert übernommen. Als tragend gezeichnet (stehen in allen Geschossen übereinander).
+2 Treppenhauswände im DG-Ausschnitt ca. 0,08–0,10 m gegenüber den Obergeschossen nach rechts versetzt und 0,28 m stark (Zeichenungenauigkeit oder Bestand); unverändert übernommen. Als tragend gezeichnet (stehen in allen Geschossen übereinander).
  11
-8.5
+8.399999999999999
  21
 1.6
  31
@@ -31397,7 +31397,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -31411,17 +31411,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-12.3
+12.2
  20
 1.0
  30
 0.0
  40
-0.2
+0.12
   1
-Raumgrenzen an den Kniestock-/Abseitenwänden (Doppellinie 5 cm). Gepunktete Höhenlinien der Dachschräge, Dachflächenfenster und Kamine (gelb, Abbruch) nicht übernommen. Flächen = Grundfläche ohne Abzug nach WoFlV (Dachschräge).
+3 Raumgrenzen an den Kniestock-/Abseitenwänden (Doppellinie 5 cm). Gepunktete Höhenlinien der Dachschräge, Dachflächenfenster und Kamine (gelb, Abbruch) nicht übernommen. Flächen = Grundfläche ohne Abzug nach WoFlV (Dachschräge).
  11
-12.3
+12.2
  21
 1.0
  31
@@ -31447,7 +31447,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -31461,17 +31461,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-7.12
+7.0200000000000005
  20
 5.8
  30
 0.0
  40
-0.2
+0.12
   1
-Grenze Wohnen/Essen/Kochen zu Diele in der Flucht der Treppenhauswand angenommen; die Tür dort ist im Plan gestrichelt (geplant).
+4 Grenze Wohnen/Essen/Kochen zu Diele in der Flucht der Treppenhauswand angenommen; die Tür dort ist im Plan gestrichelt (geplant).
  11
-7.12
+7.0200000000000005
  21
 5.8
  31
@@ -31497,7 +31497,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -31511,17 +31511,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-16.05
+15.95
  20
 4.6
  30
 0.0
  40
-0.2
+0.12
   1
-Rechte Abseitenwand im Bereich y 4,15–5,35 m im Plan gelb (Abbruch/Durchbruch?); als durchgehende Wand gezeichnet.
+5 Rechte Abseitenwand im Bereich y 4,15–5,35 m im Plan gelb (Abbruch/Durchbruch?); als durchgehende Wand gezeichnet.
  11
-16.05
+15.95
  21
 4.6
  31
@@ -31547,7 +31547,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -31561,17 +31561,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-2.16
+2.06
  20
 10.6
  30
 0.0
  40
-0.2
+0.12
   1
-Balkon WE7: Fläche aus der Geometrie; Mietflächenanteil nicht belegt.
+6 Balkon WE7: Fläche aus der Geometrie; Mietflächenanteil nicht belegt.
  11
-2.16
+2.06
  21
 10.6
  31
@@ -31597,7 +31597,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -31611,17 +31611,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-9.74
+9.639999999999999
  20
 4.2
  30
 0.0
  40
-0.2
+0.12
   1
-Treppenhauswand rechts bei y 4,04–4,40 m im Plan gelb (Abbruch) – Lücke zwischen Treppenhaus und Schlafen; Raumgrenze in der Wandflucht angenommen, Zweck unklar.
+7 Treppenhauswand rechts bei y 4,04–4,40 m im Plan gelb (Abbruch) – Lücke zwischen Treppenhaus und Schlafen; Raumgrenze in der Wandflucht angenommen, Zweck unklar.
  11
-9.74
+9.639999999999999
  21
 4.2
  31
@@ -32731,7 +32731,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T03:06:26.574022+00:00
+0.0 @ 2000-01-01T00:00:00.000000+00:00
   0
 VISUALSTYLE
   5
@@ -39293,7 +39293,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T03:06:26.598173+00:00
+0.0 @ 2000-01-01T00:00:00.000000+00:00
   0
 ENDSEC
   0

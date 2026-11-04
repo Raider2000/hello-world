@@ -493,19 +493,19 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461349.1294560186
+2451545.0
   9
 $TDUCREATE
  40
-2458532.153996898
+2451545.0
   9
 $TDUPDATE
  40
-2461349.1294560186
+2451545.0
   9
 $TDUUPDATE
  40
-2458532.1544311
+2451545.0
   9
 $TDINDWG
  40
@@ -933,11 +933,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{88F9ECC7-1E75-41E0-A338-992B2C5B6C90}
+{00000000-0000-0000-0000-000000000000}
   9
 $VERSIONGUID
   2
-{1C3840D7-6FD8-48F5-BA6D-D0B8929A41E1}
+{00000000-0000-0000-0000-000000000000}
   9
 $EXTNAMES
 290
@@ -45157,7 +45157,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -45171,17 +45171,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-10.3
+10.2
  20
 3.3
  30
 0.0
  40
-0.2
+0.12
   1
-Darstellung = Zielzustand des Aufteilungsplans 2014: rote Wände (Neubau 2014) schraffiert als „neu“, gelbe Wände (Abbruch 2014) weggelassen, gestrichelte Türen (geplant/entfallend) nicht gezeichnet. Ob die Maßnahmen ausgeführt wurden, ist außer für WE05 (Sanierung 2026) nicht belegt.
+1 Darstellung = Zielzustand des Aufteilungsplans 2014: rote Wände (Neubau 2014) schraffiert als „neu“, gelbe Wände (Abbruch 2014) weggelassen, gestrichelte Türen (geplant/entfallend) nicht gezeichnet. Ob die Maßnahmen ausgeführt wurden, ist außer für WE05 (Sanierung 2026) nicht belegt.
  11
-10.3
+10.2
  21
 3.3
  31
@@ -45207,7 +45207,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -45221,17 +45221,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-13.010000000000002
+12.91
  20
 2.3
  30
 0.0
  40
-0.2
+0.12
   1
-Wandtyp „tragend“ (load-bearing) nicht belegt: Wände, die im Aufteilungsplan 2014 in KG, EG, 1. OG und 2. OG übereinanderstehen (Überdeckung ≥ 60 %, Toleranz 6 cm), sind als tragend gezeichnet – plausibel, aber ohne Statik/Aufmaß nicht geprüft.
+2 Wandtyp „tragend“ (load-bearing) nicht belegt: Wände, die im Aufteilungsplan 2014 in KG, EG, 1. OG und 2. OG übereinanderstehen (Überdeckung ≥ 60 %, Toleranz 6 cm), sind als tragend gezeichnet – plausibel, aber ohne Statik/Aufmaß nicht geprüft.
  11
-13.010000000000002
+12.91
  21
 2.3
  31
@@ -45257,7 +45257,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -45271,17 +45271,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-2.0
+1.9
  20
 5.68
  30
 0.0
  40
-0.2
+0.12
   1
-WE3: Wände Essen/Wohnen (2,25 m) und Essen/Kochen im Aufteilungsplan 2014 gelb = Abbruch; offen gezeichnet, Raumgrenzen in der Wandflucht. Ausführung nicht belegt.
+3 WE3: Wände Essen/Wohnen (2,25 m) und Essen/Kochen im Aufteilungsplan 2014 gelb = Abbruch; offen gezeichnet, Raumgrenzen in der Wandflucht. Ausführung nicht belegt.
  11
-2.0
+1.9
  21
 5.68
  31
@@ -45307,7 +45307,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -45321,17 +45321,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-14.700000000000001
+14.6
  20
 5.65
  30
 0.0
  40
-0.2
+0.12
   1
-WE4: Wand Kochen/Wohnen (2,17 m) gelb = Abbruch 2014; offen gezeichnet, Raumgrenze in der Wandflucht. Bad-Türöffnung zum Vorraum gelb/gestrichelt, ohne Türblatt.
+4 WE4: Wand Kochen/Wohnen (2,17 m) gelb = Abbruch 2014; offen gezeichnet, Raumgrenze in der Wandflucht. Bad-Türöffnung zum Vorraum gelb/gestrichelt, ohne Türblatt.
  11
-14.700000000000001
+14.6
  21
 5.65
  31
@@ -45357,7 +45357,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -45371,17 +45371,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-1.93
+1.8299999999999998
  20
 10.6
  30
 0.0
  40
-0.2
+0.12
   1
-Balkone WE3/WE4: Fläche aus der Geometrie (3,00 x 2,50 m); Mietflächenanteil (½ wie bei WE05/WE06) nicht belegt.
+5 Balkone WE3/WE4: Fläche aus der Geometrie (3,00 x 2,50 m); Mietflächenanteil (½ wie bei WE05/WE06) nicht belegt.
  11
-1.93
+1.8299999999999998
  21
 10.6
  31
@@ -45407,7 +45407,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -45421,17 +45421,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-12.59
+12.489999999999998
  20
 7.55
  30
 0.0
  40
-0.2
+0.12
   1
-WE4 – WC einschließlich Vorraum zum Bad (Grenze WC/Vorraum im Plan offen).
+6 WE4 – WC einschließlich Vorraum zum Bad (Grenze WC/Vorraum im Plan offen).
  11
-12.59
+12.489999999999998
  21
 7.55
  31
@@ -45457,7 +45457,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -45471,17 +45471,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-8.38
+8.28
  20
 1.6
  30
 0.0
  40
-0.2
+0.12
   1
-Kein bemaßter Plan für das 1. OG: alle Maße aus dem Aufteilungsplan (M 1:100) abgegriffen, Flächen berechnet (keine Planflächen vorhanden).
+7 Kein bemaßter Plan für das 1. OG: alle Maße aus dem Aufteilungsplan (M 1:100) abgegriffen, Flächen berechnet (keine Planflächen vorhanden).
  11
-8.38
+8.28
  21
 1.6
  31
@@ -46591,7 +46591,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T03:06:25.536514+00:00
+0.0 @ 2000-01-01T00:00:00.000000+00:00
   0
 VISUALSTYLE
   5
@@ -53153,7 +53153,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T03:06:25.578487+00:00
+0.0 @ 2000-01-01T00:00:00.000000+00:00
   0
 ENDSEC
   0

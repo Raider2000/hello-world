@@ -493,19 +493,19 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461349.1160069443
+2451545.0
   9
 $TDUCREATE
  40
-2458532.153996898
+2451545.0
   9
 $TDUPDATE
  40
-2461349.1160069443
+2451545.0
   9
 $TDUUPDATE
  40
-2458532.1544311
+2451545.0
   9
 $TDINDWG
  40
@@ -933,11 +933,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{82048FBF-46DF-4175-8120-4EE098610682}
+{00000000-0000-0000-0000-000000000000}
   9
 $VERSIONGUID
   2
-{A956D547-C829-40DA-AEDE-1404261464A2}
+{00000000-0000-0000-0000-000000000000}
   9
 $EXTNAMES
 290
@@ -1327,9 +1327,9 @@ ISM
   0
 CLASS
   1
-LAYOUT
+ACDBPLACEHOLDER
   2
-AcDbLayout
+AcDbPlaceHolder
   3
 ObjectDBX Classes
  90
@@ -1343,9 +1343,9 @@ ObjectDBX Classes
   0
 CLASS
   1
-ACDBPLACEHOLDER
+LAYOUT
   2
-AcDbPlaceHolder
+AcDbLayout
   3
 ObjectDBX Classes
  90
@@ -33629,7 +33629,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -33643,17 +33643,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-6.3
+6.2
  20
 8.6
  30
 0.0
  40
-0.2
+0.12
   1
-WE-Nummern WE 3/WE 4/WE 5 angenommen (Stempel im Scan 2010 unleserlich); Zählung wie EG: Altbau Süd, Altbau Nord, Neubau
+1 WE-Nummern WE 3/WE 4/WE 5 angenommen (Stempel im Scan 2010 unleserlich); Zählung wie EG: Altbau Süd, Altbau Nord, Neubau
  11
-6.3
+6.2
  21
 8.6
  31
@@ -33679,7 +33679,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -33693,17 +33693,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-23.5
+23.4
  20
 2.3
  30
 0.0
  40
-0.2
+0.12
   1
-Zickzackwand Bad/Schlafen wie EG (Stand 2026 WE 1) übernommen; Plan 2010 zeigt hier dieselbe Wandführung, Lage ±10 cm
+2 Zickzackwand Bad/Schlafen wie EG (Stand 2026 WE 1) übernommen; Plan 2010 zeigt hier dieselbe Wandführung, Lage ±10 cm
  11
-23.5
+23.4
  21
 2.3
  31
@@ -33729,7 +33729,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -33743,17 +33743,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-20.900000000000002
+20.8
  20
 4.7
  30
 0.0
  40
-0.2
+0.12
   1
-Türbreiten/Aufschläge unleserlich – Standardmaße angenommen, Lage abgegriffen
+3 Türbreiten/Aufschläge unleserlich – Standardmaße angenommen, Lage abgegriffen
  11
-20.900000000000002
+20.8
  21
 4.7
  31
@@ -33779,7 +33779,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -33793,17 +33793,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-5.3
+5.2
  20
 0.0
  30
 0.0
  40
-0.2
+0.12
   1
-Fenster Neubau Süd lt. Maßkette 1999; Plan 2010 zeigt sie ca. 0,24 m weiter westlich und das Wohnzimmerfenster zweiteilig
+4 Fenster Neubau Süd lt. Maßkette 1999; Plan 2010 zeigt sie ca. 0,24 m weiter westlich und das Wohnzimmerfenster zweiteilig
  11
-5.3
+5.2
  21
 0.0
  31
@@ -33829,7 +33829,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -33843,17 +33843,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-21.3
+21.2
  20
 9.5
  30
 0.0
  40
-0.2
+0.12
   1
-Flur WE Nord: offener Übergang zum Wohnen; Raumgrenze bei x = 20,75 so angenommen, dass beide Flächen lt. Plan passen
+5 Flur WE Nord: offener Übergang zum Wohnen; Raumgrenze bei x = 20,75 so angenommen, dass beide Flächen lt. Plan passen
  11
-21.3
+21.2
  21
 9.5
  31
@@ -33879,7 +33879,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -33893,17 +33893,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-13.4
+13.299999999999999
  20
 7.2
  30
 0.0
  40
-0.2
+0.12
   1
-Laubengang/Treppe West: Wandführung im Scan 2010 nur schematisch, Brüstungen angenommen
+6 Laubengang/Treppe West: Wandführung im Scan 2010 nur schematisch, Brüstungen angenommen
  11
-13.4
+13.299999999999999
  21
 7.2
  31
@@ -33929,7 +33929,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -33943,17 +33943,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-8.600000000000001
+8.5
  20
 9.3
  30
 0.0
  40
-0.2
+0.12
   1
-Balkon Neubau: Tiefe 1,50 aus Plan 2010 abgegriffen, Breite 2,51 lt. 1999
+7 Balkon Neubau: Tiefe 1,50 aus Plan 2010 abgegriffen, Breite 2,51 lt. 1999
  11
-8.600000000000001
+8.5
  21
 9.3
  31
@@ -35063,7 +35063,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T02:47:03.737247+00:00
+0.0 @ 2000-01-01T00:00:00.000000+00:00
   0
 VISUALSTYLE
   5
@@ -41625,7 +41625,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T02:47:03.774607+00:00
+0.0 @ 2000-01-01T00:00:00.000000+00:00
   0
 ENDSEC
   0

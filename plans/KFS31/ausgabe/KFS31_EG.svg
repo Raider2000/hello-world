@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="339.1mm" height="230.5mm" viewBox="0 0 339.1 230.5">
+<svg xmlns="http://www.w3.org/2000/svg" width="383.3mm" height="294.6mm" viewBox="0 0 383.3 294.6">
 <title>KFS31 – Erdgeschoss</title>
 <style>text{font-family:Arial,Helvetica,sans-serif}</style>
 <rect width="100%" height="100%" fill="#ffffff"/>
@@ -436,28 +436,33 @@
 <text x="187.00" y="49.50" font-size="2" text-anchor="middle">Durchgang 1,66</text>
 <text x="163.00" y="108.50" font-size="2" text-anchor="middle">Müll</text>
 </g>
-<g id="A_UNGEPRUEFT" fill="none" stroke="#d00000" stroke-width="0.3" font-size="2" >
-<circle cx="235.00" cy="120.50" r="2.5"/>
-<text x="238.00" y="120.50" fill="#d00000" stroke="none">Innenkante 5,21 (1999: 5,40)</text>
-<circle cx="269.00" cy="153.50" r="2.5"/>
-<text x="272.00" y="153.50" fill="#d00000" stroke="none">Bad lt. 2026 – Fläche abw.</text>
-<circle cx="184.80" cy="129.50" r="2.5"/>
-<text x="187.80" y="129.50" fill="#d00000" stroke="none">Dicke angenommen</text>
-<circle cx="240.00" cy="129.50" r="2.5"/>
-<text x="243.00" y="129.50" fill="#d00000" stroke="none">Türmaße angenommen</text>
-<circle cx="251.00" cy="38.00" r="2.5"/>
-<text x="254.00" y="38.00" fill="#d00000" stroke="none">13,40 / 1999: 13,50</text>
-<circle cx="275.00" cy="62.70" r="2.5"/>
-<text x="278.00" y="62.70" fill="#d00000" stroke="none">11,05–11,50 (1999 abw.)</text>
-<circle cx="277.00" cy="85.50" r="2.5"/>
-<text x="280.00" y="85.50" fill="#d00000" stroke="none">Flächen abw. (Plan 2010 widersprüchlich)</text>
-<circle cx="36.20" cy="135.50" r="2.5"/>
-<text x="39.20" y="135.50" fill="#d00000" stroke="none">Wanddicke lt. 1999</text>
-<circle cx="202.00" cy="68.50" r="2.5"/>
-<text x="205.00" y="68.50" fill="#d00000" stroke="none">Breite abgegriffen</text>
-<circle cx="62.50" cy="179.00" r="2.5"/>
-<text x="65.50" y="179.00" fill="#d00000" stroke="none">Öffnung abgegriffen</text>
-<circle cx="159.00" cy="145.50" r="2.5"/>
+<g id="A_UNGEPRUEFT" font-size="1.5" font-weight="bold" text-anchor="middle">
+<circle cx="235.00" cy="120.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="235.00" y="121.05" fill="#d00000">1</text>
+<circle cx="269.00" cy="153.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="269.00" y="154.05" fill="#d00000">2</text>
+<circle cx="184.80" cy="129.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="184.80" y="130.05" fill="#d00000">3</text>
+<circle cx="240.00" cy="129.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="240.00" y="130.05" fill="#d00000">4</text>
+<circle cx="251.00" cy="38.00" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="251.00" y="38.55" fill="#d00000">5</text>
+<circle cx="275.00" cy="62.70" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="275.00" y="63.25" fill="#d00000">6</text>
+<circle cx="277.00" cy="85.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="277.00" y="86.05" fill="#d00000">7</text>
+<circle cx="36.20" cy="135.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="36.20" y="136.05" fill="#d00000">8</text>
+<circle cx="202.00" cy="68.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="202.00" y="69.05" fill="#d00000">9</text>
+<circle cx="62.50" cy="179.00" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="62.50" y="179.55" fill="#d00000">10</text>
+<circle cx="159.00" cy="145.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="159.00" y="146.05" fill="#d00000">11</text>
 </g>
-<g id="SCHRIFTFELD" font-size="2.6" fill="#000"><text x="35.0" y="214.5" font-weight="bold">KFS31 · Erdgeschoss · M 1:100</text><text x="35.0" y="218.5" font-size="2">Quelle: 20101111-Grundrisse-Karl_Ferlemann_Str_31.pdf S. 4 (Raum/WE) · 19990111-…pdf S. 4/5 (Maße) · 2026-…WE1-vereinfacht.svg (WE 1) (2010-11-11 / 1999-01-11 / 2026) · Maße in m · Neuzeichnung, ohne Gewähr – rot markierte Werte ungeprüft</text></g>
+<g id="SCHRIFTFELD" font-size="2.6" fill="#000"><text x="35.0" y="252.5" font-weight="bold">KFS31 · Erdgeschoss · M 1:100</text>
+<text x="35.0" y="256.5" font-size="2">Quelle: 20101111-Grundrisse-Karl_Ferlemann_Str_31.pdf S. 4 (Raum/WE) · 19990111-…pdf S. 4/5 (Maße) · 2026-…WE1-vereinfacht.svg (WE 1) (2010-11-11 / 1999-01-11 / 2026) · Maße in m · Neuzeichnung, ohne Gewähr – rot nummerierte Punkte sind ungeprüft (Legende)</text>
+</g>
+<g id="LEGENDE_UNGEPRUEFT" font-size="1.8" fill="#333"><text x="35.0" y="262.7" font-weight="bold" fill="#d00000">Ungeprüfte bzw. angenommene Werte</text>
+<text x="35.0" y="265.6">1 Nordwand WE 1: Innenkante 5,21 aus Plan 2010 abgegriffen; Bestandsplan 1999 und Plan 2026 zeigen 5,40</text>
+<text x="35.0" y="268.3">2 Zickzackwand Bad/Schlafzimmer und Mauerpfeiler aus Plan 2026 (unbemaßt) übernommen, Maßstab über Fensterachsen 1999 (131,6 px/m), Lage ±10 cm. Bad damit 5,2 m² statt 6,35 m² (2010) bzw. ca. 6 m² (2026): Plan 2010 zeigt eine diagonal gestellte Wanne mit abweichender Wandführung, die im Scan nicht eindeutig lesbar ist</text>
+<text x="35.0" y="271.0">3 Küchenwand: im Plan 2026 als Wand, im Plan 2010 nur als Linie – Dicke 0,11 angenommen</text>
+<text x="35.0" y="273.7">4 Türbreiten (Rohbaurichtmaße) in den Scans unleserlich – Standardmaße 0,76/0,885/1,01 angenommen, Lage abgegriffen</text>
+<text x="35.0" y="276.4">5 Nordwand: Innenkante 13,40 (2010 abgegriffen), 1999: 13,50; Außenkante 14,05 lt. 1999</text>
+<text x="35.0" y="279.1">6 Wand WE 2/Fahrradraum: 11,05–11,50 aus 2010 abgegriffen, 1999: 11,25–11,55</text>
+<text x="35.0" y="281.8">7 WE 2 Wohnen/Schlafen: lt. Plan 15,05 / 7,25 m²; die im Plan 2010 gezeichnete Trennwand (7,92–8,07) ergibt 14,26 / 7,56 m². Summe beider Räume stimmt auf 2 % – Plan 2010 in sich widersprüchlich</text>
+<text x="35.0" y="284.5">8 Neubau-Wanddicken lt. Bauantrag 1999 (0,24 / 0,30); Plan 2010 zeichnet ca. 0,36</text>
+<text x="35.0" y="287.2">9 Fenster Bad WE 2 zum Hof: Breite abgegriffen (ca. 0,64), Maßzahl unleserlich</text>
+<text x="35.0" y="289.9">10 Öffnung in der Neubau-Südwand EG: Lage/Breite (ca. 1,00) aus Plan 2010 abgegriffen, Art (Fenster/Lüftung) unklar</text>
+<text x="35.0" y="292.6">11 Fuge Neubau/Altbau 2 cm lt. 1999; Giebelwand Altbau 0,55 lt. 1999 (Plan 2026 zeichnet dünner)</text>
+</g>
 </svg>

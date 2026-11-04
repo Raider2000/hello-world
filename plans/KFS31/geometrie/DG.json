@@ -1011,7 +1011,7 @@
    "area_stated": 4.9
   },
   {
-   "name": "WE 9 – Bad",
+   "name": "WE 9 – Bad", "area_note": "Planfläche größer als gezeichnete Zickzackwand ergibt; Aufmaß offen",
    "polygon": [
     [
      21.52,
@@ -1290,7 +1290,7 @@
    "area_stated": 15.45
   },
   {
-   "name": "WE 11 – Schlafen",
+   "name": "WE 11 – Schlafen", "area_note": "Dachschräge Neubau, Fläche vermutlich nach WoFlV reduziert",
    "polygon": [
     [
      0.24,
@@ -1312,7 +1312,7 @@
    "area_stated": 11.15
   },
   {
-   "name": "WE 11 – Flur",
+   "name": "WE 11 – Flur", "area_note": "Plan 2010 nennt 2,65, OG1 bei gleicher Zeichnung 2,85",
    "polygon": [
     [
      3.07,
@@ -1334,7 +1334,7 @@
    "area_stated": 2.65
   },
   {
-   "name": "WE 11 – Bad",
+   "name": "WE 11 – Bad", "area_note": "Dachschräge Neubau, Fläche vermutlich nach WoFlV reduziert",
    "polygon": [
     [
      3.07,
@@ -1378,7 +1378,7 @@
    "area_stated": 28.3
   },
   {
-   "name": "WE 11 – Kochen",
+   "name": "WE 11 – Kochen", "area_note": "Dachschräge Neubau, Fläche vermutlich nach WoFlV reduziert",
    "polygon": [
     [
      9.66,

@@ -1004,7 +1004,7 @@
    "area_stated": 4.9
   },
   {
-   "name": "WE 3 – Bad",
+   "name": "WE 3 – Bad", "area_note": "Planfläche größer als gezeichnete Zickzackwand ergibt; Aufmaß offen",
    "polygon": [
     [
      21.52,

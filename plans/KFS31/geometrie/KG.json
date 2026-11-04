@@ -556,7 +556,7 @@
    "area_stated": 7.7
   },
   {
-   "name": "Keller (2)",
+   "name": "Keller (2)", "area_note": "Kellerverschläge im Scan nur schematisch, Innenmaße abgegriffen",
    "polygon": [
     [
      14.97,
@@ -578,7 +578,7 @@
    "area_stated": 5.1
   },
   {
-   "name": "Keller (3)",
+   "name": "Keller (3)", "area_note": "Kellerverschläge im Scan nur schematisch, Innenmaße abgegriffen",
    "polygon": [
     [
      16.65,
@@ -600,7 +600,7 @@
    "area_stated": 6.8
   },
   {
-   "name": "Keller (4)",
+   "name": "Keller (4)", "area_note": "Kellerverschläge im Scan nur schematisch, Innenmaße abgegriffen",
    "polygon": [
     [
      18.99,
@@ -622,7 +622,7 @@
    "area_stated": 7.5
   },
   {
-   "name": "Keller (5)",
+   "name": "Keller (5)", "area_note": "Kellerverschläge im Scan nur schematisch, Innenmaße abgegriffen",
    "polygon": [
     [
      21.65,
@@ -656,7 +656,7 @@
    ]
   },
   {
-   "name": "Keller (6)",
+   "name": "Keller (6)", "area_note": "Kellerverschläge im Scan nur schematisch, Innenmaße abgegriffen",
    "polygon": [
     [
      23.03,
@@ -686,7 +686,7 @@
    "area_stated": 7.7
   },
   {
-   "name": "HR/Technik",
+   "name": "HR/Technik", "area_note": "Kellerverschläge im Scan nur schematisch, Innenmaße abgegriffen",
    "polygon": [
     [
      23.55,
@@ -728,7 +728,7 @@
    ]
   },
   {
-   "name": "Keller (7)",
+   "name": "Keller (7)", "area_note": "Kellerverschläge im Scan nur schematisch, Innenmaße abgegriffen",
    "polygon": [
     [
      21.4,
@@ -750,7 +750,7 @@
    "area_stated": 6.85
   },
   {
-   "name": "ELT",
+   "name": "ELT", "area_note": "Kellerverschläge im Scan nur schematisch, Innenmaße abgegriffen",
    "polygon": [
     [
      23.41,
@@ -794,7 +794,7 @@
    "area_stated": 8.1
   },
   {
-   "name": "AR",
+   "name": "AR", "area_note": "Kellerverschläge im Scan nur schematisch, Innenmaße abgegriffen",
    "polygon": [
     [
      16.3,

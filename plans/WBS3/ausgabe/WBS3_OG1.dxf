@@ -493,19 +493,19 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461349.1005208334
+2451545.0
   9
 $TDUCREATE
  40
-2458532.153996898
+2451545.0
   9
 $TDUPDATE
  40
-2461349.1005208334
+2451545.0
   9
 $TDUUPDATE
  40
-2458532.1544311
+2451545.0
   9
 $TDINDWG
  40
@@ -933,11 +933,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{EDFF6697-9186-4570-BC2B-828648BD699C}
+{00000000-0000-0000-0000-000000000000}
   9
 $VERSIONGUID
   2
-{7386844A-CC3A-4A1E-B8EC-F9143204B916}
+{00000000-0000-0000-0000-000000000000}
   9
 $EXTNAMES
 290
@@ -1327,9 +1327,9 @@ ISM
   0
 CLASS
   1
-LAYOUT
+ACDBPLACEHOLDER
   2
-AcDbLayout
+AcDbPlaceHolder
   3
 ObjectDBX Classes
  90
@@ -1343,9 +1343,9 @@ ObjectDBX Classes
   0
 CLASS
   1
-ACDBPLACEHOLDER
+LAYOUT
   2
-AcDbPlaceHolder
+AcDbLayout
   3
 ObjectDBX Classes
  90
@@ -49885,7 +49885,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -49899,17 +49899,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
--1.145
+-1.245
  20
 5.902
  30
 0.0
  40
-0.2
+0.12
   1
-Maßkette links außen (x=1250): 11,805 m laut Plan, Messpunkte Quell-y 4395 und 16200. Die Wandaußenkante links liegt in der Quelle bei y=4365 (Kette x=1950 beginnt dort), geometrisch also 11,835 m. Kette in der Quelle um 0,03 m versetzt; Wand nach Geometrie gezeichnet, Kette nach Quelle beschriftet. Laut Eigentümer lassen sich die Maße aus dem historischen Grundriss (Teilungserklärung) wegen schlechter Qualität nicht sauber ablesen; Differenz bleibt bis zu einem Aufmaß offen.
+1 Maßkette links außen (x=1250): 11,805 m laut Plan, Messpunkte Quell-y 4395 und 16200. Die Wandaußenkante links liegt in der Quelle bei y=4365 (Kette x=1950 beginnt dort), geometrisch also 11,835 m. Kette in der Quelle um 0,03 m versetzt; Wand nach Geometrie gezeichnet, Kette nach Quelle beschriftet. Laut Eigentümer lassen sich die Maße aus dem historischen Grundriss (Teilungserklärung) wegen schlechter Qualität nicht sauber ablesen; Differenz bleibt bis zu einem Aufmaß offen.
  11
--1.145
+-1.245
  21
 5.902
  31
@@ -49935,7 +49935,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -49949,17 +49949,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-5.6
+5.5
  20
 13.75
  30
 0.0
  40
-0.2
+0.12
   1
-Nordfassade nicht rechtwinklig: Wandaußenkante links bei Quell-y 4365, rechts bei 4455 (0,09 m Versatz auf 14,535 m), ebenso Treppenhaus-Fassade. Unverändert aus der Quelle übernommen; ob Aufmaß oder Zeichenartefakt, ist offen.
+2 Nordfassade nicht rechtwinklig: Wandaußenkante links bei Quell-y 4365, rechts bei 4455 (0,09 m Versatz auf 14,535 m), ebenso Treppenhaus-Fassade. Unverändert aus der Quelle übernommen; ob Aufmaß oder Zeichenartefakt, ist offen.
  11
-5.6
+5.5
  21
 13.75
  31
@@ -49985,7 +49985,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -49999,17 +49999,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-14.700000000000001
+14.6
  20
 6.175
  30
 0.0
  40
-0.2
+0.12
   1
-Aussparung mit Nische (0,175 x 0,19 m) in der rechten Außenwand: laut Eigentümer vermutlich ein Wand-Einbauschrank mit Tür (nicht bestätigt, Tür nicht gezeichnet).
+3 Aussparung mit Nische (0,175 x 0,19 m) in der rechten Außenwand: laut Eigentümer vermutlich ein Wand-Einbauschrank mit Tür (nicht bestätigt, Tür nicht gezeichnet).
  11
-14.700000000000001
+14.6
  21
 6.175
  31
@@ -50035,7 +50035,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -50049,17 +50049,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-5.5
+5.4
  20
 11.51
  30
 0.0
  40
-0.2
+0.12
   1
-Nische im Pfeiler neben der Küche WE3 (0,50 x 0,45 m) von Quell-y 4465 bis 4915; darunter bleibt in der Quelle ein Restsaum von 0,026 m Wand stehen. Unverändert übernommen.
+4 Nische im Pfeiler neben der Küche WE3 (0,50 x 0,45 m) von Quell-y 4465 bis 4915; darunter bleibt in der Quelle ein Restsaum von 0,026 m Wand stehen. Unverändert übernommen.
  11
-5.5
+5.4
  21
 11.51
  31
@@ -50085,7 +50085,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -50099,17 +50099,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-6.8999999999999995
+6.8
  20
 10.3
  30
 0.0
  40
-0.2
+0.12
   1
-Treppenhaus: Treppe nach Ebene 23 der Quelle gezeichnet (zwei gegenläufige Läufe mit Mittelwand, 9 + 10 Stufen, Lauflinien mit Pfeil). Weder Stufenhöhe noch Raumfläche des Treppenhauses sind im Plan bemaßt.
+5 Treppenhaus: Treppe nach Ebene 23 der Quelle gezeichnet (zwei gegenläufige Läufe mit Mittelwand, 9 + 10 Stufen, Lauflinien mit Pfeil). Weder Stufenhöhe noch Raumfläche des Treppenhauses sind im Plan bemaßt.
  11
-6.8999999999999995
+6.8
  21
 10.3
  31
@@ -50135,7 +50135,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -50149,17 +50149,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-9.350000000000001
+9.25
  20
 11.2
  30
 0.0
  40
-0.2
+0.12
   1
-Wandtypen (Außenwand / tragend / nichttragend) nach Quell-Ebenen 10 (tragend), 11 (leicht), 12 (aufgemessen) und Lage zugeordnet; die Quelle unterscheidet Außen- und Innentragwände nicht ausdrücklich.
+6 Wandtypen (Außenwand / tragend / nichttragend) nach Quell-Ebenen 10 (tragend), 11 (leicht), 12 (aufgemessen) und Lage zugeordnet; die Quelle unterscheidet Außen- und Innentragwände nicht ausdrücklich.
  11
-9.350000000000001
+9.25
  21
 11.2
  31
@@ -50185,7 +50185,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -50199,17 +50199,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-2.1999999999999997
+2.1
  20
 7.05
  30
 0.0
  40
-0.2
+0.12
   1
-Türbreiten: Aus dem Türblatt (= Radius des Aufschlagbogens) übernommen, Rohbaurichtmaße sind im Plan nicht bemaßt. Aufschlag und Angel nach Quelle (Ebene 21).
+7 Türbreiten: Aus dem Türblatt (= Radius des Aufschlagbogens) übernommen, Rohbaurichtmaße sind im Plan nicht bemaßt. Aufschlag und Angel nach Quelle (Ebene 21).
  11
-2.1999999999999997
+2.1
  21
 7.05
  31
@@ -50235,7 +50235,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -50249,17 +50249,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-3.4
+3.3000000000000003
  20
 12.9
  30
 0.0
  40
-0.2
+0.12
   1
-Fensterbreiten und -lage nach der Glaslinie (Ebene 20), Stärke 0,06 m schematisch; Laibungstiefen und Brüstungshöhen nicht im Plan.
+8 Fensterbreiten und -lage nach der Glaslinie (Ebene 20), Stärke 0,06 m schematisch; Laibungstiefen und Brüstungshöhen nicht im Plan.
  11
-3.4
+3.3000000000000003
  21
 12.9
  31
@@ -50285,7 +50285,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -50299,17 +50299,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-3.6999999999999997
+3.6
  20
 12.8
  30
 0.0
  40
-0.2
+0.12
   1
-Balkon WE3: Fläche im Plan als Hälfte (1,23 m²) angegeben; Lichtmaß-Polygon 2,453 m², Hälfte = 1,226 m² passt. Brüstung als graues Wandpolygon (Ebene 22) übernommen, Geländerhöhe unbekannt.
+9 Balkon WE3: Fläche im Plan als Hälfte (1,23 m²) angegeben; Lichtmaß-Polygon 2,453 m², Hälfte = 1,226 m² passt. Brüstung als graues Wandpolygon (Ebene 22) übernommen, Geländerhöhe unbekannt.
  11
-3.6999999999999997
+3.6
  21
 12.8
  31
@@ -50335,7 +50335,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -50349,17 +50349,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-11.4
+11.299999999999999
  20
 12.7
  30
 0.0
  40
-0.2
+0.12
   1
-Balkon rechte Wohnung: Fläche im Plan als Hälfte (1,21 m²) angegeben; Lichtmaß-Polygon 2,425 m², Hälfte = 1,213 m² passt. Brüstung wie links.
+10 Balkon rechte Wohnung: Fläche im Plan als Hälfte (1,21 m²) angegeben; Lichtmaß-Polygon 2,425 m², Hälfte = 1,213 m² passt. Brüstung wie links.
  11
-11.4
+11.299999999999999
  21
 12.7
  31
@@ -50385,7 +50385,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -50399,17 +50399,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-7.2
+7.1000000000000005
  20
 -1.95
  30
 0.0
  40
-0.2
+0.12
   1
-Maßkette unten (y=18250): die Teilmaße 15 und 8 (Quell-x 9340/9490/9570) liegen eng beieinander, die Zahlen überlagern sich im Plan wie in der Quelle.
+11 Maßkette unten (y=18250): die Teilmaße 15 und 8 (Quell-x 9340/9490/9570) liegen eng beieinander, die Zahlen überlagern sich im Plan wie in der Quelle.
  11
-7.2
+7.1000000000000005
  21
 -1.95
  31
@@ -51519,7 +51519,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T02:24:45.176555+00:00
+0.0 @ 2000-01-01T00:00:00.000000+00:00
   0
 VISUALSTYLE
   5
@@ -58081,7 +58081,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T02:24:45.240118+00:00
+0.0 @ 2000-01-01T00:00:00.000000+00:00
   0
 ENDSEC
   0

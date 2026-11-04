@@ -493,19 +493,19 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461349.118148148
+2451545.0
   9
 $TDUCREATE
  40
-2458532.153996898
+2451545.0
   9
 $TDUPDATE
  40
-2461349.118148148
+2451545.0
   9
 $TDUUPDATE
  40
-2458532.1544311
+2451545.0
   9
 $TDINDWG
  40
@@ -933,11 +933,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{0E20487C-A13B-41BF-AAE8-F5575F9FB6F4}
+{00000000-0000-0000-0000-000000000000}
   9
 $VERSIONGUID
   2
-{964877A7-8276-437D-BA3F-1AFF220BF8FE}
+{00000000-0000-0000-0000-000000000000}
   9
 $EXTNAMES
 290
@@ -1327,9 +1327,9 @@ ISM
   0
 CLASS
   1
-LAYOUT
+ACDBPLACEHOLDER
   2
-AcDbLayout
+AcDbPlaceHolder
   3
 ObjectDBX Classes
  90
@@ -1343,9 +1343,9 @@ ObjectDBX Classes
   0
 CLASS
   1
-ACDBPLACEHOLDER
+LAYOUT
   2
-AcDbPlaceHolder
+AcDbLayout
   3
 ObjectDBX Classes
  90
@@ -26065,7 +26065,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -26079,17 +26079,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-17.3
+17.2
  20
 2.2
  30
 0.0
  40
-0.2
+0.12
   1
-Kellerverschläge: Zuordnung zu den WE in 2010 unleserlich (1999: W 3, W 4, W 6, W 9–W 11 …); Trennwände als Lattenverschläge ca. 0,07, Lage aus Plan 2010 abgegriffen, Flächen nur näherungsweise
+1 Kellerverschläge: Zuordnung zu den WE in 2010 unleserlich (1999: W 3, W 4, W 6, W 9–W 11 …); Trennwände als Lattenverschläge ca. 0,07, Lage aus Plan 2010 abgegriffen, Flächen nur näherungsweise
  11
-17.3
+17.2
  21
 2.2
  31
@@ -26115,7 +26115,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -26129,17 +26129,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-21.7
+21.599999999999998
  20
 13.6
  30
 0.0
  40
-0.2
+0.12
   1
-Innenwände/Innenkanten aus Plan 2010 abgegriffen (±5 cm); Maßketten 1999 weichen teils ab (z. B. tragende Wand 21,26–21,71 statt 21,20–21,65)
+2 Innenwände/Innenkanten aus Plan 2010 abgegriffen (±5 cm); Maßketten 1999 weichen teils ab (z. B. tragende Wand 21,26–21,71 statt 21,20–21,65)
  11
-21.7
+21.599999999999998
  21
 13.6
  31
@@ -26165,7 +26165,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -26179,17 +26179,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-15.100000000000001
+15.0
  20
 6.3
  30
 0.0
  40
-0.2
+0.12
   1
-Bereich Hof/Schacht zwischen Kellerflur und AR: im Plan 2010 nur Umriss mit Quadrat (Schacht?), nicht bezeichnet
+3 Bereich Hof/Schacht zwischen Kellerflur und AR: im Plan 2010 nur Umriss mit Quadrat (Schacht?), nicht bezeichnet
  11
-15.100000000000001
+15.0
  21
 6.3
  31
@@ -26215,7 +26215,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -26229,17 +26229,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-17.400000000000002
+17.3
  20
 7.2
  30
 0.0
  40
-0.2
+0.12
   1
-AR 5,85 m² lt. Plan, gezeichnete Abgrenzung zur Treppe ergibt 4,41 m² – Treppenbreite/Lage unsicher
+4 AR 5,85 m² lt. Plan, gezeichnete Abgrenzung zur Treppe ergibt 4,41 m² – Treppenbreite/Lage unsicher
  11
-17.400000000000002
+17.3
  21
 7.2
  31
@@ -26265,7 +26265,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -26279,17 +26279,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-22.6
+22.5
  20
 9.4
  30
 0.0
  40
-0.2
+0.12
   1
-Keller 6,85: Begrenzung im Scan unklar (Wandstummel, Tür bei y 9,93); als 21,40–23,22 × 8,20–11,14 angenommen
+5 Keller 6,85: Begrenzung im Scan unklar (Wandstummel, Tür bei y 9,93); als 21,40–23,22 × 8,20–11,14 angenommen
  11
-22.6
+22.5
  21
 9.4
  31
@@ -26315,7 +26315,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -26329,17 +26329,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-22.0
+21.9
  20
 12.5
  30
 0.0
  40
-0.2
+0.12
   1
-Nördlicher Raum 17,11–26,26 × 11,60–13,40 ohne Bezeichnung und Flächenangabe (evtl. nicht nutzbar/verfüllt)
+6 Nördlicher Raum 17,11–26,26 × 11,60–13,40 ohne Bezeichnung und Flächenangabe (evtl. nicht nutzbar/verfüllt)
  11
-22.0
+21.9
  21
 12.5
  31
@@ -27449,7 +27449,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T02:50:08.565457+00:00
+0.0 @ 2000-01-01T00:00:00.000000+00:00
   0
 VISUALSTYLE
   5
@@ -34011,7 +34011,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T02:50:08.620941+00:00
+0.0 @ 2000-01-01T00:00:00.000000+00:00
   0
 ENDSEC
   0

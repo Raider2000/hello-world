@@ -493,19 +493,19 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461349.1294675926
+2451545.0
   9
 $TDUCREATE
  40
-2458532.153996898
+2451545.0
   9
 $TDUPDATE
  40
-2461349.1294675926
+2451545.0
   9
 $TDUUPDATE
  40
-2458532.1544311
+2451545.0
   9
 $TDINDWG
  40
@@ -933,11 +933,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{81685F76-5714-400B-8A9C-3B1EA1D7DEB6}
+{00000000-0000-0000-0000-000000000000}
   9
 $VERSIONGUID
   2
-{F720C45A-A872-4D59-A583-E98E2BBB9B41}
+{00000000-0000-0000-0000-000000000000}
   9
 $EXTNAMES
 290
@@ -35113,7 +35113,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -35127,17 +35127,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-4.652
+4.5520000000000005
  20
 8.24
  30
 0.0
  40
-0.2
+0.12
   1
-ca. 1,66 m Küchenbreite: im Vorgänger nur abgeleitet (Planunterlagen), keine Vor-Ort-Messung
+1 ca. 1,66 m Küchenbreite: im Vorgänger nur abgeleitet (Planunterlagen), keine Vor-Ort-Messung
  11
-4.652
+4.5520000000000005
  21
 8.24
  31
@@ -35163,7 +35163,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -35177,17 +35177,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-6.955
+6.855
  20
 8.55
  30
 0.0
  40
-0.2
+0.12
   1
-ca. 2,30 m Bad-Lichtmaß: im Vorgänger nur abgeleitet
+2 ca. 2,30 m Bad-Lichtmaß: im Vorgänger nur abgeleitet
  11
-6.955
+6.855
  21
 8.55
  31
@@ -35213,7 +35213,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -35227,17 +35227,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-2.05
+1.95
  20
 6.27
  30
 0.0
  40
-0.2
+0.12
   1
-ca. 2,25 m Durchgang Essen/Wohnen: im Vorgänger nur abgeleitet
+3 ca. 2,25 m Durchgang Essen/Wohnen: im Vorgänger nur abgeleitet
  11
-2.05
+1.95
  21
 6.27
  31
@@ -35263,7 +35263,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -35277,17 +35277,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-0.3
+0.2
  20
 7.54
  30
 0.0
  40
-0.2
+0.12
   1
-ca. 3,44 m Raumtiefe Essen/Kochen: im Vorgänger nur abgeleitet
+4 ca. 3,44 m Raumtiefe Essen/Kochen: im Vorgänger nur abgeleitet
  11
-0.3
+0.2
  21
 7.54
  31
@@ -35313,7 +35313,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -35327,17 +35327,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-0.3
+0.2
  20
 3.06
  30
 0.0
  40
-0.2
+0.12
   1
-ca. 4,98 m Raumtiefe Wohnen: im Vorgänger nur abgeleitet
+5 ca. 4,98 m Raumtiefe Wohnen: im Vorgänger nur abgeleitet
  11
-0.3
+0.2
  21
 3.06
  31
@@ -35363,7 +35363,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -35377,17 +35377,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-6.7
+6.6000000000000005
  20
 2.395
  30
 0.0
  40
-0.2
+0.12
   1
-ca. 3,65 m Raumtiefe Schlafen: im Vorgänger nur abgeleitet
+6 ca. 3,65 m Raumtiefe Schlafen: im Vorgänger nur abgeleitet
  11
-6.7
+6.6000000000000005
  21
 2.395
  31
@@ -35413,7 +35413,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -35427,17 +35427,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-7.85
+7.75
  20
 7.54
  30
 0.0
  40
-0.2
+0.12
   1
-ca. 3,44 m Bad-Tiefe: im Vorgänger nur abgeleitet
+7 ca. 3,44 m Bad-Tiefe: im Vorgänger nur abgeleitet
  11
-7.85
+7.75
  21
 7.54
  31
@@ -35463,7 +35463,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -35477,17 +35477,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-5.2749999999999995
+5.175
  20
 4.62
  30
 0.0
  40
-0.2
+0.12
   1
-Flur: 3,69 m2 laut Gesamtplan nur als ca.-Wert (Bildquelle); berechnet 3,71 m2
+8 Flur: 3,69 m2 laut Gesamtplan nur als ca.-Wert (Bildquelle); berechnet 3,71 m2
  11
-5.2749999999999995
+5.175
  21
 4.62
  31
@@ -35513,7 +35513,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -35527,17 +35527,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-2.8699999999999997
+2.77
  20
 8.94
  30
 0.0
  40
-0.2
+0.12
   1
-Balkontür: Aufschlag gemäß Vorgänger, nicht vor Ort geprüft
+9 Balkontür: Aufschlag gemäß Vorgänger, nicht vor Ort geprüft
  11
-2.8699999999999997
+2.77
  21
 8.94
  31
@@ -35563,7 +35563,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -35577,17 +35577,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-5.5649999999999995
+5.465
  20
 7.54
  30
 0.0
  40
-0.2
+0.12
   1
-Badtrennwand neu: Lage/Stärke aus Vorgänger, Neubau noch nicht abgenommen
+10 Badtrennwand neu: Lage/Stärke aus Vorgänger, Neubau noch nicht abgenommen
  11
-5.5649999999999995
+5.465
  21
 7.54
  31
@@ -35613,7 +35613,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -35627,17 +35627,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-4.235
+4.135
  20
 5.685
  30
 0.0
  40
-0.2
+0.12
   1
-zugemauerte Küchentür: Maße aus Vorgänger
+11 zugemauerte Küchentür: Maße aus Vorgänger
  11
-4.235
+4.135
  21
 5.685
  31
@@ -35663,7 +35663,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -35677,17 +35677,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-7.125
+7.025
  20
 8.14
  30
 0.0
  40
-0.2
+0.12
   1
-Sanitärobjekte und Waschmaschinenstellplatz schematisch/gemäß Quelle, nur als Notes
+12 Sanitärobjekte und Waschmaschinenstellplatz schematisch/gemäß Quelle, nur als Notes
  11
-7.125
+7.025
  21
 8.14
  31
@@ -35713,7 +35713,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -35727,17 +35727,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-17.2
+17.099999999999998
  20
 -1.41
  30
 0.0
  40
-0.2
+0.12
   1
-Kontrollmaß Gesamtbreite: bemaßter Plan 16,51⁵ m, Aufteilungsplan (M 1:100) 16,527 m an der Unterkante; Differenz 1,2 cm in der rechten Außenwand (PDF 0,57–0,59 m). Geometrie nach Aufteilungsplan, Kette nach bemaßtem Plan beschriftet.
+13 Kontrollmaß Gesamtbreite: bemaßter Plan 16,51⁵ m, Aufteilungsplan (M 1:100) 16,527 m an der Unterkante; Differenz 1,2 cm in der rechten Außenwand (PDF 0,57–0,59 m). Geometrie nach Aufteilungsplan, Kette nach bemaßtem Plan beschriftet.
  11
-17.2
+17.099999999999998
  21
 -1.41
  31
@@ -35763,7 +35763,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -35777,17 +35777,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-21.150000000000002
+21.05
  20
 11.405
  30
 0.0
  40
-0.2
+0.12
   1
-Kontrollmaß rechte Seite: bemaßt 11,39⁵ m, Aufteilungsplan 11,405 m (Δ +1,0 cm). Gebäudetiefe links: WE05 9,84 m, Aufteilungsplan 9,83 m.
+14 Kontrollmaß rechte Seite: bemaßt 11,39⁵ m, Aufteilungsplan 11,405 m (Δ +1,0 cm). Gebäudetiefe links: WE05 9,84 m, Aufteilungsplan 9,83 m.
  11
-21.150000000000002
+21.05
  21
 11.405
  31
@@ -35813,7 +35813,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -35827,17 +35827,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-12.59
+12.489999999999998
  20
 7.55
  30
 0.0
  40
-0.2
+0.12
   1
-WE6 – WC: im Aufteilungsplan 2014 „WC 6“ mit Vorraum zum Bad (2,63 m² berechnet); der bemaßte Plan zeigt hier „Flur 2“ mit 2,92 m² (anderer Zustand, Wand WC/Vorraum ohne Abschluss). Keine Planfläche übernommen.
+15 WE6 – WC: im Aufteilungsplan 2014 „WC 6“ mit Vorraum zum Bad (2,63 m² berechnet); der bemaßte Plan zeigt hier „Flur 2“ mit 2,92 m² (anderer Zustand, Wand WC/Vorraum ohne Abschluss). Keine Planfläche übernommen.
  11
-12.59
+12.489999999999998
  21
 7.55
  31
@@ -35863,7 +35863,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -35877,17 +35877,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-15.14
+15.04
  20
 6.65
  30
 0.0
  40
-0.2
+0.12
   1
-WE6 – Kochen: berechnet 8,57 m², bemaßter Plan 9,12 m² (Zustand vor dem 2014 geplanten Wandschluss an der alten Küchentür, rot schraffiert). Keine Planfläche übernommen.
+16 WE6 – Kochen: berechnet 8,57 m², bemaßter Plan 9,12 m² (Zustand vor dem 2014 geplanten Wandschluss an der alten Küchentür, rot schraffiert). Keine Planfläche übernommen.
  11
-15.14
+15.04
  21
 6.65
  31
@@ -35913,7 +35913,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -35927,17 +35927,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-14.700000000000001
+14.6
  20
 5.65
  30
 0.0
  40
-0.2
+0.12
   1
-Wand Kochen/Wohnen WE6 (2,17 m) im Aufteilungsplan 2014 gelb = Abbruch; als offen gezeichnet, Raumgrenze bei y = 5,51/5,78 m nach Wand. Ausführung nicht belegt.
+17 Wand Kochen/Wohnen WE6 (2,17 m) im Aufteilungsplan 2014 gelb = Abbruch; als offen gezeichnet, Raumgrenze bei y = 5,51/5,78 m nach Wand. Ausführung nicht belegt.
  11
-14.700000000000001
+14.6
  21
 5.65
  31
@@ -35963,7 +35963,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -35977,17 +35977,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-13.55
+13.45
  20
 9.3
  30
 0.0
  40
-0.2
+0.12
   1
-Bad WE6: Türöffnung zum Vorraum im Aufteilungsplan gelb/gestrichelt (geplant); Türblatt nicht gezeichnet, Raumgrenze an der Wandflucht.
+18 Bad WE6: Türöffnung zum Vorraum im Aufteilungsplan gelb/gestrichelt (geplant); Türblatt nicht gezeichnet, Raumgrenze an der Wandflucht.
  11
-13.55
+13.45
  21
 9.3
  31
@@ -36013,7 +36013,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -36027,17 +36027,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-10.3
+10.2
  20
 3.3
  30
 0.0
  40
-0.2
+0.12
   1
-Darstellung = Zielzustand des Aufteilungsplans 2014: rote Wände (Neubau 2014) schraffiert als „neu“, gelbe Wände (Abbruch 2014) weggelassen, gestrichelte Türen (geplant/entfallend) nicht gezeichnet. Ob die Maßnahmen ausgeführt wurden, ist außer für WE05 (Sanierung 2026) nicht belegt.
+19 Darstellung = Zielzustand des Aufteilungsplans 2014: rote Wände (Neubau 2014) schraffiert als „neu“, gelbe Wände (Abbruch 2014) weggelassen, gestrichelte Türen (geplant/entfallend) nicht gezeichnet. Ob die Maßnahmen ausgeführt wurden, ist außer für WE05 (Sanierung 2026) nicht belegt.
  11
-10.3
+10.2
  21
 3.3
  31
@@ -36063,7 +36063,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -36077,17 +36077,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-13.010000000000002
+12.91
  20
 2.3
  30
 0.0
  40
-0.2
+0.12
   1
-Wandtyp „tragend“ (load-bearing) nicht belegt: Wände, die im Aufteilungsplan 2014 in KG, EG, 1. OG und 2. OG übereinanderstehen (Überdeckung ≥ 60 %, Toleranz 6 cm), sind als tragend gezeichnet – plausibel, aber ohne Statik/Aufmaß nicht geprüft.
+20 Wandtyp „tragend“ (load-bearing) nicht belegt: Wände, die im Aufteilungsplan 2014 in KG, EG, 1. OG und 2. OG übereinanderstehen (Überdeckung ≥ 60 %, Toleranz 6 cm), sind als tragend gezeichnet – plausibel, aber ohne Statik/Aufmaß nicht geprüft.
  11
-13.010000000000002
+12.91
  21
 2.3
  31
@@ -36113,7 +36113,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -36127,17 +36127,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-3.75
+3.6500000000000004
  20
 3.0
  30
 0.0
  40
-0.2
+0.12
   1
-WE05 Wand Wohnen/Schlafen: laut Eigentümer wahrscheinlich tragend, als load-bearing gezeichnet; nicht belegt (steht in allen Geschossen übereinander).
+21 WE05 Wand Wohnen/Schlafen: laut Eigentümer wahrscheinlich tragend, als load-bearing gezeichnet; nicht belegt (steht in allen Geschossen übereinander).
  11
-3.75
+3.6500000000000004
  21
 3.0
  31
@@ -36163,7 +36163,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -36177,17 +36177,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-5.3999999999999995
+5.3
  20
 4.31
  30
 0.0
  40
-0.2
+0.12
   1
-WE05 Flurwände (Schlafen/Flur, Küche/Flur und deren Flucht Essen/Wohnen): laut Eigentümer wahrscheinlich tragend, als load-bearing gezeichnet; nicht belegt.
+22 WE05 Flurwände (Schlafen/Flur, Küche/Flur und deren Flucht Essen/Wohnen): laut Eigentümer wahrscheinlich tragend, als load-bearing gezeichnet; nicht belegt.
  11
-5.3999999999999995
+5.3
  21
 4.31
  31
@@ -37297,7 +37297,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T03:06:26.101560+00:00
+0.0 @ 2000-01-01T00:00:00.000000+00:00
   0
 VISUALSTYLE
   5
@@ -43859,7 +43859,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T03:06:26.135565+00:00
+0.0 @ 2000-01-01T00:00:00.000000+00:00
   0
 ENDSEC
   0

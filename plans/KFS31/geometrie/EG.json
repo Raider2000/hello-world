@@ -887,7 +887,7 @@
    "area_stated": 4.55
   },
   {
-   "name": "WE 1 – Bad/WC",
+   "name": "WE 1 – Bad/WC", "area_note": "Plan nennt 6,35, Wände 2026 ergeben ca. 5,2; 2026 „ca. 6 m²“; Aufmaß offen",
    "polygon": [
     [
      21.54,
@@ -1011,7 +1011,7 @@
    "area_stated": 3.5
   },
   {
-   "name": "WE 2 – Wohnen",
+   "name": "WE 2 – Wohnen", "area_note": "Plan 2010 widersprüchlich; Summe Wohnen+Schlafen stimmt",
    "polygon": [
     [
      21.65,
@@ -1067,7 +1067,7 @@
    "area_stated": 3.8
   },
   {
-   "name": "WE 2 – Schlafen",
+   "name": "WE 2 – Schlafen", "area_note": "Plan 2010 widersprüchlich; Summe Wohnen+Schlafen stimmt",
    "polygon": [
     [
      23.3,

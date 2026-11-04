@@ -493,19 +493,19 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461349.1107060187
+2451545.0
   9
 $TDUCREATE
  40
-2458532.153996898
+2451545.0
   9
 $TDUPDATE
  40
-2461349.1107060187
+2451545.0
   9
 $TDUUPDATE
  40
-2458532.1544311
+2451545.0
   9
 $TDINDWG
  40
@@ -933,11 +933,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{457AE59B-3F21-4914-BDB0-A0319067E802}
+{00000000-0000-0000-0000-000000000000}
   9
 $VERSIONGUID
   2
-{18D3B51D-F47B-45B3-98AD-36D9845D37BC}
+{00000000-0000-0000-0000-000000000000}
   9
 $EXTNAMES
 290
@@ -53387,7 +53387,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -53401,17 +53401,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-16.86
+16.759999999999998
  20
 -0.6
  30
 0.0
  40
-0.2
+0.12
   1
-Gesamtmaß Tiefe: Gesamtkette 11,67⁵, alle Teilketten links/rechts summieren aber 11,68. Übernommen: 11,675; die 5 mm sind in den südlichen Raumtiefen (Wohnen/Kind 2: 3,485 statt 3,49; Loggia 3,23 statt 3,235) aufgefangen.
+1 Gesamtmaß Tiefe: Gesamtkette 11,67⁵, alle Teilketten links/rechts summieren aber 11,68. Übernommen: 11,675; die 5 mm sind in den südlichen Raumtiefen (Wohnen/Kind 2: 3,485 statt 3,49; Loggia 3,23 statt 3,235) aufgefangen.
  11
-16.86
+16.759999999999998
  21
 -0.6
  31
@@ -53437,7 +53437,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -53451,17 +53451,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-1.85
+1.75
  20
 9.375
  30
 0.0
  40
-0.2
+0.12
   1
-Treppe: im Scan halbgewendelt mit Schnittlinie, 2 × 16 Stg. 18,1/27 (Lauf von EG und Lauf zum DG überlagert). Stufen nicht gezeichnet (Renderer hat keine freien Linien); nur Treppenauge (BD/DD Treppe, ca. 0,22 × 1,78 m, aus Scan abgegriffen) als Kontur.
+2 Treppe: im Scan halbgewendelt mit Schnittlinie, 2 × 16 Stg. 18,1/27 (Lauf von EG und Lauf zum DG überlagert). Stufen nicht gezeichnet (Renderer hat keine freien Linien); nur Treppenauge (BD/DD Treppe, ca. 0,22 × 1,78 m, aus Scan abgegriffen) als Kontur.
  11
-1.85
+1.75
  21
 9.375
  31
@@ -53487,7 +53487,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -53501,17 +53501,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-7.38
+7.28
  20
 3.425
  30
 0.0
  40
-0.2
+0.12
   1
-Diele-Türen: Kette 17⁵/11/88/28/88/11/17⁵ = 2,61 m, verfügbar 2,58 m (5,79–8,37). Türen symmetrisch zur Wand Wohnen/Kind 2 gesetzt (Stich je ca. 0,095); Pixelmessung bestätigt Lage auf ±2 cm.
+3 Diele-Türen: Kette 17⁵/11/88/28/88/11/17⁵ = 2,61 m, verfügbar 2,58 m (5,79–8,37). Türen symmetrisch zur Wand Wohnen/Kind 2 gesetzt (Stich je ca. 0,095); Pixelmessung bestätigt Lage auf ±2 cm.
  11
-7.38
+7.28
  21
 3.425
  31
@@ -53537,7 +53537,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -53551,17 +53551,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-5.875
+5.775
  20
 6.075
  30
 0.0
  40
-0.2
+0.12
   1
-Kamin 40/70: x laut Kette (43 bis Küchenwand Ost), Tiefe 0,70 und Lage an der Küchennordwand aus Bezeichnung/Scan abgegriffen.
+4 Kamin 40/70: x laut Kette (43 bis Küchenwand Ost), Tiefe 0,70 und Lage an der Küchennordwand aus Bezeichnung/Scan abgegriffen.
  11
-5.875
+5.775
  21
 6.075
  31
@@ -53587,7 +53587,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -53601,17 +53601,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-5.35
+5.25
  20
 10.275
  30
 0.0
  40
-0.2
+0.12
   1
-Trockenbauwand WC/Dusche bzw. Installationsvorwände WC (20 cm), Dusche gehört laut Eigentümer zum Bad: Breite laut Kette oben (0,20), Lage der Nordvorwand (yd 1,455–1,655) aus Scan abgegriffen; Bad 7,54 / WC 1,50 m² bestätigen die Lage. WC/AR-Stempel stehen im Scan auf dem Flachdach.
+5 Trockenbauwand WC/Dusche bzw. Installationsvorwände WC (20 cm), Dusche gehört laut Eigentümer zum Bad: Breite laut Kette oben (0,20), Lage der Nordvorwand (yd 1,455–1,655) aus Scan abgegriffen; Bad 7,54 / WC 1,50 m² bestätigen die Lage. WC/AR-Stempel stehen im Scan auf dem Flachdach.
  11
-5.35
+5.25
  21
 10.275
  31
@@ -53637,7 +53637,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -53651,17 +53651,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-3.4099999999999997
+3.31
  20
 9.675
  30
 0.0
  40
-0.2
+0.12
   1
-Schacht BD/DD E 20/20 im AR: Kontur 0,30 × 0,85 aus Kette (30) und Scan abgegriffen.
+6 Schacht BD/DD E 20/20 im AR: Kontur 0,30 × 0,85 aus Kette (30) und Scan abgegriffen.
  11
-3.4099999999999997
+3.31
  21
 9.675
  31
@@ -53687,7 +53687,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -53701,17 +53701,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-3.29
+3.1900000000000004
  20
 14.575
  30
 0.0
  40
-0.2
+0.12
   1
-Flachdach (begrünt) nördlich vor AR/Bad: keine Maßkette, Kontur (ca. 5,975 × 3,04 m, Außenlinie der Doppellinie) aus dem Scan abgegriffen.
+7 Flachdach (begrünt) nördlich vor AR/Bad: keine Maßkette, Kontur (ca. 5,975 × 3,04 m, Außenlinie der Doppellinie) aus dem Scan abgegriffen.
  11
-3.29
+3.1900000000000004
  21
 14.575
  31
@@ -53737,7 +53737,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -53751,17 +53751,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-0.27
+0.17
  20
 0.675
  30
 0.0
  40
-0.2
+0.12
   1
-Loggia/Balkon 2: gezeichnet bis Innenkante Geländer (2,07 × 3,23 = 6,69 m²); BF 6,88 laut Plan bezieht vermutlich Geländerachse ein. Geländer 10 cm als graue Brüstung dargestellt (Detail BA.03, 06).
+8 Loggia/Balkon 2: gezeichnet bis Innenkante Geländer (2,07 × 3,23 = 6,69 m²); BF 6,88 laut Plan bezieht vermutlich Geländerachse ein. Geländer 10 cm als graue Brüstung dargestellt (Detail BA.03, 06).
  11
-0.27
+0.17
  21
 0.675
  31
@@ -53787,7 +53787,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -53801,17 +53801,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-13.020000000000001
+12.92
  20
 1.475
  30
 0.0
  40
-0.2
+0.12
   1
-Balkon 1: gezeichnet bis Innenkante Geländer (1,52 × 4,75 = 7,22 m²); BF 7,37 laut Plan (= 1,52 × 4,85, also bis Geländerachse in Längsrichtung?). Balkonplatte Nord/Süd-Rand (5,63 / 10,58) aus Scan abgegriffen.
+9 Balkon 1: gezeichnet bis Innenkante Geländer (1,52 × 4,75 = 7,22 m²); BF 7,37 laut Plan (= 1,52 × 4,85, also bis Geländerachse in Längsrichtung?). Balkonplatte Nord/Süd-Rand (5,63 / 10,58) aus Scan abgegriffen.
  11
-13.020000000000001
+12.92
  21
 1.475
  31
@@ -53837,7 +53837,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -53851,17 +53851,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-4.5
+4.4
  20
 3.905
  30
 0.0
  40
-0.2
+0.12
   1
-Übergang Küche/Wohnen offen (keine Wand im Scan). Raumgrenze bei yd 7,715 (Kette 2,90 links); die Teilkette 3,01 links endet bei 7,825 (vermutlich Unterzug/Belagwechsel, nicht gezeichnet).
+10 Übergang Küche/Wohnen offen (keine Wand im Scan). Raumgrenze bei yd 7,715 (Kette 2,90 links); die Teilkette 3,01 links endet bei 7,825 (vermutlich Unterzug/Belagwechsel, nicht gezeichnet).
  11
-4.5
+4.4
  21
 3.905
  31
@@ -53887,7 +53887,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -53901,17 +53901,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-8.583
+8.482999999999999
  20
 10.675
  30
 0.0
  40
-0.2
+0.12
   1
-Wandtypen: 24er und 17,5er Innenwände (KS) als tragend angenommen, 11,5er und Vorwände als nichttragend. Im Scan nicht ausdrücklich unterschieden (nur Bezeichnungen 'Innenwand KS 2,0/12/IIa' bzw. 'KS 1,2/12/IIa').
+11 Wandtypen: 24er und 17,5er Innenwände (KS) als tragend angenommen, 11,5er und Vorwände als nichttragend. Im Scan nicht ausdrücklich unterschieden (nur Bezeichnungen 'Innenwand KS 2,0/12/IIa' bzw. 'KS 1,2/12/IIa').
  11
-8.583
+8.482999999999999
  21
 10.675
  31
@@ -53937,7 +53937,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -53951,17 +53951,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
--0.6100000000000001
+-0.71
  20
 11.175
  30
 0.0
  40
-0.2
+0.12
   1
-Vordach (Beton-FT 22 cm, Detail BA.04) gehört zum EG-Eingang; Tiefe 1,82 ab Außenkante Dämmung, Länge laut Kette links (0,265 / 4,50).
+12 Vordach (Beton-FT 22 cm, Detail BA.04) gehört zum EG-Eingang; Tiefe 1,82 ab Außenkante Dämmung, Länge laut Kette links (0,265 / 4,50).
  11
--0.6100000000000001
+-0.71
  21
 11.175
  31
@@ -53987,7 +53987,7 @@ AcDbCircle
  30
 0.0
  40
-0.25
+0.15
   0
 TEXT
   5
@@ -54001,17 +54001,17 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-0.8
+0.7
  20
 5.475
  30
 0.0
  40
-0.2
+0.12
   1
-Raumpolygone = Rohbau-Innenkanten laut Ketten; NF im Stempel sind Fertigmaße (Putzabzug), daher berechnet meist +1…3 %.
+13 Raumpolygone = Rohbau-Innenkanten laut Ketten; NF im Stempel sind Fertigmaße (Putzabzug), daher berechnet meist +1…3 %.
  11
-0.8
+0.7
  21
 5.475
  31
@@ -55121,7 +55121,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T02:39:25.619323+00:00
+0.0 @ 2000-01-01T00:00:00.000000+00:00
   0
 VISUALSTYLE
   5
@@ -61683,7 +61683,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T02:39:25.705217+00:00
+0.0 @ 2000-01-01T00:00:00.000000+00:00
   0
 ENDSEC
   0
