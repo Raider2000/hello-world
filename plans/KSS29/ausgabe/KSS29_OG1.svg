@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="374.7mm" height="342.6mm" viewBox="0 0 374.7 342.6">
+<svg xmlns="http://www.w3.org/2000/svg" width="374.7mm" height="345.4mm" viewBox="0 0 374.7 345.4">
 <title>KSS29 – 1. Obergeschoss – Kastenssestraße 29</title>
 <style>text{font-family:Arial,Helvetica,sans-serif}</style>
 <rect width="100%" height="100%" fill="#ffffff"/>
@@ -137,6 +137,55 @@
 <path d="M221.32,157.55 A8.85,8.85 0 0 1 212.47,166.40" stroke-dasharray="1,0.8"/>
 <path d="M174.32,138.29 A7.60,7.60 0 0 0 181.92,130.69" stroke-dasharray="1,0.8"/>
 <path d="M191.88,139.54 A8.85,8.85 0 0 0 200.72,130.69" stroke-dasharray="1,0.8"/>
+</g>
+<g id="A_TREPPE" stroke="#000" stroke-width="0.12" fill="none">
+<line x1="132.47" y1="132.35" x2="142.73" y2="132.35"/>
+<line x1="132.64" y1="129.75" x2="142.73" y2="129.75"/>
+<line x1="132.97" y1="127.15" x2="142.73" y2="127.15"/>
+<line x1="133.31" y1="124.45" x2="142.73" y2="124.45"/>
+<line x1="133.63" y1="121.85" x2="142.73" y2="121.85"/>
+<line x1="132.47" y1="135.15" x2="142.73" y2="135.15"/>
+<line x1="142.73" y1="135.15" x2="142.73" y2="113.65"/>
+<line x1="142.73" y1="132.15" x2="146.07" y2="132.15"/>
+<line x1="146.07" y1="132.15" x2="146.07" y2="113.65"/>
+<line x1="134.38" y1="118.45" x2="142.73" y2="120.05"/>
+<line x1="134.77" y1="115.35" x2="142.73" y2="118.55"/>
+<line x1="135.07" y1="112.25" x2="142.73" y2="116.95"/>
+<line x1="135.57" y1="107.95" x2="142.73" y2="116.15"/>
+<line x1="135.28" y1="109.25" x2="139.77" y2="119.85"/>
+<line x1="138.81" y1="105.95" x2="142.73" y2="113.45"/>
+<line x1="142.57" y1="105.35" x2="143.78" y2="113.65"/>
+<line x1="146.07" y1="104.95" x2="144.47" y2="114.15"/>
+<line x1="146.68" y1="104.95" x2="144.77" y2="113.85"/>
+<line x1="150.67" y1="104.25" x2="145.88" y2="113.55"/>
+<line x1="155.67" y1="111.05" x2="145.78" y2="115.45"/>
+<line x1="155.78" y1="114.55" x2="146.18" y2="118.45"/>
+<line x1="146.07" y1="120.65" x2="155.78" y2="120.65"/>
+<line x1="132.78" y1="135.05" x2="155.78" y2="103.05"/>
+<line x1="137.27" y1="114.75" x2="137.27" y2="131.55"/>
+<line x1="151.48" y1="114.75" x2="151.36" y2="113.60"/>
+<line x1="151.36" y1="113.60" x2="151.04" y2="112.49"/>
+<line x1="151.04" y1="112.49" x2="150.52" y2="111.45"/>
+<line x1="150.52" y1="111.45" x2="149.81" y2="110.51"/>
+<line x1="149.81" y1="110.51" x2="148.94" y2="109.69"/>
+<line x1="148.94" y1="109.69" x2="147.93" y2="109.03"/>
+<line x1="147.93" y1="109.03" x2="146.80" y2="108.55"/>
+<line x1="146.80" y1="108.55" x2="145.60" y2="108.25"/>
+<line x1="145.60" y1="108.25" x2="144.38" y2="108.15"/>
+<line x1="144.38" y1="108.15" x2="143.14" y2="108.25"/>
+<line x1="143.14" y1="108.25" x2="141.94" y2="108.55"/>
+<line x1="141.94" y1="108.55" x2="140.82" y2="109.03"/>
+<line x1="140.82" y1="109.03" x2="139.81" y2="109.69"/>
+<line x1="139.81" y1="109.69" x2="138.94" y2="110.51"/>
+<line x1="138.94" y1="110.51" x2="138.22" y2="111.45"/>
+<line x1="138.22" y1="111.45" x2="137.70" y2="112.49"/>
+<line x1="137.70" y1="112.49" x2="137.38" y2="113.60"/>
+<line x1="137.38" y1="113.60" x2="137.27" y2="114.75"/>
+<line x1="151.48" y1="114.75" x2="151.48" y2="116.35"/>
+<polygon points="132.47,103.05 155.78,103.05 135.57,106.25 132.47,131.15" fill="#000"/>
+<polygon points="136.57,131.55 137.97,131.55 137.27,132.65" fill="#000"/>
+<polygon points="145.78,108.45 146.77,107.75 146.57,109.35" fill="#000"/>
+<circle cx="151.48" cy="116.35" r="0.40" fill="#fff"/>
 </g>
 <g id="A_BEMASSUNG" stroke="#333" stroke-width="0.13" font-size="2.2" fill="#333">
 <line x1="158.38" y1="63.40" x2="161.38" y2="63.40"/>
@@ -929,11 +978,9 @@
 <text x="122.93" y="162.60" font-size="2.2">2. Rettungsweg</text>
 <text x="159.88" y="126.90" font-weight="bold"> </text>
 <text x="143.98" y="133.90" font-weight="bold"> </text>
-<text x="144.27" y="107.90" font-size="1.8" text-anchor="middle" font-weight="bold">Treppe gewendelt</text>
-<text x="144.27" y="110.90" font-size="1.6" text-anchor="middle">2 × 16 Stg. 18,1/27</text>
-<text x="137.78" y="125.40" font-size="1.4" text-anchor="middle">Lauf West</text>
-<text x="150.47" y="117.40" font-size="1.4" text-anchor="middle">Lauf Ost</text>
-<text x="144.27" y="132.40" font-size="1.2" text-anchor="middle">Treppenauge (BD/DD)</text>
+<text x="151.18" y="123.15" font-size="1.0" text-anchor="middle" font-weight="bold">Treppe gewendelt</text>
+<text x="151.18" y="124.75" font-size="1.0" text-anchor="middle">2 × 16 Stg. 18,1/27</text>
+<text x="151.18" y="127.15" font-size="1.0" text-anchor="middle">Auge (BD/DD)</text>
 <text x="144.27" y="136.90" font-size="1.4" text-anchor="middle">Podest</text>
 <text x="186.27" y="156.90" font-size="1.4" text-anchor="end">Kamin 40/70</text>
 <text x="159.88" y="119.90" font-size="1.1" text-anchor="middle">Schacht E 20/20</text>
@@ -976,17 +1023,18 @@
 </g>
 <g id="LEGENDE_UNGEPRUEFT" font-size="1.8" fill="#333"><text x="69.0" y="305.3" font-weight="bold" fill="#d00000">Ungeprüfte bzw. angenommene Werte</text>
 <text x="69.0" y="308.2">1 Gesamtmaß Tiefe: Gesamtkette 11,67⁵, alle Teilketten links/rechts summieren aber 11,68. Übernommen: 11,675; die 5 mm sind in den südlichen Raumtiefen (Wohnen/Kind 2: 3,485 statt 3,49; Loggia 3,23 statt 3,235) aufgefangen.</text>
-<text x="69.0" y="310.9">2 Treppe: im Scan halbgewendelt mit Schnittlinie, 2 × 16 Stg. 18,1/27 (Lauf von EG und Lauf zum DG überlagert). Stufen nicht gezeichnet (Renderer hat keine freien Linien); nur Treppenauge (BD/DD Treppe, ca. 0,22 × 1,78 m, aus Scan abgegriffen) als Kontur.</text>
-<text x="69.0" y="313.6">3 Diele-Türen: Kette 17⁵/11/88/28/88/11/17⁵ = 2,61 m, verfügbar 2,58 m (5,79–8,37). Türen symmetrisch zur Wand Wohnen/Kind 2 gesetzt (Stich je ca. 0,095); Pixelmessung bestätigt Lage auf ±2 cm.</text>
-<text x="69.0" y="316.3">4 Kamin 40/70: x laut Kette (43 bis Küchenwand Ost), Tiefe 0,70 und Lage an der Küchennordwand aus Bezeichnung/Scan abgegriffen.</text>
-<text x="69.0" y="319.0">5 Trockenbauwand WC/Dusche bzw. Installationsvorwände WC (20 cm), Dusche gehört laut Eigentümer zum Bad: Breite laut Kette oben (0,20), Lage der Nordvorwand (yd 1,455–1,655) aus Scan abgegriffen; Bad 7,54 / WC 1,50 m² bestätigen die Lage. WC/AR-Stempel stehen im Scan auf dem Flachdach.</text>
-<text x="69.0" y="321.7">6 Schacht BD/DD E 20/20 im AR: Kontur 0,30 × 0,85 aus Kette (30) und Scan abgegriffen.</text>
-<text x="69.0" y="324.4">7 Flachdach (begrünt) nördlich vor AR/Bad: keine Maßkette, Kontur (ca. 5,975 × 3,04 m, Außenlinie der Doppellinie) aus dem Scan abgegriffen.</text>
-<text x="69.0" y="327.1">8 Loggia/Balkon 2: gezeichnet bis Innenkante Geländer (2,07 × 3,23 = 6,69 m²); BF 6,88 laut Plan bezieht vermutlich Geländerachse ein. Geländer 10 cm als graue Brüstung dargestellt (Detail BA.03, 06).</text>
-<text x="69.0" y="329.8">9 Balkon 1: gezeichnet bis Innenkante Geländer (1,52 × 4,75 = 7,22 m²); BF 7,37 laut Plan (= 1,52 × 4,85, also bis Geländerachse in Längsrichtung?). Balkonplatte Nord/Süd-Rand (5,63 / 10,58) aus Scan abgegriffen.</text>
-<text x="69.0" y="332.5">10 Übergang Küche/Wohnen offen (keine Wand im Scan). Raumgrenze bei yd 7,715 (Kette 2,90 links); die Teilkette 3,01 links endet bei 7,825 (vermutlich Unterzug/Belagwechsel, nicht gezeichnet).</text>
-<text x="69.0" y="335.2">11 Wandtypen: 24er und 17,5er Innenwände (KS) als tragend angenommen, 11,5er und Vorwände als nichttragend. Im Scan nicht ausdrücklich unterschieden (nur Bezeichnungen 'Innenwand KS 2,0/12/IIa' bzw. 'KS 1,2/12/IIa').</text>
-<text x="69.0" y="337.9">12 Vordach (Beton-FT 22 cm, Detail BA.04) gehört zum EG-Eingang; Tiefe 1,82 ab Außenkante Dämmung, Länge laut Kette links (0,265 / 4,50).</text>
-<text x="69.0" y="340.6">13 Raumpolygone = Rohbau-Innenkanten laut Ketten; NF im Stempel sind Fertigmaße (Putzabzug), daher berechnet meist +1…3 %.</text>
+<text x="69.0" y="310.9">2 Treppe (Symbol, Layer A_TREPPE): im Scan sind Lauf EG→OG und Lauf OG→DG überlagert gezeichnet (je 16 Stg. 18,1/27, halbgewendelt, Schnittlinie diagonal). Gerade Stufen West (5 Stück, Teilung ca. 0,265 m), Wendelstufen West/Ost, Lauflinie mit Bogen und Pfeil sowie Treppenauge (BD/DD, ca. 0,22 × 1,78 m) aus dem Scan abgegriffen (±5 cm). Die</text>
+<text x="72.0" y="313.6">Gesamtzahl 2 × 16 ist wegen der Überlagerung nicht auszählbar; Lage der Wendelstufen und der Ost-Stufen schematisch, Podestkante Ost (y 9,55) und der dunkle Keil an West-/Nordwand (Treppenwange/Schnitt, Bedeutung im Scan nicht beschriftet) nur grob übernommen.</text>
+<text x="69.0" y="316.3">3 Diele-Türen: Kette 17⁵/11/88/28/88/11/17⁵ = 2,61 m, verfügbar 2,58 m (5,79–8,37). Türen symmetrisch zur Wand Wohnen/Kind 2 gesetzt (Stich je ca. 0,095); Pixelmessung bestätigt Lage auf ±2 cm.</text>
+<text x="69.0" y="319.0">4 Kamin 40/70: x laut Kette (43 bis Küchenwand Ost), Tiefe 0,70 und Lage an der Küchennordwand aus Bezeichnung/Scan abgegriffen.</text>
+<text x="69.0" y="321.7">5 Trockenbauwand WC/Dusche bzw. Installationsvorwände WC (20 cm), Dusche gehört laut Eigentümer zum Bad: Breite laut Kette oben (0,20), Lage der Nordvorwand (yd 1,455–1,655) aus Scan abgegriffen; Bad 7,54 / WC 1,50 m² bestätigen die Lage. WC/AR-Stempel stehen im Scan auf dem Flachdach.</text>
+<text x="69.0" y="324.4">6 Schacht BD/DD E 20/20 im AR: Kontur 0,30 × 0,85 aus Kette (30) und Scan abgegriffen.</text>
+<text x="69.0" y="327.1">7 Flachdach (begrünt) nördlich vor AR/Bad: keine Maßkette, Kontur (ca. 5,975 × 3,04 m, Außenlinie der Doppellinie) aus dem Scan abgegriffen.</text>
+<text x="69.0" y="329.8">8 Loggia/Balkon 2: gezeichnet bis Innenkante Geländer (2,07 × 3,23 = 6,69 m²); BF 6,88 laut Plan bezieht vermutlich Geländerachse ein. Geländer 10 cm als graue Brüstung dargestellt (Detail BA.03, 06).</text>
+<text x="69.0" y="332.5">9 Balkon 1: gezeichnet bis Innenkante Geländer (1,52 × 4,75 = 7,22 m²); BF 7,37 laut Plan (= 1,52 × 4,85, also bis Geländerachse in Längsrichtung?). Balkonplatte Nord/Süd-Rand (5,63 / 10,58) aus Scan abgegriffen.</text>
+<text x="69.0" y="335.2">10 Übergang Küche/Wohnen offen (keine Wand im Scan). Raumgrenze bei yd 7,715 (Kette 2,90 links); die Teilkette 3,01 links endet bei 7,825 (vermutlich Unterzug/Belagwechsel, nicht gezeichnet).</text>
+<text x="69.0" y="337.9">11 Wandtypen: 24er und 17,5er Innenwände (KS) als tragend angenommen, 11,5er und Vorwände als nichttragend. Im Scan nicht ausdrücklich unterschieden (nur Bezeichnungen 'Innenwand KS 2,0/12/IIa' bzw. 'KS 1,2/12/IIa').</text>
+<text x="69.0" y="340.6">12 Vordach (Beton-FT 22 cm, Detail BA.04) gehört zum EG-Eingang; Tiefe 1,82 ab Außenkante Dämmung, Länge laut Kette links (0,265 / 4,50).</text>
+<text x="69.0" y="343.3">13 Raumpolygone = Rohbau-Innenkanten laut Ketten; NF im Stempel sind Fertigmaße (Putzabzug), daher berechnet meist +1…3 %.</text>
 </g>
 </svg>

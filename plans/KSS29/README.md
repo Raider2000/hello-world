@@ -72,5 +72,4 @@ Neu erzeugter Dashboard-Hintergrund aus der Neuzeichnung: [`dashboard/`](dashboa
 - Weitere Geschosse: keine Quellen vorhanden.
 - OG1: Gesamtmaß Tiefe 11,67⁵ ↔ Summe aller Teilketten 11,68 (5 mm in den Südräumen aufgefangen).
 - OG1: Balkonflächen (BF 6,88 / 7,37) nur mit Geländerachse erreichbar, gezeichnet bis Innenkante Geländer.
-- OG1: Treppenstufen nicht gezeichnet (der Renderer kennt keine freien Linien), nur Treppenauge und Hinweise.
 - Alle weiteren Annahmen stehen in `geometrie/OG1.json` unter `unverified`.
