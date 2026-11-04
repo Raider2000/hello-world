@@ -59,7 +59,6 @@
 ## Offene Punkte
 
 - Weitere Geschosse: keine Quellen vorhanden.
-- Schreibweise des Straßennamens laut Dateiname („Kastenssestrasse“) bitte bestätigen.
 - OG1: Gesamtmaß Tiefe 11,67⁵ ↔ Summe aller Teilketten 11,68 (5 mm in den Südräumen aufgefangen).
 - OG1: Treppenhaus-NF 4,49 m² passt nicht zur Grundfläche (9,91 m²), Bezug unklar.
 - OG1: Bedeutung des gestrichelten Rechtecks vor dem Küchenfenster („Rollladen 2.RW“) unklar.
