@@ -330,6 +330,9 @@ let S = structuredClone(DEFAULTS);
 let furniture = [];   // {uid,type,x,y,rot,w,d,h,color}
 let pictures = [];    // {uid,src,x,y,z,nx,ny,width,aspect,frame}
 let example = true;
+const EXAMPLE_VERSION = 2;       // erhöhen, wenn sich die Beispiel-Einrichtung ändert
+let exampleVersion = EXAMPLE_VERSION;
+const examplePictures = () => [{ uid: uid('b'), src: exampleArt(), aspect: 4 / 3, x: 9.98, y: 11.31, z: 1.45, nx: 0, ny: -1, width: 1.0, frame: 'galerie' }];
 
 function loadState() {
   try {
@@ -345,10 +348,11 @@ function applyProject(o, keepSettings) {
   furniture = Array.isArray(o.furniture) ? o.furniture : [];
   pictures = Array.isArray(o.pictures) ? o.pictures : [];
   example = !!o.example;
+  exampleVersion = o.exampleVersion || 1;
 }
 function project() {
   return { app: 'raumplaner', version: 1, object: META.object, floor: META.floor, saved: new Date().toISOString(),
-    example, settings: { ...S, walk: { ...S.walk } }, furniture, pictures };
+    example, exampleVersion, settings: { ...S, walk: { ...S.walk } }, furniture, pictures };
 }
 let saveTimer = 0;
 function save() {
@@ -485,26 +489,25 @@ function canvasTex(size, draw, repeat = 1) {
 }
 let seed = 7;
 const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
-const parkett = canvasTex(1024, (g, s) => {           // 1 m × 1 m, Dielen 16,7 cm, versetzt
-  const rows = 6, rh = s / rows;
+const parkett = canvasTex(1024, (g, s) => {           // 0,98 m × 0,98 m: Stabparkett Eiche hell 7 × 49 cm, Schiffsverband
+  const rows = 14, rh = s / rows, len = s / 2;
   for (let r = 0; r < rows; r++) {
-    let x = -rnd() * s;
-    while (x < s) {
-      const len = s * (0.55 + rnd() * 0.6);
-      const l = 46 + rnd() * 10, hue = 28 + rnd() * 6;
-      g.fillStyle = `hsl(${hue} 42% ${l}%)`; g.fillRect(x, r * rh, len, rh);
-      g.globalAlpha = 0.12;
-      for (let k = 0; k < 14; k++) { g.fillStyle = rnd() > 0.5 ? '#3b2412' : '#f3d9b8'; g.fillRect(x, r * rh + rnd() * rh, len, 1 + rnd() * 2); }
-      g.globalAlpha = 1; g.fillStyle = 'rgba(40,25,10,0.45)'; g.fillRect(x, r * rh, 2, rh);
-      x += len;
+    const off = (r % 2 ? 0.5 : 0) * len + (rnd() - 0.5) * len * 0.3;
+    for (let k = -1; k < 3; k++) {
+      const x = off + k * len;
+      const l = 70 + rnd() * 9, hue = 33 + rnd() * 5, sat = 38 + rnd() * 14;
+      g.fillStyle = `hsl(${hue} ${sat}% ${l}%)`; g.fillRect(x, r * rh, len, rh);
+      g.globalAlpha = 0.09;
+      for (let q = 0; q < 9; q++) { g.fillStyle = rnd() > 0.5 ? '#6b4a2a' : '#fff3df'; g.fillRect(x, r * rh + rnd() * rh, len, 1 + rnd() * 1.5); }
+      g.globalAlpha = 1; g.fillStyle = 'rgba(90,62,35,0.35)'; g.fillRect(x, r * rh, 1.5, rh);
     }
-    g.fillStyle = 'rgba(40,25,10,0.5)'; g.fillRect(0, r * rh, s, 2);
+    g.fillStyle = 'rgba(90,62,35,0.35)'; g.fillRect(0, r * rh, s, 1.5);
   }
-});
-const fliese = canvasTex(512, (g, s) => {             // 1,2 m: 2 × 2 Platten 60 × 60
-  g.fillStyle = '#9b9890'; g.fillRect(0, 0, s, s);
+}, 1 / 0.98);
+const fliese = canvasTex(512, (g, s) => {             // 1,2 m: 2 × 2 Platten 60 × 60, hellgrau
+  g.fillStyle = '#b9b8b3'; g.fillRect(0, 0, s, s);
   for (let i = 0; i < 2; i++) for (let j = 0; j < 2; j++) {
-    const l = 66 + rnd() * 4; g.fillStyle = `hsl(40 5% ${l}%)`; g.fillRect(i * s / 2 + 2, j * s / 2 + 2, s / 2 - 4, s / 2 - 4);
+    const l = 80 + rnd() * 2; g.fillStyle = `hsl(45 3% ${l}%)`; g.fillRect(i * s / 2 + 1.5, j * s / 2 + 1.5, s / 2 - 3, s / 2 - 3);
   }
 }, 1 / 1.2);
 
@@ -533,9 +536,10 @@ function prepareModel(root) {
     if (o.userData.ceiling) { ceiling = o; o.traverse((c) => c.layers.set(1)); }
     if (o.name === 'Umgebung') context = o;
     if (o.userData.door) doors.push({ obj: o, closed: o.userData.yawClosed, open: o.userData.yawOpen, t: 1 });
-    if (o.isPointLight) {
+    if (o.isPointLight || o.isSpotLight) {
       const room = flag(o, 'room');
-      o.userData.baseCd = o.intensity; o.decay = 2; o.distance = 7; o.castShadow = false; o.position.y -= 0.13;
+      o.userData.baseCd = o.intensity; o.decay = 2; o.distance = 7; o.castShadow = false;
+      if (o.isPointLight) o.position.y -= 0.13; else { o.penumbra = 0.5; o.userData.spot = true; }
       o.shadow.mapSize.set(256, 256); o.shadow.bias = -0.003;
       const lampMesh = o.parent && o.parent.isMesh ? o.parent : o.parent?.children.find((c) => c.isMesh);
       lamps.push({ light: o, room, mesh: o.parent });
@@ -733,12 +737,14 @@ function exampleFurniture() {
   // rot: Blickrichtung der Vorderseite, im Uhrzeigersinn ab Süd (0 = Süd, 90 = West, 180 = Nord, 270 = Ost)
   return [
     F('bett160', 9.98, 10.29, 0), F('nachttisch', 8.86, 11.08, 0), F('nachttisch', 11.1, 11.08, 0),
-    F('schrank', 10.3, 7.09, 180),
-    F('sofa', 6.53, 2.1, 90), F('couchtisch', 5.35, 2.1, 90), F('teppich', 5.3, 2.1, 90),
-    F('sessel', 3.9, 1.0, 225), F('regal', 1.55, 3.52, 270), F('pflanze', 6.6, 0.75, 0),
-    F('kueche', 2.15, 6.56, 180, { w: 3.4 }), F('esstisch', 3.1, 4.75, 0),
-    F('stuhl', 2.65, 5.36, 0), F('stuhl', 3.55, 5.36, 0), F('stuhl', 2.65, 4.14, 180), F('stuhl', 3.55, 4.14, 180),
-    F('schreibtisch', 11.19, 5.25, 90), F('buerostuhl', 10.55, 5.25, 270), F('regal', 9.5, 4.21, 180, { w: 1.2 }),
+    F('schrank', 9.9825, 7.075, 180, { w: 3.225, h: 2.55 }),                       // Wandschrank, durchgehend
+    F('tv', 6.81, 2.1, 90, { w: 1.4 }),                                             // kleines Sideboard mit 55-Zoll-TV
+    F('sofa', 4.2, 2.1, 270), F('couchtisch', 5.45, 2.1, 90), F('teppich', 5.2, 2.1, 90),
+    F('esstisch', 2.45, 2.1, 90),                                                   // neben der Couch, Nord-Süd
+    F('stuhl', 1.75, 1.7, 270), F('stuhl', 1.75, 2.5, 270), F('stuhl', 3.15, 1.7, 90), F('stuhl', 3.15, 2.5, 90),
+    F('regal', 1.55, 3.52, 270), F('pflanze', 6.75, 0.7, 0),
+    F('kueche', 2.15, 6.56, 180, { w: 3.4 }),
+    F('schreibtisch', 10.3, 6.26, 0), F('buerostuhl', 10.3, 5.6, 180), F('regal', 9.5, 4.21, 180, { w: 1.2 }),
     F('bett90', 7.6, 1.38, 180), F('kommode', 10.6, 3.6, 180), F('stehlampe', 11.3, 0.65, 0),
     F('waschtisch', 7.955, 10.3, 90, { w: 0.9 }),
   ];
@@ -875,7 +881,7 @@ function updateLamps() {
   for (const L of lamps) {
     const on = lampsActive && S.roomLights[L.room] !== false;
     L.light.visible = on; L.light.intensity = L.light.userData.baseCd * k; L.light.color.set(col);
-    L.light.castShadow = on && S.hq;
+    L.light.castShadow = on && S.hq && !L.light.userData.spot;
     L.mesh.traverse((o) => { if (o.isMesh && o.material.name === 'Leuchte') { o.material.emissiveIntensity = on ? 1.5 : 0; } });
   }
   furnGroup.traverse((o) => {
@@ -1372,10 +1378,11 @@ function frame() {
     $('#title').firstChild.textContent = META.object || 'Modell';
     $('#subtitle').textContent = (META.title || '').split('–')[0].trim() || META.floor;
     const restored = loadState();
-    if (!restored) {
+    const outdated = restored && example && exampleVersion < EXAMPLE_VERSION;   // unveränderte alte Beispiel-Einrichtung
+    if (!restored || outdated) {
       furniture = exampleFurniture();
-      pictures = [{ uid: uid('b'), src: exampleArt(), aspect: 4 / 3, x: 7.02, y: 2.1, z: 1.55, nx: -1, ny: 0, width: 1.0, frame: 'galerie' }];
-      example = true;
+      pictures = examplePictures();
+      example = true; exampleVersion = EXAMPLE_VERSION;
     }
     cam.fov = S.fov; cam.updateProjectionMatrix();
     const root = await loadModel();
@@ -1386,7 +1393,7 @@ function frame() {
     renderer.setAnimationLoop(frame);
     clearTimeout(window.__loadTimer);
     $('#loading').hidden = true;
-    if (!restored) save();
+    if (!restored || outdated) save();
     window.raumplaner = { get state() { return S; }, setMode, goRoom, rooms: META.rooms, update: () => { syncControls(); updateSun(); } };
   } catch (err) {
     console.error(err);

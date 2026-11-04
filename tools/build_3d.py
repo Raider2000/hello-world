@@ -13,6 +13,7 @@ Das GLB ist ein offenes Format: Blender (Datei > Importieren > glTF 2.0), three.
 Unity usw. lesen es direkt. Jeder Knoten trägt einen sprechenden Namen (Wand_*, Boden_*,
 Tuer_*, Fenster_*, Licht_*), Materialnamen sind einheitlich (Wand_weiss, Boden_Parkett, ...).
 Höhen und Annahmen: siehe HOEHEN unten und plans/<Objekt>/3d/README.md.
+Optional: plans/<Objekt>/3d/ausstattung.json (Deckenspots je Raum, Bodenfarben, Balkonbrüstung).
 Nur Standardbibliothek, keine Abhängigkeiten.
 """
 from __future__ import annotations
@@ -56,6 +57,7 @@ FARBEN = {  # Materialname -> (RGBA linear-sRGB grob, metallic, roughness)
     "Boden_Treppenhaus": ((0.50, 0.50, 0.50, 1.0), 0.0, 0.7),
     "Balkon_Beton": ((0.60, 0.60, 0.58, 1.0), 0.0, 0.9),
     "Gelaender_Metall": ((0.25, 0.26, 0.28, 1.0), 0.6, 0.4),
+    "Bruestung_Platte": ((0.55, 0.55, 0.53, 1.0), 0.0, 0.8),
     "Fassade_Putz": ((0.86, 0.84, 0.80, 1.0), 0.0, 0.95),
     "Dach_Begruent": ((0.20, 0.32, 0.12, 1.0), 0.0, 1.0),
     "Gelaende_Rasen": ((0.18, 0.30, 0.10, 1.0), 0.0, 1.0),
@@ -256,7 +258,7 @@ class Gltf:
         return len(self.doc["meshes"]) - 1
 
     def node(self, name, mesh: Mesh | None = None, parent=None, origin=(0.0, 0.0, 0.0),
-             yaw=0.0, extras=None, light=None):
+             yaw=0.0, extras=None, light=None, rotation=None):
         n = {"name": name}
         if mesh is not None and not mesh.empty():
             n["mesh"] = self.mesh(name, mesh)  # Netz in Knoten-Koordinaten
@@ -264,6 +266,8 @@ class Gltf:
             n["translation"] = [origin[0], origin[2], -origin[1]]
         if yaw:
             n["rotation"] = [0.0, math.sin(yaw / 2), 0.0, math.cos(yaw / 2)]
+        if rotation:
+            n["rotation"] = list(rotation)
         if extras:
             n["extras"] = extras
         if light is not None:
@@ -279,6 +283,15 @@ class Gltf:
     def point_light(self, name, lumen=1000, color=(1.0, 0.85, 0.65)):
         self.lights.append({"name": name, "type": "point", "color": list(color),
                             "intensity": round(lumen / (4 * math.pi), 2), "range": 12.0})
+        return len(self.lights) - 1
+
+    def spot_light(self, name, lumen=400, beam_deg=60, color=(1.0, 0.85, 0.65)):
+        """Einbauspot, strahlt entlang -Z des Knotens. Lichtstärke aus Lichtstrom und Kegel."""
+        outer = math.radians(beam_deg / 2)
+        cd = lumen / (2 * math.pi * (1 - math.cos(outer)))
+        self.lights.append({"name": name, "type": "spot", "color": list(color), "intensity": round(cd, 1),
+                            "range": 8.0, "spot": {"innerConeAngle": round(outer * 0.55, 4),
+                                                   "outerConeAngle": round(outer, 4)}})
         return len(self.lights) - 1
 
     def glb(self) -> bytes:
@@ -328,7 +341,31 @@ def wall_frame(w):
     return (ax, ay), u, ln, off0, off1
 
 
-def build(geo: dict) -> tuple[Gltf, dict]:
+def srgb_to_linear(c):
+    c = c / 255
+    return c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4
+
+
+def apply_ausstattung(aus: dict):
+    """Farben aus ausstattung.json in die Materialtabelle übernehmen."""
+    for mat, d in (aus.get("boeden") or {}).items():
+        if mat in FARBEN and "farbe_srgb" in d:
+            _, metal, rough = FARBEN[mat]
+            FARBEN[mat] = (tuple(srgb_to_linear(v) for v in d["farbe_srgb"]) + (1.0,), metal, rough)
+    br = aus.get("balkonbruestung") or {}
+    if "farbe_srgb" in br:
+        FARBEN["Bruestung_Platte"] = (tuple(srgb_to_linear(v) for v in br["farbe_srgb"]) + (1.0,), 0.0, 0.8)
+    if "hoehe" in br:
+        HOEHEN["gelaender"] = br["hoehe"]
+
+
+def build(geo: dict, aus: dict | None = None) -> tuple[Gltf, dict]:
+    aus = aus or {}
+    apply_ausstattung(aus)
+    spots = (aus.get("spots") or {}).get("raeume", {})
+    spot_lm = (aus.get("spots") or {}).get("lumen", 400)
+    spot_beam = (aus.get("spots") or {}).get("abstrahlwinkel", 60)
+    panels = (aus.get("balkonbruestung") or {}).get("art") == "platten"
     g = Gltf()
     H = HOEHEN
     info = {"rooms": [], "openings": [], "bounds": None}
@@ -471,7 +508,7 @@ def build(geo: dict) -> tuple[Gltf, dict]:
     for wp in geo.get("wall_polygons", []):
         m = Mesh()
         if wp["id"].lower().startswith("gelaender"):
-            railing(m, wp["polygon"], x0, x1)
+            railing(m, wp["polygon"], x0, x1, panels)
             g.node(f"Gelaender_{wp['id']}", m, parent=grp_x, extras={"solid": True})
         else:
             m.prism("Kamin", wp["polygon"], -H["aufbau"], H["decke_oben"])
@@ -492,7 +529,18 @@ def build(geo: dict) -> tuple[Gltf, dict]:
                 "label": cx, "floor": True})
             info["rooms"].append({"name": name, "label": cx, "area": round(area, 2),
                                   "area_stated": r.get("area_stated"), "polygon": poly})
-            if name not in KEIN_LICHT:
+            if name in spots:
+                down = (-math.sqrt(0.5), 0.0, 0.0, math.sqrt(0.5))   # -Z des Lichts nach unten
+                for i, (sx, sy) in enumerate(spots[name], 1):
+                    li = g.spot_light(f"Spot_{name}_{i}", lumen=spot_lm, beam_deg=spot_beam)
+                    sm = Mesh()
+                    ring = [(0.045 * math.cos(k * math.pi / 8), 0.045 * math.sin(k * math.pi / 8)) for k in range(16)]
+                    sm.prism("Leuchte", ring, -0.004, 0.0)
+                    sn = g.node(f"Spot_{name}_{i}", sm, parent=grp_l, origin=(sx, sy, H["raumhoehe"]),
+                                extras={"room": name, "lamp": True, "spot": True, "lumen": spot_lm})
+                    g.node(f"Licht_{name}_{i}", None, parent=sn, origin=(0.0, 0.0, -0.01), light=li,
+                           rotation=down, extras={"room": name})
+            elif name not in KEIN_LICHT:
                 cpt = centroid(poly) if point_in_poly(centroid(poly), poly) else cx
                 lum = 600 + 60 * area     # grob: ~100 lx Grundlicht
                 li = g.point_light(f"Licht_{name}", lumen=round(lum))
@@ -542,8 +590,9 @@ def build(geo: dict) -> tuple[Gltf, dict]:
     return g, info
 
 
-def railing(m: Mesh, poly, bx0, bx1):
-    """Stabgeländer an den Außenkanten der Geländer-Kontur (nicht an der Fassade)."""
+def railing(m: Mesh, poly, bx0, bx1, panels=False):
+    """Brüstung an den Außenkanten der Geländer-Kontur (nicht an der Fassade):
+    Stabgeländer oder geschlossene Plattenverkleidung (lichtundurchlässig)."""
     x0, y0, x1, y1 = bbox(poly)
     H = HOEHEN["gelaender"]
     t = 0.04
@@ -560,6 +609,10 @@ def railing(m: Mesh, poly, bx0, bx1):
         if ln < 0.05:
             continue
         u = ((bx - ax) / ln, (by - ay) / ln)
+        if panels:
+            m.box_along("Bruestung_Platte", (ax, ay), u, -0.05, ln + 0.05, -0.02, 0.02, -0.25, H)   # Platte
+            m.box_along("Gelaender_Metall", (ax, ay), u, -0.05, ln + 0.05, -0.03, 0.03, H, H + 0.03)  # Abdeckung
+            continue
         m.box_along("Gelaender_Metall", (ax, ay), u, 0, ln, -0.03, 0.03, H - 0.05, H)      # Handlauf
         m.box_along("Gelaender_Metall", (ax, ay), u, 0, ln, -0.015, 0.015, 0.08, 0.12)     # Untergurt
         n = max(1, int(ln / 0.12))
@@ -627,8 +680,14 @@ def main(argv=None):
     ap.add_argument("--out", type=Path, help="Ausgabeordner (Standard: plans/<Objekt>/3d)")
     args = ap.parse_args(argv)
     geo = json.loads(args.geometry.read_text(encoding="utf-8"))
-    g, info = build(geo)
     out = args.out or args.geometry.resolve().parent.parent / "3d"
+    aus_path = out / "ausstattung.json"
+    aus = json.loads(aus_path.read_text(encoding="utf-8")) if aus_path.exists() else {}
+    if aus:
+        print(f"Ausstattung: {aus_path}")
+    g, info = build(geo, aus)
+    info["ausstattung"] = {"boeden": {k: v.get("name", "") for k, v in (aus.get("boeden") or {}).items()},
+                           "bruestung": (aus.get("balkonbruestung") or {}).get("art", "stabgelaender")}
     out.mkdir(parents=True, exist_ok=True)
     stem = f"{geo['object']}_{geo['floor']}"
     glb = g.glb()

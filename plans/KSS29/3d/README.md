@@ -7,6 +7,7 @@ zum Prüfen von Bildern an der Wand und zum Einschätzen von Tageslicht und Kuns
 |-------|--------|------------|
 | `KSS29_OG1.html` | Raumplaner im Browser, Modell eingebettet | Doppelklick, Chrome/Edge/Firefox/Safari (lädt three.js aus dem Internet) |
 | `KSS29_OG1.glb` | Modell als glTF 2.0 (offenes Format) | Blender, SketchUp, Unity, Windows 3D-Viewer, three.js |
+| `ausstattung.json` | Deckenspots, Bodenbeläge, Balkonbrüstung (Eingabe für den Generator) | Texteditor |
 
 Neu erzeugen, nachdem sich der Grundriss geändert hat:
 
@@ -41,8 +42,21 @@ eine Kamera in den Raum. Mit `-b … --render bild.png` rendert es ohne Oberflä
 Auch das GLB mit Möbeln aus dem Browser lässt sich so laden.
 
 Struktur im GLB: `Waende/Wand_<id>`, `Oeffnungen/Fenster_*|Balkontuer_*|Tuer_*|Zarge_*`, `Boeden/Boden_<Raum>`,
-`Leuchten/Leuchte_<Raum>` mit Punktlicht, `Decke`, `Umgebung` (EG-Baukörper, Balkone, Geländer, Gelände).
+`Leuchten/Leuchte_<Raum>` (Punktlicht) bzw. `Leuchten/Spot_<Raum>_<n>` (Spotlicht), `Decke`, `Umgebung` (EG-Baukörper, Balkone, Brüstungen, Gelände).
 Türblätter drehen um ihren Bandpunkt, die Winkel für offen und zu stehen in den Extras (`yawOpen`, `yawClosed`).
+
+## Ausstattung (`ausstattung.json`)
+
+- **Deckenspots** in Flur (4), Garderobe (2), Bad (5, davon einer über der Dusche) und WC (1), Lage aus den pinken
+  Symbolen im Werkplan („Vorschlag Deckenspots“). Je 400 lm, 60° Abstrahlwinkel (angenommen). Die übrigen Räume haben
+  eine Deckenleuchte in Raummitte (Annahme, Lage unbekannt).
+- **Böden**: kleinformatiges Stabparkett Eiche hell (Schiffsverband 7 × 49 cm angenommen), Feinsteinzeug hellgrau 60 × 60.
+- **Balkonbrüstung**: Plattenverkleidung, lichtundurchlässig, 1,00 m hoch, Farbe angenommen (hellgrau). Gilt für Balkon und Loggia.
+
+Die Beispiel-Einrichtung im Browser folgt dem heutigen Stand: durchgehender Wandschrank im Schlafzimmer,
+Schreibtisch im Büro an der Nordwand, Couch mittig im Wohnzimmer mit Blick auf ein kleines Sideboard mit 55-Zoll-TV an der
+Ostwand, Esstisch neben der Couch in Nord-Süd-Richtung. Maße und genaue Lage der Möbel sind geschätzt und lassen sich im
+Browser anpassen.
 
 ## Annahmen (nicht aus dem Plan)
 
@@ -54,7 +68,7 @@ Türblätter drehen um ihren Bandpunkt, die Winkel für offen und zu stehen in d
 | Balkon-/Loggiatüren | 0 bis 2,23 | Sturz wie Fenster |
 | Innentüren | lichte Höhe 1,985 | Rohbaumaß 2,135 minus Fußbodenaufbau 0,15 |
 | Wohnungstür | weiß wie Innentüren | Vorgabe: Innenwände und Türen weiß |
-| Geländer | Stabgeländer 1,00 m, dunkelgrau | Ausführung unbekannt, Plan: Brüstung max. 1,20 |
+| Balkonbrüstung | Platten 1,00 m hoch, hellgrau | Plattenverkleidung laut Eigentümer, Höhe und Farbe angenommen |
 | Böden | Parkett bzw. Feinsteinzeug 60 × 60 | Raumstempel im Werkplan, Garderobe wie Flur angenommen |
 | Treppenhausfenster | nicht geöffnet | liegt mit Brüstung +6,50 über dieser Etage |
 
