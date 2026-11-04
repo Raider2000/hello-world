@@ -88,7 +88,6 @@ rechts: Kind, WC, Bad, Kochen, Flur, Schlafen, Wohnen/Essen, Balkon (Ostseite, 3
 - **Balkon WE05**: 3,00 × 2,50 m = 7,50 m² ist korrekt; für die Miete wird er zur Hälfte (3,75 m²) angesetzt.
 - **Flächen Essen, Kochen, Bad**: kein neues Aufmaß; Flächen werden aus der Neuzeichnung berechnet und als „berechnet“ gekennzeichnet.
 - **Tragende Wände**: nicht belegt; wahrscheinlich tragend sind die Wand Wohnen/Schlafen und die Flurwände – als tragend gezeichnet, in `unverified` vermerkt.
-
 - **Umbauten 2014** (Aufteilungsplan rot/gelb) in WE1–WE4, WE6 und DG: ausgeführt (Eigentümer, 04.11.2026).
 
 ## Offene Punkte
