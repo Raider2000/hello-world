@@ -34,6 +34,7 @@ W5 Nr. 14.2 unten, W7 Nr. 14.1 oben, W9 Nr. 13.2 unten, W10 Nr. 12.2 unten, W11 
 | OG1 | `geometrie/OG1.json` | `ausgabe/KFS31_OG1.svg` | `ausgabe/KFS31_OG1.dxf` | 2 begründete Abweichungen (Bad WE 3, Flur WE 9) |
 | OG2 | `geometrie/OG2.json` | `ausgabe/KFS31_OG2.svg` | `ausgabe/KFS31_OG2.dxf` | 2 begründete Abweichungen (Bad WE 5, Flur WE 10) |
 | DG | `geometrie/DG.json` | `ausgabe/KFS31_DG.svg` | `ausgabe/KFS31_DG.dxf` | 4 begründete Abweichungen (Bad WE 7; WE 11: Schlafen/Bad Dachschräge, Flur) |
+| SB | `geometrie/SB.json` | `ausgabe/KFS31_SB.svg` | `ausgabe/KFS31_SB.dxf` | keine Abweichung > 3 % (Spitzböden W11 / W8 / W7: 0,0 / +0,4 / −1,6 %) |
 
 ## Quellen-Seitenzuordnung
 
@@ -44,7 +45,7 @@ W5 Nr. 14.2 unten, W7 Nr. 14.1 oben, W9 Nr. 13.2 unten, W10 Nr. 12.2 unten, W11 
 | OG1 | S. 5 | S. 6 + S. 7 | – |
 | OG2 | S. 6 | S. 8 + S. 9 | – |
 | DG | S. 7 | S. 10 + S. 11 | – |
-| SB | – (kein Grundriss 2010) | S. 12/13 (nicht ausgewertet) | – |
+| SB | – (kein Grundriss 2010) | S. 12/13 (Grundriss), S. 18 (Schnitt A-A) | – |
 
 Ansichten (2010 S. 8–10), Schnitt (S. 11) und Lageplan (S. 1–2) wurden nicht neu gezeichnet.
 
@@ -116,5 +117,21 @@ Maßketten 1999. Der Plan 2026 (WE 1) wurde über die Fensterachsen 1999 skalier
   (Die Teilungserklärung 1999 ordnete noch anders zu; maßgeblich ist die Aufteilung 2010/2011.)
 - Keller 7: Raumstempel 4,65 m², Flächentabelle 7,65 m², Geometrie 5,35 m² – widersprüchlich, aufmessen.
 - Nördlicher Raum (11,60–13,40) ohne Bezeichnung; Hofbereich westlich des AR (Schacht?) unklar.
-- Spitzboden: Die Bauantragsblätter 1999 S. 12/13 wurden nicht neu gezeichnet; 2010 enthält keinen
-  Spitzboden-Grundriss. Laut Teilungserklärung 1999 Sondernutzungsrecht für W7, W8 (Altbau) und W11 (Neubau).
+
+### SB (Spitzboden)
+- Quelle nur 1999 S. 12/13 (2010 ohne Spitzboden). Gezeichnet sind die drei Spitzbodenflächen mit lichter Höhe
+  ≥ 1 m (gestrichelt), Giebel/Brandwand an der Fuge (0,24 / 0,02 / 0,45), die Trennwand zwischen den
+  Altbau-Spitzböden und drei Bodentreppen. Die Außenkontur ist aus dem DG übernommen (Plan zeigt Traufen).
+- Flächen: Der Plan nennt F = halbe Grundfläche und in Klammern die Grundfläche mit lichter Höhe ≥ 1 m:
+  W11 17,26 (34,51), Altbau Süd 11,55 (23,10), Altbau Ost 15,26 (30,52) m². `area_stated` = Klammerwert.
+- Lage der Streifen in y, die Trennwand und die Bodentreppen sind am entzerrten Scan abgegriffen (±5 cm). Bemaßt
+  sind nur 12,15 / 0,24 / 0,02 / 0,45 / 14,05 / 26,91, die Breiten 2,84 und 3,50 sowie die Kette 14,05 (Ost).
+- **Zuordnung W7/W8**: Das Kennzeichen im Süd-Spitzboden ist als „8“ lesbar, im Ost-Spitzboden unleserlich. Nach dem
+  DG-Plan 1999 lag W8 im Südwestteil des Altbaus. Deshalb heißt der Süd-Spitzboden „W8“, der Ost-Spitzboden „W7“
+  (Nummerierung 1999). Im Aufteilungsplan 2010 ist W7 = Süd, W8 = Nord. Ob die Sondernutzungsrechte durch
+  die Nachträge 2010/2011 angepasst wurden, ist offen → Nachträge prüfen.
+- W11: Die Teilungserklärung 1999 (1.2.11) nennt den Spitzboden „dazugehörend“, nicht ausdrücklich als
+  Sondernutzungsrecht (anders als bei W7/W8).
+- Die Trennwand ist mit „…KA F90“ beschriftet (Lesung unsicher). Ihre Fortsetzung unter der 1-m-Linie ist gestrichelt.
+  Kamine sind nicht erkennbar. Dachgauben (Süd/Ost) sind nicht bemaßt und deshalb nicht gezeichnet.
+- Werkzeuge: `werkzeuge/SB_entzerrung.py` (Entzerrung S. 12/13, Overlay), `werkzeuge/SB.py` (erzeugt das JSON).

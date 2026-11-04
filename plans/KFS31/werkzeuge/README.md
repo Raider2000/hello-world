@@ -7,6 +7,7 @@ Sie dienen der Nachvollziehbarkeit; maßgeblich ist das JSON.
 - `crop.py`, `edge.py`, `lines.py`: Ausschnitte und Wandkanten abgreifen
 - `overlay.py`: Neuzeichnung über den entzerrten Scan legen
 - `common.py`, `EG.py`, `REG.py` (OG1/OG2/DG), `KG.py`: Erzeugen der Geschoss-JSONs
+- `SB_entzerrung.py`, `SB.py`: Spitzboden (Entzerrung 1999 S. 12/13 mit Overlay, Erzeugen von `SB.json`)
 
 Die Skripte erwarten gerenderte Scan-Seiten in einem Arbeitsverzeichnis (ursprünglich im
 Scratchpad der Sitzung); Pfade bei erneuter Nutzung anpassen.
