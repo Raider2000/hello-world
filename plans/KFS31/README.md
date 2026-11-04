@@ -14,12 +14,14 @@
 | Geschoss | Geometrie | SVG | DXF | Flächenprüfung |
 |----------|-----------|-----|-----|----------------|
 | EG | `geometrie/EG.json` | `ausgabe/KFS31_EG.svg` | `ausgabe/KFS31_EG.dxf` | 3 Abweichungen > 3 % (dokumentiert, s. u.) |
+| OG1 | `geometrie/OG1.json` | `ausgabe/KFS31_OG1.svg` | `ausgabe/KFS31_OG1.dxf` | 1 Abweichung > 3 % (Bad WE 3, s. u.) |
 
 ## Quellen-Seitenzuordnung
 
 | Geschoss | 2010 (Raumaufteilung, WE) | 1999 (Maße) | 2026 |
 |----------|---------------------------|-------------|------|
 | EG | S. 4 | S. 4 (Neubau/West) + S. 5 (Altbau/Ost) | WE 1 |
+| OG1 | S. 5 | S. 6 + S. 7 | – |
 
 ## Koordinatensystem (alle Geschosse gleich)
 
@@ -53,3 +55,14 @@ Maßketten 1999. Der Plan 2026 (WE 1) wurde über die Fensterachsen 1999 skalier
 
 
 - Das Objekt wurde ursprünglich als „KFS29“ geführt; die Unterlagen lauten auf Hausnr. 31.
+
+### OG1 (gilt sinngemäß auch für OG2 und DG)
+- WE-Nummern (WE 3 Altbau Süd, WE 4 Altbau Nord, WE 5 Neubau) sind **angenommen**: Die Stempel sind im
+  Scan 2010 unleserlich. Gezählt wird wie im EG (Altbau Süd, Altbau Nord), danach der Neubau.
+- **Bad Altbau Süd**: 5,61 m² berechnet, 6,65 m² lt. Plan. Die Zickzackwand ist aus dem EG (Stand 2026)
+  übernommen, die Abweichung ist dieselbe wie dort → aufmessen.
+- Fenster der Neubau-Südfassade sind nach der Maßkette 1999 gesetzt. Plan 2010 zeichnet sie ca. 0,24 m
+  weiter westlich.
+- Flur/Wohnen der Wohnung Nord gehen offen ineinander über; die Raumgrenze bei x = 20,75 ist so
+  angenommen, dass beide Flächen passen.
+- Außenwand Altbau in den OG 0,45 (1999), im EG 0,55.
