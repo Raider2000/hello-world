@@ -29,6 +29,31 @@ Aufteilungsplan 2014 (Vektor-PDF, M 1:100 → 1 m = 28,3465 pt); je Geschoss nur
 | EG (gesamte Etage) | `geometrie/EG.json` | `ausgabe/RBS25_EG.svg` / `.dxf` | WE1, WE2 (+ Hauseingang) | keine Planflächen (nur berechnet); Außenanlagen nicht übernommen |
 | OG1 (gesamte Etage) | `geometrie/OG1.json` | `ausgabe/RBS25_OG1.svg` / `.dxf` | WE3, WE4 | keine Planflächen (nur berechnet); Achsen wie OG2: Kette unten 3,24⁵ / 3,21 / 2,20 / 3,22 / 3,16⁵, Gesamt 16,51⁵ |
 | OG2 (gesamte Etage) | `geometrie/OG2.json` | `ausgabe/RBS25_OG2.svg` / `.dxf` | WE5 (nach Sanierung), WE6 | WE5 Wohnen +0,2 %, Schlafen +0,3 %, Flur +0,5 %; WE6 Kind +0,1 %, Bad −1,2 %, Flur −0,7 %, Schlafen ±0,0 %, Wohnen/Essen +0,2 % (Sollwerte bemaßter Plan) |
+| DG | `geometrie/DG.json` | `ausgabe/RBS25_DG.svg` / `.dxf` | WE7 (DG-Ausbau laut Plan 2014) | keine Planflächen (nur berechnet, Grundfläche ohne Abzug Dachschräge) |
+
+Erzeugt mit `python3 tools/render_plan.py plans/RBS25/geometrie/<G>.json` (alle Exit 0). Der Renderer wurde nicht geändert.
+
+**Darstellungsstand:** Die Geschosse zeigen den Zielzustand des Aufteilungsplans 2014 – rote Wände (Neubau 2014)
+schraffiert als `new`, gelbe Wände (Abbruch 2014) weggelassen, gestrichelte (geplante/entfallende) Türen nicht gezeichnet.
+Ausnahme WE05: Zustand nach Sanierung (12.09.2026). Ob die 2014 geplanten Maßnahmen in den übrigen Wohnungen
+ausgeführt sind, ist nicht belegt (je Geschoss in `unverified`).
+
+**Tragende Wände:** Außenwände `exterior`; Wände, die in KG, EG, 1. OG und 2. OG des Aufteilungsplans
+übereinanderstehen (Überdeckung ≥ 60 %, Toleranz 6 cm), sowie die Treppenhauswände sind `load-bearing` – plausibel,
+nicht belegt (`unverified`). WE05: Wand Wohnen/Schlafen und Flurwände nach Angabe des Eigentümers.
+
+### Wohnungen
+
+| Geschoss | Einheiten |
+|----------|-----------|
+| KG | Kellerabteile K1–K8, Flur 1–3, Fahrräder/Kinderwägen, Treppenhaus |
+| EG | WE1 (links), WE2 (rechts), Treppenhaus mit Hauseingang |
+| 1. OG | WE3 (links), WE4 (rechts) |
+| 2. OG | WE5 (links, saniert), WE6 (rechts) |
+| DG | WE7 |
+
+Je Etage EG–OG2 links: Essen, Kochen, Bad, Flur, Wohnen, Schlafen, Balkon (Nordseite, 4 Balkone übereinander);
+rechts: Kind, WC, Bad, Kochen, Flur, Schlafen, Wohnen/Essen, Balkon (Ostseite, 3 Balkone übereinander).
 
 ### KG – Transformation
 
@@ -52,6 +77,13 @@ Aufteilungsplan 2014 (Vektor-PDF, M 1:100 → 1 m = 28,3465 pt); je Geschoss nur
   Gesamtbreite 16,515 / 16,527; Tiefe links 9,84 / 9,84 (WE05) bzw. 9,83 (Aufteilungsplan); rechte Seite 11,395 / 11,405
   (0,57 / 4,94 / 0,27 / 3,23 / 0,30 / 1,86 / 0,225 → 0,572 / 4,940 / 0,271 / 3,230 / 0,300 / 1,859 / 0,233); 12,15 / 12,167.
 
+### DG – Transformation
+
+- `x_m = (x_pt − 2104,44) / 28,3465`, `y_m = (495,00 − y_pt) / 28,3465` (Giebelwand-Außenkante, Traufe unten).
+  Treppenhauswände im DG-Ausschnitt ca. 8–10 cm nach rechts versetzt und 0,28 m stark – unverändert übernommen, in `unverified`.
+- Kniestock-/Abseitenwände sind im Plan Doppellinien (5 cm) und als 0,051-m-Wände gezeichnet; Dachflächen (Sparren, Grat,
+  Traufe) außerhalb der Räume als Symbol-Linien.
+
 ## Klärungen (Eigentümer, 04.11.2026)
 
 - **Balkon WE05**: 3,00 × 2,50 m = 7,50 m² ist korrekt; für die Miete wird er zur Hälfte (3,75 m²) angesetzt.
@@ -60,5 +92,10 @@ Aufteilungsplan 2014 (Vektor-PDF, M 1:100 → 1 m = 28,3465 pt); je Geschoss nur
 
 ## Offene Punkte
 
-- Alle „ca.“-Maße aus dem Vorgänger sind in `unverified` geführt, bis sie mit dem Aufteilungsplan 2014 bzw. dem bemaßten Brandschutzplan abgeglichen sind.
+- Die „ca.“-Maße aus dem Vorgänger (WE05) stimmen mit dem Aufteilungsplan 2014 auf ≤ 1 cm überein (Wohnen 4,97⁵, Essen 3,44, Schlafen 3,64);
+  sie bleiben in `unverified`, weil kein Aufmaß vorliegt.
+- WE6: Kochen (8,57 m² berechnet / 9,12 m² bemaßt) und WC (2,63 m² / „Flur 2“ 2,92 m²) weichen ab – bemaßter Plan zeigt einen anderen Zustand.
+- Balkone außer WE05/WE06: Mietflächenanteil (½?) nicht belegt.
+- Zuordnung der Kellerabteile K1–K8 zu den Wohnungen fehlt.
+- Ausführungsstand der 2014 geplanten Umbauten (rot/gelb) in WE1–WE4, WE6 und im DG (WE7) klären.
 - Sanitärobjekte und Waschmaschinenstellplatz nur schematisch; Fensterbänke und Balkongeländer nicht gezeichnet.
