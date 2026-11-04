@@ -7,17 +7,33 @@
 | `quelle/2026-Grundriss-Karl_Ferlemann_Str_31-WE1-vereinfacht.svg` | WE 1, vereinfacht (Inkscape, unbemaßt, Flächen „ca.“) | 2026 | **neueste Fassung für WE 1** |
 | `quelle/2026-Grundriss-WE1-vektorisiert.svg` | WE 1, automatisch vektorisiert | 2026 | Referenz |
 | `quelle/20101111-Grundrisse-Karl_Ferlemann_Str_31.pdf` | Scan, 16 S.: Lageplan, Grundrisse (S. 3–7), Ansichten, Schnitt, Abgeschlossenheitsunterlagen | 11.11.2010 | **neueste Fassung für alle Geschosse** |
+| `quelle/19990111-Teilungserklaerung-Karl_Ferlemann_Str_31.pdf` | Teilungserklärung (Text, 34 S.; Aufteilung S. 6–9 Abschnitt 1.2) | 11.01.1999 | Geschosszuordnung W1–W11, Keller, Spitzboden, Stellplätze; Aufteilung später durch Nachträge geändert (2. Nachtrag 13.05.2011) |
 | `quelle/19990111-Grundrisse-Karl_Ferlemann_Str_31.pdf` | Scan, 20 S.: Bauantragspläne (Grundrisse, Schnitte, Ansichten) mit Bemaßung | 11.01.1999 | ersetzt, Maßquelle |
+
+## Wohnungen
+
+Belegt durch die Flächentabellen im Aufteilungsplan 2010 (S. 4–7) und die Geschosszuordnung der
+Teilungserklärung 1999:
+
+| Geschoss | Altbau Süd (Ecke) | Altbau Nord | Neubau |
+|----------|-------------------|-------------|--------|
+| EG  | W1 – 59,42 m² | W2 – 35,20 m² | Stellplätze (Parklift), AR 9/10/11 je 1,75 m² |
+| OG1 | W3 – 62,90 m² | W4 – 61,25 m² (inkl. ½ Balkon) | W9 – 82,33 m² |
+| OG2 | W5 – 62,90 m² | W6 – 61,25 m² | W10 – 82,93 m² |
+| DG  | W7 – 62,90 m² | W8 – 61,25 m² | W11 – 82,08 m² |
+
+Doppelstock-Stellplätze laut Teilungserklärung 1999 (ggf. durch Nachträge geändert): W3 Nr. 13.1 oben,
+W5 Nr. 14.2 unten, W7 Nr. 14.1 oben, W9 Nr. 13.2 unten, W10 Nr. 12.2 unten, W11 Nr. 12.1 oben.
 
 ## Geschosse
 
 | Geschoss | Geometrie | SVG | DXF | Flächenprüfung |
 |----------|-----------|-----|-----|----------------|
-| KG | `geometrie/KG.json` | `ausgabe/KFS31_KG.svg` | `ausgabe/KFS31_KG.dxf` | 9 Abweichungen > 3 % (Kellerverschläge schematisch, s. u.) |
-| EG | `geometrie/EG.json` | `ausgabe/KFS31_EG.svg` | `ausgabe/KFS31_EG.dxf` | 3 Abweichungen > 3 % (dokumentiert, s. u.) |
-| OG1 | `geometrie/OG1.json` | `ausgabe/KFS31_OG1.svg` | `ausgabe/KFS31_OG1.dxf` | 1 Abweichung > 3 % (Bad WE 3, s. u.) |
-| OG2 | `geometrie/OG2.json` | `ausgabe/KFS31_OG2.svg` | `ausgabe/KFS31_OG2.dxf` | 2 Abweichungen > 3 % (Bad WE 6, Flur WE 8) |
-| DG | `geometrie/DG.json` | `ausgabe/KFS31_DG.svg` | `ausgabe/KFS31_DG.dxf` | 5 Abweichungen > 3 % (Dachschräge Neubau, Bad WE 9) |
+| KG | `geometrie/KG.json` | `ausgabe/KFS31_KG.svg` | `ausgabe/KFS31_KG.dxf` | 9 begründete Abweichungen (Kellerverschläge schematisch, s. u.) |
+| EG | `geometrie/EG.json` | `ausgabe/KFS31_EG.svg` | `ausgabe/KFS31_EG.dxf` | 3 begründete Abweichungen (s. u.) |
+| OG1 | `geometrie/OG1.json` | `ausgabe/KFS31_OG1.svg` | `ausgabe/KFS31_OG1.dxf` | 2 begründete Abweichungen (Bad WE 3, Flur WE 9) |
+| OG2 | `geometrie/OG2.json` | `ausgabe/KFS31_OG2.svg` | `ausgabe/KFS31_OG2.dxf` | 2 begründete Abweichungen (Bad WE 5, Flur WE 10) |
+| DG | `geometrie/DG.json` | `ausgabe/KFS31_DG.svg` | `ausgabe/KFS31_DG.dxf` | 4 begründete Abweichungen (Bad WE 7; WE 11: Schlafen/Bad Dachschräge, Flur) |
 
 ## Quellen-Seitenzuordnung
 
@@ -68,8 +84,9 @@ Maßketten 1999. Der Plan 2026 (WE 1) wurde über die Fensterachsen 1999 skalier
 - Das Objekt wurde ursprünglich als „KFS29“ geführt; die Unterlagen lauten auf Hausnr. 31.
 
 ### OG1 (gilt sinngemäß auch für OG2 und DG)
-- WE-Nummern (WE 3 Altbau Süd, WE 4 Altbau Nord, WE 5 Neubau) sind **angenommen**: Die Stempel sind im
-  Scan 2010 unleserlich. Gezählt wird wie im EG (Altbau Süd, Altbau Nord), danach der Neubau.
+- Wohnungsnummern siehe „Wohnungen“ oben (aus den Flächentabellen 2010 belegt).
+- Flur Neubau (WE 9/10/11): Flächentabelle 2010 nennt 2,60 m², die Raumstempel 2,85 (OG1) bzw. 2,65;
+  die gezeichnete Geometrie ergibt 2,90 m² → aufmessen.
 - **Bad Altbau Süd**: 5,61 m² berechnet, 6,65 m² lt. Plan. Die Zickzackwand ist aus dem EG (Stand 2026)
   übernommen, die Abweichung ist dieselbe wie dort → aufmessen.
 - Fenster der Neubau-Südfassade sind nach der Maßkette 1999 gesetzt. Plan 2010 zeichnet sie ca. 0,24 m
@@ -79,23 +96,25 @@ Maßketten 1999. Der Plan 2026 (WE 1) wurde über die Fensterachsen 1999 skalier
 - Außenwand Altbau in den OG 0,45 (1999), im EG 0,55.
 
 ### OG2
-- Gleiche Zeichnung wie OG1 (Plan 2010 deckt sich beim Overlay). WE 6/7/8 angenommen.
-- Flur WE 8: Plan 2010 schreibt 2,65 m² (OG1 bei identischer Zeichnung 2,85 m²); berechnet 2,90 m².
+- Gleiche Zeichnung wie OG1 (Plan 2010 deckt sich beim Overlay): WE 5 (Süd), WE 6 (Nord), WE 10 (Neubau).
 
 ### DG
-- Wände wie OG1/OG2 (Overlay mit Plan 2010 S. 7 deckungsgleich). WE 9/10/11 angenommen.
-- Neubau: gestrichelte Linie bei y ≈ 0,99 (Dachschräge, Höhe nicht angegeben). Die Flächen lt. 2010
-  (Schlafen 11,15 / Bad 3,55 / Kochen 6,80 m²) liegen deutlich unter der Grundfläche (11,49 / 5,84 /
-  8,69 m²): vermutlich Abzug nach WoFlV, eventuell auch andere Trennwände → Schnitt 1999 (S. 11) prüfen.
+- Wände wie OG1/OG2 (Overlay mit Plan 2010 S. 7 deckungsgleich): WE 7 (Süd), WE 8 (Nord), WE 11 (Neubau).
+- Neubau WE 11: gestrichelte Linie bei y ≈ 0,99 (Dachschräge). Laut Flächentabelle 2010 Schlafen 11,15 /
+  Bad 5,55 / Kochen 8,60 m² (OG: 11,50 / 5,90 / 8,75) – die kleinen Abzüge passen zu einer Dachschräge.
+  (Frühere Lesung 3,55 / 6,80 aus dem Raumstempel war falsch; die Tabellensumme 82,08 m² bestätigt die neuen Werte.)
 - Neubau-Südfenster lt. Maßkette 1999 S. 10 (Doppelfenster); Altbau-Fenster wie OG übernommen
   (1999 bemaßt im DG abweichende Öffnungen).
-- Bad WE 9: wie in OG1/OG2 (Zickzackwand), 5,61 statt 6,85 m².
+- Bad WE 7: wie in OG1/OG2 (Zickzackwand), 5,61 statt 6,65 m².
 
 ### KG
 - Die Kellerverschläge sind Lattenverschläge (ca. 0,07) und im Scan 2010 nur schematisch erkennbar.
   Die Trennwände sind aus dem entzerrten Scan abgegriffen; die Flächen weichen bis ca. 25 % ab
   (Keller 2/3/4/5/6/7, ELT, AR, HR/Technik +3,6 %). Wohnungszuordnung der Keller unleserlich →
-  Räume heißen „Keller (1)“ … „Keller (8)“.
+  Räume heißen „Keller (1)“ … „Keller (8)“. Laut Teilungserklärung 1999 gehört zu W2–W6 und W9–W11 je ein
+  Kellerraum (W2–W4 „mit Vorraum“) – das sind 8 Keller; W1 hat stattdessen einen Abstellraum im EG,
+  W7/W8 den Spitzboden. Welcher Keller (1)–(8) zu welcher Wohnung gehört, ist im Scan nicht lesbar;
+  durch die Nachträge 2010/2011 kann sich die Zuordnung geändert haben.
 - Nördlicher Raum (11,60–13,40) ohne Bezeichnung; Hofbereich westlich des AR (Schacht?) unklar.
 - Spitzboden: Die Bauantragsblätter 1999 S. 12/13 wurden nicht neu gezeichnet; 2010 enthält keinen
-  Spitzboden-Grundriss.
+  Spitzboden-Grundriss. Laut Teilungserklärung 1999 Sondernutzungsrecht für W7, W8 (Altbau) und W11 (Neubau).

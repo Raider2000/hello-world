@@ -5,7 +5,8 @@
  "source": {
   "file": "20101111-Grundrisse-Karl_Ferlemann_Str_31.pdf S. 5 (Raum/WE) · 19990111-…pdf S. 6/7 (Maße)",
   "date": "2010-11-11 / 1999-01-11",
-  "version": "Aufteilungsplan WE 1–11"
+  "version": "Aufteilungsplan WE 1–11",
+  "wohnungsnummern": "Laut Flächentabellen im Aufteilungsplan 2010 (S. 4–7): EG W1/W2, 1. OG W3/W4/W9, 2. OG W5/W6/W10, DG W7/W8/W11 (Altbau Süd/Altbau Nord/Neubau); bestätigt Teilungserklärung 1999 Abschnitt 1.2 (Geschosszuordnung)."
  },
  "walls": [
   {
@@ -1004,7 +1005,8 @@
    "area_stated": 4.9
   },
   {
-   "name": "WE 3 – Bad", "area_note": "Planfläche größer als gezeichnete Zickzackwand ergibt; Aufmaß offen",
+   "name": "WE 3 – Bad",
+   "area_note": "Planfläche größer als gezeichnete Zickzackwand ergibt; Aufmaß offen",
    "polygon": [
     [
      21.52,
@@ -1253,7 +1255,7 @@
    "outline": true
   },
   {
-   "name": "WE 5 – Kind",
+   "name": "WE 9 – Kind",
    "polygon": [
     [
      0.24,
@@ -1283,7 +1285,7 @@
    "area_stated": 15.45
   },
   {
-   "name": "WE 5 – Schlafen",
+   "name": "WE 9 – Schlafen",
    "polygon": [
     [
      0.24,
@@ -1305,7 +1307,7 @@
    "area_stated": 11.5
   },
   {
-   "name": "WE 5 – Flur",
+   "name": "WE 9 – Flur",
    "polygon": [
     [
      3.07,
@@ -1324,10 +1326,11 @@
      4.12
     ]
    ],
-   "area_stated": 2.85
+   "area_stated": 2.6,
+   "area_note": "Flächentabelle 2010: 2,60 m²; Raumstempel 2,85; Geometrie 2,90 – Aufmaß offen"
   },
   {
-   "name": "WE 5 – Bad",
+   "name": "WE 9 – Bad",
    "polygon": [
     [
      3.07,
@@ -1349,7 +1352,7 @@
    "area_stated": 5.9
   },
   {
-   "name": "WE 5 – Wohnen",
+   "name": "WE 9 – Wohnen",
    "polygon": [
     [
      5.59,
@@ -1371,7 +1374,7 @@
    "area_stated": 28.3
   },
   {
-   "name": "WE 5 – Kochen",
+   "name": "WE 9 – Kochen",
    "polygon": [
     [
      9.66,
@@ -1393,7 +1396,7 @@
    "area_stated": 8.75
   },
   {
-   "name": "WE 5 – Garderobe",
+   "name": "WE 9 – Garderobe",
    "polygon": [
     [
      9.66,
@@ -1416,7 +1419,7 @@
    "show_area": false
   },
   {
-   "name": "WE 5 – Du/WC",
+   "name": "WE 9 – Du/WC",
    "polygon": [
     [
      10.63,
@@ -1438,7 +1441,7 @@
    "area_stated": 3.0
   },
   {
-   "name": "WE 5 – Flur 2",
+   "name": "WE 9 – Flur 2",
    "polygon": [
     [
      9.66,
@@ -1460,7 +1463,7 @@
    "area_stated": 3.75
   },
   {
-   "name": "WE 5 – Balkon",
+   "name": "WE 9 – Balkon",
    "polygon": [
     [
      7.03,
@@ -2127,14 +2130,6 @@
   }
  ],
  "unverified": [
-  {
-   "pos": [
-    6.0,
-    8.6
-   ],
-   "text": "WE-Nummern WE 3/WE 4/WE 5 angenommen (Stempel im Scan 2010 unleserlich); Zählung wie EG: Altbau Süd, Altbau Nord, Neubau",
-   "short": "WE-Nr. angenommen"
-  },
   {
    "pos": [
     23.2,

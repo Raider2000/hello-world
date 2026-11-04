@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="383.3mm" height="283.8mm" viewBox="0 0 383.3 283.8">
+<svg xmlns="http://www.w3.org/2000/svg" width="383.3mm" height="281.1mm" viewBox="0 0 383.3 281.1">
 <title>KFS31 – 1. Obergeschoss</title>
 <style>text{font-family:Arial,Helvetica,sans-serif}</style>
 <rect width="100%" height="100%" fill="#ffffff"/>
@@ -555,24 +555,24 @@
 <text x="283.65" y="110.85" font-size="2.2">7,50 m²</text>
 <text x="192.00" y="60.60" font-weight="bold">WE 4 – Balkon</text>
 <text x="192.00" y="63.80" font-size="2.2">6,30 m²</text>
-<text x="63.90" y="120.83" font-weight="bold">WE 5 – Kind</text>
+<text x="63.90" y="120.83" font-weight="bold">WE 9 – Kind</text>
 <text x="63.90" y="124.03" font-size="2.2">15,45 m²</text>
-<text x="50.95" y="151.10" font-weight="bold">WE 5 – Schlafen</text>
+<text x="50.95" y="151.10" font-weight="bold">WE 9 – Schlafen</text>
 <text x="50.95" y="154.30" font-size="2.2">11,50 m²</text>
-<text x="78.30" y="140.05" font-weight="bold">WE 5 – Flur</text>
-<text x="78.30" y="143.25" font-size="2.2">2,85 m²</text>
-<text x="77.15" y="159.55" font-weight="bold">WE 5 – Bad</text>
+<text x="78.30" y="140.05" font-weight="bold">WE 9 – Flur</text>
+<text x="78.30" y="143.25" font-size="2.2">2,60 m²</text>
+<text x="77.15" y="159.55" font-weight="bold">WE 9 – Bad</text>
 <text x="77.15" y="162.75" font-size="2.2">5,90 m²</text>
-<text x="110.70" y="136.45" font-weight="bold">WE 5 – Wohnen</text>
+<text x="110.70" y="136.45" font-weight="bold">WE 9 – Wohnen</text>
 <text x="110.70" y="139.65" font-size="2.2">28,30 m²</text>
-<text x="144.05" y="154.85" font-weight="bold">WE 5 – Kochen</text>
+<text x="144.05" y="154.85" font-weight="bold">WE 9 – Kochen</text>
 <text x="144.05" y="158.05" font-size="2.2">8,75 m²</text>
-<text x="135.95" y="120.85" font-weight="bold">WE 5 – Garderobe</text>
-<text x="148.90" y="126.25" font-weight="bold">WE 5 – Du/WC</text>
+<text x="135.95" y="120.85" font-weight="bold">WE 9 – Garderobe</text>
+<text x="148.90" y="126.25" font-weight="bold">WE 9 – Du/WC</text>
 <text x="148.90" y="129.45" font-size="2.2">3,00 m²</text>
-<text x="144.05" y="108.15" font-weight="bold">WE 5 – Flur 2</text>
+<text x="144.05" y="108.15" font-weight="bold">WE 9 – Flur 2</text>
 <text x="144.05" y="111.35" font-size="2.2">3,75 m²</text>
-<text x="117.85" y="90.10" font-weight="bold">WE 5 – Balkon</text>
+<text x="117.85" y="90.10" font-weight="bold">WE 9 – Balkon</text>
 <text x="117.85" y="93.30" font-size="2.2">3,76 m² (Fläche zur Hälfte)</text>
 <text x="240.00" y="101.50" font-weight="bold">Treppenhaus</text>
 <text x="222.75" y="102.70" font-weight="bold">Treppe</text>
@@ -585,24 +585,22 @@
 <text x="331.00" y="105.50" font-size="3" text-anchor="middle">Karl-Ferlemann-Straße</text>
 </g>
 <g id="A_UNGEPRUEFT" font-size="1.5" font-weight="bold" text-anchor="middle">
-<circle cx="95.00" cy="89.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="95.00" y="90.05" fill="#d00000">1</text>
-<circle cx="267.00" cy="152.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="267.00" y="153.05" fill="#d00000">2</text>
-<circle cx="241.00" cy="128.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="241.00" y="129.05" fill="#d00000">3</text>
-<circle cx="85.00" cy="175.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="85.00" y="176.05" fill="#d00000">4</text>
-<circle cx="245.00" cy="80.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="245.00" y="81.05" fill="#d00000">5</text>
-<circle cx="166.00" cy="103.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="166.00" y="104.05" fill="#d00000">6</text>
-<circle cx="118.00" cy="82.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="118.00" y="83.05" fill="#d00000">7</text>
+<circle cx="267.00" cy="152.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="267.00" y="153.05" fill="#d00000">1</text>
+<circle cx="241.00" cy="128.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="241.00" y="129.05" fill="#d00000">2</text>
+<circle cx="85.00" cy="175.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="85.00" y="176.05" fill="#d00000">3</text>
+<circle cx="245.00" cy="80.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="245.00" y="81.05" fill="#d00000">4</text>
+<circle cx="166.00" cy="103.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="166.00" y="104.05" fill="#d00000">5</text>
+<circle cx="118.00" cy="82.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="118.00" y="83.05" fill="#d00000">6</text>
 </g>
 <g id="SCHRIFTFELD" font-size="2.6" fill="#000"><text x="35.0" y="252.5" font-weight="bold">KFS31 · 1. Obergeschoss · M 1:100</text>
 <text x="35.0" y="256.5" font-size="2">Quelle: 20101111-Grundrisse-Karl_Ferlemann_Str_31.pdf S. 5 (Raum/WE) · 19990111-…pdf S. 6/7 (Maße) (2010-11-11 / 1999-01-11) · Maße in m · Neuzeichnung, ohne Gewähr – rot nummerierte Punkte sind ungeprüft (Legende)</text>
 </g>
 <g id="LEGENDE_UNGEPRUEFT" font-size="1.8" fill="#333"><text x="35.0" y="262.7" font-weight="bold" fill="#d00000">Ungeprüfte bzw. angenommene Werte</text>
-<text x="35.0" y="265.6">1 WE-Nummern WE 3/WE 4/WE 5 angenommen (Stempel im Scan 2010 unleserlich); Zählung wie EG: Altbau Süd, Altbau Nord, Neubau</text>
-<text x="35.0" y="268.3">2 Zickzackwand Bad/Schlafen wie EG (Stand 2026 WE 1) übernommen; Plan 2010 zeigt hier dieselbe Wandführung, Lage ±10 cm</text>
-<text x="35.0" y="271.0">3 Türbreiten/Aufschläge unleserlich – Standardmaße angenommen, Lage abgegriffen</text>
-<text x="35.0" y="273.7">4 Fenster Neubau Süd lt. Maßkette 1999; Plan 2010 zeigt sie ca. 0,24 m weiter westlich und das Wohnzimmerfenster zweiteilig</text>
-<text x="35.0" y="276.4">5 Flur WE Nord: offener Übergang zum Wohnen; Raumgrenze bei x = 20,75 so angenommen, dass beide Flächen lt. Plan passen</text>
-<text x="35.0" y="279.1">6 Laubengang/Treppe West: Wandführung im Scan 2010 nur schematisch, Brüstungen angenommen</text>
-<text x="35.0" y="281.8">7 Balkon Neubau: Tiefe 1,50 aus Plan 2010 abgegriffen, Breite 2,51 lt. 1999</text>
+<text x="35.0" y="265.6">1 Zickzackwand Bad/Schlafen wie EG (Stand 2026 WE 1) übernommen; Plan 2010 zeigt hier dieselbe Wandführung, Lage ±10 cm</text>
+<text x="35.0" y="268.3">2 Türbreiten/Aufschläge unleserlich – Standardmaße angenommen, Lage abgegriffen</text>
+<text x="35.0" y="271.0">3 Fenster Neubau Süd lt. Maßkette 1999; Plan 2010 zeigt sie ca. 0,24 m weiter westlich und das Wohnzimmerfenster zweiteilig</text>
+<text x="35.0" y="273.7">4 Flur WE Nord: offener Übergang zum Wohnen; Raumgrenze bei x = 20,75 so angenommen, dass beide Flächen lt. Plan passen</text>
+<text x="35.0" y="276.4">5 Laubengang/Treppe West: Wandführung im Scan 2010 nur schematisch, Brüstungen angenommen</text>
+<text x="35.0" y="279.1">6 Balkon Neubau: Tiefe 1,50 aus Plan 2010 abgegriffen, Breite 2,51 lt. 1999</text>
 </g>
 </svg>

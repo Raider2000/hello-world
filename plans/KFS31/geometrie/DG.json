@@ -5,7 +5,8 @@
  "source": {
   "file": "20101111-Grundrisse-Karl_Ferlemann_Str_31.pdf S. 7 (Raum/WE) · 19990111-…pdf S. 10/11 (Maße)",
   "date": "2010-11-11 / 1999-01-11",
-  "version": "Aufteilungsplan WE 1–11"
+  "version": "Aufteilungsplan WE 1–11",
+  "wohnungsnummern": "Laut Flächentabellen im Aufteilungsplan 2010 (S. 4–7): EG W1/W2, 1. OG W3/W4/W9, 2. OG W5/W6/W10, DG W7/W8/W11 (Altbau Süd/Altbau Nord/Neubau); bestätigt Teilungserklärung 1999 Abschnitt 1.2 (Geschosszuordnung)."
  },
  "walls": [
   {
@@ -903,7 +904,7 @@
  ],
  "rooms": [
   {
-   "name": "WE 9 – Kochen",
+   "name": "WE 7 – Kochen",
    "polygon": [
     [
      12.87,
@@ -925,7 +926,7 @@
    "area_stated": 4.0
   },
   {
-   "name": "WE 9 – Wohnen/Essen",
+   "name": "WE 7 – Wohnen/Essen",
    "polygon": [
     [
      12.87,
@@ -967,7 +968,7 @@
    ]
   },
   {
-   "name": "WE 9 – Kind",
+   "name": "WE 7 – Kind",
    "polygon": [
     [
      19.0,
@@ -989,7 +990,7 @@
    "area_stated": 8.0
   },
   {
-   "name": "WE 9 – Flur",
+   "name": "WE 7 – Flur",
    "polygon": [
     [
      19.0,
@@ -1011,7 +1012,7 @@
    "area_stated": 4.9
   },
   {
-   "name": "WE 9 – Bad", "area_note": "Planfläche größer als gezeichnete Zickzackwand ergibt; Aufmaß offen",
+   "name": "WE 7 – Bad",
    "polygon": [
     [
      21.52,
@@ -1042,14 +1043,15 @@
      3.88
     ]
    ],
-   "area_stated": 6.85,
+   "area_stated": 6.65,
    "label_pos": [
     22.05,
     2.6
-   ]
+   ],
+   "area_note": "Planfläche größer als gezeichnete Zickzackwand ergibt; Aufmaß offen"
   },
   {
-   "name": "WE 9 – Schlafen",
+   "name": "WE 7 – Schlafen",
    "polygon": [
     [
      22.62,
@@ -1091,7 +1093,7 @@
    ]
   },
   {
-   "name": "WE 10 – Wohnen",
+   "name": "WE 8 – Wohnen",
    "polygon": [
     [
      16.89,
@@ -1121,7 +1123,7 @@
    "area_stated": 21.0
   },
   {
-   "name": "WE 10 – Schlafen",
+   "name": "WE 8 – Schlafen",
    "polygon": [
     [
      21.65,
@@ -1143,7 +1145,7 @@
    "area_stated": 17.0
   },
   {
-   "name": "WE 10 – Flur",
+   "name": "WE 8 – Flur",
    "polygon": [
     [
      21.65,
@@ -1186,14 +1188,14 @@
      9.0
     ]
    ],
-   "area_stated": 6.8,
+   "area_stated": 6.6,
    "label_pos": [
     22.2,
     8.9
    ]
   },
   {
-   "name": "WE 10 – Kochen",
+   "name": "WE 8 – Kochen",
    "polygon": [
     [
      23.0,
@@ -1215,7 +1217,7 @@
    "area_stated": 6.0
   },
   {
-   "name": "WE 10 – Bad",
+   "name": "WE 8 – Bad",
    "polygon": [
     [
      23.27,
@@ -1237,7 +1239,7 @@
    "area_stated": 7.5
   },
   {
-   "name": "WE 10 – Balkon",
+   "name": "WE 8 – Balkon",
    "polygon": [
     [
      14.96,
@@ -1290,7 +1292,7 @@
    "area_stated": 15.45
   },
   {
-   "name": "WE 11 – Schlafen", "area_note": "Dachschräge Neubau, Fläche vermutlich nach WoFlV reduziert",
+   "name": "WE 11 – Schlafen",
    "polygon": [
     [
      0.24,
@@ -1309,10 +1311,11 @@
      4.56
     ]
    ],
-   "area_stated": 11.15
+   "area_stated": 11.15,
+   "area_note": "Flächentabelle 2010: 11,15 m² (OG: 11,50) – vermutlich Abzug Dachschräge"
   },
   {
-   "name": "WE 11 – Flur", "area_note": "Plan 2010 nennt 2,65, OG1 bei gleicher Zeichnung 2,85",
+   "name": "WE 11 – Flur",
    "polygon": [
     [
      3.07,
@@ -1331,10 +1334,11 @@
      4.12
     ]
    ],
-   "area_stated": 2.65
+   "area_stated": 2.6,
+   "area_note": "Flächentabelle 2010: 2,60 m²; Raumstempel 2,65; Geometrie 2,90 – Aufmaß offen"
   },
   {
-   "name": "WE 11 – Bad", "area_note": "Dachschräge Neubau, Fläche vermutlich nach WoFlV reduziert",
+   "name": "WE 11 – Bad",
    "polygon": [
     [
      3.07,
@@ -1353,7 +1357,8 @@
      2.87
     ]
    ],
-   "area_stated": 3.55
+   "area_stated": 5.55,
+   "area_note": "Flächentabelle 2010: 5,55 m² (OG: 5,90) – vermutlich Abzug Dachschräge"
   },
   {
    "name": "WE 11 – Wohnen",
@@ -1378,7 +1383,7 @@
    "area_stated": 28.3
   },
   {
-   "name": "WE 11 – Kochen", "area_note": "Dachschräge Neubau, Fläche vermutlich nach WoFlV reduziert",
+   "name": "WE 11 – Kochen",
    "polygon": [
     [
      9.66,
@@ -1397,7 +1402,7 @@
      3.81
     ]
    ],
-   "area_stated": 6.8
+   "area_stated": 8.6
   },
   {
    "name": "WE 11 – Garderobe",
@@ -2184,14 +2189,6 @@
   }
  ],
  "unverified": [
-  {
-   "pos": [
-    6.0,
-    8.6
-   ],
-   "text": "WE-Nummern WE 9/WE 10/WE 11 angenommen (Stempel im Scan 2010 unleserlich); Zählung wie EG: Altbau Süd, Altbau Nord, Neubau",
-   "short": "WE-Nr. angenommen"
-  },
   {
    "pos": [
     23.2,

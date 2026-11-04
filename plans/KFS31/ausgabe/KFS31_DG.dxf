@@ -553,7 +553,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-4FC
+4FA
   9
 $SURFTAB1
  70
@@ -3281,7 +3281,7 @@ ACAD
   0
 APPID
   5
-4F9
+4F7
 330
 3
 100
@@ -3295,7 +3295,7 @@ HATCHBACKGROUNDCOLOR
   0
 APPID
   5
-4FA
+4F8
 330
 3
 100
@@ -29245,7 +29245,7 @@ AcDbText
  40
 0.25
   1
-WE 9 – Kochen
+WE 7 – Kochen
  72
 1
  11
@@ -29361,7 +29361,7 @@ AcDbText
  40
 0.25
   1
-WE 9 – Wohnen/Essen
+WE 7 – Wohnen/Essen
  72
 1
  11
@@ -29461,7 +29461,7 @@ AcDbText
  40
 0.25
   1
-WE 9 – Kind
+WE 7 – Kind
  72
 1
  11
@@ -29561,7 +29561,7 @@ AcDbText
  40
 0.25
   1
-WE 9 – Flur
+WE 7 – Flur
  72
 1
  11
@@ -29673,7 +29673,7 @@ AcDbText
  40
 0.25
   1
-WE 9 – Bad
+WE 7 – Bad
  72
 1
  11
@@ -29707,7 +29707,7 @@ AcDbText
  40
 0.2
   1
-6,85 m²
+6,65 m²
  72
 1
  11
@@ -29789,7 +29789,7 @@ AcDbText
  40
 0.25
   1
-WE 9 – Schlafen
+WE 7 – Schlafen
  72
 1
  11
@@ -29897,7 +29897,7 @@ AcDbText
  40
 0.25
   1
-WE 10 – Wohnen
+WE 8 – Wohnen
  72
 1
  11
@@ -29997,7 +29997,7 @@ AcDbText
  40
 0.25
   1
-WE 10 – Schlafen
+WE 8 – Schlafen
  72
 1
  11
@@ -30121,7 +30121,7 @@ AcDbText
  40
 0.25
   1
-WE 10 – Flur
+WE 8 – Flur
  72
 1
  11
@@ -30155,7 +30155,7 @@ AcDbText
  40
 0.2
   1
-6,80 m²
+6,60 m²
  72
 1
  11
@@ -30221,7 +30221,7 @@ AcDbText
  40
 0.25
   1
-WE 10 – Kochen
+WE 8 – Kochen
  72
 1
  11
@@ -30321,7 +30321,7 @@ AcDbText
  40
 0.25
   1
-WE 10 – Bad
+WE 8 – Bad
  72
 1
  11
@@ -30421,7 +30421,7 @@ AcDbText
  40
 0.25
   1
-WE 10 – Balkon
+WE 8 – Balkon
  72
 1
  11
@@ -30763,7 +30763,7 @@ AcDbText
  40
 0.2
   1
-2,65 m²
+2,60 m²
  72
 1
  11
@@ -30863,7 +30863,7 @@ AcDbText
  40
 0.2
   1
-3,55 m²
+5,55 m²
  72
 1
  11
@@ -31063,7 +31063,7 @@ AcDbText
  40
 0.2
   1
-6,80 m²
+8,60 m²
  72
 1
  11
@@ -34589,9 +34589,9 @@ A_UNGEPRUEFT
 100
 AcDbCircle
  10
-6.0
+23.2
  20
-8.6
+2.3
  30
 0.0
  40
@@ -34609,19 +34609,19 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-6.2
+23.4
  20
-8.6
+2.3
  30
 0.0
  40
 0.12
   1
-1 WE-Nummern WE 9/WE 10/WE 11 angenommen (Stempel im Scan 2010 unleserlich); Zählung wie EG: Altbau Süd, Altbau Nord, Neubau
+1 Zickzackwand Bad/Schlafen wie EG (Stand 2026 WE 1) übernommen; Plan 2010 zeigt hier dieselbe Wandführung, Lage ±10 cm
  11
-6.2
+23.4
  21
-8.6
+2.3
  31
 0.0
 100
@@ -34630,56 +34630,6 @@ AcDbText
 CIRCLE
   5
 4E7
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbCircle
- 10
-23.2
- 20
-2.3
- 30
-0.0
- 40
-0.15
-  0
-TEXT
-  5
-4E8
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbText
- 10
-23.4
- 20
-2.3
- 30
-0.0
- 40
-0.12
-  1
-2 Zickzackwand Bad/Schlafen wie EG (Stand 2026 WE 1) übernommen; Plan 2010 zeigt hier dieselbe Wandführung, Lage ±10 cm
- 11
-23.4
- 21
-2.3
- 31
-0.0
-100
-AcDbText
-  0
-CIRCLE
-  5
-4E9
 330
 17
 100
@@ -34699,7 +34649,7 @@ AcDbCircle
   0
 TEXT
   5
-4EA
+4E8
 330
 17
 100
@@ -34717,7 +34667,7 @@ AcDbText
  40
 0.12
   1
-3 Türbreiten/Aufschläge unleserlich – Standardmaße angenommen, Lage abgegriffen
+2 Türbreiten/Aufschläge unleserlich – Standardmaße angenommen, Lage abgegriffen
  11
 20.8
  21
@@ -34729,7 +34679,7 @@ AcDbText
   0
 CIRCLE
   5
-4EB
+4E9
 330
 17
 100
@@ -34749,7 +34699,7 @@ AcDbCircle
   0
 TEXT
   5
-4EC
+4EA
 330
 17
 100
@@ -34767,7 +34717,7 @@ AcDbText
  40
 0.12
   1
-4 Fenster Neubau Süd lt. Maßkette 1999; Plan 2010 zeigt sie ca. 0,24 m weiter westlich und das Wohnzimmerfenster zweiteilig
+3 Fenster Neubau Süd lt. Maßkette 1999; Plan 2010 zeigt sie ca. 0,24 m weiter westlich und das Wohnzimmerfenster zweiteilig
  11
 5.2
  21
@@ -34779,7 +34729,7 @@ AcDbText
   0
 CIRCLE
   5
-4ED
+4EB
 330
 17
 100
@@ -34799,7 +34749,7 @@ AcDbCircle
   0
 TEXT
   5
-4EE
+4EC
 330
 17
 100
@@ -34817,7 +34767,7 @@ AcDbText
  40
 0.12
   1
-5 Flur WE Nord: offener Übergang zum Wohnen; Raumgrenze bei x = 20,75 so angenommen, dass beide Flächen lt. Plan passen
+4 Flur WE Nord: offener Übergang zum Wohnen; Raumgrenze bei x = 20,75 so angenommen, dass beide Flächen lt. Plan passen
  11
 21.2
  21
@@ -34829,7 +34779,7 @@ AcDbText
   0
 CIRCLE
   5
-4EF
+4ED
 330
 17
 100
@@ -34849,7 +34799,7 @@ AcDbCircle
   0
 TEXT
   5
-4F0
+4EE
 330
 17
 100
@@ -34867,7 +34817,7 @@ AcDbText
  40
 0.12
   1
-6 Laubengang/Treppe West: Wandführung im Scan 2010 nur schematisch, Brüstungen angenommen
+5 Laubengang/Treppe West: Wandführung im Scan 2010 nur schematisch, Brüstungen angenommen
  11
 13.299999999999999
  21
@@ -34879,7 +34829,7 @@ AcDbText
   0
 CIRCLE
   5
-4F1
+4EF
 330
 17
 100
@@ -34899,7 +34849,7 @@ AcDbCircle
   0
 TEXT
   5
-4F2
+4F0
 330
 17
 100
@@ -34917,7 +34867,7 @@ AcDbText
  40
 0.12
   1
-7 Balkon Neubau: Tiefe 1,50 aus Plan 2010 abgegriffen, Breite 2,51 lt. 1999
+6 Balkon Neubau: Tiefe 1,50 aus Plan 2010 abgegriffen, Breite 2,51 lt. 1999
  11
 8.5
  21
@@ -34929,7 +34879,7 @@ AcDbText
   0
 CIRCLE
   5
-4F3
+4F1
 330
 17
 100
@@ -34949,7 +34899,7 @@ AcDbCircle
   0
 TEXT
   5
-4F4
+4F2
 330
 17
 100
@@ -34967,7 +34917,7 @@ AcDbText
  40
 0.12
   1
-8 DG Neubau: gestrichelte Linie y ≈ 0,99 (Dachschräge, Höhe nicht angegeben). Flächen lt. Plan 2010 (Schlafen 11,15, Bad 3,55, Kochen 6,80) sind kleiner als die Grundfläche – vermutlich Abzug nach WoFlV und/oder abweichende Trennwände; DG-Schnitt 1999 (S. 11) prüfen
+7 DG Neubau: gestrichelte Linie y ≈ 0,99 (Dachschräge, Höhe nicht angegeben). Flächen lt. Plan 2010 (Schlafen 11,15, Bad 3,55, Kochen 6,80) sind kleiner als die Grundfläche – vermutlich Abzug nach WoFlV und/oder abweichende Trennwände; DG-Schnitt 1999 (S. 11) prüfen
  11
 4.4
  21
@@ -34979,7 +34929,7 @@ AcDbText
   0
 CIRCLE
   5
-4F5
+4F3
 330
 17
 100
@@ -34999,7 +34949,7 @@ AcDbCircle
   0
 TEXT
   5
-4F6
+4F4
 330
 17
 100
@@ -35017,7 +34967,7 @@ AcDbText
  40
 0.12
   1
-9 DG Altbau: Fenster wie OG übernommen (Plan 2010 zeigt sie an gleicher Stelle); Bauantrag 1999 S. 10/11 bemaßt im DG abweichende Öffnungen (Gauben?) – prüfen
+8 DG Altbau: Fenster wie OG übernommen (Plan 2010 zeigt sie an gleicher Stelle); Bauantrag 1999 S. 10/11 bemaßt im DG abweichende Öffnungen (Gauben?) – prüfen
  11
 18.2
  21
@@ -35029,7 +34979,7 @@ AcDbText
   0
 CIRCLE
   5
-4F7
+4F5
 330
 17
 100
@@ -35049,7 +34999,7 @@ AcDbCircle
   0
 TEXT
   5
-4F8
+4F6
 330
 17
 100
@@ -35067,7 +35017,7 @@ AcDbText
  40
 0.12
   1
-10 Flur Neubau: Plan 2010 schreibt 2,65 m² (OG1: 2,85 m²) bei identischer Zeichnung – Lesefehler oder Planfehler
+9 Flur Neubau: Plan 2010 schreibt 2,65 m² (OG1: 2,85 m²) bei identischer Zeichnung – Lesefehler oder Planfehler
  11
 4.5
  21
@@ -36167,7 +36117,7 @@ CREATED_BY_EZDXF
   3
 WRITTEN_BY_EZDXF
 350
-4FB
+4F9
   0
 DICTIONARYVAR
   5
@@ -42733,7 +42683,7 @@ strokes_ogs.tif
   0
 DICTIONARYVAR
   5
-4FB
+4F9
 330
 2D
 100
