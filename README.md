@@ -11,3 +11,6 @@ Maßgetreue Neuzeichnungen der Bestandsgrundrisse als offene Formate (SVG + DXF)
 
 Arbeitsweise, Koordinatensystem, Layer und Schema: [docs/ZEICHENRICHTLINIE.md](docs/ZEICHENRICHTLINIE.md).
 Renderer: `python3 tools/render_plan.py --all`.
+
+3D-Modell (glTF + Browser-Raumplaner mit Sonnenstand): `python3 tools/build_3d.py plans/<Objekt>/geometrie/<Geschoss>.json --viewer`,
+Blender-Szene: `tools/blender_szene.py`. Beispiel: [plans/KSS29/3d](plans/KSS29/3d/README.md).

@@ -56,6 +56,12 @@
 | Balkontür Kinderzimmer | y 8,40–10,20 | y 8,57–10,37 |
 | Fenster Süd Wohnen / Kinderzimmer | x 3,96–5,76 / 8,47–10,27 | x 5,13–6,93 / 8,68–10,48 |
 
+## 3D-Modell
+
+Begehbares Modell mit Möbeln, Bildern und Sonnenstand: [`3d/`](3d/README.md)
+(`3d/KSS29_OG1.html` im Browser öffnen, `3d/KSS29_OG1.glb` für Blender).
+Erzeugt mit `python3 tools/build_3d.py plans/KSS29/geometrie/OG1.json --viewer`.
+
 ## Offene Punkte
 
 - Weitere Geschosse: keine Quellen vorhanden.

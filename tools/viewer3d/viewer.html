@@ -1,0 +1,1396 @@
+<title>__TITLE__</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: Vollbild-3D-Fläche, Werkzeugleiste rechts (Desktop) bzw. ausklappbares Blatt unten (Telefon). */
+:root {
+  --bg: #e9ecea;          /* Fläche hinter der 3D-Ansicht */
+  --panel: rgba(250, 251, 250, 0.94);
+  --ink: #1b2320;
+  --muted: #5d6a65;
+  --line: #d3d9d6;
+  --field: #ffffff;
+  --accent: #1f6a64;      /* Auswahl, aktive Werkzeuge */
+  --accent-ink: #ffffff;
+  --sun: #b7790e;         /* alles, was mit Sonnenstand zu tun hat */
+  --warn: #a4372a;
+  --font-ui: "Barlow", "Segoe UI", system-ui, sans-serif;
+  --font-label: "Barlow Semi Condensed", "Barlow", "Arial Narrow", sans-serif;
+  --font-num: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r: 6px;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121614; --panel: rgba(22, 27, 25, 0.94); --ink: #e6ebe8; --muted: #9aa8a2; --line: #2f3835;
+  --field: #1c2321; --accent: #4fb3a9; --accent-ink: #0d1312; --sun: #e2a73c; --warn: #e07a6a; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #121614; --panel: rgba(22, 27, 25, 0.94); --ink: #e6ebe8; --muted: #9aa8a2; --line: #2f3835;
+  --field: #1c2321; --accent: #4fb3a9; --accent-ink: #0d1312; --sun: #e2a73c; --warn: #e07a6a; color-scheme: dark }
+
+[hidden] { display: none !important; }
+html, body { height: 100%; margin: 0; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-ui); font-size: 14px; overflow: hidden; }
+#app { position: relative; height: 100%; overflow: hidden; }
+#c { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; outline: none; }
+
+.float { position: absolute; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+#top { top: calc(10px + env(safe-area-inset-top, 0px)); left: calc(10px + env(safe-area-inset-left, 0px));
+  display: flex; align-items: center; gap: 12px; padding: 6px 6px 6px 12px; flex-wrap: wrap; max-width: calc(100% - 380px); }
+#top h1 { font-family: var(--font-label); font-weight: 600; font-size: 15px; letter-spacing: 0.02em; margin: 0; white-space: nowrap; }
+#top h1 small { font-weight: 500; color: var(--muted); margin-left: 6px; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.seg button { border: 0; border-right: 1px solid var(--line); background: transparent; color: var(--ink); font: 500 13px var(--font-ui);
+  padding: 6px 11px; cursor: pointer; }
+.seg button:last-child { border-right: 0; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+
+#readout { top: calc(10px + env(safe-area-inset-top, 0px)); right: calc(370px + env(safe-area-inset-right, 0px));
+  padding: 6px 10px; font: 12px/1.35 var(--font-num); color: var(--ink); display: flex; gap: 10px; align-items: center; }
+#readout b { color: var(--sun); font-weight: 500; }
+#compass { width: 34px; height: 34px; flex: none; }
+#compass text { font: 600 9px var(--font-label); fill: var(--ink); }
+
+#hint { left: calc(10px + env(safe-area-inset-left, 0px)); bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+  padding: 6px 10px; font-size: 12.5px; color: var(--muted); max-width: min(560px, calc(100% - 400px)); }
+#hint strong { color: var(--ink); font-weight: 600; }
+#notice { left: 50%; transform: translateX(-50%); bottom: calc(52px + env(safe-area-inset-bottom, 0px)); padding: 8px 14px;
+  font-size: 13px; border-color: var(--accent); }
+
+#panel { top: calc(10px + env(safe-area-inset-top, 0px)); right: calc(10px + env(safe-area-inset-right, 0px));
+  bottom: calc(10px + env(safe-area-inset-bottom, 0px)); width: 348px; display: flex; flex-direction: column; }
+#tabs { display: grid; grid-template-columns: repeat(5, 1fr); border-bottom: 1px solid var(--line); flex: none; }
+#tabs button { border: 0; background: transparent; color: var(--muted); font: 600 13px var(--font-label); letter-spacing: 0.03em;
+  padding: 10px 2px 9px; cursor: pointer; border-bottom: 2px solid transparent; }
+#tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+#tabs button[data-tab="sonne"][aria-selected="true"] { border-bottom-color: var(--sun); }
+#sheetToggle { display: none; }
+.tabbody { overflow-y: auto; padding: 14px 14px 18px; display: flex; flex-direction: column; gap: 16px; min-height: 0; }
+.group { display: flex; flex-direction: column; gap: 8px; }
+.group > h2 { font: 600 11.5px var(--font-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0; }
+.row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.row > label { min-width: 0; }
+.val { font: 500 13px var(--font-num); font-variant-numeric: tabular-nums; }
+.sunval { color: var(--sun); }
+.small { font-size: 12px; color: var(--muted); line-height: 1.45; }
+input[type="range"] { width: 100%; accent-color: var(--accent); }
+#tabSonne input[type="range"] { accent-color: var(--sun); }
+input[type="number"], select, input[type="text"] { font: 13px var(--font-ui); color: var(--ink); background: var(--field);
+  border: 1px solid var(--line); border-radius: 4px; padding: 5px 6px; min-width: 0; }
+input[type="number"] { width: 76px; font-family: var(--font-num); }
+input[type="color"] { width: 44px; height: 28px; border: 1px solid var(--line); border-radius: 4px; background: var(--field); padding: 2px; }
+.btn { font: 500 13px var(--font-ui); color: var(--ink); background: var(--field); border: 1px solid var(--line); border-radius: 4px;
+  padding: 6px 10px; cursor: pointer; }
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.btn.danger { color: var(--warn); }
+.btn.sun { border-color: var(--sun); color: var(--sun); }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chips .btn { padding: 4px 8px; font-size: 12.5px; }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; font-size: 13px; }
+.kv span:nth-child(odd) { color: var(--muted); }
+#sunChart { width: 100%; height: 96px; display: block; border: 1px solid var(--line); border-radius: 4px; background: var(--field); }
+.cat { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.cat button { text-align: left; font: 500 13px var(--font-ui); color: var(--ink); background: var(--field); border: 1px solid var(--line);
+  border-radius: 4px; padding: 6px 8px; cursor: pointer; display: flex; flex-direction: column; gap: 1px; }
+.cat button small { font: 11px var(--font-num); color: var(--muted); }
+.cat button:hover { border-color: var(--accent); }
+.editor { border: 1px solid var(--accent); border-radius: var(--r); padding: 10px; display: flex; flex-direction: column; gap: 8px; }
+.editor h3 { margin: 0; font: 600 14px var(--font-label); }
+.dims { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.dims label { display: flex; flex-direction: column; gap: 2px; font-size: 11.5px; color: var(--muted); }
+.dims input { width: 100%; }
+.rooms { display: flex; flex-direction: column; }
+.rooms .r { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.rooms .r:last-child { border-bottom: 0; }
+.rooms .r .name { font-weight: 500; }
+.rooms .r .area { font: 12px var(--font-num); color: var(--muted); }
+.check { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+#loading { position: absolute; inset: 0; display: grid; place-items: center; background: var(--bg); z-index: 5; text-align: center; padding: 24px; }
+#loading p { max-width: 42ch; color: var(--muted); }
+#loading h2 { font: 600 18px var(--font-label); margin: 0 0 6px; }
+.err { color: var(--warn); }
+
+@media (max-width: 760px) {
+  #top { max-width: calc(100% - 20px); right: 10px; }
+  #readout { right: auto; left: calc(10px + env(safe-area-inset-left, 0px)); top: calc(96px + env(safe-area-inset-top, 0px)); }
+  #hint { display: none; }
+  #panel { top: auto; left: calc(6px + env(safe-area-inset-left, 0px)); right: calc(6px + env(safe-area-inset-right, 0px));
+    bottom: calc(6px + env(safe-area-inset-bottom, 0px)); width: auto; max-height: 52%; }
+  #panel.collapsed .tabbody { display: none; }
+  #sheetToggle { display: block; position: absolute; top: -34px; right: 0; }
+  #notice { bottom: auto; top: calc(150px + env(safe-area-inset-top, 0px)); }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div id="app">
+  <canvas id="c" tabindex="0" aria-label="3D-Ansicht der Wohnung"></canvas>
+
+  <div id="top" class="float">
+    <h1 id="title">KSS29<small id="subtitle">1. OG</small></h1>
+    <div class="seg" role="group" aria-label="Ansicht">
+      <button id="mWalk" data-mode="walk" aria-pressed="true">Rundgang</button>
+      <button id="mOrbit" data-mode="orbit" aria-pressed="false">Übersicht</button>
+      <button id="mPlan" data-mode="plan" aria-pressed="false">Grundriss</button>
+    </div>
+  </div>
+
+  <div id="readout" class="float" aria-live="polite">
+    <svg id="compass" viewBox="-17 -17 34 34" aria-label="Nordrichtung"><circle r="15.5" fill="none" stroke="currentColor" stroke-opacity="0.25"/>
+      <g id="needle"><path d="M0 -12 L4 2 L0 0 L-4 2 Z" fill="var(--warn)"/><text y="-4.5" x="0" text-anchor="middle" dy="-8">N</text></g></svg>
+    <div><div id="roDate">–</div><div id="roSun">–</div></div>
+  </div>
+
+  <div id="hint" class="float"></div>
+  <div id="notice" class="float" hidden></div>
+
+  <aside id="panel" class="float">
+    <button id="sheetToggle" class="btn">Werkzeuge ausblenden</button>
+    <div id="tabs" role="tablist">
+      <button role="tab" data-tab="sonne" aria-selected="true">Sonne</button>
+      <button role="tab" data-tab="licht" aria-selected="false">Licht</button>
+      <button role="tab" data-tab="moebel" aria-selected="false">Möbel</button>
+      <button role="tab" data-tab="bilder" aria-selected="false">Bilder</button>
+      <button role="tab" data-tab="raeume" aria-selected="false">Räume</button>
+    </div>
+
+    <section class="tabbody" id="tabSonne" data-body="sonne">
+      <div class="group">
+        <h2>Datum</h2>
+        <div class="row" style="justify-content:space-between"><span class="val sunval" id="dateVal">–</span><span class="small" id="riseSet">–</span></div>
+        <input type="range" id="doy" min="1" max="365" step="1" aria-label="Tag im Jahr">
+        <div class="chips">
+          <button class="btn" data-doy="80">21. März</button><button class="btn" data-doy="172">21. Juni</button>
+          <button class="btn" data-doy="266">23. Sept.</button><button class="btn" data-doy="355">21. Dez.</button>
+          <button class="btn" id="today">Heute</button>
+        </div>
+      </div>
+      <div class="group">
+        <h2>Uhrzeit</h2>
+        <div class="row" style="justify-content:space-between"><span class="val sunval" id="timeVal">–</span>
+          <span class="row"><select id="speed" aria-label="Zeitraffer"><option value="0.5">30 min/s</option><option value="1" selected>1 h/s</option><option value="3">3 h/s</option></select>
+          <button class="btn sun" id="play">Abspielen</button></span></div>
+        <input type="range" id="time" min="0" max="1439" step="5" aria-label="Uhrzeit">
+        <canvas id="sunChart" aria-label="Sonnenhöhe über den Tag"></canvas>
+        <div class="small">Kurve: Sonnenhöhe über den Tag, Punkt: gewählte Uhrzeit. Ortszeit MEZ/MESZ.</div>
+      </div>
+      <div class="group">
+        <h2>Himmel</h2>
+        <div class="seg" role="group" aria-label="Himmel"><button data-sky="klar" aria-pressed="true">Klar</button><button data-sky="bedeckt" aria-pressed="false">Bedeckt</button></div>
+      </div>
+      <div class="group">
+        <h2>Standort und Ausrichtung</h2>
+        <div class="row"><label class="small" for="lat">Breite</label><input type="number" id="lat" step="0.001">
+          <label class="small" for="lon">Länge</label><input type="number" id="lon" step="0.001"></div>
+        <div class="row"><label class="small" for="north">Nordabweichung</label><input type="number" id="north" step="0.5"><span class="small">Grad im Uhrzeigersinn</span></div>
+        <div class="small">Vorgabe München. Der Grundriss ist genordet (Norden oben, Straße West, Garten Ost). Steht der Nordpfeil im Lageplan schräg, hier den Winkel eintragen.</div>
+      </div>
+    </section>
+
+    <section class="tabbody" id="tabLicht" data-body="licht" hidden>
+      <div class="group">
+        <h2>Deckenleuchten</h2>
+        <div class="seg" role="group" aria-label="Deckenleuchten"><button data-lamps="auto" aria-pressed="true">Automatisch</button><button data-lamps="an" aria-pressed="false">An</button><button data-lamps="aus" aria-pressed="false">Aus</button></div>
+        <div class="small">Automatisch: an, sobald es draußen dämmert. Einzelne Räume schaltest du unter „Räume“.</div>
+        <div class="row" style="justify-content:space-between"><label for="lampLevel">Helligkeit</label><span class="val" id="lampVal">100 %</span></div>
+        <input type="range" id="lampLevel" min="10" max="250" step="5">
+        <div class="row"><label for="cct">Lichtfarbe</label><select id="cct"><option value="2700">2700 K warmweiß</option><option value="3000">3000 K</option><option value="4000">4000 K neutralweiß</option></select></div>
+      </div>
+      <div class="group">
+        <h2>Tageslicht</h2>
+        <div class="row" style="justify-content:space-between"><label for="fill">Himmelslicht durch Fenster</label><span class="val" id="fillVal">100 %</span></div>
+        <input type="range" id="fill" min="0" max="250" step="5">
+        <div class="row" style="justify-content:space-between"><label for="exposure">Belichtung</label><span class="val" id="expVal">auto</span></div>
+        <input type="range" id="exposure" min="-2" max="2" step="0.1">
+        <label class="check"><input type="checkbox" id="autoExp"> Automatisch an Tageszeit anpassen (wie das Auge)</label>
+      </div>
+      <div class="group">
+        <h2>Darstellung</h2>
+        <label class="check"><input type="checkbox" id="doorsOpen"> Türen offen</label>
+        <label class="check"><input type="checkbox" id="hq"> Feine Schatten (langsamer)</label>
+        <div class="row"><label for="eye">Augenhöhe</label><select id="eye"><option value="1.65">Stehen 1,65 m</option><option value="1.2">Sitzen 1,20 m</option><option value="1.0">Kind 1,00 m</option></select>
+          <label for="fov">Blickwinkel</label><select id="fov"><option value="60">60°</option><option value="72" selected>72°</option><option value="90">90°</option></select></div>
+      </div>
+      <p class="small">Echtzeit-Näherung: Sonne und Schatten sind genau, das Licht, das von weißen Wänden zurückgeworfen wird, ist nur geschätzt. Für eine fotorealistische Prüfung das Modell mit <code>tools/blender_kss29.py</code> in Blender (Cycles) öffnen.</p>
+    </section>
+
+    <section class="tabbody" id="tabMoebel" data-body="moebel" hidden>
+      <div class="editor" id="furnEditor" hidden>
+        <div class="row" style="justify-content:space-between"><h3 id="feName">–</h3><button class="btn" id="feClose" aria-label="Auswahl aufheben">Fertig</button></div>
+        <div class="dims">
+          <label>Breite cm<input type="number" id="feW" min="5" step="1"></label>
+          <label>Tiefe cm<input type="number" id="feD" min="5" step="1"></label>
+          <label>Höhe cm<input type="number" id="feH" min="1" step="1"></label>
+        </div>
+        <div class="row"><label for="feRot">Drehung</label><input type="range" id="feRot" min="0" max="355" step="5" style="flex:1"><span class="val" id="feRotVal">0°</span></div>
+        <div class="row"><button class="btn" id="feRotL">⟲ 90°</button><button class="btn" id="feRotR">⟳ 90°</button>
+          <label for="feColor" class="small">Farbe</label><input type="color" id="feColor"></div>
+        <div class="row"><button class="btn" id="feDup">Duplizieren</button><button class="btn danger" id="feDel">Löschen</button></div>
+      </div>
+      <div class="group">
+        <h2>Möbel hinzufügen</h2>
+        <div class="cat" id="catalog"></div>
+        <div class="small">Das neue Stück erscheint dort, wohin du schaust. Ziehen verschiebt es, <b>R</b> dreht um 90°, <b>Entf</b> löscht.</div>
+        <label class="check"><input type="checkbox" id="snap"> Am 5-cm-Raster ausrichten</label>
+      </div>
+      <div class="group">
+        <h2>Einrichtung</h2>
+        <div class="small" id="exampleNote">Die Wohnung ist mit einer Beispiel-Einrichtung vorbelegt. Du kannst alles verschieben, ändern oder entfernen.</div>
+        <div class="row"><button class="btn danger" id="clearFurn">Alle Möbel entfernen</button></div>
+      </div>
+    </section>
+
+    <section class="tabbody" id="tabBilder" data-body="bilder" hidden>
+      <div class="editor" id="picEditor" hidden>
+        <div class="row" style="justify-content:space-between"><h3>Bild an der Wand</h3><button class="btn" id="peClose">Fertig</button></div>
+        <div class="dims">
+          <label>Breite cm<input type="number" id="peW" min="5" step="1"></label>
+          <label>Höhe cm<input type="number" id="peH" min="5" step="1" disabled></label>
+          <label>Mitte über Boden<input type="number" id="peY" min="20" step="1"></label>
+        </div>
+        <div class="row"><label for="peFrame">Rahmen</label><select id="peFrame">
+          <option value="none">ohne (Leinwand)</option><option value="schwarz">schmal schwarz</option><option value="weiss">weiß</option>
+          <option value="eiche">Eiche</option><option value="galerie">Galerie mit Passepartout</option></select></div>
+        <div class="row"><button class="btn danger" id="peDel">Entfernen</button></div>
+        <div class="small">Ziehen schiebt das Bild über die Wände. Galerie-Regel: Bildmitte auf etwa 145–155 cm.</div>
+      </div>
+      <div class="group">
+        <h2>Bild aufhängen</h2>
+        <div class="row"><label class="btn primary" for="picFile">Bild hochladen</label><input type="file" id="picFile" accept="image/*" hidden>
+          <button class="btn" id="picSample">Beispielbild</button></div>
+        <div class="small" id="picHint">Nach der Auswahl tippst du auf die Wand, an der das Bild hängen soll. Fotos werden auf 1600 px verkleinert und nur in diesem Browser gespeichert.</div>
+      </div>
+    </section>
+
+    <section class="tabbody" id="tabRaeume" data-body="raeume" hidden>
+      <div class="group">
+        <h2>Räume</h2>
+        <div class="rooms" id="roomList"></div>
+        <div class="small">„Hin“ stellt dich in die Raummitte. Fläche aus dem Grundriss (Rohbaumaß), der Plan-Stempel steht in Klammern.</div>
+      </div>
+      <div class="group">
+        <h2>Sichern und weitergeben</h2>
+        <div class="row"><button class="btn" id="expJson">Einrichtung als Datei</button><button class="btn" id="copyJson">In Zwischenablage</button></div>
+        <div class="row"><label class="btn" for="impJson">Einrichtung laden</label><input type="file" id="impJson" accept=".json,application/json" hidden></div>
+        <div class="row"><button class="btn" id="expGlb">Modell mit Möbeln als GLB (Blender)</button></div>
+        <div class="small">Die Einrichtung wird automatisch in diesem Browser gespeichert. Als Datei sicherst du sie dauerhaft oder bringst sie auf ein anderes Gerät. In der Online-Ansicht kann der Browser keine Dateien speichern; dann „In Zwischenablage“ verwenden oder die HTML-Datei aus dem Repository lokal öffnen.</div>
+      </div>
+    </section>
+  </aside>
+
+  <div id="loading"><div><h2>Modell wird geladen</h2><p id="loadMsg">3D-Ansicht startet …</p></div></div>
+</div>
+
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+<script>
+  window.__loadTimer = setTimeout(() => {
+    const m = document.getElementById('loadMsg');
+    if (m && !window.__started) { m.className = 'err'; m.textContent = 'Die 3D-Bibliothek (three.js von cdn.jsdelivr.net) lädt nicht. Internetverbindung prüfen und neu laden.'; }
+  }, 15000);
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { Sky } from 'three/addons/objects/Sky.js';
+import { RectAreaLightUniformsLib } from 'three/addons/lights/RectAreaLightUniformsLib.js';
+import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
+
+window.__started = true;
+const MODEL_B64 = /*__MODEL_B64__*/"";
+const META = /*__MODEL_META__*/{};
+
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => [...document.querySelectorAll(s)];
+const RAD = Math.PI / 180;
+const W = (x, y, h = 0) => new THREE.Vector3(x, h, -y);       // Plan (x Ost, y Nord) -> Welt
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const smooth = (a, b, v) => { const t = clamp((v - a) / (b - a), 0, 1); return t * t * (3 - 2 * t); };
+const coarse = matchMedia('(pointer: coarse)').matches;
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const KEY = `${META.object}_${META.floor}_raumplaner_v1`;
+
+// ------------------------------------------------------------------ Zustand
+const now = new Date();
+const doyOf = (d) => Math.floor((Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) - Date.UTC(d.getFullYear(), 0, 0)) / 864e5);
+const DEFAULTS = {
+  mode: 'walk', lat: 48.137, lon: 11.575, north: 0, year: now.getFullYear(), doy: doyOf(now), minutes: 15 * 60,
+  sky: 'klar', lamps: 'auto', lampLevel: 100, cct: 2700, fill: 100, exposure: 0, autoExp: true,
+  doorsOpen: true, hq: !coarse, snap: true, eye: 1.65, fov: 72, roomLights: {},
+  walk: { x: 6.5, y: 6.7, yaw: Math.PI, pitch: -0.05 },
+};
+let S = structuredClone(DEFAULTS);
+let furniture = [];   // {uid,type,x,y,rot,w,d,h,color}
+let pictures = [];    // {uid,src,x,y,z,nx,ny,width,aspect,frame}
+let example = true;
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem(KEY);
+    if (!raw) return false;
+    const o = JSON.parse(raw);
+    applyProject(o, true);
+    return true;
+  } catch (e) { return false; }
+}
+function applyProject(o, keepSettings) {
+  if (o.settings) S = { ...structuredClone(DEFAULTS), ...o.settings, walk: { ...DEFAULTS.walk, ...(o.settings.walk || {}) } };
+  furniture = Array.isArray(o.furniture) ? o.furniture : [];
+  pictures = Array.isArray(o.pictures) ? o.pictures : [];
+  example = !!o.example;
+}
+function project() {
+  return { app: 'raumplaner', version: 1, object: META.object, floor: META.floor, saved: new Date().toISOString(),
+    example, settings: { ...S, walk: { ...S.walk } }, furniture, pictures };
+}
+let saveTimer = 0;
+function save() {
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(() => {
+    try { localStorage.setItem(KEY, JSON.stringify(project())); }
+    catch (e) { notice('Der Browser-Speicher ist voll (meist durch große Bilder). Einrichtung unter „Räume“ als Datei sichern.'); }
+  }, 400);
+}
+let noticeTimer = 0;
+function notice(t, ms = 4200) {
+  const n = $('#notice'); n.textContent = t; n.hidden = false;
+  clearTimeout(noticeTimer); noticeTimer = setTimeout(() => (n.hidden = true), ms);
+}
+
+// ------------------------------------------------------------------ Sonne (Algorithmus nach SunCalc / NOAA)
+function sunPos(ms, lat, lon) {
+  const d = ms / 864e5 - 0.5 + 2440588 - 2451545;
+  const M = RAD * (357.5291 + 0.98560028 * d);
+  const C = RAD * (1.9148 * Math.sin(M) + 0.02 * Math.sin(2 * M) + 0.0003 * Math.sin(3 * M));
+  const L = M + C + RAD * 102.9372 + Math.PI;
+  const e = RAD * 23.4397;
+  const dec = Math.asin(Math.sin(e) * Math.sin(L));
+  const ra = Math.atan2(Math.sin(L) * Math.cos(e), Math.cos(L));
+  const H = RAD * (280.16 + 360.9856235 * d) + lon * RAD - ra;
+  const phi = lat * RAD;
+  const el = Math.asin(Math.sin(phi) * Math.sin(dec) + Math.cos(phi) * Math.cos(dec) * Math.cos(H));
+  const az = Math.atan2(Math.sin(H), Math.cos(H) * Math.sin(phi) - Math.tan(dec) * Math.cos(phi)) + Math.PI; // ab Nord, im Uhrzeigersinn
+  return { az, el };
+}
+const lastSunday = (y, m) => { const d = new Date(Date.UTC(y, m + 1, 0)); return d.getUTCDate() - d.getUTCDay(); };
+function localToUTC(year, doy, minutes) {
+  const base = Date.UTC(year, 0, doy) + minutes * 6e4;
+  const ds = Date.UTC(year, 2, lastSunday(year, 2), 1), de = Date.UTC(year, 9, lastSunday(year, 9), 1);
+  const guess = base - 36e5;
+  const dst = guess >= ds && guess < de;
+  return { ms: base - (dst ? 2 : 1) * 36e5, dst };
+}
+const fmtTime = (m) => `${String(Math.floor(m / 60) % 24).padStart(2, '0')}:${String(Math.round(m % 60)).padStart(2, '0')}`;
+const fmtDate = (year, doy) => new Date(Date.UTC(year, 0, doy)).toLocaleDateString('de-DE', { day: 'numeric', month: 'long', timeZone: 'UTC' });
+const compassName = (deg) => ['N', 'NO', 'O', 'SO', 'S', 'SW', 'W', 'NW'][Math.round(((deg % 360) + 360) % 360 / 45) % 8];
+function dayCurve() {
+  const pts = []; let rise = null, set = null, prev = null;
+  for (let m = 0; m <= 1440; m += 4) {
+    const { ms } = localToUTC(S.year, S.doy, m);
+    const el = sunPos(ms, S.lat, S.lon).el / RAD;
+    pts.push([m, el]);
+    if (prev !== null) {
+      if (prev < -0.833 && el >= -0.833) rise = m - 4 + 4 * (-0.833 - prev) / (el - prev);
+      if (prev >= -0.833 && el < -0.833) set = m - 4 + 4 * (prev + 0.833) / (prev - el);
+    }
+    prev = el;
+  }
+  return { pts, rise, set };
+}
+
+// ------------------------------------------------------------------ Renderer, Szene, Kameras
+const canvas = $('#c');
+let renderer;
+try {
+  renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+} catch (e) {
+  $('#loadMsg').className = 'err';
+  $('#loadMsg').textContent = 'Dieser Browser kann kein WebGL darstellen. Bitte einen aktuellen Chrome, Edge, Firefox oder Safari verwenden.';
+  throw e;
+}
+renderer.setPixelRatio(Math.min(devicePixelRatio, coarse ? 1.5 : 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+RectAreaLightUniformsLib.init();
+
+const scene = new THREE.Scene();
+const B = META.bounds || [0, 0, 12, 12];
+const center = W((B[0] + B[2]) / 2, (B[1] + B[3]) / 2, 0);
+
+const cam = new THREE.PerspectiveCamera(72, 1, 0.05, 3000);
+cam.layers.enable(1);
+const planCam = new THREE.OrthographicCamera(-10, 10, 10, -10, 0.1, 300);
+planCam.up.set(0, 0, -1);
+planCam.position.set(center.x, 60, center.z);
+planCam.lookAt(center.x, 0, center.z);
+const orbit = new OrbitControls(cam, canvas);
+orbit.enableDamping = true; orbit.target.copy(center).setY(0.8); orbit.maxPolarAngle = Math.PI * 0.49;
+orbit.minDistance = 3; orbit.maxDistance = 80; orbit.enabled = false;
+const planCtl = new OrbitControls(planCam, canvas);
+planCtl.enableRotate = false; planCtl.screenSpacePanning = true; planCtl.target.copy(center); planCtl.enabled = false;
+planCtl.mouseButtons = { LEFT: THREE.MOUSE.PAN, MIDDLE: THREE.MOUSE.DOLLY, RIGHT: THREE.MOUSE.PAN };
+planCtl.touches = { ONE: THREE.TOUCH.PAN, TWO: THREE.TOUCH.DOLLY_PAN };
+planCtl.minZoom = 0.5; planCtl.maxZoom = 6;
+
+const sky = new Sky();
+sky.scale.setScalar(2000);
+Object.assign(sky.material.uniforms.turbidity, { value: 3.5 });
+sky.material.uniforms.rayleigh.value = 1.4;
+sky.material.uniforms.mieCoefficient.value = 0.004;
+sky.material.uniforms.mieDirectionalG.value = 0.8;
+scene.add(sky);
+
+const sun = new THREE.DirectionalLight(0xffffff, 3);
+sun.castShadow = true;
+sun.shadow.camera.left = -14; sun.shadow.camera.right = 14; sun.shadow.camera.top = 14; sun.shadow.camera.bottom = -14;
+sun.shadow.camera.near = 1; sun.shadow.camera.far = 120;
+sun.shadow.camera.layers.enableAll();
+sun.shadow.bias = -0.0004; sun.shadow.normalBias = 0.025;
+scene.add(sun, sun.target);
+const hemi = new THREE.HemisphereLight(0xcfe0ff, 0x8a7f70, 0.3);
+scene.add(hemi);
+
+// Sonnenbahn (in Übersicht sichtbar)
+const pathGeo = new THREE.BufferGeometry();
+const sunPath = new THREE.Line(pathGeo, new THREE.LineBasicMaterial({ color: 0xe2a73c, transparent: true, opacity: 0.8 }));
+const sunBall = new THREE.Mesh(new THREE.SphereGeometry(0.6, 16, 12), new THREE.MeshBasicMaterial({ color: 0xffd27a }));
+sunPath.visible = sunBall.visible = false;
+scene.add(sunPath, sunBall);
+
+const modelRoot = new THREE.Group();
+const furnGroup = new THREE.Group(); furnGroup.name = 'Moebel';
+const picGroup = new THREE.Group(); picGroup.name = 'Bilder';
+scene.add(modelRoot, furnGroup, picGroup);
+
+const solids = [], floors = [], wallTargets = [], glassMeshes = [], doors = [], lamps = [], winLights = [];
+let ceiling = null, context = null;
+
+// ------------------------------------------------------------------ Materialien (prozedurale Böden)
+function canvasTex(size, draw, repeat = 1) {
+  const c = document.createElement('canvas'); c.width = c.height = size;
+  draw(c.getContext('2d'), size);
+  const t = new THREE.CanvasTexture(c);
+  t.wrapS = t.wrapT = THREE.RepeatWrapping; t.colorSpace = THREE.SRGBColorSpace;
+  t.anisotropy = renderer.capabilities.getMaxAnisotropy(); t.repeat.set(repeat, repeat);
+  return t;
+}
+let seed = 7;
+const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+const parkett = canvasTex(1024, (g, s) => {           // 1 m × 1 m, Dielen 16,7 cm, versetzt
+  const rows = 6, rh = s / rows;
+  for (let r = 0; r < rows; r++) {
+    let x = -rnd() * s;
+    while (x < s) {
+      const len = s * (0.55 + rnd() * 0.6);
+      const l = 46 + rnd() * 10, hue = 28 + rnd() * 6;
+      g.fillStyle = `hsl(${hue} 42% ${l}%)`; g.fillRect(x, r * rh, len, rh);
+      g.globalAlpha = 0.12;
+      for (let k = 0; k < 14; k++) { g.fillStyle = rnd() > 0.5 ? '#3b2412' : '#f3d9b8'; g.fillRect(x, r * rh + rnd() * rh, len, 1 + rnd() * 2); }
+      g.globalAlpha = 1; g.fillStyle = 'rgba(40,25,10,0.45)'; g.fillRect(x, r * rh, 2, rh);
+      x += len;
+    }
+    g.fillStyle = 'rgba(40,25,10,0.5)'; g.fillRect(0, r * rh, s, 2);
+  }
+});
+const fliese = canvasTex(512, (g, s) => {             // 1,2 m: 2 × 2 Platten 60 × 60
+  g.fillStyle = '#9b9890'; g.fillRect(0, 0, s, s);
+  for (let i = 0; i < 2; i++) for (let j = 0; j < 2; j++) {
+    const l = 66 + rnd() * 4; g.fillStyle = `hsl(40 5% ${l}%)`; g.fillRect(i * s / 2 + 2, j * s / 2 + 2, s / 2 - 4, s / 2 - 4);
+  }
+}, 1 / 1.2);
+
+// ------------------------------------------------------------------ Modell laden
+function loadModel() {
+  if (!MODEL_B64) throw new Error('Kein Modell eingebettet. Bitte mit tools/build_3d.py --viewer erzeugen.');
+  const bin = Uint8Array.from(atob(MODEL_B64), (c) => c.charCodeAt(0)).buffer;
+  return new Promise((res, rej) => new GLTFLoader().parse(bin, '', (g) => res(g.scene), rej));
+}
+function prepareModel(root) {
+  modelRoot.add(root);
+  const flag = (o, k) => { for (let p = o; p; p = p.parent) if (p.userData && p.userData[k] !== undefined) return p.userData[k]; return undefined; };
+  root.traverse((o) => {
+    if (o.isMesh) {
+      const m = o.material;
+      const glass = m.name === 'Glas';
+      o.castShadow = !glass && m.name !== 'Leuchte'; o.receiveShadow = true;
+      if (glass) { m.depthWrite = false; m.envMapIntensity = 1; o.renderOrder = 2; glassMeshes.push(o); }
+      if (m.name === 'Boden_Parkett') { m.map = parkett; m.color.set(0xffffff); }
+      if (m.name === 'Boden_Fliese') { m.map = fliese; m.color.set(0xffffff); }
+      if (m.name === 'Leuchte') { o.material = m.clone(); o.material.emissiveIntensity = 0; }
+      if (flag(o, 'solid')) solids.push(o);
+      if (flag(o, 'floor')) floors.push(o);
+      if (/^(Wand_|Bauteil_|Schacht)/.test(nodeName(o))) wallTargets.push(o);
+    }
+    if (o.userData.ceiling) { ceiling = o; o.traverse((c) => c.layers.set(1)); }
+    if (o.name === 'Umgebung') context = o;
+    if (o.userData.door) doors.push({ obj: o, closed: o.userData.yawClosed, open: o.userData.yawOpen, t: 1 });
+    if (o.isPointLight) {
+      const room = flag(o, 'room');
+      o.userData.baseCd = o.intensity; o.decay = 2; o.distance = 7; o.castShadow = false; o.position.y -= 0.13;
+      o.shadow.mapSize.set(256, 256); o.shadow.bias = -0.003;
+      const lampMesh = o.parent && o.parent.isMesh ? o.parent : o.parent?.children.find((c) => c.isMesh);
+      lamps.push({ light: o, room, mesh: o.parent });
+    }
+  });
+  for (const op of META.openings || []) {
+    if (!op.exterior) continue;
+    const nIn = new THREE.Vector3(-op.dir[1] * op.inside, 0, -op.dir[0] * op.inside);
+    const h = op.z1 - op.z0;
+    const rl = new THREE.RectAreaLight(0xdfe8ff, 1, Math.max(0.2, op.width - 0.12), Math.max(0.2, h - 0.12));
+    const p = W(op.center[0], op.center[1], (op.z0 + op.z1) / 2).addScaledVector(nIn, op.thickness / 2 + 0.03);
+    rl.position.copy(p); rl.lookAt(p.clone().add(nIn));
+    rl.userData = { nOut: nIn.clone().negate(), area: (op.width * h) };
+    scene.add(rl); winLights.push(rl);
+  }
+}
+function nodeName(o) { for (let p = o; p; p = p.parent) if (/^(Wand_|Bauteil_|Schacht)/.test(p.name)) return p.name; return o.name; }
+
+// ------------------------------------------------------------------ Möbel-Katalog
+const matCache = new Map();
+function mat(color, rough = 0.75, extra = {}) {
+  const k = color + rough + JSON.stringify(extra);
+  if (!matCache.has(k)) matCache.set(k, new THREE.MeshStandardMaterial({ color, roughness: rough, ...extra }));
+  return matCache.get(k);
+}
+function box(g, x0, x1, y0, y1, z0, z1, m) {
+  const mesh = new THREE.Mesh(new THREE.BoxGeometry(Math.max(0.002, x1 - x0), Math.max(0.002, y1 - y0), Math.max(0.002, z1 - z0)), m);
+  mesh.position.set((x0 + x1) / 2, (y0 + y1) / 2, (z0 + z1) / 2); g.add(mesh); return mesh;
+}
+function cyl(g, r0, r1, y0, y1, x, z, m, seg = 20) {
+  const mesh = new THREE.Mesh(new THREE.CylinderGeometry(r1, r0, y1 - y0, seg), m);
+  mesh.position.set(x, (y0 + y1) / 2, z); g.add(mesh); return mesh;
+}
+const shade = (hex, f) => { const c = new THREE.Color(hex); c.offsetHSL(0, 0, f); return '#' + c.getHexString(); };
+const legs = (g, w, d, h, t, m, inset = 0.03) => {
+  for (const sx of [-1, 1]) for (const sz of [-1, 1]) box(g, sx * (w / 2 - inset) - t / 2, sx * (w / 2 - inset) + t / 2, 0, h, sz * (d / 2 - inset) - t / 2, sz * (d / 2 - inset) + t / 2, m);
+};
+const BUILD = {
+  bed(g, w, d, h, c) {
+    const fr = mat(c, 0.6), white = mat('#f1efe9', 0.9), duvet = mat('#d9dde3', 0.95);
+    box(g, -w / 2, w / 2, 0.06, 0.3, -d / 2, d / 2, fr);
+    box(g, -w / 2, w / 2, 0.3, Math.max(0.5, h * 0.55), -d / 2, -d / 2 + 0.06, fr);
+    box(g, -w / 2, w / 2, 0.3, h, -d / 2, -d / 2 + 0.06, fr);
+    box(g, -w / 2 + 0.02, w / 2 - 0.02, 0.3, 0.5, -d / 2 + 0.06, d / 2 - 0.02, white);
+    box(g, -w / 2 + 0.03, w / 2 - 0.03, 0.5, 0.56, -d / 2 + 0.55, d / 2 - 0.01, duvet);
+    const n = w > 1.2 ? 2 : 1;
+    for (let i = 0; i < n; i++) { const pw = (w - 0.12) / n; const x0 = -w / 2 + 0.06 + i * pw; box(g, x0 + 0.02, x0 + pw - 0.02, 0.5, 0.62, -d / 2 + 0.1, -d / 2 + 0.5, white); }
+  },
+  sofa(g, w, d, h, c) {
+    const m = mat(c, 0.95), m2 = mat(shade(c, 0.06), 0.95), leg = mat('#2b2622', 0.5);
+    const arm = Math.min(0.2, w * 0.15);
+    legs(g, w, d, 0.1, 0.05, leg, 0.06);
+    box(g, -w / 2, w / 2, 0.1, 0.4, -d / 2, d / 2, m);
+    box(g, -w / 2, w / 2, 0.1, h, -d / 2, -d / 2 + 0.2, m);
+    for (const s of [-1, 1]) box(g, s * w / 2 - (s > 0 ? arm : 0), s * w / 2 + (s < 0 ? arm : 0), 0.1, 0.62, -d / 2, d / 2, m);
+    const seats = w > 1.4 ? 3 : 1, sw = (w - 2 * arm) / seats;
+    for (let i = 0; i < seats; i++) {
+      const x0 = -w / 2 + arm + i * sw;
+      box(g, x0 + 0.01, x0 + sw - 0.01, 0.4, 0.5, -d / 2 + 0.2, d / 2 - 0.02, m2);
+      box(g, x0 + 0.02, x0 + sw - 0.02, 0.5, h - 0.05, -d / 2 + 0.2, -d / 2 + 0.38, m2);
+    }
+  },
+  table(g, w, d, h, c) {
+    const top = mat(c, 0.55), leg = mat(shade(c, -0.25), 0.5);
+    box(g, -w / 2, w / 2, h - 0.03, h, -d / 2, d / 2, top);
+    legs(g, w, d, h - 0.03, 0.05, leg, 0.06);
+  },
+  chair(g, w, d, h, c) {
+    const m = mat(c, 0.6);
+    legs(g, w, d, 0.45, 0.03, m, 0.03);
+    box(g, -w / 2, w / 2, 0.45, 0.48, -d / 2, d / 2, m);
+    box(g, -w / 2, w / 2, 0.48, h, -d / 2, -d / 2 + 0.03, m);
+  },
+  officeChair(g, w, d, h, c) {
+    const m = mat(c, 0.8), metal = mat('#8c9096', 0.35, { metalness: 0.6 });
+    for (let i = 0; i < 5; i++) { const a = i * Math.PI * 0.4; const b = box(g, -0.02, 0.02, 0.04, 0.07, 0, w / 2 - 0.03, metal); b.position.set(Math.sin(a) * w / 4, 0.055, Math.cos(a) * w / 4); b.rotation.y = a; }
+    cyl(g, 0.025, 0.025, 0.07, 0.45, 0, 0, metal);
+    box(g, -w / 2 + 0.07, w / 2 - 0.07, 0.45, 0.52, -d / 2 + 0.07, d / 2 - 0.05, m);
+    box(g, -w / 2 + 0.09, w / 2 - 0.09, 0.58, h, -d / 2 + 0.05, -d / 2 + 0.11, m);
+  },
+  cabinet(g, w, d, h, c) {
+    const m = mat(c, 0.5), gap = mat(shade(c, -0.35), 0.8), hd = mat('#9aa0a6', 0.3, { metalness: 0.7 });
+    box(g, -w / 2, w / 2, 0, h, -d / 2, d / 2 - 0.004, m);
+    const n = Math.max(1, Math.round(w / 0.5));
+    for (let i = 1; i < n; i++) { const x = -w / 2 + i * w / n; box(g, x - 0.002, x + 0.002, 0.08, h - 0.01, d / 2 - 0.004, d / 2, gap); }
+    box(g, -w / 2, w / 2, 0.075, 0.08, d / 2 - 0.004, d / 2, gap);
+    for (let i = 0; i < n; i++) { const x = -w / 2 + (i + (i % 2 ? 0.12 : 0.88)) * w / n; box(g, x - 0.008, x + 0.008, h * 0.45, h * 0.45 + 0.25, d / 2, d / 2 + 0.02, hd); }
+  },
+  shelf(g, w, d, h, c) {
+    const m = mat(c, 0.6), t = 0.02;
+    box(g, -w / 2, -w / 2 + t, 0, h, -d / 2, d / 2, m); box(g, w / 2 - t, w / 2, 0, h, -d / 2, d / 2, m);
+    box(g, -w / 2, w / 2, 0, h, -d / 2, -d / 2 + 0.006, m);
+    const n = Math.max(2, Math.round(h / 0.38));
+    const bookCols = ['#7b3b2f', '#2f4e6b', '#c9b27c', '#3e5c43', '#d7d2c8', '#5a4a6a', '#1f1f22'];
+    for (let i = 0; i <= n; i++) {
+      const y = i * (h - t) / n; box(g, -w / 2 + t, w / 2 - t, y, y + t, -d / 2, d / 2, m);
+      if (i < n && i > 0) {
+        let x = -w / 2 + t + 0.01; const lim = w / 2 - t - 0.05 - rnd() * w * 0.3;
+        while (x < lim) { const bw = 0.02 + rnd() * 0.03, bh = 0.18 + rnd() * 0.1; box(g, x, x + bw, y + t, y + t + bh, -d / 2 + 0.03, d / 2 - 0.06 - rnd() * 0.04, mat(bookCols[Math.floor(rnd() * bookCols.length)], 0.8)); x += bw + 0.002; }
+      }
+    }
+  },
+  sideboard(g, w, d, h, c) {
+    const m = mat(c, 0.55), gap = mat(shade(c, -0.3), 0.8), leg = mat('#2b2622', 0.5);
+    const lh = Math.min(0.15, h * 0.2);
+    legs(g, w, d, lh, 0.035, leg, 0.06);
+    box(g, -w / 2, w / 2, lh, h, -d / 2, d / 2 - 0.004, m);
+    const n = Math.max(1, Math.round(w / 0.6));
+    for (let i = 1; i < n; i++) { const x = -w / 2 + i * w / n; box(g, x - 0.002, x + 0.002, lh + 0.01, h - 0.01, d / 2 - 0.004, d / 2, gap); }
+  },
+  tvboard(g, w, d, h, c) {
+    BUILD.sideboard(g, w, d, Math.min(0.45, h * 0.4), c);
+    const black = mat('#0c0d0f', 0.25), y0 = Math.min(0.45, h * 0.4) + 0.08;
+    const tw = Math.min(1.23, w * 0.9), th = tw * 9 / 16;
+    box(g, -0.15, 0.15, y0 - 0.08, y0 - 0.06, -0.1, 0.1, black); box(g, -0.02, 0.02, y0 - 0.06, y0 + 0.1, -0.05, -0.02, black);
+    box(g, -tw / 2, tw / 2, y0, y0 + th, -0.04, -0.01, black);
+  },
+  kitchen(g, w, d, h, c) {
+    const front = mat(c, 0.45), top = mat('#5d5a55', 0.35), gap = mat(shade(c, -0.3), 0.8), sockel = mat('#3a3a3a', 0.8);
+    box(g, -w / 2, w / 2, 0, 0.1, -d / 2, d / 2 - 0.06, sockel);
+    box(g, -w / 2, w / 2, 0.1, 0.86, -d / 2, d / 2 - 0.02, front);
+    box(g, -w / 2, w / 2, 0.86, 0.9, -d / 2, d / 2, top);
+    const n = Math.max(1, Math.round(w / 0.6));
+    for (let i = 1; i < n; i++) { const x = -w / 2 + i * w / n; box(g, x - 0.002, x + 0.002, 0.1, 0.86, d / 2 - 0.02, d / 2 - 0.018, gap); }
+    if (h > 1.6) {
+      box(g, -w / 2, w / 2, 1.45, h, -d / 2, -d / 2 + 0.35, front);
+      for (let i = 1; i < n; i++) { const x = -w / 2 + i * w / n; box(g, x - 0.002, x + 0.002, 1.45, h, -d / 2 + 0.35, -d / 2 + 0.352, gap); }
+    }
+    const steel = mat('#b8bcc0', 0.25, { metalness: 0.8 });
+    box(g, -w / 2 + 0.25, -w / 2 + 0.75, 0.895, 0.905, -d / 2 + 0.1, d / 2 - 0.08, steel);
+    box(g, w / 2 - 0.75, w / 2 - 0.15, 0.9, 0.905, -d / 2 + 0.06, d / 2 - 0.06, mat('#111214', 0.2));
+  },
+  rug(g, w, d, h, c) { box(g, -w / 2, w / 2, 0.001, Math.max(0.006, h), -d / 2, d / 2, mat(c, 1)); },
+  plant(g, w, d, h, c) {
+    cyl(g, w * 0.28, w * 0.34, 0, h * 0.28, 0, 0, mat('#c7c0b4', 0.8));
+    const leaf = mat(c, 0.85);
+    for (let i = 0; i < 6; i++) { const s = new THREE.Mesh(new THREE.IcosahedronGeometry(w * (0.28 + rnd() * 0.12), 1), leaf); s.position.set((rnd() - 0.5) * w * 0.4, h * (0.45 + i * 0.09), (rnd() - 0.5) * d * 0.4); g.add(s); }
+  },
+  floorLamp(g, w, d, h, c) {
+    const metal = mat('#2c2d30', 0.4, { metalness: 0.5 });
+    cyl(g, w * 0.4, w * 0.4, 0, 0.025, 0, 0, metal);
+    cyl(g, 0.012, 0.012, 0.025, h - 0.3, 0, 0, metal);
+    const sh = cyl(g, w / 2, w * 0.38, h - 0.32, h, 0, 0, new THREE.MeshStandardMaterial({ color: c, roughness: 0.9, side: THREE.DoubleSide, emissive: new THREE.Color(0xffd8a0), emissiveIntensity: 0 }), 28);
+    sh.geometry = new THREE.CylinderGeometry(w * 0.38, w / 2, 0.32, 28, 1, true);
+    sh.userData.lampShade = true;
+    const L = new THREE.PointLight(0xffc98a, 1, 6, 2); L.position.set(0, h - 0.2, 0);
+    L.userData.baseCd = 1500 / (4 * Math.PI); L.userData.floorLamp = true; g.add(L);
+  },
+  basin(g, w, d, h, c) {
+    const m = mat(c, 0.2), cab = mat('#8a6b4e', 0.6);
+    box(g, -w / 2, w / 2, 0.35, h - 0.05, -d / 2, d / 2, cab);
+    box(g, -w / 2, w / 2, h - 0.05, h, -d / 2, d / 2, m);
+    box(g, -w / 2, w / 2, 1.1, 1.8, -d / 2, -d / 2 + 0.02, mat('#cfd8dc', 0.05, { metalness: 0.9 }));
+  },
+  wc(g, w, d, h, c) {
+    const m = mat(c, 0.2);
+    box(g, -w / 2, w / 2, 0.35, h, -d / 2, -d / 2 + 0.12, m);
+    cyl(g, w * 0.36, w * 0.42, 0.0, 0.4, 0, 0.05, m);
+    box(g, -w / 2 + 0.02, w / 2 - 0.02, 0.4, 0.42, -d / 2 + 0.12, d / 2, m);
+  },
+  tub(g, w, d, h, c) {
+    const m = mat(c, 0.2), inner = mat('#e9eef0', 0.15);
+    box(g, -w / 2, w / 2, 0, h, -d / 2, d / 2, m);
+    box(g, -w / 2 + 0.07, w / 2 - 0.07, h - 0.002, h + 0.001, -d / 2 + 0.07, d / 2 - 0.07, inner);
+  },
+};
+const CAT = {
+  bett160: { label: 'Doppelbett', w: 1.6, d: 2.0, h: 0.9, color: '#a88565', build: 'bed' },
+  bett90: { label: 'Einzelbett', w: 0.9, d: 2.0, h: 0.8, color: '#c9b49a', build: 'bed' },
+  sofa: { label: 'Sofa 3-Sitzer', w: 2.2, d: 0.95, h: 0.85, color: '#5b6b73', build: 'sofa' },
+  sessel: { label: 'Sessel', w: 0.85, d: 0.85, h: 0.85, color: '#9a6b4f', build: 'sofa' },
+  esstisch: { label: 'Esstisch', w: 1.6, d: 0.9, h: 0.75, color: '#c8a27a', build: 'table' },
+  stuhl: { label: 'Stuhl', w: 0.45, d: 0.52, h: 0.88, color: '#2f2f2f', build: 'chair' },
+  couchtisch: { label: 'Couchtisch', w: 1.1, d: 0.6, h: 0.4, color: '#3b3b3b', build: 'table' },
+  schreibtisch: { label: 'Schreibtisch', w: 1.6, d: 0.8, h: 0.75, color: '#e8e4dc', build: 'table' },
+  buerostuhl: { label: 'Bürostuhl', w: 0.65, d: 0.65, h: 1.1, color: '#2a2d33', build: 'officeChair' },
+  schrank: { label: 'Kleiderschrank', w: 2.0, d: 0.6, h: 2.2, color: '#f2f0eb', build: 'cabinet' },
+  regal: { label: 'Bücherregal', w: 0.8, d: 0.35, h: 2.0, color: '#d9c3a0', build: 'shelf' },
+  sideboard: { label: 'Sideboard', w: 1.8, d: 0.45, h: 0.75, color: '#7a5a3e', build: 'sideboard' },
+  kommode: { label: 'Kommode', w: 1.0, d: 0.5, h: 0.9, color: '#f2f0eb', build: 'sideboard' },
+  nachttisch: { label: 'Nachttisch', w: 0.45, d: 0.4, h: 0.5, color: '#a88565', build: 'sideboard' },
+  tv: { label: 'TV 55″ mit Lowboard', w: 1.6, d: 0.42, h: 1.15, color: '#3a3a3a', build: 'tvboard' },
+  kueche: { label: 'Küchenzeile', w: 3.0, d: 0.6, h: 2.2, color: '#e9e7e2', build: 'kitchen' },
+  teppich: { label: 'Teppich', w: 1.6, d: 2.3, h: 0.01, color: '#a39382', build: 'rug' },
+  pflanze: { label: 'Zimmerpflanze', w: 0.5, d: 0.5, h: 1.4, color: '#3f6b3a', build: 'plant' },
+  stehlampe: { label: 'Stehleuchte', w: 0.4, d: 0.4, h: 1.6, color: '#e9e2d2', build: 'floorLamp' },
+  waschtisch: { label: 'Waschtisch', w: 0.8, d: 0.48, h: 0.85, color: '#f4f4f4', build: 'basin' },
+  wc: { label: 'WC', w: 0.38, d: 0.6, h: 0.8, color: '#f4f4f4', build: 'wc' },
+  wanne: { label: 'Badewanne', w: 1.7, d: 0.75, h: 0.6, color: '#f4f4f4', build: 'tub' },
+};
+let uidN = 1;
+const uid = (p) => `${p}${Date.now().toString(36)}${(uidN++).toString(36)}`;
+function exampleFurniture() {
+  const F = (type, x, y, rot, o = {}) => ({ uid: uid('m'), type, x, y, rot, w: CAT[type].w, d: CAT[type].d, h: CAT[type].h, color: CAT[type].color, ...o });
+  // rot: Blickrichtung der Vorderseite, im Uhrzeigersinn ab Süd (0 = Süd, 90 = West, 180 = Nord, 270 = Ost)
+  return [
+    F('bett160', 9.98, 10.29, 0), F('nachttisch', 8.86, 11.08, 0), F('nachttisch', 11.1, 11.08, 0),
+    F('schrank', 10.3, 7.09, 180),
+    F('sofa', 6.53, 2.1, 90), F('couchtisch', 5.35, 2.1, 90), F('teppich', 5.3, 2.1, 90),
+    F('sessel', 3.9, 1.0, 225), F('regal', 1.55, 3.52, 270), F('pflanze', 6.6, 0.75, 0),
+    F('kueche', 2.15, 6.56, 180, { w: 3.4 }), F('esstisch', 3.1, 4.75, 0),
+    F('stuhl', 2.65, 5.36, 0), F('stuhl', 3.55, 5.36, 0), F('stuhl', 2.65, 4.14, 180), F('stuhl', 3.55, 4.14, 180),
+    F('schreibtisch', 11.19, 5.25, 90), F('buerostuhl', 10.55, 5.25, 270), F('regal', 9.5, 4.21, 180, { w: 1.2 }),
+    F('bett90', 7.6, 1.38, 180), F('kommode', 10.6, 3.6, 180), F('stehlampe', 11.3, 0.65, 0),
+    F('waschtisch', 7.955, 10.3, 90, { w: 0.9 }),
+  ];
+}
+function exampleArt() {
+  const c = document.createElement('canvas'); c.width = 1200; c.height = 900; const g = c.getContext('2d');
+  g.fillStyle = '#efe7da'; g.fillRect(0, 0, 1200, 900);
+  const cols = ['#c4532f', '#1f4b5a', '#e0b24a', '#6f8f6a', '#2a2a2a'];
+  g.fillStyle = cols[1]; g.fillRect(90, 520, 1020, 300);
+  g.fillStyle = cols[0]; g.beginPath(); g.arc(820, 330, 190, 0, Math.PI * 2); g.fill();
+  g.fillStyle = cols[2]; g.fillRect(170, 170, 360, 360);
+  g.strokeStyle = cols[4]; g.lineWidth = 14; g.beginPath(); g.moveTo(90, 520); g.lineTo(1110, 520); g.stroke();
+  g.fillStyle = cols[3]; g.beginPath(); g.moveTo(520, 820); g.lineTo(760, 520); g.lineTo(1000, 820); g.fill();
+  return c.toDataURL('image/jpeg', 0.9);
+}
+
+function buildItem(it) {
+  const def = CAT[it.type]; if (!def) return null;
+  const g = new THREE.Group();
+  BUILD[def.build](g, it.w, it.d, it.h, it.color);
+  g.position.copy(W(it.x, it.y)); g.rotation.y = -it.rot * RAD;
+  g.userData.uid = it.uid;
+  g.traverse((o) => { if (o.isMesh) { o.castShadow = it.type !== 'teppich'; o.receiveShadow = true; o.userData.uid = it.uid; } });
+  return g;
+}
+const furnObj = new Map();
+function syncItem(it) {
+  const old = furnObj.get(it.uid);
+  if (old) { furnGroup.remove(old); old.traverse((o) => o.geometry && o.geometry.dispose()); }
+  const g = buildItem(it); if (!g) return;
+  furnGroup.add(g); furnObj.set(it.uid, g);
+  updateLamps();
+}
+function removeItem(u) {
+  const old = furnObj.get(u); if (old) { furnGroup.remove(old); furnObj.delete(u); }
+  furniture = furniture.filter((f) => f.uid !== u);
+}
+
+// ------------------------------------------------------------------ Bilder
+const texCache = new Map();
+function picTexture(src) {
+  if (!texCache.has(src)) {
+    const t = new THREE.TextureLoader().load(src); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8;
+    texCache.set(src, t);
+  }
+  return texCache.get(src);
+}
+const FRAMES = { none: null, schwarz: { c: '#151515', f: 0.02 }, weiss: { c: '#f3f3f1', f: 0.03 }, eiche: { c: '#b68b5a', f: 0.035 }, galerie: { c: '#1d1d1d', f: 0.025, pp: 0.08 } };
+function buildPicture(p) {
+  const g = new THREE.Group();
+  const w = p.width, h = p.width / p.aspect;
+  const fr = FRAMES[p.frame];
+  const imgMat = new THREE.MeshStandardMaterial({ map: picTexture(p.src), roughness: 0.55 });
+  if (!fr) {
+    const sideM = mat('#e9e4da', 0.9);
+    const b = new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.025), [sideM, sideM, sideM, sideM, imgMat, sideM]);
+    b.position.z = 0.0125; g.add(b);
+  } else {
+    const pp = fr.pp || 0, ow = w + 2 * pp + 2 * fr.f, oh = h + 2 * pp + 2 * fr.f;
+    const fm = mat(fr.c, 0.5), dz = 0.03;
+    box(g, -ow / 2, ow / 2, oh / 2 - fr.f, oh / 2, 0, dz, fm); box(g, -ow / 2, ow / 2, -oh / 2, -oh / 2 + fr.f, 0, dz, fm);
+    box(g, -ow / 2, -ow / 2 + fr.f, -oh / 2, oh / 2, 0, dz, fm); box(g, ow / 2 - fr.f, ow / 2, -oh / 2, oh / 2, 0, dz, fm);
+    box(g, -ow / 2 + fr.f, ow / 2 - fr.f, -oh / 2 + fr.f, oh / 2 - fr.f, 0, 0.012, mat('#f6f4ee', 0.9));
+    const img = new THREE.Mesh(new THREE.PlaneGeometry(w, h), imgMat); img.position.z = 0.0125; g.add(img);
+  }
+  const n = new THREE.Vector3(p.nx, 0, -p.ny).normalize();
+  g.position.copy(W(p.x, p.y, p.z)).addScaledVector(n, 0.004);
+  g.lookAt(g.position.clone().add(n));
+  g.userData.uid = p.uid;
+  g.traverse((o) => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; o.userData.uid = p.uid; } });
+  return g;
+}
+const picObj = new Map();
+function syncPic(p) {
+  const old = picObj.get(p.uid); if (old) picGroup.remove(old);
+  const g = buildPicture(p); picGroup.add(g); picObj.set(p.uid, g);
+}
+function removePic(u) { const o = picObj.get(u); if (o) picGroup.remove(o); picObj.delete(u); pictures = pictures.filter((p) => p.uid !== u); }
+function downscale(file) {
+  return new Promise((res, rej) => {
+    const img = new Image();
+    img.onload = () => {
+      const k = Math.min(1, 1600 / Math.max(img.width, img.height));
+      const c = document.createElement('canvas'); c.width = Math.round(img.width * k); c.height = Math.round(img.height * k);
+      c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+      res({ src: c.toDataURL('image/jpeg', 0.86), aspect: img.width / img.height });
+      URL.revokeObjectURL(img.src);
+    };
+    img.onerror = () => rej(new Error('Bild konnte nicht gelesen werden'));
+    img.src = URL.createObjectURL(file);
+  });
+}
+
+// ------------------------------------------------------------------ Licht & Sonne anwenden
+const kelvin = (k) => ({ 2700: 0xffc896, 3000: 0xffd6ae, 4000: 0xffeedc })[k] || 0xffd6ae;
+let dayLevel = 1, lampsActive = false;
+function updateSun() {
+  const { ms, dst } = localToUTC(S.year, S.doy, S.minutes);
+  const { az, el } = sunPos(ms, S.lat, S.lon);
+  const a = az + S.north * RAD;
+  const dir = new THREE.Vector3(Math.sin(a) * Math.cos(el), Math.sin(el), -Math.cos(a) * Math.cos(el));
+  const elDeg = el / RAD, azDeg = ((az / RAD) % 360 + 360) % 360;
+  const clear = S.sky === 'klar';
+  dayLevel = smooth(-7, 10, elDeg);
+  const direct = clear ? smooth(-0.5, 8, elDeg) : 0;
+  sun.position.copy(center).addScaledVector(dir, 60); sun.target.position.copy(center);
+  sun.intensity = 3.4 * direct * (0.55 + 0.45 * smooth(5, 40, elDeg));
+  const warm = 1 - smooth(2, 25, elDeg);
+  sun.color.setRGB(1, 0.96 - 0.25 * warm, 0.9 - 0.5 * warm);
+  sky.material.uniforms.sunPosition.value.copy(dir);
+  sky.visible = clear && elDeg > -5;
+  if (!sky.visible) scene.background = new THREE.Color().setRGB(0.02 + 0.5 * dayLevel, 0.025 + 0.52 * dayLevel, 0.05 + 0.54 * dayLevel, THREE.SRGBColorSpace);
+  else scene.background = null;
+  hemi.intensity = (clear ? 0.5 : 0.7) * dayLevel + 0.015;
+  hemi.color.set(clear ? 0xcfe0ff : 0xe4e7ea);
+  const f = S.fill / 100;
+  const sunH = new THREE.Vector3(dir.x, 0, dir.z).normalize();
+  for (const rl of winLights) {
+    const facing = Math.max(0, rl.userData.nOut.dot(sunH));
+    rl.intensity = f * ((clear ? 2.4 : 3.6) * dayLevel + 3.5 * facing * direct);
+    rl.color.set(facing * direct > 0.2 ? 0xfff1dc : (clear ? 0xdfe9ff : 0xeef0f2));
+  }
+  sunBall.position.copy(center).addScaledVector(dir, 26);
+  sunBall.visible = sunPath.visible && elDeg > -2;
+  $('#roDate').innerHTML = `${fmtDate(S.year, S.doy)} · <b>${fmtTime(S.minutes)}</b> ${dst ? 'MESZ' : 'MEZ'}`;
+  $('#roSun').innerHTML = elDeg > -0.833 ? `Sonne <b>${elDeg.toFixed(0)}°</b> hoch, aus <b>${compassName(azDeg)}</b> (${azDeg.toFixed(0)}°)` : 'Sonne unter dem Horizont';
+  updateLamps();
+  updateExposure();
+  drawChart();
+}
+function updateLamps() {
+  lampsActive = S.lamps === 'an' || (S.lamps === 'auto' && dayLevel < 0.45);
+  const col = kelvin(S.cct), k = (S.lampLevel / 100) * 0.022;
+  for (const L of lamps) {
+    const on = lampsActive && S.roomLights[L.room] !== false;
+    L.light.visible = on; L.light.intensity = L.light.userData.baseCd * k; L.light.color.set(col);
+    L.light.castShadow = on && S.hq;
+    L.mesh.traverse((o) => { if (o.isMesh && o.material.name === 'Leuchte') { o.material.emissiveIntensity = on ? 1.5 : 0; } });
+  }
+  furnGroup.traverse((o) => {
+    if (o.isPointLight && o.userData.floorLamp) { o.visible = lampsActive; o.intensity = o.userData.baseCd * k; o.color.set(col); }
+    if (o.isMesh && o.userData.lampShade) o.material.emissiveIntensity = lampsActive ? 0.6 : 0;
+  });
+}
+function updateExposure() {
+  let ev = S.exposure;
+  if (S.autoExp) ev += lampsActive ? 0.9 * (1 - dayLevel) : 0.8 * (1 - dayLevel);
+  renderer.toneMappingExposure = Math.pow(2, ev) * 0.85;
+  $('#expVal').textContent = S.autoExp ? `auto ${S.exposure >= 0 ? '+' : ''}${S.exposure.toFixed(1)}` : `${S.exposure >= 0 ? '+' : ''}${S.exposure.toFixed(1)} LW`;
+}
+function drawChart() {
+  const c = $('#sunChart'), dpr = Math.min(2, devicePixelRatio);
+  const w = c.clientWidth, h = c.clientHeight; if (!w) return;
+  c.width = w * dpr; c.height = h * dpr;
+  const g = c.getContext('2d'); g.scale(dpr, dpr);
+  const cs = getComputedStyle(document.documentElement);
+  const sunC = cs.getPropertyValue('--sun').trim(), line = cs.getPropertyValue('--line').trim(), muted = cs.getPropertyValue('--muted').trim();
+  const { pts, rise, set } = dayCurve();
+  const maxEl = 70, minEl = -25;
+  const X = (m) => 6 + (w - 12) * m / 1440, Y = (e) => 8 + (h - 22) * (maxEl - e) / (maxEl - minEl);
+  g.font = `10px ${cs.getPropertyValue('--font-num')}`; g.fillStyle = muted; g.strokeStyle = line; g.lineWidth = 1;
+  for (const hr of [0, 6, 12, 18, 24]) { g.beginPath(); g.moveTo(X(hr * 60), 6); g.lineTo(X(hr * 60), h - 14); g.stroke(); g.fillText(String(hr).padStart(2, '0'), clamp(X(hr * 60) - 6, 2, w - 16), h - 3); }
+  g.beginPath(); g.moveTo(X(0), Y(0)); g.lineTo(X(1440), Y(0)); g.strokeStyle = muted; g.stroke();
+  g.beginPath(); pts.forEach(([m, e], i) => (i ? g.lineTo(X(m), Y(e)) : g.moveTo(X(m), Y(e))));
+  g.strokeStyle = sunC; g.lineWidth = 2; g.stroke();
+  g.globalAlpha = 0.14; g.lineTo(X(1440), Y(minEl)); g.lineTo(X(0), Y(minEl)); g.closePath(); g.fillStyle = sunC; g.fill(); g.globalAlpha = 1;
+  const { ms } = localToUTC(S.year, S.doy, S.minutes); const e = sunPos(ms, S.lat, S.lon).el / RAD;
+  g.beginPath(); g.arc(X(S.minutes), Y(e), 4.5, 0, Math.PI * 2); g.fillStyle = sunC; g.fill();
+  g.fillStyle = muted; g.fillText(`max ${Math.max(...pts.map((p) => p[1])).toFixed(0)}°`, w - 54, 16);
+  $('#riseSet').textContent = rise !== null && set !== null ? `Aufgang ${fmtTime(rise)} · Untergang ${fmtTime(set)}` : '';
+  // Sonnenbahn in 3D
+  const arr = [];
+  for (const [m, el2] of pts) {
+    if (el2 < -1) continue;
+    const { ms: t } = localToUTC(S.year, S.doy, m); const sp = sunPos(t, S.lat, S.lon); const a = sp.az + S.north * RAD;
+    arr.push(center.x + 26 * Math.sin(a) * Math.cos(sp.el), 26 * Math.sin(sp.el), center.z - 26 * Math.cos(a) * Math.cos(sp.el));
+  }
+  pathGeo.setAttribute('position', new THREE.Float32BufferAttribute(arr, 3)); pathGeo.computeBoundingSphere();
+}
+function setDoors(open, animate = true) {
+  S.doorsOpen = open;
+  for (const d of doors) d.target = open ? 1 : 0;
+  if (!animate || reduced) for (const d of doors) { d.t = d.target; d.obj.rotation.set(0, d.closed + (d.open - d.closed) * d.t, 0); }
+}
+function applyShadowQuality() {
+  const s = S.hq ? 4096 : 2048;
+  if (sun.shadow.mapSize.x !== s) { sun.shadow.mapSize.set(s, s); if (sun.shadow.map) { sun.shadow.map.dispose(); sun.shadow.map = null; } }
+  updateLamps();
+}
+
+// ------------------------------------------------------------------ Navigation
+const ray = new THREE.Raycaster();
+const ndc = new THREE.Vector2();
+const keys = new Set();
+let walkTarget = null;
+function setMode(m) {
+  S.mode = m;
+  for (const b of $$('[data-mode]')) b.setAttribute('aria-pressed', String(b.dataset.mode === m));
+  orbit.enabled = m === 'orbit'; planCtl.enabled = m === 'plan';
+  if (m === 'walk') { cam.layers.enable(1); placeWalkCam(); }
+  else cam.layers.disable(1);
+  if (m === 'orbit') {
+    const d = new THREE.Vector3(0.55, 0.85, 0.9).normalize().multiplyScalar(19);
+    if (cam.position.y < 3) { cam.position.copy(center).add(d); orbit.target.copy(center).setY(0.8); }
+    cam.lookAt(orbit.target);
+  }
+  sunPath.visible = m !== 'walk';
+  sunBall.visible = sunPath.visible;
+  updateHint(); updateSun(); save();
+}
+function activeCam() { return S.mode === 'plan' ? planCam : cam; }
+function placeWalkCam() {
+  cam.position.copy(W(S.walk.x, S.walk.y, S.eye));
+  cam.rotation.set(S.walk.pitch, S.walk.yaw, 0, 'YXZ');
+}
+function updateHint() {
+  const h = $('#hint');
+  const sel = selected ? (selected.kind === 'pic' ? ' · <strong>Bild ziehen</strong>: an der Wand verschieben' : ' · <strong>Ziehen</strong>: Möbel verschieben · <strong>R</strong>: drehen · <strong>Entf</strong>: löschen') : '';
+  if (placingPic) h.innerHTML = '<strong>Tippe auf eine Wand</strong>, um das Bild aufzuhängen · Esc bricht ab';
+  else if (S.mode === 'walk') h.innerHTML = `<strong>Ziehen</strong>: umsehen · <strong>Tippen auf den Boden</strong>: hingehen · <strong>WASD</strong>/Pfeile: gehen${sel}`;
+  else if (S.mode === 'orbit') h.innerHTML = `<strong>Ziehen</strong>: drehen · <strong>Rechte Taste</strong>/zwei Finger: verschieben · <strong>Mausrad</strong>: Zoom${sel}`;
+  else h.innerHTML = `<strong>Ziehen</strong>: verschieben · <strong>Mausrad</strong>/zwei Finger: Zoom${sel}`;
+}
+function blocked(from, dir, dist) {
+  const obstacles = solids.concat(glassMeshes, furnGroup.children.filter((g) => !/teppich/.test(furniture.find((f) => f.uid === g.userData.uid)?.type || '')));
+  for (const hgt of [0.35, 1.1]) {
+    ray.set(new THREE.Vector3(from.x, hgt, from.z), dir); ray.far = dist + 0.28;
+    if (ray.intersectObjects(obstacles, true).length) return true;
+  }
+  return false;
+}
+function walkStep(dt) {
+  const f = new THREE.Vector3(-Math.sin(S.walk.yaw), 0, -Math.cos(S.walk.yaw));
+  const r = new THREE.Vector3(-f.z, 0, f.x);
+  const mv = new THREE.Vector3();
+  if (keys.has('w') || keys.has('arrowup')) mv.add(f);
+  if (keys.has('s') || keys.has('arrowdown')) mv.sub(f);
+  if (keys.has('d')) mv.add(r);
+  if (keys.has('a')) mv.sub(r);
+  if (keys.has('arrowleft')) S.walk.yaw += 1.8 * dt;
+  if (keys.has('arrowright')) S.walk.yaw -= 1.8 * dt;
+  const p = cam.position;
+  if (mv.lengthSq() > 0) {
+    walkTarget = null;
+    mv.normalize();
+    const step = (keys.has('shift') ? 3 : 1.4) * dt;
+    if (!blocked(p, mv, step)) p.addScaledVector(mv, step);
+    else { // an der Wand entlanggleiten
+      for (const ax of [new THREE.Vector3(mv.x, 0, 0), new THREE.Vector3(0, 0, mv.z)]) {
+        if (ax.lengthSq() < 1e-4) continue; ax.normalize();
+        if (!blocked(p, ax, step * 0.7)) { p.addScaledVector(ax, step * 0.7); break; }
+      }
+    }
+  }
+  if (walkTarget) {
+    const d = new THREE.Vector3(walkTarget.x - p.x, 0, walkTarget.z - p.z);
+    const len = d.length(), step = (reduced ? 50 : 2.6) * dt;
+    if (len <= step) { p.x = walkTarget.x; p.z = walkTarget.z; walkTarget = null; } else p.addScaledVector(d.normalize(), step);
+  }
+  p.y += (S.eye - p.y) * Math.min(1, dt * 8);
+  cam.rotation.set(S.walk.pitch, S.walk.yaw, 0, 'YXZ');
+  S.walk.x = p.x; S.walk.y = -p.z;
+}
+function goRoom(r) {
+  if (S.mode !== 'walk') setMode('walk');
+  walkTarget = null;
+  const c = r.label; S.walk.x = c[0]; S.walk.y = c[1];
+  // Blick zum größten Fenster bzw. zur Raummitte
+  const cx = r.polygon.reduce((s, p) => s + p[0], 0) / r.polygon.length, cy = r.polygon.reduce((s, p) => s + p[1], 0) / r.polygon.length;
+  let best = null, bd = 1e9;
+  for (const op of META.openings || []) {
+    if (!op.exterior) continue;
+    const d = Math.hypot(op.center[0] - cx, op.center[1] - cy);
+    if (d < bd && d < 4) { bd = d; best = op; }
+  }
+  const tx = best ? best.center[0] : cx, ty = best ? best.center[1] : cy;
+  // gegenüber vom Fenster stehen, Richtung Fenster schauen
+  const vx = tx - cx, vy = ty - cy, vl = Math.hypot(vx, vy) || 1;
+  S.walk.x = cx - (vx / vl) * Math.min(1.0, vl * 0.4); S.walk.y = cy - (vy / vl) * Math.min(1.0, vl * 0.4);
+  if (!pointInPoly([S.walk.x, S.walk.y], r.polygon)) { S.walk.x = c[0]; S.walk.y = c[1]; }
+  S.walk.yaw = Math.atan2(-(tx - S.walk.x), (ty - S.walk.y)); S.walk.pitch = -0.04;
+  placeWalkCam(); save();
+}
+function pointInPoly(p, poly) {
+  let ins = false;
+  for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+    const [xi, yi] = poly[i], [xj, yj] = poly[j];
+    if ((yi > p[1]) !== (yj > p[1]) && p[0] < (xj - xi) * (p[1] - yi) / (yj - yi) + xi) ins = !ins;
+  }
+  return ins;
+}
+
+// ------------------------------------------------------------------ Auswahl, Ziehen, Platzieren
+let selected = null;      // {kind:'furn'|'pic', uid}
+let drag = null;          // {kind, uid, offset, moved}
+let look = null;          // {x, y}
+let downAt = null;
+let placingPic = null;    // {src, aspect}
+const selBox = new THREE.BoxHelper(undefined, 0x1f6a64);
+selBox.visible = false; selBox.material.depthTest = false; selBox.renderOrder = 5;
+scene.add(selBox);
+function setNdc(e) { const r = canvas.getBoundingClientRect(); ndc.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1); ray.setFromCamera(ndc, activeCam()); ray.far = Infinity; }
+function pickUid(e) {
+  setNdc(e);
+  const objs = [...furnGroup.children, ...picGroup.children];
+  const hit = ray.intersectObjects(objs, true)[0];
+  if (!hit) return null;
+  const front = ray.intersectObjects(solids.concat(wallTargets), true)[0];
+  if (front && front.distance < hit.distance - 0.02) return null;
+  const u = hit.object.userData.uid;
+  return u ? { uid: u, kind: picObj.has(u) ? 'pic' : 'furn', point: hit.point } : null;
+}
+function select(s) {
+  selected = s;
+  const obj = s ? (s.kind === 'pic' ? picObj.get(s.uid) : furnObj.get(s.uid)) : null;
+  selBox.visible = !!obj; if (obj) selBox.setFromObject(obj);
+  $('#furnEditor').hidden = !(s && s.kind === 'furn');
+  $('#picEditor').hidden = !(s && s.kind === 'pic');
+  if (s && s.kind === 'furn') { fillFurnEditor(); showTab('moebel'); }
+  if (s && s.kind === 'pic') { fillPicEditor(); showTab('bilder'); }
+  updateHint();
+}
+function refreshSel() { if (selected) { const obj = selected.kind === 'pic' ? picObj.get(selected.uid) : furnObj.get(selected.uid); if (obj) selBox.setFromObject(obj); } }
+const floorPlane = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0);
+function floorHit() { const p = new THREE.Vector3(); return ray.ray.intersectPlane(floorPlane, p) ? p : null; }
+function wallHit() {
+  const hit = ray.intersectObjects(wallTargets, true)[0];
+  if (!hit || !hit.face) return null;
+  const n = hit.face.normal.clone().transformDirection(hit.object.matrixWorld); n.y = 0;
+  if (n.lengthSq() < 0.5) return null;
+  n.normalize();
+  return { point: hit.point, n };
+}
+canvas.addEventListener('pointerdown', (e) => {
+  if (!e.isPrimary) return;
+  canvas.focus({ preventScroll: true });
+  downAt = { x: e.clientX, y: e.clientY, t: performance.now() };
+  if (placingPic) return;
+  const hit = pickUid(e);
+  if (hit) {
+    select({ kind: hit.kind, uid: hit.uid });
+    orbit.enabled = planCtl.enabled = false;
+    if (hit.kind === 'furn') {
+      const it = furniture.find((f) => f.uid === hit.uid); const fp = floorHit();
+      drag = { kind: 'furn', uid: hit.uid, off: fp ? new THREE.Vector2(it.x - fp.x, it.y + fp.z) : new THREE.Vector2(), moved: false };
+    } else drag = { kind: 'pic', uid: hit.uid, moved: false };
+    canvas.setPointerCapture(e.pointerId);
+    e.stopImmediatePropagation();
+    return;
+  }
+  if (S.mode === 'walk') { look = { x: e.clientX, y: e.clientY }; canvas.setPointerCapture(e.pointerId); }
+}, { capture: true });
+canvas.addEventListener('pointermove', (e) => {
+  if (!e.isPrimary) return;
+  if (drag) {
+    setNdc(e);
+    if (drag.kind === 'furn') {
+      const fp = floorHit(); if (!fp) return;
+      const it = furniture.find((f) => f.uid === drag.uid);
+      let x = fp.x + drag.off.x, y = -fp.z + drag.off.y;
+      if (S.snap && !e.shiftKey) { x = Math.round(x * 20) / 20; y = Math.round(y * 20) / 20; }
+      it.x = +x.toFixed(3); it.y = +y.toFixed(3);
+      furnObj.get(it.uid).position.copy(W(it.x, it.y));
+    } else {
+      const wh = wallHit(); if (!wh) return;
+      const p = pictures.find((q) => q.uid === drag.uid);
+      p.x = +wh.point.x.toFixed(3); p.y = +(-wh.point.z).toFixed(3); p.nx = wh.n.x; p.ny = -wh.n.z;
+      syncPic(p);
+    }
+    drag.moved = true; refreshSel(); return;
+  }
+  if (look) {
+    const k = coarse ? 0.006 : 0.0045;
+    S.walk.yaw += (e.clientX - look.x) * k; S.walk.pitch = clamp(S.walk.pitch + (e.clientY - look.y) * k, -1.35, 1.35);
+    look = { x: e.clientX, y: e.clientY };
+  }
+});
+canvas.addEventListener('pointerup', (e) => {
+  if (!e.isPrimary) return;
+  const tap = downAt && Math.hypot(e.clientX - downAt.x, e.clientY - downAt.y) < 6 && performance.now() - downAt.t < 450;
+  if (drag) { if (drag.moved) { example = false; save(); } drag = null; orbit.enabled = S.mode === 'orbit'; planCtl.enabled = S.mode === 'plan'; look = null; return; }
+  look = null;
+  if (!tap) return;
+  setNdc(e);
+  if (placingPic) {
+    const wh = wallHit();
+    if (!wh) { notice('Dort ist keine Wand. Tippe direkt auf eine Wandfläche.'); return; }
+    const p = { uid: uid('b'), src: placingPic.src, aspect: placingPic.aspect, x: +wh.point.x.toFixed(3), y: +(-wh.point.z).toFixed(3),
+      z: 1.5, nx: wh.n.x, ny: -wh.n.z, width: placingPic.aspect >= 1 ? 0.9 : 0.6, frame: 'galerie' };
+    pictures.push(p); syncPic(p); placingPic = null; example = false; save();
+    select({ kind: 'pic', uid: p.uid });
+    return;
+  }
+  if (selected) { select(null); }
+  if (S.mode === 'walk') {
+    const hits = ray.intersectObjects([...modelRoot.children, ...furnGroup.children], true).filter((h) => h.object.material?.name !== 'Glas');
+    const h = hits[0];
+    if (h && floors.includes(h.object) && h.face && h.face.normal.y > 0.5) walkTarget = h.point.clone();
+  }
+});
+canvas.addEventListener('wheel', (e) => {
+  if (S.mode !== 'walk') return;
+  e.preventDefault();
+  const f = new THREE.Vector3(-Math.sin(S.walk.yaw), 0, -Math.cos(S.walk.yaw)).multiplyScalar(-Math.sign(e.deltaY) * 0.35);
+  if (!blocked(cam.position, f.clone().normalize(), 0.35)) cam.position.add(f);
+}, { passive: false });
+window.addEventListener('keydown', (e) => {
+  if (e.target.closest && e.target.closest('input, select, textarea')) return;
+  const k = e.key.toLowerCase();
+  if (k === 'escape') { placingPic = null; select(null); return; }
+  if (selected && (k === 'delete' || k === 'backspace')) { e.preventDefault(); deleteSelected(); return; }
+  if (selected && selected.kind === 'furn' && (k === 'r' || k === 'q' || k === 'e')) { rotateSel(k === 'q' ? -15 : k === 'e' ? 15 : (e.shiftKey ? -90 : 90)); return; }
+  if (S.mode === 'walk' && ['w', 'a', 's', 'd', 'arrowup', 'arrowdown', 'arrowleft', 'arrowright', 'shift'].includes(k)) { keys.add(k); e.preventDefault(); }
+});
+window.addEventListener('keyup', (e) => keys.delete(e.key.toLowerCase()));
+window.addEventListener('blur', () => keys.clear());
+
+function deleteSelected() {
+  if (!selected) return;
+  if (selected.kind === 'furn') removeItem(selected.uid); else removePic(selected.uid);
+  example = false; select(null); save(); updateLamps();
+}
+function rotateSel(deg) {
+  const it = furniture.find((f) => f.uid === selected.uid); if (!it) return;
+  it.rot = ((Math.round(it.rot + deg) % 360) + 360) % 360; syncItem(it); refreshSel(); fillFurnEditor(); example = false; save();
+}
+function addFurniture(type) {
+  const def = CAT[type];
+  // dort platzieren, wohin die Kamera schaut
+  ndc.set(0, S.mode === 'walk' ? -0.35 : 0); ray.setFromCamera(ndc, activeCam()); ray.far = Infinity;
+  const h = ray.intersectObjects(floors, true)[0];
+  let x, y;
+  if (h) { x = h.point.x; y = -h.point.z; }
+  else { const p = floorHit() || center; x = p.x; y = -p.z; }
+  if (S.mode === 'walk') { const dx = x - cam.position.x, dz = -y - cam.position.z, dl = Math.hypot(dx, dz); if (dl > 2.5) { x = cam.position.x + dx / dl * 2.5; y = -(cam.position.z + dz / dl * 2.5); } }
+  const it = { uid: uid('m'), type, x: Math.round(x * 20) / 20, y: Math.round(y * 20) / 20, rot: S.mode === 'walk' ? (Math.round(((-S.walk.yaw / RAD) % 360 + 360) % 360 / 15) * 15) % 360 : 0, w: def.w, d: def.d, h: def.h, color: def.color };
+  furniture.push(it); syncItem(it); example = false; save();
+  select({ kind: 'furn', uid: it.uid });
+}
+
+// ------------------------------------------------------------------ Panel
+function showTab(t) {
+  for (const b of $$('#tabs [data-tab]')) b.setAttribute('aria-selected', String(b.dataset.tab === t));
+  for (const s of $$('[data-body]')) s.hidden = s.dataset.body !== t;
+  $('#panel').classList.remove('collapsed'); $('#sheetToggle').textContent = 'Werkzeuge ausblenden';
+  if (t === 'sonne') drawChart();
+}
+$$('#tabs [data-tab]').forEach((b) => b.addEventListener('click', () => showTab(b.dataset.tab)));
+$('#sheetToggle').addEventListener('click', () => { const p = $('#panel'); p.classList.toggle('collapsed'); $('#sheetToggle').textContent = p.classList.contains('collapsed') ? 'Werkzeuge einblenden' : 'Werkzeuge ausblenden'; });
+$$('[data-mode]').forEach((b) => b.addEventListener('click', () => setMode(b.dataset.mode)));
+
+function syncControls() {
+  $('#doy').value = S.doy; $('#time').value = S.minutes;
+  $('#dateVal').textContent = fmtDate(S.year, S.doy); $('#timeVal').textContent = fmtTime(S.minutes);
+  $('#lat').value = S.lat; $('#lon').value = S.lon; $('#north').value = S.north;
+  $$('[data-sky]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.sky === S.sky)));
+  $$('[data-lamps]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lamps === S.lamps)));
+  $('#lampLevel').value = S.lampLevel; $('#lampVal').textContent = `${S.lampLevel} %`;
+  $('#cct').value = String(S.cct); $('#fill').value = S.fill; $('#fillVal').textContent = `${S.fill} %`;
+  $('#exposure').value = S.exposure; $('#autoExp').checked = S.autoExp; $('#doorsOpen').checked = S.doorsOpen; $('#hq').checked = S.hq;
+  $('#snap').checked = S.snap; $('#eye').value = String(S.eye); $('#fov').value = String(S.fov);
+  $('#exampleNote').hidden = !example;
+}
+const onInput = (id, fn) => $(id).addEventListener('input', (e) => { fn(e.target); syncControls(); updateSun(); save(); });
+onInput('#doy', (t) => (S.doy = +t.value));
+onInput('#time', (t) => (S.minutes = +t.value));
+onInput('#lat', (t) => (S.lat = clamp(+t.value || 0, -89, 89)));
+onInput('#lon', (t) => (S.lon = clamp(+t.value || 0, -180, 180)));
+onInput('#north', (t) => (S.north = +t.value || 0));
+onInput('#lampLevel', (t) => (S.lampLevel = +t.value));
+onInput('#cct', (t) => (S.cct = +t.value));
+onInput('#fill', (t) => (S.fill = +t.value));
+onInput('#exposure', (t) => (S.exposure = +t.value));
+onInput('#autoExp', (t) => (S.autoExp = t.checked));
+onInput('#doorsOpen', (t) => setDoors(t.checked));
+onInput('#hq', (t) => { S.hq = t.checked; applyShadowQuality(); });
+onInput('#snap', (t) => (S.snap = t.checked));
+onInput('#eye', (t) => (S.eye = +t.value));
+onInput('#fov', (t) => { S.fov = +t.value; cam.fov = S.fov; cam.updateProjectionMatrix(); });
+$$('[data-doy]').forEach((b) => b.addEventListener('click', () => { S.doy = +b.dataset.doy; syncControls(); updateSun(); save(); }));
+$('#today').addEventListener('click', () => { const d = new Date(); S.doy = doyOf(d); S.minutes = Math.round((d.getHours() * 60 + d.getMinutes()) / 5) * 5; syncControls(); updateSun(); save(); });
+$$('[data-sky]').forEach((b) => b.addEventListener('click', () => { S.sky = b.dataset.sky; syncControls(); updateSun(); save(); }));
+$$('[data-lamps]').forEach((b) => b.addEventListener('click', () => { S.lamps = b.dataset.lamps; syncControls(); updateSun(); save(); }));
+let playing = false;
+$('#play').addEventListener('click', () => { playing = !playing; $('#play').textContent = playing ? 'Anhalten' : 'Abspielen'; });
+
+// Katalog
+for (const [k, d] of Object.entries(CAT)) {
+  const b = document.createElement('button');
+  b.innerHTML = `${d.label}<small>${Math.round(d.w * 100)} × ${Math.round(d.d * 100)} cm</small>`;
+  b.addEventListener('click', () => addFurniture(k));
+  $('#catalog').appendChild(b);
+}
+function fillFurnEditor() {
+  const it = furniture.find((f) => f.uid === selected?.uid); if (!it) return;
+  $('#feName').textContent = CAT[it.type].label;
+  $('#feW').value = Math.round(it.w * 100); $('#feD').value = Math.round(it.d * 100); $('#feH').value = Math.round(it.h * 100);
+  $('#feRot').value = it.rot; $('#feRotVal').textContent = `${it.rot}°`; $('#feColor').value = it.color;
+}
+const feChange = (fn) => () => { const it = furniture.find((f) => f.uid === selected?.uid); if (!it) return; fn(it); syncItem(it); refreshSel(); fillFurnEditor(); example = false; save(); };
+$('#feW').addEventListener('change', feChange((it) => (it.w = clamp(+$('#feW').value / 100, 0.05, 8))));
+$('#feD').addEventListener('change', feChange((it) => (it.d = clamp(+$('#feD').value / 100, 0.05, 8))));
+$('#feH').addEventListener('change', feChange((it) => (it.h = clamp(+$('#feH').value / 100, 0.005, 2.55))));
+$('#feRot').addEventListener('input', feChange((it) => (it.rot = +$('#feRot').value)));
+$('#feColor').addEventListener('input', feChange((it) => (it.color = $('#feColor').value)));
+$('#feRotL').addEventListener('click', () => rotateSel(-90));
+$('#feRotR').addEventListener('click', () => rotateSel(90));
+$('#feDel').addEventListener('click', deleteSelected);
+$('#feClose').addEventListener('click', () => select(null));
+$('#feDup').addEventListener('click', () => {
+  const it = furniture.find((f) => f.uid === selected?.uid); if (!it) return;
+  const c = { ...it, uid: uid('m'), x: it.x + 0.3, y: it.y - 0.3 }; furniture.push(c); syncItem(c); save(); select({ kind: 'furn', uid: c.uid });
+});
+let clearArmed = 0;
+$('#clearFurn').addEventListener('click', () => {
+  const b = $('#clearFurn');
+  if (!clearArmed) { b.textContent = 'Wirklich alle entfernen?'; clearArmed = setTimeout(() => { clearArmed = 0; b.textContent = 'Alle Möbel entfernen'; }, 3000); return; }
+  clearTimeout(clearArmed); clearArmed = 0; b.textContent = 'Alle Möbel entfernen';
+  for (const f of [...furniture]) removeItem(f.uid);
+  example = false; select(null); syncControls(); save(); updateLamps();
+});
+// Bilder
+function fillPicEditor() {
+  const p = pictures.find((q) => q.uid === selected?.uid); if (!p) return;
+  $('#peW').value = Math.round(p.width * 100); $('#peH').value = Math.round(p.width / p.aspect * 100);
+  $('#peY').value = Math.round(p.z * 100); $('#peFrame').value = p.frame;
+}
+const peChange = (fn) => () => { const p = pictures.find((q) => q.uid === selected?.uid); if (!p) return; fn(p); syncPic(p); refreshSel(); fillPicEditor(); save(); };
+$('#peW').addEventListener('change', peChange((p) => (p.width = clamp(+$('#peW').value / 100, 0.05, 4))));
+$('#peY').addEventListener('change', peChange((p) => (p.z = clamp(+$('#peY').value / 100, 0.1, 2.5))));
+$('#peFrame').addEventListener('change', peChange((p) => (p.frame = $('#peFrame').value)));
+$('#peDel').addEventListener('click', deleteSelected);
+$('#peClose').addEventListener('click', () => select(null));
+$('#picFile').addEventListener('change', async (e) => {
+  const f = e.target.files[0]; e.target.value = ''; if (!f) return;
+  try { placingPic = await downscale(f); select(null); updateHint(); notice('Jetzt auf die Wand tippen, an der das Bild hängen soll.'); }
+  catch (err) { notice(err.message); }
+});
+$('#picSample').addEventListener('click', () => { placingPic = { src: exampleArt(), aspect: 4 / 3 }; select(null); updateHint(); notice('Jetzt auf die Wand tippen, an der das Bild hängen soll.'); });
+
+// Räume
+function buildRoomList() {
+  const list = $('#roomList'); list.innerHTML = '';
+  for (const r of META.rooms || []) {
+    if (r.name === 'Treppenhaus') continue;
+    const row = document.createElement('div'); row.className = 'r';
+    const stated = r.area_stated ? ` (${String(r.area_stated).replace('.', ',')})` : '';
+    row.innerHTML = `<div><div class="name">${r.name}</div><div class="area">${r.area.toFixed(2).replace('.', ',')} m²${stated}</div></div>`;
+    const go = document.createElement('button'); go.className = 'btn'; go.textContent = 'Hin'; go.addEventListener('click', () => goRoom(r));
+    row.appendChild(go);
+    if (!r.outdoor) {
+      const lab = document.createElement('label'); lab.className = 'check small';
+      const cb = document.createElement('input'); cb.type = 'checkbox'; cb.checked = S.roomLights[r.name] !== false; cb.id = `light_${r.name}`;
+      cb.addEventListener('change', () => { S.roomLights[r.name] = cb.checked; updateLamps(); save(); });
+      lab.append(cb, document.createTextNode('Licht')); row.appendChild(lab);
+    } else row.appendChild(document.createElement('span'));
+    list.appendChild(row);
+  }
+}
+function download(blob, name) {
+  try {
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name;
+    document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+    notice(`${name} wird gespeichert. Startet kein Download, ist das in der Online-Ansicht gesperrt.`);
+  } catch (e) { notice('Download nicht möglich. Bitte „In Zwischenablage“ verwenden.'); }
+}
+$('#expJson').addEventListener('click', () => download(new Blob([JSON.stringify(project(), null, 1)], { type: 'application/json' }), `${META.object}_${META.floor}_einrichtung.json`));
+$('#copyJson').addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(JSON.stringify(project())); notice('Einrichtung in die Zwischenablage kopiert. In eine .json-Datei einfügen, um sie zu sichern.'); }
+  catch (e) { notice('Die Zwischenablage ist gesperrt. Bitte „Einrichtung als Datei“ in der lokalen HTML-Datei verwenden.'); }
+});
+$('#impJson').addEventListener('change', async (e) => {
+  const f = e.target.files[0]; e.target.value = ''; if (!f) return;
+  try {
+    const o = JSON.parse(await f.text());
+    if (o.app !== 'raumplaner') throw new Error('Das ist keine Einrichtungsdatei dieses Raumplaners.');
+    for (const it of [...furniture]) removeItem(it.uid);
+    for (const p of [...pictures]) removePic(p.uid);
+    applyProject(o); furniture.forEach(syncItem); pictures.forEach(syncPic);
+    syncControls(); buildRoomList(); setDoors(S.doorsOpen, false); setMode(S.mode); save();
+    notice(`Geladen: ${furniture.length} Möbel, ${pictures.length} Bilder.`);
+  } catch (err) { notice(`Laden fehlgeschlagen: ${err.message}`); }
+});
+$('#expGlb').addEventListener('click', () => {
+  const wasSel = selBox.visible; selBox.visible = false;
+  new GLTFExporter().parse([modelRoot, furnGroup, picGroup], (res) => {
+    selBox.visible = wasSel;
+    download(new Blob([res], { type: 'model/gltf-binary' }), `${META.object}_${META.floor}_eingerichtet.glb`);
+  }, (err) => { selBox.visible = wasSel; notice(`Export fehlgeschlagen: ${err.message || err}`); }, { binary: true });
+});
+
+// ------------------------------------------------------------------ Größe, Schleife
+function resize() {
+  const w = canvas.clientWidth, h = canvas.clientHeight;
+  renderer.setSize(w, h, false);
+  cam.aspect = w / h; cam.updateProjectionMatrix();
+  const span = 10.5, a = w / h;
+  if (a >= 1) { planCam.left = -span * a; planCam.right = span * a; planCam.top = span; planCam.bottom = -span; }
+  else { planCam.left = -span; planCam.right = span; planCam.top = span / a; planCam.bottom = -span / a; }
+  planCam.updateProjectionMatrix();
+  drawChart();
+}
+new ResizeObserver(resize).observe(canvas);
+const clock = new THREE.Clock();
+const needle = $('#needle');
+function frame() {
+  const dt = Math.min(0.05, clock.getDelta());
+  if (playing) {
+    S.minutes += dt * 60 * +$('#speed').value;
+    if (S.minutes >= 1440) S.minutes -= 1440;
+    $('#time').value = S.minutes; $('#timeVal').textContent = fmtTime(S.minutes);
+    updateSun();
+  }
+  for (const d of doors) if (d.target !== undefined && d.t !== d.target) {
+    d.t += Math.sign(d.target - d.t) * Math.min(Math.abs(d.target - d.t), dt * 2.2);
+    d.obj.rotation.set(0, d.closed + (d.open - d.closed) * d.t, 0);
+  }
+  if (S.mode === 'walk') walkStep(dt);
+  else if (S.mode === 'orbit') orbit.update();
+  else planCtl.update();
+  const c = activeCam(); const fw = new THREE.Vector3(); c.getWorldDirection(fw);
+  if (S.mode === 'plan') fw.set(0, 0, -1);
+  const heading = Math.atan2(fw.x, -fw.z) / RAD + S.north;
+  needle.setAttribute('transform', `rotate(${-heading})`);
+  renderer.render(scene, c);
+}
+
+// ------------------------------------------------------------------ Start
+(async () => {
+  try {
+    $('#title').firstChild.textContent = META.object || 'Modell';
+    $('#subtitle').textContent = (META.title || '').split('–')[0].trim() || META.floor;
+    const restored = loadState();
+    if (!restored) {
+      furniture = exampleFurniture();
+      pictures = [{ uid: uid('b'), src: exampleArt(), aspect: 4 / 3, x: 7.02, y: 2.1, z: 1.55, nx: -1, ny: 0, width: 1.0, frame: 'galerie' }];
+      example = true;
+    }
+    cam.fov = S.fov; cam.updateProjectionMatrix();
+    const root = await loadModel();
+    prepareModel(root);
+    furniture.forEach(syncItem); pictures.forEach(syncPic);
+    buildRoomList(); syncControls(); applyShadowQuality(); setDoors(S.doorsOpen, false);
+    resize(); setMode(S.mode);
+    renderer.setAnimationLoop(frame);
+    clearTimeout(window.__loadTimer);
+    $('#loading').hidden = true;
+    if (!restored) save();
+    window.raumplaner = { get state() { return S; }, setMode, goRoom, rooms: META.rooms, update: () => { syncControls(); updateSun(); } };
+  } catch (err) {
+    console.error(err);
+    $('#loadMsg').className = 'err'; $('#loadMsg').textContent = `3D-Ansicht konnte nicht starten: ${err.message || err}`;
+  }
+})();
+</script>
