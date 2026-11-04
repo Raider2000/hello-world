@@ -16,6 +16,7 @@
 | EG | `geometrie/EG.json` | `ausgabe/KFS31_EG.svg` | `ausgabe/KFS31_EG.dxf` | 3 Abweichungen > 3 % (dokumentiert, s. u.) |
 | OG1 | `geometrie/OG1.json` | `ausgabe/KFS31_OG1.svg` | `ausgabe/KFS31_OG1.dxf` | 1 Abweichung > 3 % (Bad WE 3, s. u.) |
 | OG2 | `geometrie/OG2.json` | `ausgabe/KFS31_OG2.svg` | `ausgabe/KFS31_OG2.dxf` | 2 Abweichungen > 3 % (Bad WE 6, Flur WE 8) |
+| DG | `geometrie/DG.json` | `ausgabe/KFS31_DG.svg` | `ausgabe/KFS31_DG.dxf` | 5 Abweichungen > 3 % (Dachschräge Neubau, Bad WE 9) |
 
 ## Quellen-Seitenzuordnung
 
@@ -24,6 +25,7 @@
 | EG | S. 4 | S. 4 (Neubau/West) + S. 5 (Altbau/Ost) | WE 1 |
 | OG1 | S. 5 | S. 6 + S. 7 | – |
 | OG2 | S. 6 | S. 8 + S. 9 | – |
+| DG | S. 7 | S. 10 + S. 11 | – |
 
 ## Koordinatensystem (alle Geschosse gleich)
 
@@ -72,3 +74,12 @@ Maßketten 1999. Der Plan 2026 (WE 1) wurde über die Fensterachsen 1999 skalier
 ### OG2
 - Gleiche Zeichnung wie OG1 (Plan 2010 deckt sich beim Overlay). WE 6/7/8 angenommen.
 - Flur WE 8: Plan 2010 schreibt 2,65 m² (OG1 bei identischer Zeichnung 2,85 m²); berechnet 2,90 m².
+
+### DG
+- Wände wie OG1/OG2 (Overlay mit Plan 2010 S. 7 deckungsgleich). WE 9/10/11 angenommen.
+- Neubau: gestrichelte Linie bei y ≈ 0,99 (Dachschräge, Höhe nicht angegeben). Die Flächen lt. 2010
+  (Schlafen 11,15 / Bad 3,55 / Kochen 6,80 m²) liegen deutlich unter der Grundfläche (11,49 / 5,84 /
+  8,69 m²): vermutlich Abzug nach WoFlV, eventuell auch andere Trennwände → Schnitt 1999 (S. 11) prüfen.
+- Neubau-Südfenster lt. Maßkette 1999 S. 10 (Doppelfenster); Altbau-Fenster wie OG übernommen
+  (1999 bemaßt im DG abweichende Öffnungen).
+- Bad WE 9: wie in OG1/OG2 (Zickzackwand), 5,61 statt 6,85 m².
