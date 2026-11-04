@@ -15,6 +15,7 @@
 |----------|-----------|-----|-----|----------------|
 | EG | `geometrie/EG.json` | `ausgabe/KFS31_EG.svg` | `ausgabe/KFS31_EG.dxf` | 3 Abweichungen > 3 % (dokumentiert, s. u.) |
 | OG1 | `geometrie/OG1.json` | `ausgabe/KFS31_OG1.svg` | `ausgabe/KFS31_OG1.dxf` | 1 Abweichung > 3 % (Bad WE 3, s. u.) |
+| OG2 | `geometrie/OG2.json` | `ausgabe/KFS31_OG2.svg` | `ausgabe/KFS31_OG2.dxf` | 2 Abweichungen > 3 % (Bad WE 6, Flur WE 8) |
 
 ## Quellen-Seitenzuordnung
 
@@ -22,6 +23,7 @@
 |----------|---------------------------|-------------|------|
 | EG | S. 4 | S. 4 (Neubau/West) + S. 5 (Altbau/Ost) | WE 1 |
 | OG1 | S. 5 | S. 6 + S. 7 | – |
+| OG2 | S. 6 | S. 8 + S. 9 | – |
 
 ## Koordinatensystem (alle Geschosse gleich)
 
@@ -66,3 +68,7 @@ Maßketten 1999. Der Plan 2026 (WE 1) wurde über die Fensterachsen 1999 skalier
 - Flur/Wohnen der Wohnung Nord gehen offen ineinander über; die Raumgrenze bei x = 20,75 ist so
   angenommen, dass beide Flächen passen.
 - Außenwand Altbau in den OG 0,45 (1999), im EG 0,55.
+
+### OG2
+- Gleiche Zeichnung wie OG1 (Plan 2010 deckt sich beim Overlay). WE 6/7/8 angenommen.
+- Flur WE 8: Plan 2010 schreibt 2,65 m² (OG1 bei identischer Zeichnung 2,85 m²); berechnet 2,90 m².
