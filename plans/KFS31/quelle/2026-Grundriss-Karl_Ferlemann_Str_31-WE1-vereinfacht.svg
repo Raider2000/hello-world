@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="0 0 1273 2048"
+   width="578"
+   height="930"
+   id="svg55"
+   sodipodi:docname="2026-Grundriss-Karl_Ferlemann_Str_31-vereinfacht.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview55"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.71737124"
+     inkscape:cx="92.002574"
+     inkscape:cy="433.52728"
+     inkscape:window-width="1918"
+     inkscape:window-height="1024"
+     inkscape:window-x="1913"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg55" />
+  <defs
+     id="defs2">
+    <pattern
+       id="tilesK"
+       width="33.7"
+       height="33.7"
+       patternUnits="userSpaceOnUse"
+       patternTransform="translate(552,117.5)">
+      <rect
+         width="33.7"
+         height="33.7"
+         fill="#ffffff"
+         id="rect1" />
+      <path
+         d="M 33.7 0 L 0 0 0 33.7"
+         fill="none"
+         stroke="#a8a6a8"
+         stroke-width="2.4"
+         id="path1" />
+    </pattern>
+    <pattern
+       id="tilesB"
+       width="33.7"
+       height="33.7"
+       patternUnits="userSpaceOnUse"
+       patternTransform="translate(220,1256)">
+      <rect
+         width="33.7"
+         height="33.7"
+         fill="#ffffff"
+         id="rect2" />
+      <path
+         d="M 33.7 0 L 0 0 0 33.7"
+         fill="none"
+         stroke="#a8a6a8"
+         stroke-width="2.4"
+         id="path2" />
+    </pattern>
+  </defs>
+  <rect
+     x="-10.311819"
+     y="-7.0554557"
+     width="1294.709"
+     height="2069.709"
+     fill="#ffffff"
+     id="rect3" />
+  <!-- ==================== FLOORS (tiled rooms) ==================== -->
+  <g
+     id="floors">
+    <rect
+       id="floor-kueche"
+       x="550"
+       y="118"
+       width="272"
+       height="274"
+       fill="url(#tilesK)" />
+    <path
+       id="floor-bad"
+       d="M 222 1256 L 672 1256 L 672 1430 L 659 1434 L 531 1563 L 443 1477 L 228 1692 L 222 1686 Z"
+       fill="url(#tilesB)" />
+  </g>
+  <!-- ==================== WALLS ==================== -->
+  <g
+     id="walls"
+     fill="#b03c24"
+     stroke="#1a1512"
+     stroke-width="6"
+     stroke-linejoin="miter">
+    <!-- P1: Aussenwaende oben (Wohn-/Esszimmer + Kueche) bis Wohnungstuer -->
+    <path
+       id="wall-top"
+       d="M 155 85 L 916 85 L 916 1049 L 866 1049 L 866 931 L 826 931 L 826 912 L 866 912 L 866 414 L 550 414 L 550 390 L 820 390 L 820 120 L 224 120 L 224 227 L 186 227 L 186 239 L 155 239 Z" />
+    <!-- P2: linke Aussenwand, Stueck zwischen Fenster 1 und 2 -->
+    <path
+       id="wall-left-1"
+       d="M 155 350 L 186 350 L 186 360 L 224 360 L 224 502 L 186 502 L 186 512 L 155 512 Z" />
+    <!-- P3: linke Aussenwand, Stueck zwischen Fenster 2 und 3 -->
+    <path
+       id="wall-left-2"
+       d="M 155 622 L 186 622 L 186 635 L 224 635 L 224 743 L 186 743 L 186 755 L 155 755 Z" />
+    <!-- P4: Wand Wohnzimmer/Gast-Buero + Flurwand West (oben) + Aussenwandstueck -->
+    <path
+       id="wall-band1"
+       d="M 155 868 L 186 868 L 186 876 L 224 876 L 224 911 L 716 911 L 716 931 L 686 931 L 686 977 L 662 977 L 662 931 L 224 931 L 224 985 L 186 985 L 186 996 L 155 996 Z" />
+    <!-- P5: Flurwand West (unten) + Wand Gast-Buero/Bad + Aussenwandstueck -->
+    <path
+       id="wall-mid"
+       d="M 661 1080 L 686 1080 L 686 1238 L 715 1238 L 715 1281 L 661 1281 L 661 1260 L 224 1260 L 224 1393 L 186 1393 L 186 1407 L 155 1407 L 155 1106 L 186 1106 L 186 1118 L 224 1118 L 224 1238 L 661 1238 Z" />
+    <!-- P6: Wand Bad/Schlafzimmer (Zickzack) + Aussenwand Suedwest -->
+    <path
+       id="wall-low"
+       d="m 671,1402 h 40 v 30 H 661 L 530.99957,1561 443,1475 l -214,214 60,64 -4.10473,-2.1373 -29.24764,28.751 6.71802,7.4126 -20.33674,20.541 L 244,1810 155,1721 v -205 h 31 v 20 h 38 l 72.72545,50.1036 L 456,1429 l 71,66 18.97455,17.4827 L 656,1405 v -3 z"
+       sodipodi:nodetypes="ccccccccccccccccccccccccc" />
+    <!-- P7: Aussenwand rechts/unten ab Wohnungstuer inkl. Mauervorsprung -->
+    <path
+       id="wall-right"
+       d="M 866 1218 L 916 1218 L 916 1254 L 959 1254 L 959 1303 L 880 1303 L 880 1905 L 917 1905 L 917 1985 L 727 1985 L 727 1951 L 738 1951 L 738 1908 L 846 1908 L 846 1432 L 823 1432 L 823 1402 L 846 1402 L 846 1281 L 821 1281 L 821 1238 L 866 1238 Z" />
+    <!-- P8: Aussenwand Erker unten -->
+    <path
+       id="wall-bot"
+       d="m 377,1841 70,66 h 160 v 44 h 11 v 34 H 418 l -98,-99 21.23263,-19.8636 7.84716,6.932 30.46085,-28.5048 z"
+       sodipodi:nodetypes="cccccccccccc" />
+  </g>
+  <!-- Bodenlinie Kueche/Wohnzimmer (kein Mauerwerk, nur Materialgrenze) -->
+  <line
+     id="kueche-grenze"
+     x1="552.5"
+     y1="120"
+     x2="552.5"
+     y2="390"
+     stroke="#1a1512"
+     stroke-width="5" />
+  <!-- ==================== FENSTER ==================== -->
+  <g
+     id="windows">
+    <g
+       id="fenster-symbole-links"
+       stroke-linecap="butt">
+      <!-- W1 -->
+      <path
+         d="M 158 239 L 186 239 L 186 227 L 221 227 L 221 360 L 186 360 L 186 350 L 158 350 Z"
+         fill="#ffffff"
+         stroke="none"
+         id="path3" />
+      <line
+         x1="157"
+         y1="239"
+         x2="157"
+         y2="350"
+         stroke="#2e2d2f"
+         stroke-width="4"
+         id="line3" />
+      <line
+         x1="184"
+         y1="239"
+         x2="184"
+         y2="350"
+         stroke="#2e2d2f"
+         stroke-width="4"
+         id="line4" />
+      <line
+         x1="221"
+         y1="227"
+         x2="221"
+         y2="360"
+         stroke="#121211"
+         stroke-width="4.5"
+         id="line5" />
+      <!-- W2 -->
+      <path
+         d="M 158 512 L 186 512 L 186 502 L 221 502 L 221 635 L 186 635 L 186 622 L 158 622 Z"
+         fill="#ffffff"
+         stroke="none"
+         id="path5" />
+      <line
+         x1="157"
+         y1="512"
+         x2="157"
+         y2="622"
+         stroke="#2e2d2f"
+         stroke-width="4"
+         id="line6" />
+      <line
+         x1="184"
+         y1="512"
+         x2="184"
+         y2="622"
+         stroke="#2e2d2f"
+         stroke-width="4"
+         id="line7" />
+      <line
+         x1="221"
+         y1="502"
+         x2="221"
+         y2="635"
+         stroke="#121211"
+         stroke-width="4.5"
+         id="line8" />
+      <!-- W3 -->
+      <path
+         d="M 158 755 L 186 755 L 186 743 L 221 743 L 221 876 L 186 876 L 186 868 L 158 868 Z"
+         fill="#ffffff"
+         stroke="none"
+         id="path8" />
+      <line
+         x1="157"
+         y1="755"
+         x2="157"
+         y2="868"
+         stroke="#2e2d2f"
+         stroke-width="4"
+         id="line9" />
+      <line
+         x1="184"
+         y1="755"
+         x2="184"
+         y2="868"
+         stroke="#2e2d2f"
+         stroke-width="4"
+         id="line10" />
+      <line
+         x1="221"
+         y1="743"
+         x2="221"
+         y2="876"
+         stroke="#121211"
+         stroke-width="4.5"
+         id="line11" />
+      <!-- W4 -->
+      <path
+         d="M 158 996 L 186 996 L 186 985 L 221 985 L 221 1118 L 186 1118 L 186 1106 L 158 1106 Z"
+         fill="#ffffff"
+         stroke="none"
+         id="path11" />
+      <line
+         x1="157"
+         y1="996"
+         x2="157"
+         y2="1106"
+         stroke="#2e2d2f"
+         stroke-width="4"
+         id="line12" />
+      <line
+         x1="184"
+         y1="996"
+         x2="184"
+         y2="1106"
+         stroke="#2e2d2f"
+         stroke-width="4"
+         id="line13" />
+      <line
+         x1="221"
+         y1="985"
+         x2="221"
+         y2="1118"
+         stroke="#121211"
+         stroke-width="4.5"
+         id="line14" />
+      <!-- W5 (Bad) -->
+      <path
+         d="M 158 1407 L 186 1407 L 186 1393 L 221 1393 L 221 1536 L 186 1536 L 186 1516 L 158 1516 Z"
+         fill="#ffffff"
+         stroke="none"
+         id="path14" />
+      <line
+         x1="157"
+         y1="1407"
+         x2="157"
+         y2="1516"
+         stroke="#2e2d2f"
+         stroke-width="4"
+         id="line15" />
+      <line
+         x1="184"
+         y1="1407"
+         x2="184"
+         y2="1516"
+         stroke="#2e2d2f"
+         stroke-width="4"
+         id="line16" />
+      <line
+         x1="221"
+         y1="1393"
+         x2="221"
+         y2="1536"
+         stroke="#121211"
+         stroke-width="4.5"
+         id="line17" />
+    </g>
+    <!-- W6 (Schlafzimmer Sued) -->
+    <g
+       id="fenster-sued">
+      <path
+         d="M 607 1911 L 738 1911 L 738 1951 L 726 1951 L 726 1982 L 618 1982 L 618 1951 L 607 1951 Z"
+         fill="#ffffff"
+         stroke="none"
+         id="path17" />
+      <line
+         x1="607"
+         y1="1911"
+         x2="738"
+         y2="1911"
+         stroke="#121211"
+         stroke-width="5"
+         id="line18" />
+      <line
+         x1="617"
+         y1="1952"
+         x2="727"
+         y2="1952"
+         stroke="#2e2d2f"
+         stroke-width="4"
+         id="line19" />
+      <line
+         x1="618"
+         y1="1982"
+         x2="726"
+         y2="1982"
+         stroke="#2e2d2f"
+         stroke-width="4"
+         id="line20" />
+    </g>
+    <g
+       id="fenster-nord-ost"
+       transform="rotate(45,639.03309,1442.8356)">
+      <path
+         d="m 607,1911 h 131 v 40 l -12.38376,0.3837 L 726,1982 H 618 v -31 h -11 z"
+         fill="#ffffff"
+         stroke="none"
+         id="path17-8"
+         sodipodi:nodetypes="ccccccccc" />
+      <line
+         x1="607"
+         y1="1911"
+         x2="738"
+         y2="1911"
+         stroke="#121211"
+         stroke-width="5"
+         id="line18-2" />
+      <line
+         x1="617"
+         y1="1952"
+         x2="727"
+         y2="1952"
+         stroke="#2e2d2f"
+         stroke-width="4"
+         id="line19-4" />
+      <line
+         x1="618"
+         y1="1982"
+         x2="726"
+         y2="1982"
+         stroke="#2e2d2f"
+         stroke-width="4"
+         id="line20-5" />
+    </g>
+    <!-- W7 (Schlafzimmer Erker, diagonal) -->
+  </g>
+  <!-- ==================== TUEREN ==================== -->
+  <g
+     id="doors"
+     stroke-linecap="butt">
+    <!-- D1: Wohn-/Esszimmer -> Flur (oeffnet ins Wohnzimmer) -->
+    <g
+       id="tuer-wohnzimmer">
+      <path
+         d="M 826 911 L 826 797 A 114 114 0 0 0 712 911 Z"
+         fill="#ffffff"
+         stroke="none"
+         id="path23" />
+      <path
+         d="M 826 797 A 114 114 0 0 0 712 911"
+         fill="none"
+         stroke="#121211"
+         stroke-width="2.5"
+         id="path24" />
+      <line
+         x1="826"
+         y1="911"
+         x2="826"
+         y2="797"
+         stroke="#121211"
+         stroke-width="5"
+         id="line24" />
+      <line
+         x1="716"
+         y1="914"
+         x2="826"
+         y2="914"
+         stroke="#121211"
+         stroke-width="3"
+         id="line25" />
+      <line
+         x1="716"
+         y1="928"
+         x2="826"
+         y2="928"
+         stroke="#121211"
+         stroke-width="3"
+         id="line26" />
+    </g>
+    <!-- D2: Flur -> Gast/Buero (oeffnet ins Gast/Buero) -->
+    <g
+       id="tuer-gast-buero">
+      <path
+         d="M 662 977 L 559 977 A 103 103 0 0 0 662 1080 Z"
+         fill="#ffffff"
+         stroke="none"
+         id="path26" />
+      <path
+         d="M 559 977 A 103 103 0 0 0 662 1080"
+         fill="none"
+         stroke="#121211"
+         stroke-width="2.5"
+         id="path27" />
+      <line
+         x1="662"
+         y1="977"
+         x2="559"
+         y2="977"
+         stroke="#121211"
+         stroke-width="5"
+         id="line27" />
+      <line
+         x1="665"
+         y1="977"
+         x2="665"
+         y2="1080"
+         stroke="#121211"
+         stroke-width="3"
+         id="line28" />
+      <line
+         x1="683"
+         y1="977"
+         x2="683"
+         y2="1080"
+         stroke="#121211"
+         stroke-width="3"
+         id="line29" />
+    </g>
+    <!-- D3: Wohnungstuer (zweifluegelig: Hauptfluegel + Seitenfluegel) -->
+    <g
+       id="tuer-eingang">
+      <path
+         d="M 866 1049 L 743 1049 A 123 123 0 0 0 866 1172 Z"
+         fill="#ffffff"
+         stroke="none"
+         id="path29" />
+      <path
+         d="M 743 1049 A 123 123 0 0 0 866 1172"
+         fill="none"
+         stroke="#121211"
+         stroke-width="2.5"
+         id="path30" />
+      <line
+         x1="866"
+         y1="1049"
+         x2="743"
+         y2="1049"
+         stroke="#121211"
+         stroke-width="5"
+         id="line30" />
+      <path
+         d="M 866 1218 L 866 1172 A 46 46 0 0 0 820 1218 Z"
+         fill="#ffffff"
+         stroke="none"
+         id="path31" />
+      <path
+         d="M 866 1172 A 46 46 0 0 0 820 1218"
+         fill="none"
+         stroke="#121211"
+         stroke-width="2.5"
+         id="path32" />
+      <line
+         x1="866"
+         y1="1218"
+         x2="820"
+         y2="1218"
+         stroke="#121211"
+         stroke-width="5"
+         id="line32" />
+      <line
+         x1="868"
+         y1="1049"
+         x2="868"
+         y2="1218"
+         stroke="#121211"
+         stroke-width="3"
+         id="line33" />
+      <line
+         x1="914"
+         y1="1049"
+         x2="914"
+         y2="1218"
+         stroke="#121211"
+         stroke-width="3"
+         id="line34" />
+    </g>
+    <!-- D4: Flur -> Schlafzimmer (oeffnet ins Schlafzimmer) -->
+    <g
+       id="tuer-schlafzimmer">
+      <path
+         d="M 823 1430 L 823 1542 A 112 112 0 0 1 711 1430 Z"
+         fill="#ffffff"
+         stroke="none"
+         id="path34" />
+      <path
+         d="M 823 1542 A 112 112 0 0 1 711 1430"
+         fill="none"
+         stroke="#121211"
+         stroke-width="2.5"
+         id="path35" />
+      <line
+         x1="823"
+         y1="1430"
+         x2="823"
+         y2="1542"
+         stroke="#121211"
+         stroke-width="5"
+         id="line35" />
+      <line
+         x1="711"
+         y1="1406"
+         x2="823"
+         y2="1406"
+         stroke="#121211"
+         stroke-width="3"
+         id="line36" />
+      <line
+         x1="711"
+         y1="1428"
+         x2="823"
+         y2="1428"
+         stroke="#121211"
+         stroke-width="3"
+         id="line37" />
+    </g>
+    <!-- D5: Flur -> Bad/WC (oeffnet ins Bad, Blatt geschlossen dargestellt) -->
+    <g
+       id="tuer-bad">
+      <!-- duenne schwarze Wandstummel ober-/unterhalb der Oeffnung -->
+      <rect
+         x="660"
+         y="1281"
+         width="10"
+         height="12"
+         fill="#121211"
+         stroke="none"
+         id="rect37" />
+      <rect
+         x="660"
+         y="1380"
+         width="10"
+         height="24"
+         fill="#121211"
+         stroke="none"
+         id="rect38" />
+      <path
+         d="M 665 1291 L 665 1382 A 91 91 0 0 1 574 1291 Z"
+         fill="#ffffff"
+         stroke="none"
+         id="path38" />
+      <path
+         d="M 665 1382 A 91 91 0 0 1 574 1291"
+         fill="none"
+         stroke="#121211"
+         stroke-width="2.5"
+         id="path39" />
+      <line
+         x1="574"
+         y1="1291"
+         x2="665"
+         y2="1291"
+         stroke="#121211"
+         stroke-width="5"
+         id="line39" />
+      <line
+         x1="661"
+         y1="1291"
+         x2="661"
+         y2="1382"
+         stroke="#121211"
+         stroke-width="3"
+         id="line40" />
+      <line
+         x1="669"
+         y1="1291"
+         x2="669"
+         y2="1382"
+         stroke="#121211"
+         stroke-width="3"
+         id="line41" />
+    </g>
+  </g>
+  <!-- ==================== EINRICHTUNGS-ANDEUTUNGEN (Bad) ==================== -->
+  <g
+     id="fixtures"
+     fill="#ffffff"
+     stroke="#8f8d8f"
+     stroke-width="3">
+    <rect
+       id="dusche"
+       x="225"
+       y="1259"
+       width="108"
+       height="108" />
+    <rect
+       id="ablage"
+       x="336"
+       y="1260"
+       width="189"
+       height="20" />
+    <path
+       id="wc"
+       d="M 274 1491 L 312 1517 L 276 1569 L 239 1544 Z" />
+  </g>
+  <!-- ==================== ANNOTATIONEN ==================== -->
+  <g
+     id="annotations"
+     fill="#121211">
+    <!-- Pfeil vom Flur-Label in den Flur -->
+    <line
+       x1="790"
+       y1="1006"
+       x2="941"
+       y2="1006"
+       stroke="#121211"
+       stroke-width="4"
+       id="line42" />
+    <path
+       d="M 768 1006 L 790 994 L 790 1019 Z"
+       id="path42" />
+    <!-- Eingangsmarkierung WE 1 -->
+    <path
+       d="M 936 1146 L 967 1115 L 967 1177 Z"
+       id="path43" />
+  </g>
+  <!-- ==================== BESCHRIFTUNG ==================== -->
+  <g
+     id="labels"
+     font-family="sans-serif"
+     fill="#000000">
+    <text
+       x="589.7"
+       y="211.1"
+       font-size="52.85"
+       font-weight="bold"
+       id="text43">Küche</text>
+    <text
+       x="589.7"
+       y="277.2"
+       font-size="35.24"
+       id="text44">ca. 4m²</text>
+    <text
+       x="274.3"
+       y="612.1"
+       font-size="52.85"
+       font-weight="bold"
+       id="text45">Wohn-/Esszimmer</text>
+    <text
+       x="274.3"
+       y="678.2"
+       font-size="35.24"
+       id="text46">ca. 23m²</text>
+    <text
+       x="971.4"
+       y="974.7"
+       font-size="52.85"
+       font-weight="bold"
+       id="text47">Flur</text>
+    <text
+       x="971.4"
+       y="1040.7"
+       font-size="35.24"
+       id="text48">ca. 5m²</text>
+    <text
+       x="265.3"
+       y="1093.4"
+       font-size="52.85"
+       font-weight="bold"
+       id="text49">Gast/Büro</text>
+    <text
+       x="265.3"
+       y="1159.4"
+       font-size="35.24"
+       id="text50">ca. 8m²</text>
+    <text
+       x="345.4"
+       y="1332.1"
+       font-size="52.85"
+       font-weight="bold"
+       id="text51">Bad/WC</text>
+    <text
+       x="345.4"
+       y="1398.1"
+       font-size="35.24"
+       id="text52">ca. 6m²</text>
+    <text
+       x="427.1"
+       y="1673.1"
+       font-size="52.85"
+       font-weight="bold"
+       id="text53">Schlafzimmer</text>
+    <text
+       x="427.1"
+       y="1739.2"
+       font-size="35.24"
+       id="text54">ca. 13m²</text>
+    <text
+       x="992.0"
+       y="1162.5"
+       font-size="64.6"
+       font-weight="bold"
+       id="text55">WE 1</text>
+  </g>
+  <g
+     id="Nordpfeil"
+     transform="rotate(28.5,441.48391,1793.7689)">
+    <path
+       sodipodi:type="star"
+       style="fill:#8f8f8f;stroke-width:2.20242"
+       id="path55"
+       inkscape:flatsided="false"
+       sodipodi:sides="2"
+       sodipodi:cx="1035.5236"
+       sodipodi:cy="1497.8009"
+       sodipodi:r1="119.47891"
+       sodipodi:r2="17.921837"
+       sodipodi:arg1="1.5707963"
+       sodipodi:arg2="3.1415927"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 1035.5236,1617.2798 -17.9219,-119.4789 17.9219,-119.4789 17.9218,119.4789 z" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:28.6315px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';writing-mode:lr-tb;direction:ltr;fill:#8f8f8f;stroke-width:2.20242"
+       x="1007.7697"
+       y="1675.3966"
+       id="text58"><tspan
+         sodipodi:role="line"
+         id="tspan57"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:70.4775px;font-family:Sans;-inkscape-font-specification:'Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:2.20242"
+         x="1007.7697"
+         y="1675.3966">N</tspan></text>
+  </g>
+</svg>

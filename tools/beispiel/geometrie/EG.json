@@ -1,0 +1,31 @@
+{
+  "object": "BEISPIEL",
+  "floor": "EG",
+  "floor_name": "Erdgeschoss (fiktives Schema-Beispiel)",
+  "source": {"file": "keine – Testdatei", "date": "2026-11-04", "version": "-"},
+  "walls": [
+    {"id": "W1", "a": [0, 0], "b": [8.0, 0], "thickness": 0.365, "align": "left", "type": "exterior"},
+    {"id": "W2", "a": [8.0, 0], "b": [8.0, 6.0], "thickness": 0.365, "align": "left", "type": "exterior"},
+    {"id": "W3", "a": [8.0, 6.0], "b": [0, 6.0], "thickness": 0.365, "align": "left", "type": "exterior"},
+    {"id": "W4", "a": [0, 6.0], "b": [0, 0], "thickness": 0.365, "align": "left", "type": "exterior"},
+    {"id": "W5", "a": [4.5, 0.365], "b": [4.5, 5.635], "thickness": 0.115, "type": "interior"}
+  ],
+  "openings": [
+    {"id": "T1", "wall": "W1", "type": "door", "offset": 1.0, "width": 1.01, "hinge": "start", "side": "left"},
+    {"id": "F1", "wall": "W1", "type": "window", "offset": 5.5, "width": 1.51},
+    {"id": "F2", "wall": "W3", "type": "window", "offset": 2.0, "width": 1.26},
+    {"id": "T2", "wall": "W5", "type": "door", "offset": 3.5, "width": 0.885, "hinge": "start", "side": "right"}
+  ],
+  "rooms": [
+    {"name": "Wohnen", "polygon": [[0.365, 0.365], [4.4425, 0.365], [4.4425, 5.635], [0.365, 5.635]], "area_stated": 21.49},
+    {"name": "Küche", "polygon": [[4.5575, 0.365], [7.635, 0.365], [7.635, 5.635], [4.5575, 5.635]], "area_stated": 16.22}
+  ],
+  "dimensions": [
+    {"a": [0, 0], "b": [8.0, 0], "offset": -1.2},
+    {"a": [0, 0], "b": [0, 6.0], "offset": 1.2}
+  ],
+  "notes": [],
+  "unverified": [
+    {"pos": [6.25, 0.0], "text": "Fensterbreite unleserlich"}
+  ]
+}

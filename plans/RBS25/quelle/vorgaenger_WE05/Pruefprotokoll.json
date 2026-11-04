@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "checked_at": "2026-09-12",
+  "svg_layers": [
+    "00 | Papier und Plankopf",
+    "01 | Balkon - Metallkonstruktion",
+    "02 | Außen- und Wohnungstrennwände",
+    "03 | Erhaltene Innenwände und Wandreste",
+    "04 | Neue Wände und geschlossene Öffnung",
+    "05 | Fenster und Balkonverglasung",
+    "06 | Türen mit Öffnungsbögen",
+    "07 | Sanitär und Waschmaschine - schematisch",
+    "08 | Räume und Zugang",
+    "09 | Bemaßung - Maße in m; ca. = abgeleitet",
+    "10 | Maßstabsleiste und Hinweise"
+  ],
+  "unique_svg_ids": 237,
+  "embedded_rasters": 0,
+  "external_links": 0,
+  "pdf_pages": 1,
+  "pdf_size_mm": [
+    297.0000127777778,
+    419.9999361111111
+  ],
+  "scale": "1:50",
+  "two_metre_scale_bar_printed_mm": 40,
+  "horizontal_dimension_chain_mm": [
+    3250,
+    150,
+    3210,
+    240
+  ],
+  "horizontal_chain_sum_mm": 6850,
+  "total_vertical_dimension_mm": 9840,
+  "independent_render_wall_mask_iou": 0.9792,
+  "render_comparison_method": "Wall interiors: luminance 70-130, 1-pixel erosion to exclude antialiasing and thin strokes; minimum IoU 0.97.",
+  "visual_review": "SVG and PDF reviewed separately; no clipped labels or fixture/dimension overlaps seen.",
+  "scope": "Artifact integrity and consistency, not verification of the physical building.",
+  "source_sha256": {
+    "Grundriss WE05 ursprünglich bemaßt.pdf": "90095f77c122ab3300c5205749fa2b677824cb9d54326ab9133ab95d539d0da9",
+    "Grundriss_Rohfassun.png": "c224aab58573f5e91a9e152820aaae99b0d5a7d279a642d4c5fb0eb5fecbfe62",
+    "Grundrisse.pdf": "ef492d6a770001c3dcc1f139f540429e4ee09358ffe9812f9f453db26d95a951",
+    "Grundriss zweites OG Istzustand unbemaßt - Rohfassung.png": "415d9305882fb1b920196979e3af841cbfebce92d34728179b454b4c8ca600fc",
+    "Grundriss zweites OG vorheriger Planzustand bemaßt - Rohfassung.png": "60817e4b7023a278e937cd2fc7d2418b98d7a22c22bab36443dfddd394ee3ad4"
+  },
+  "output_sha256": {
+    "WE05_Grundriss_editierbar.svg": "81c574baab577659056398d2170af6d6359fd78c5721d7d3e7a0bd6111b58c46",
+    "WE05_Grundriss_A3_1-50.pdf": "35063ecac3eac9caed912b6b40193b37fd11fa40a6d34cdbb79b014832505ef6",
+    "WE05_Vorschau.png": "c29b6e633e5c3d5e32ba76c5677475f68d9db9cbda5614241b8699900eccdc22",
+    "Begleittext.md": "5e0f0bfd17a085a0cb3b66833fc3eb24e41e645e067bcb5b9458272f110ca2ea"
+  }
+}
