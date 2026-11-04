@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="213.4mm" height="224.0mm" viewBox="0 0 213.4 224.0">
-<title>WBS3 – 1. Obergeschoss – gesamte Etage (WE3 und Wohnung rechts)</title>
+<title>WBS3 – 1. Obergeschoss – gesamte Etage (WE3 und WE4)</title>
 <style>text{font-family:Arial,Helvetica,sans-serif}</style>
 <rect width="100%" height="100%" fill="#ffffff"/>
 <g id="A_RAUM" fill="none">
@@ -882,23 +882,23 @@
 <text x="111.00" y="44.05" font-size="1.27">0,89 m²</text>
 <text x="68.60" y="45.00" font-weight="bold" font-size="2.20">WE3 – Balkon</text>
 <text x="68.60" y="47.71" font-size="1.86">½ 1,23 m²</text>
-<text x="136.50" y="74.50" font-weight="bold">WE-R – Küche</text>
+<text x="136.50" y="74.50" font-weight="bold">WE4 – Küche</text>
 <text x="136.50" y="77.70" font-size="2.2">7,88 m²</text>
-<text x="161.00" y="80.00" font-weight="bold">WE-R – Schlafen</text>
+<text x="161.00" y="80.00" font-weight="bold">WE4 – Schlafen</text>
 <text x="161.00" y="83.20" font-size="2.2">12,65 m²</text>
-<text x="130.00" y="102.80" font-weight="bold">WE-R – Diele</text>
+<text x="130.00" y="102.80" font-weight="bold">WE4 – Diele</text>
 <text x="130.00" y="106.00" font-size="2.2">7,07 m²</text>
-<text x="120.50" y="139.00" font-weight="bold">WE-R – Wohnen</text>
+<text x="120.50" y="139.00" font-weight="bold">WE4 – Wohnen</text>
 <text x="120.50" y="142.20" font-size="2.2">17,58 m²</text>
-<text x="144.57" y="121.00" font-weight="bold" font-size="1.80">WE-R – Flur</text>
+<text x="144.57" y="121.00" font-weight="bold" font-size="1.80">WE4 – Flur</text>
 <text x="144.57" y="123.22" font-size="1.52">2,52 m²</text>
-<text x="163.00" y="121.50" font-weight="bold">WE-R – Bad</text>
+<text x="163.00" y="121.50" font-weight="bold">WE4 – Bad</text>
 <text x="163.00" y="124.70" font-size="2.2">4,52 m²</text>
-<text x="156.50" y="150.00" font-weight="bold">WE-R – Kind</text>
+<text x="156.50" y="150.00" font-weight="bold">WE4 – Kind</text>
 <text x="156.50" y="153.20" font-size="2.2">10,73 m²</text>
-<text x="106.90" y="47.50" font-weight="bold" font-size="1.50">WE-R – Kammer</text>
+<text x="106.90" y="47.50" font-weight="bold" font-size="1.50">WE4 – Kammer</text>
 <text x="106.90" y="49.35" font-size="1.27">0,82 m²</text>
-<text x="145.15" y="45.00" font-weight="bold" font-size="2.20">WE-R – Balkon</text>
+<text x="145.15" y="45.00" font-weight="bold" font-size="2.20">WE4 – Balkon</text>
 <text x="145.15" y="47.71" font-size="1.86">½ 1,21 m²</text>
 <text x="36.91" y="45.61" font-size="2.7" text-anchor="middle" font-weight="bold">N</text>
 </g>
@@ -914,7 +914,6 @@
 <circle cx="68.00" cy="42.00" r="2.5"/>
 <circle cx="145.00" cy="43.00" r="2.5"/>
 <circle cx="103.00" cy="189.50" r="2.5"/>
-<circle cx="127.00" cy="102.80" r="2.5"/>
 </g>
-<g id="SCHRIFTFELD" font-size="2.6" fill="#000"><text x="34.0" y="208.0" font-weight="bold">WBS3 · 1. Obergeschoss – gesamte Etage (WE3 und Wohnung rechts) · M 1:100</text><text x="34.0" y="212.0" font-size="2">Quelle: plans/WBS3/quelle/20260919-Grundriss_1OG_Etage_gesamt_mit_Massen-Weinbergstr_3.svg (2026-09-19) · Maße in m · Neuzeichnung, ohne Gewähr – rot markierte Werte ungeprüft</text></g>
+<g id="SCHRIFTFELD" font-size="2.6" fill="#000"><text x="34.0" y="208.0" font-weight="bold">WBS3 · 1. Obergeschoss – gesamte Etage (WE3 und WE4) · M 1:100</text><text x="34.0" y="212.0" font-size="2">Quelle: plans/WBS3/quelle/20260919-Grundriss_1OG_Etage_gesamt_mit_Massen-Weinbergstr_3.svg (2026-09-19) · Maße in m · Neuzeichnung, ohne Gewähr – rot markierte Werte ungeprüft</text></g>
 </svg>

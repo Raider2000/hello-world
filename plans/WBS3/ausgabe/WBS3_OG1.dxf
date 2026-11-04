@@ -493,7 +493,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461349.0989930555
+2461349.1005208334
   9
 $TDUCREATE
  40
@@ -501,7 +501,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461349.0989930555
+2461349.1005208334
   9
 $TDUUPDATE
  40
@@ -553,7 +553,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-80A
+808
   9
 $SURFTAB1
  70
@@ -933,11 +933,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{CFA7F970-B983-4466-BF16-610AE3E69C1F}
+{EDFF6697-9186-4570-BC2B-828648BD699C}
   9
 $VERSIONGUID
   2
-{CA1DEF1C-4A39-4434-BEF9-C8DB5458B5B0}
+{7386844A-CC3A-4A1E-B8EC-F9143204B916}
   9
 $EXTNAMES
 290
@@ -1327,9 +1327,9 @@ ISM
   0
 CLASS
   1
-ACDBPLACEHOLDER
+LAYOUT
   2
-AcDbPlaceHolder
+AcDbLayout
   3
 ObjectDBX Classes
  90
@@ -1343,9 +1343,9 @@ ObjectDBX Classes
   0
 CLASS
   1
-LAYOUT
+ACDBPLACEHOLDER
   2
-AcDbLayout
+AcDbPlaceHolder
   3
 ObjectDBX Classes
  90
@@ -3329,7 +3329,7 @@ ACAD
   0
 APPID
   5
-807
+805
 330
 3
 100
@@ -3343,7 +3343,7 @@ HATCHBACKGROUNDCOLOR
   0
 APPID
   5
-808
+806
 330
 3
 100
@@ -43411,7 +43411,7 @@ AcDbText
  40
 0.25
   1
-WE-R – Küche
+WE4 – Küche
  72
 1
  11
@@ -43523,7 +43523,7 @@ AcDbText
  40
 0.25
   1
-WE-R – Schlafen
+WE4 – Schlafen
  72
 1
  11
@@ -43623,7 +43623,7 @@ AcDbText
  40
 0.25
   1
-WE-R – Diele
+WE4 – Diele
  72
 1
  11
@@ -43723,7 +43723,7 @@ AcDbText
  40
 0.25
   1
-WE-R – Wohnen
+WE4 – Wohnen
  72
 1
  11
@@ -43823,7 +43823,7 @@ AcDbText
  40
 0.17307692307692307
   1
-WE-R – Flur
+WE4 – Flur
  72
 1
  11
@@ -43923,7 +43923,7 @@ AcDbText
  40
 0.25
   1
-WE-R – Bad
+WE4 – Bad
  72
 1
  11
@@ -44023,7 +44023,7 @@ AcDbText
  40
 0.25
   1
-WE-R – Kind
+WE4 – Kind
  72
 1
  11
@@ -44123,7 +44123,7 @@ AcDbText
  40
 0.14423076923076922
   1
-WE-R – Kammer
+WE4 – Kammer
  72
 1
  11
@@ -44223,7 +44223,7 @@ AcDbText
  40
 0.21153846153846154
   1
-WE-R – Balkon
+WE4 – Balkon
  72
 1
  11
@@ -50417,56 +50417,6 @@ Maßkette unten (y=18250): die Teilmaße 15 und 8 (Quell-x 9340/9490/9570) liege
 100
 AcDbText
   0
-CIRCLE
-  5
-805
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbCircle
- 10
-9.3
- 20
-6.72
- 30
-0.0
- 40
-0.25
-  0
-TEXT
-  5
-806
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbText
- 10
-9.600000000000001
- 20
-6.72
- 30
-0.0
- 40
-0.2
-  1
-Wohnung rechts: Wohnungsnummer im Plan nicht genannt (nur WE3 ist als Ebene 05 markiert); sie ergibt sich laut Eigentümer aus der Teilungserklärung (liegt noch nicht vor). Bis dahin Präfix „WE-R“ (Wohnung rechts).
- 11
-9.600000000000001
- 21
-6.72
- 31
-0.0
-100
-AcDbText
-  0
 ENDSEC
   0
 SECTION
@@ -51557,7 +51507,7 @@ CREATED_BY_EZDXF
   3
 WRITTEN_BY_EZDXF
 350
-809
+807
   0
 DICTIONARYVAR
   5
@@ -51569,7 +51519,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T02:22:33.319310+00:00
+1.4.5 @ 2026-11-04T02:24:45.176555+00:00
   0
 VISUALSTYLE
   5
@@ -58123,7 +58073,7 @@ strokes_ogs.tif
   0
 DICTIONARYVAR
   5
-809
+807
 330
 2D
 100
@@ -58131,7 +58081,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T02:22:33.387069+00:00
+1.4.5 @ 2026-11-04T02:24:45.240118+00:00
   0
 ENDSEC
   0

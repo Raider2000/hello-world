@@ -6,13 +6,14 @@
 |-------|--------|-----------|--------|
 | `quelle/20260919-Grundriss_1OG_Etage_gesamt_mit_Massen-Weinbergstr_3.svg` / `.pdf` | 1. OG, gesamte Etage, bemaßt, Vektor (mm, Ebenen) | 19.09.2026 | **neueste Fassung**, Grundlage |
 | `quelle/20260919-Grundriss_1OG_WE3_mit_Massen-Weinbergstr_3.svg` / `.pdf` | 1. OG, nur WE3, bemaßt | 19.09.2026 | Auszug |
+| `quelle/19980000-Teilungserklaerung_URNr_1291-1998_Nachtrag_1322-1998_Weinbergstr_3_Leipzig.pdf` | Teilungserklärung mit Nachtrag, Scan 30 S.; Wohnungsverzeichnis S. 4–5, Aufteilungspläne S. 21–26 (1. OG = Blatt 7, S. 23), Abgeschlossenheitsbescheinigung | 1998 | historisch, Wohnungsnummern; Scan zu unscharf für Maßabgleich |
 | `quelle/20260919-Grundriss_1OG_WE3_ohne_Masse-Weinbergstr_3.pdf` | 1. OG, nur WE3, unbemaßt | 19.09.2026 | Auszug |
 
 ## Geschosse
 
 | Geschoss | Geometrie | SVG | DXF | Flächenprüfung |
 |----------|-----------|-----|-----|----------------|
-| OG1 | `geometrie/OG1.json` (Etage gesamt, WE3 + Wohnung rechts) | `ausgabe/WBS3_OG1.svg` | `ausgabe/WBS3_OG1.dxf` | alle 14 Räume mit Flächenangabe ≤ 0,4 % Abweichung; Balkone (Plan: ½ 1,23 / ½ 1,21 m²) per Hand geprüft: 2,453 / 2 = 1,226 und 2,425 / 2 = 1,213 |
+| OG1 | `geometrie/OG1.json` (Etage gesamt, WE3 + WE4) | `ausgabe/WBS3_OG1.svg` | `ausgabe/WBS3_OG1.dxf` | alle 14 Räume mit Flächenangabe ≤ 0,4 % Abweichung; Balkone (Plan: ½ 1,23 / ½ 1,21 m²) per Hand geprüft: 2,453 / 2 = 1,226 und 2,425 / 2 = 1,213 |
 
 ## Zeichnung OG1
 
@@ -23,7 +24,6 @@
 
 ## Offene Punkte
 
-- Wohnung rechts: Nummer im Plan nicht genannt, Präfix „WE-R“ vorläufig. Die Nummer steht laut Eigentümer in der Teilungserklärung – bitte nachreichen.
 - Maßkette 11,805 m links um 0,03 m gegenüber den Wandecken versetzt; Nordfassade um 0,09 m schräg (aus Quelle übernommen). Der historische Grundriss der Teilungserklärung ist laut Eigentümer zu schlecht lesbar, um das zu klären – offen bis zu einem Aufmaß.
 - Aussparung in der rechten Außenwand (0,175 × 0,19 m): laut Eigentümer vermutlich ein Wand-Einbauschrank mit Tür.
 
