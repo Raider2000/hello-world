@@ -1,0 +1,264 @@
+{
+  "format": {
+    "width": 1280,
+    "height": 800,
+    "px_per_m": 60.78
+  },
+  "rooms": [
+    {
+      "id": "treppenhaus",
+      "name": "Treppenhaus",
+      "left": "28.5%",
+      "top": "24.4%",
+      "area_m2": 9.91
+    },
+    {
+      "id": "garderobe",
+      "name": "Garderobe",
+      "left": "38.6%",
+      "top": "17.6%",
+      "area_m2": 3.64
+    },
+    {
+      "id": "toilette",
+      "name": "Toilette",
+      "left": "45.1%",
+      "top": "23.4%",
+      "area_m2": 1.52
+    },
+    {
+      "id": "badezimmer",
+      "name": "Badezimmer",
+      "left": "54.6%",
+      "top": "18.5%",
+      "area_m2": 7.75
+    },
+    {
+      "id": "schlafzimmer",
+      "name": "Schlafzimmer",
+      "left": "68.5%",
+      "top": "25.7%",
+      "area_m2": 14.63
+    },
+    {
+      "id": "flur",
+      "name": "Flur",
+      "left": "54.9%",
+      "top": "46.6%",
+      "area_m2": 14.42
+    },
+    {
+      "id": "kueche",
+      "name": "Küche",
+      "left": "35.8%",
+      "top": "53.2%",
+      "area_m2": 15.43
+    },
+    {
+      "id": "buero",
+      "name": "Büro",
+      "left": "68.5%",
+      "top": "53.8%",
+      "area_m2": 8.5
+    },
+    {
+      "id": "wohnen",
+      "name": "Wohnen",
+      "left": "41.1%",
+      "top": "77.9%",
+      "area_m2": 20.21
+    },
+    {
+      "id": "kinderzimmer",
+      "name": "Kinderzimmer",
+      "left": "65.6%",
+      "top": "78.3%",
+      "area_m2": 15.53
+    },
+    {
+      "id": "balkon_strasse",
+      "name": "Balkon Straße",
+      "left": "21.0%",
+      "top": "79.3%",
+      "area_m2": 6.69
+    },
+    {
+      "id": "balkon_garten",
+      "name": "Balkon Garten",
+      "left": "81.5%",
+      "top": "67.2%",
+      "area_m2": 7.22
+    },
+    {
+      "id": "vordach",
+      "name": "Vordach",
+      "left": "16.8%",
+      "top": "24.8%",
+      "area_m2": 8.19
+    }
+  ],
+  "windows": [
+    {
+      "id": "F1",
+      "name": "Fenster AR 0,90/1,23 (BRH +3,90, STH +5,13)",
+      "left": "38.9%",
+      "top": "7.0%",
+      "orientation": "horizontal",
+      "length_px": 54.7
+    },
+    {
+      "id": "F2",
+      "name": "Fenster Bad 1,20/1,23 (BRH +3,90, STH +5,13)",
+      "left": "54.8%",
+      "top": "7.0%",
+      "orientation": "horizontal",
+      "length_px": 72.9
+    },
+    {
+      "id": "F3",
+      "name": "Fenster Wohnen 1,80/1,53 (BRH +3,60, STH +5,13)",
+      "left": "49.8%",
+      "top": "93.0%",
+      "orientation": "horizontal",
+      "length_px": 109.4
+    },
+    {
+      "id": "F4",
+      "name": "Fenster Kind 2 1,80/1,53 (BRH +3,60, STH +5,13)",
+      "left": "66.6%",
+      "top": "93.0%",
+      "orientation": "horizontal",
+      "length_px": 109.4
+    },
+    {
+      "id": "F5",
+      "name": "Fenster TRH 1,20/1,53 (BRH +6,50, STH +8,03)",
+      "left": "22.0%",
+      "top": "34.9%",
+      "orientation": "vertikal",
+      "length_px": 72.9
+    },
+    {
+      "id": "F6",
+      "name": "Fenster Küche 1,20/1,53 (BRH +3,60, STH +5,13), Rollladen, 2. RW",
+      "left": "22.0%",
+      "top": "54.6%",
+      "orientation": "vertikal",
+      "length_px": 72.9
+    },
+    {
+      "id": "F7",
+      "name": "Fenster Schlafen 1,80/1,53 (BRH +3,60, STH +5,13)",
+      "left": "77.1%",
+      "top": "22.4%",
+      "orientation": "vertikal",
+      "length_px": 109.4
+    },
+    {
+      "id": "F8",
+      "name": "Fenster Kind 1 1,20/1,53 (BRH +3,60, STH +5,13)",
+      "left": "77.1%",
+      "top": "54.6%",
+      "orientation": "vertikal",
+      "length_px": 72.9
+    }
+  ],
+  "doors": [
+    {
+      "id": "T-B1a",
+      "name": "Balkontür Kind 2 1,80/2,25, Flügel N",
+      "left": "77.1%",
+      "top": "74.2%",
+      "orientation": "vertikal",
+      "length_px": 54.7
+    },
+    {
+      "id": "T-B1b",
+      "name": "Balkontür Kind 2 1,80/2,25, Flügel S",
+      "left": "77.1%",
+      "top": "81.0%",
+      "orientation": "vertikal",
+      "length_px": 54.7
+    },
+    {
+      "id": "T-L1a",
+      "name": "Loggiatür Wohnen 1,80/2,23, Flügel N",
+      "left": "26.8%",
+      "top": "74.2%",
+      "orientation": "vertikal",
+      "length_px": 54.7
+    },
+    {
+      "id": "T-L1b",
+      "name": "Loggiatür Wohnen 1,80/2,23, Flügel S",
+      "left": "26.8%",
+      "top": "81.0%",
+      "orientation": "vertikal",
+      "length_px": 54.7
+    },
+    {
+      "id": "T1",
+      "name": "Wohnungseingangstür 1,01/2,135",
+      "left": "34.6%",
+      "top": "35.6%",
+      "orientation": "vertikal",
+      "length_px": 61.4
+    },
+    {
+      "id": "T2",
+      "name": "Tür Küche 0,885/2,135",
+      "left": "43.0%",
+      "top": "41.3%",
+      "orientation": "horizontal",
+      "length_px": 53.8
+    },
+    {
+      "id": "T3",
+      "name": "Tür WC 0,76/2,135",
+      "left": "44.6%",
+      "top": "29.0%",
+      "orientation": "horizontal",
+      "length_px": 46.2
+    },
+    {
+      "id": "T4",
+      "name": "Tür Bad 0,885/2,135",
+      "left": "53.2%",
+      "top": "29.0%",
+      "orientation": "horizontal",
+      "length_px": 53.8
+    },
+    {
+      "id": "T5",
+      "name": "Tür Schlafen 0,885/2,135",
+      "left": "60.5%",
+      "top": "33.8%",
+      "orientation": "vertikal",
+      "length_px": 53.8
+    },
+    {
+      "id": "T6",
+      "name": "Tür Kind 1 0,885/2,135",
+      "left": "60.5%",
+      "top": "53.2%",
+      "orientation": "vertikal",
+      "length_px": 53.8
+    },
+    {
+      "id": "T7",
+      "name": "Tür Wohnen 0,88/2,135 mit Glasausschnitt",
+      "left": "52.0%",
+      "top": "64.4%",
+      "orientation": "horizontal",
+      "length_px": 53.5
+    },
+    {
+      "id": "T8",
+      "name": "Tür Kind 2 0,88/2,135 mit Glasausschnitt",
+      "left": "57.5%",
+      "top": "64.4%",
+      "orientation": "horizontal",
+      "length_px": 53.5
+    }
+  ]
+}

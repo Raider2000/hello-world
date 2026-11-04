@@ -9,6 +9,10 @@
 | `quelle/dashboard/gen_plan.py` | Abstrahierter Grundriss als Home-Assistant-Hintergrund, Geometrie in m (v3) | 2026 | **neueste Raumnutzung**, Maße vereinfacht |
 | `quelle/dashboard/floor_plan_floor_1_dashboard.svg` | Ausgabe von gen_plan.py, in Inkscape nachbearbeitet | 2026 | Referenz |
 
+## Home-Assistant-Dashboard
+
+Neu erzeugter Dashboard-Hintergrund aus der Neuzeichnung: [`dashboard/`](dashboard/README.md) (`tools/ha_dashboard.py`).
+
 ## Geschosse
 
 | Geschoss | Geometrie | SVG | DXF | Flächenprüfung |

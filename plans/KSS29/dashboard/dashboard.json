@@ -1,0 +1,16 @@
+{
+  "source": "plans/KSS29/geometrie/OG1.json",
+  "output": "KSS29_OG1_dashboard.svg",
+  "title": "KSS29 · 1. OG · Dashboard",
+  "width": 1280,
+  "height": 800,
+  "padding": 24,
+  "left_band": {"label": "KASTENSSESTRASSE", "width": 96, "between_label": "VORGARTEN"},
+  "right_band": {"label": "GARTEN", "width": 120},
+  "gap_left": 40,
+  "gap_right": 40,
+  "exclude_rooms": ["Flachdach", "Anleiterstelle"],
+  "faint_rooms": ["Vordach"],
+  "rename": {},
+  "label_pos": {"Flur": [6.45, 8.2], "Kinderzimmer": [8.95, 3.45]}
+}
