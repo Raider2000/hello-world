@@ -65,7 +65,12 @@ Für Bestandsfassaden mit abgeschrägten Laibungen und für Sanierungspläne:
 - **`source.transformation`**: Freitext zur Koordinatentransformation, wenn eine bestehende
   Zeichnung (z. B. mm, y nach unten) übernommen wurde. Das Rohdaten-Original bleibt in `quelle/`.
 
-Beispiel: `plans/RBS25/geometrie/OG2.json`.
+- **`wall_polygons[].holes`**: Liste von Polygonen als Aussparung (Nische, Schacht) im Wandpolygon.
+- **`symbols`**: `[{"id","layer","lines":[[a,b]],"polygons":[{"points","fill":"solid|white"}],"circles":[{"c","r","fill"}]}]`,
+  Layer `A_TREPPE` oder `A_SYMBOL` (Nordpfeil, Hinweislinien); Layer nur im DXF, wenn benutzt.
+- **`margin`** (Plan, m) überschreibt den automatischen Zeichenrand; **`name_size`** (Raum, Standard 2,6) verkleinert Name und Fläche.
+
+Beispiele: `plans/RBS25/geometrie/OG2.json`, `plans/WBS3/geometrie/OG1.json`.
 
 ## Layer (SVG-Gruppen = DXF-Layer)
 

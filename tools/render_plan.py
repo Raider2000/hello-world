@@ -29,7 +29,11 @@ LAYERS = {
     "A_BEMASSUNG": (5, "#333333"),
     "A_TEXT": (7, "#000000"),
     "A_UNGEPRUEFT": (6, "#d00000"),
+    # optionale Layer: werden nur angelegt, wenn die Geometrie sie benutzt (siehe "symbols")
+    "A_TREPPE": (2, "#000000"),
+    "A_SYMBOL": (2, "#000000"),
 }
+OPTIONAL_LAYERS = ("A_TREPPE", "A_SYMBOL")
 MM_PER_M = 10.0  # 1:100 -> 1 m = 10 mm auf Papier
 
 
@@ -132,7 +136,7 @@ def build(plan):
         if op["wall"] not in walls:
             raise ValueError(f"Öffnung {op.get('id')} verweist auf unbekannte Wand {op['wall']}")
         ops_by_wall.setdefault(op["wall"], []).append(op)
-    out = {"walls": [], "lines": [], "arcs": []}
+    out = {"walls": [], "lines": [], "arcs": [], "walls_holed": [], "symbols": []}
     for wid, wall in walls.items():
         polys, u, n, band = wall_segments(wall, ops_by_wall.get(wid, []))
         layer = wall_layer(wall.get("type"))
@@ -142,12 +146,16 @@ def build(plan):
             out["lines"] += [("A_OEFFNUNG", l) for l in ls]
             out["arcs"] += [("A_OEFFNUNG", a) for a in ars]
     for wp in plan.get("wall_polygons", []):
-        out["walls"].append((wall_layer(wp.get("type")), wp["polygon"]))
+        if wp.get("holes"):  # optional: Aussparungen/Nischen im Wandpolygon
+            out["walls_holed"].append((wall_layer(wp.get("type")), wp["polygon"], wp["holes"]))
+        else:
+            out["walls"].append((wall_layer(wp.get("type")), wp["polygon"]))
     for op in free_ops:
         u, n, band = host_frame(op["host"])
         ls, ars = opening_geometry(op["host"], op, u, n, band)
         out["lines"] += [("A_OEFFNUNG", l) for l in ls]
         out["arcs"] += [("A_OEFFNUNG", a) for a in ars]
+    out["symbols"] = plan.get("symbols", [])
     return out
 
 
@@ -156,6 +164,11 @@ def bbox(plan):
     pts += [pt for wp in plan.get("wall_polygons", []) for pt in wp["polygon"]]
     # Räume außerhalb der Wände (z. B. Balkon) gehören zur Zeichenfläche
     pts += [pt for r in plan.get("rooms", []) for pt in r["polygon"]]
+    for sy in plan.get("symbols", []):  # optionale Symbole (Treppe, Nordpfeil)
+        pts += [pt for ln in sy.get("lines", []) for pt in ln]
+        pts += [pt for pg in sy.get("polygons", []) for pt in pg["points"]]
+        for c in sy.get("circles", []):
+            pts += [(c["c"][0] - c["r"], c["c"][1] - c["r"]), (c["c"][0] + c["r"], c["c"][1] + c["r"])]
     xs, ys = [p[0] for p in pts], [p[1] for p in pts]
     return min(xs), min(ys), max(xs), max(ys)
 
@@ -179,7 +192,7 @@ def room_report(plan):
 # ---------------------------------------------------------------------- SVG
 def render_svg(plan, geo, path):
     x0, y0, x1, y1 = bbox(plan)
-    margin = margin_for(plan)  # m
+    margin = plan.get("margin") or margin_for(plan)  # m; "margin" überschreibt die Automatik
     W, H = x1 - x0 + 2 * margin, y1 - y0 + 2 * margin + 2.0
     tx = lambda p: ((p[0] - x0 + margin) * MM_PER_M, (y1 - p[1] + margin) * MM_PER_M)
     pts = lambda poly: " ".join(f"{tx(p)[0]:.2f},{tx(p)[1]:.2f}" for p in poly)
@@ -206,10 +219,15 @@ def render_svg(plan, geo, path):
     for layer in ("A_WAND_TRAGEND", "A_WAND", "A_WAND_NEU"):
         fill = {"A_WAND_TRAGEND": "#000000", "A_WAND": "#9a9a9a", "A_WAND_NEU": "url(#schraffur-neu)"}[layer]
         members = [poly for lay, poly in geo["walls"] if lay == layer]
-        if layer == "A_WAND_NEU" and not members:
+        holed = [(poly, holes) for lay, poly, holes in geo["walls_holed"] if lay == layer]
+        if layer == "A_WAND_NEU" and not members and not holed:
             continue
         o.append(f'<g id="{layer}" fill="{fill}" stroke="#000" stroke-width="0.35">')
         o += [f'<polygon points="{pts(poly)}"/>' for poly in members]
+        for poly, holes in holed:  # Wand mit Aussparung(en): Even-Odd-Pfad
+            d = " ".join("M" + " L".join(f"{tx(p)[0]:.2f},{tx(p)[1]:.2f}" for p in ring) + " Z"
+                         for ring in [poly] + holes)
+            o.append(f'<path d="{d}" fill-rule="evenodd"/>')
         o.append('</g>')
 
     o.append('<g id="A_OEFFNUNG" fill="none" stroke="#000" stroke-width="0.18">')
@@ -224,6 +242,24 @@ def render_svg(plan, geo, path):
         sweep = 1 if cross < 0 else 0  # y-Achse im SVG gespiegelt
         o.append(f'<path d="M{fx:.2f},{fy:.2f} A{r:.2f},{r:.2f} 0 0 {sweep} {ex:.2f},{ey:.2f}" stroke-dasharray="1,0.8"/>')
     o.append('</g>')
+
+    for sy_layer in OPTIONAL_LAYERS:  # Symbole (Treppe, Nordpfeil, Hinweislinien)
+        syms = [sy for sy in geo["symbols"] if sy.get("layer", "A_SYMBOL") == sy_layer]
+        if not syms:
+            continue
+        o.append(f'<g id="{sy_layer}" stroke="#000" stroke-width="0.12" fill="none">')
+        for sy in syms:
+            for a, b in sy.get("lines", []):
+                (ax, ay), (bx, by) = tx(a), tx(b)
+                o.append(f'<line x1="{ax:.2f}" y1="{ay:.2f}" x2="{bx:.2f}" y2="{by:.2f}"/>')
+            for pg in sy.get("polygons", []):
+                f = {"solid": "#000", "white": "#fff"}.get(pg.get("fill"), "none")
+                o.append(f'<polygon points="{pts(pg["points"])}" fill="{f}"/>')
+            for c in sy.get("circles", []):
+                cx, cy = tx(c["c"])
+                f = {"solid": "#000", "white": "#fff"}.get(c.get("fill"), "none")
+                o.append(f'<circle cx="{cx:.2f}" cy="{cy:.2f}" r="{c["r"] * MM_PER_M:.2f}" fill="{f}"/>')
+        o.append('</g>')
 
     o.append('<g id="A_BEMASSUNG" stroke="#333" stroke-width="0.13" font-size="2.2" fill="#333">')
     for d in plan.get("dimensions", []):
@@ -250,13 +286,17 @@ def render_svg(plan, geo, path):
     for r in plan.get("rooms", []):
         cx, cy = tx(r.get("label_pos") or centroid(r["polygon"]))
         area = r.get("area_stated") or shoelace(r["polygon"])
-        o.append(f'<text x="{cx:.2f}" y="{cy:.2f}" font-weight="bold">{escape(r["name"])}</text>')
+        # optional: "name_size" (Standard 2,6) verkleinert Name und Flächenzeile für schmale Räume
+        f = r.get("name_size", 2.6) / 2.6
+        nsz = "" if f == 1 else f' font-size="{2.6 * f:.2f}"'
+        asz = "2.2" if f == 1 else f"{2.2 * f:.2f}"
+        o.append(f'<text x="{cx:.2f}" y="{cy:.2f}" font-weight="bold"{nsz}>{escape(r["name"])}</text>')
         # optional: "subtitle" ersetzt die Flächenzeile, "show_area": false blendet sie aus
         if r.get("subtitle"):
-            o.append(f'<text x="{cx:.2f}" y="{cy+3.2:.2f}" font-size="2.2">{escape(r["subtitle"])}</text>')
+            o.append(f'<text x="{cx:.2f}" y="{cy + 3.2 * f:.2f}" font-size="{asz}">{escape(r["subtitle"])}</text>')
         elif r.get("show_area", True):
             area_txt = f"{area:.2f}".replace(".", ",")
-            o.append(f'<text x="{cx:.2f}" y="{cy+3.2:.2f}" font-size="2.2">{area_txt} m²</text>')
+            o.append(f'<text x="{cx:.2f}" y="{cy + 3.2 * f:.2f}" font-size="{asz}">{area_txt} m²</text>')
     for nt in plan.get("notes", []):
         cx, cy = tx(nt["pos"])
         bold = ' font-weight="bold"' if nt.get("bold") else ""
@@ -296,7 +336,10 @@ def render_dxf(plan, geo, path):
     doc = ezdxf.new("R2018", setup=True)
     doc.units = ezdxf.units.M
     msp = doc.modelspace()
+    used_sym = {sy.get("layer", "A_SYMBOL") for sy in geo["symbols"]}
     for name, (color, _) in LAYERS.items():
+        if name in OPTIONAL_LAYERS and name not in used_sym:
+            continue
         doc.layers.add(name, color=color)
     for layer, poly in geo["walls"]:
         msp.add_lwpolyline(poly, close=True, dxfattribs={"layer": layer})
@@ -304,6 +347,25 @@ def render_dxf(plan, geo, path):
         h.paths.add_polyline_path(poly, is_closed=True)
         if layer == "A_WAND_NEU":  # neue Wände: Schraffur statt Vollfläche
             h.set_pattern_fill("ANSI31", scale=0.05)
+    for layer, poly, holes in geo["walls_holed"]:  # Wände mit Aussparung(en)
+        for ring in [poly] + holes:
+            msp.add_lwpolyline(ring, close=True, dxfattribs={"layer": layer})
+        h = msp.add_hatch(color={"A_WAND_TRAGEND": 7, "A_WAND": 8}.get(layer, 4), dxfattribs={"layer": layer})
+        for ring in [poly] + holes:
+            h.paths.add_polyline_path(ring, is_closed=True)
+        if layer == "A_WAND_NEU":
+            h.set_pattern_fill("ANSI31", scale=0.05)
+    for sy in geo["symbols"]:
+        lay = {"layer": sy.get("layer", "A_SYMBOL")}
+        for a, b in sy.get("lines", []):
+            msp.add_line(a, b, dxfattribs=lay)
+        for pg in sy.get("polygons", []):
+            msp.add_lwpolyline(pg["points"], close=True, dxfattribs=lay)
+            if pg.get("fill") == "solid":
+                hh = msp.add_hatch(color=7, dxfattribs=lay)
+                hh.paths.add_polyline_path(pg["points"], is_closed=True)
+        for c in sy.get("circles", []):
+            msp.add_circle(c["c"], c["r"], dxfattribs=lay)
     for layer, (a, b) in geo["lines"]:
         msp.add_line(a, b, dxfattribs={"layer": layer})
     for layer, arc in geo["arcs"]:
@@ -317,12 +379,13 @@ def render_dxf(plan, geo, path):
         msp.add_lwpolyline(r["polygon"], close=True, dxfattribs={"layer": "A_RAUM"})
         cx, cy = r.get("label_pos") or centroid(r["polygon"])
         area = r.get("area_stated") or shoelace(r["polygon"])
-        msp.add_text(r["name"], height=0.25, dxfattribs={"layer": "A_TEXT"}).set_placement(
+        f = r.get("name_size", 2.6) / 2.6  # optional, siehe SVG
+        msp.add_text(r["name"], height=0.25 * f, dxfattribs={"layer": "A_TEXT"}).set_placement(
             (cx, cy), align=ezdxf.enums.TextEntityAlignment.MIDDLE_CENTER)
         if r.get("subtitle") or r.get("show_area", True):
-            msp.add_text(r.get("subtitle") or f"{area:.2f} m²".replace(".", ","), height=0.2,
+            msp.add_text(r.get("subtitle") or f"{area:.2f} m²".replace(".", ","), height=0.2 * f,
                          dxfattribs={"layer": "A_TEXT"}).set_placement(
-                (cx, cy - 0.35), align=ezdxf.enums.TextEntityAlignment.MIDDLE_CENTER)
+                (cx, cy - 0.35 * f), align=ezdxf.enums.TextEntityAlignment.MIDDLE_CENTER)
     for nt in plan.get("notes", []):
         al = {"middle": ezdxf.enums.TextEntityAlignment.MIDDLE_CENTER,
               "start": ezdxf.enums.TextEntityAlignment.MIDDLE_LEFT,
