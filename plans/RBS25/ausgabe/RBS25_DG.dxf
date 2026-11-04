@@ -553,7 +553,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-49E
+49C
   9
 $SURFTAB1
  70
@@ -3329,7 +3329,7 @@ ACAD
   0
 APPID
   5
-49B
+499
 330
 3
 100
@@ -3343,7 +3343,7 @@ HATCHBACKGROUNDCOLOR
   0
 APPID
   5
-49C
+49A
 330
 3
 100
@@ -31291,9 +31291,9 @@ A_UNGEPRUEFT
 100
 AcDbCircle
  10
-3.3
+8.2
  20
-2.0
+1.6
  30
 0.0
  40
@@ -31311,19 +31311,19 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-3.5
+8.399999999999999
  20
-2.0
+1.6
  30
 0.0
  40
 0.12
   1
-1 Darstellung = Zielzustand des Aufteilungsplans 2014: rote Wände (Neubau 2014) schraffiert als „neu“, gelbe Wände (Abbruch 2014) weggelassen, gestrichelte Türen (geplant/entfallend) nicht gezeichnet. Ob die Maßnahmen ausgeführt wurden, ist außer für WE05 (Sanierung 2026) nicht belegt. Für das DG bedeutet das: Ausbau (rote Wände) laut Plan 2014; ob und wie ausgeführt, ist nicht belegt.
+1 Treppenhauswände im DG-Ausschnitt ca. 0,08–0,10 m gegenüber den Obergeschossen nach rechts versetzt und 0,28 m stark (Zeichenungenauigkeit oder Bestand); unverändert übernommen. Als tragend gezeichnet (stehen in allen Geschossen übereinander).
  11
-3.5
+8.399999999999999
  21
-2.0
+1.6
  31
 0.0
 100
@@ -31332,56 +31332,6 @@ AcDbText
 CIRCLE
   5
 48F
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbCircle
- 10
-8.2
- 20
-1.6
- 30
-0.0
- 40
-0.15
-  0
-TEXT
-  5
-490
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbText
- 10
-8.399999999999999
- 20
-1.6
- 30
-0.0
- 40
-0.12
-  1
-2 Treppenhauswände im DG-Ausschnitt ca. 0,08–0,10 m gegenüber den Obergeschossen nach rechts versetzt und 0,28 m stark (Zeichenungenauigkeit oder Bestand); unverändert übernommen. Als tragend gezeichnet (stehen in allen Geschossen übereinander).
- 11
-8.399999999999999
- 21
-1.6
- 31
-0.0
-100
-AcDbText
-  0
-CIRCLE
-  5
-491
 330
 17
 100
@@ -31401,7 +31351,7 @@ AcDbCircle
   0
 TEXT
   5
-492
+490
 330
 17
 100
@@ -31419,7 +31369,7 @@ AcDbText
  40
 0.12
   1
-3 Raumgrenzen an den Kniestock-/Abseitenwänden (Doppellinie 5 cm). Gepunktete Höhenlinien der Dachschräge, Dachflächenfenster und Kamine (gelb, Abbruch) nicht übernommen. Flächen = Grundfläche ohne Abzug nach WoFlV (Dachschräge).
+2 Raumgrenzen an den Kniestock-/Abseitenwänden (Doppellinie 5 cm). Gepunktete Höhenlinien der Dachschräge, Dachflächenfenster und Kamine (gelb, Abbruch) nicht übernommen. Flächen = Grundfläche ohne Abzug nach WoFlV (Dachschräge).
  11
 12.2
  21
@@ -31431,7 +31381,7 @@ AcDbText
   0
 CIRCLE
   5
-493
+491
 330
 17
 100
@@ -31451,7 +31401,7 @@ AcDbCircle
   0
 TEXT
   5
-494
+492
 330
 17
 100
@@ -31469,7 +31419,7 @@ AcDbText
  40
 0.12
   1
-4 Grenze Wohnen/Essen/Kochen zu Diele in der Flucht der Treppenhauswand angenommen; die Tür dort ist im Plan gestrichelt (geplant).
+3 Grenze Wohnen/Essen/Kochen zu Diele in der Flucht der Treppenhauswand angenommen; die Tür dort ist im Plan gestrichelt (geplant).
  11
 7.0200000000000005
  21
@@ -31481,7 +31431,7 @@ AcDbText
   0
 CIRCLE
   5
-495
+493
 330
 17
 100
@@ -31501,7 +31451,7 @@ AcDbCircle
   0
 TEXT
   5
-496
+494
 330
 17
 100
@@ -31519,7 +31469,7 @@ AcDbText
  40
 0.12
   1
-5 Rechte Abseitenwand im Bereich y 4,15–5,35 m im Plan gelb (Abbruch/Durchbruch?); als durchgehende Wand gezeichnet.
+4 Rechte Abseitenwand im Bereich y 4,15–5,35 m im Plan gelb (Abbruch/Durchbruch?); als durchgehende Wand gezeichnet.
  11
 15.95
  21
@@ -31531,7 +31481,7 @@ AcDbText
   0
 CIRCLE
   5
-497
+495
 330
 17
 100
@@ -31551,7 +31501,7 @@ AcDbCircle
   0
 TEXT
   5
-498
+496
 330
 17
 100
@@ -31569,7 +31519,7 @@ AcDbText
  40
 0.12
   1
-6 Balkon WE7: Fläche aus der Geometrie; Mietflächenanteil nicht belegt.
+5 Balkon WE7: Fläche aus der Geometrie; Mietflächenanteil nicht belegt.
  11
 2.06
  21
@@ -31581,7 +31531,7 @@ AcDbText
   0
 CIRCLE
   5
-499
+497
 330
 17
 100
@@ -31601,7 +31551,7 @@ AcDbCircle
   0
 TEXT
   5
-49A
+498
 330
 17
 100
@@ -31619,7 +31569,7 @@ AcDbText
  40
 0.12
   1
-7 Treppenhauswand rechts bei y 4,04–4,40 m im Plan gelb (Abbruch) – Lücke zwischen Treppenhaus und Schlafen; Raumgrenze in der Wandflucht angenommen, Zweck unklar.
+6 Treppenhauswand rechts bei y 4,04–4,40 m im Plan gelb (Abbruch) – Lücke zwischen Treppenhaus und Schlafen; Raumgrenze in der Wandflucht angenommen, Zweck unklar.
  11
 9.639999999999999
  21
@@ -32719,7 +32669,7 @@ CREATED_BY_EZDXF
   3
 WRITTEN_BY_EZDXF
 350
-49D
+49B
   0
 DICTIONARYVAR
   5
@@ -39285,7 +39235,7 @@ strokes_ogs.tif
   0
 DICTIONARYVAR
   5
-49D
+49B
 330
 2D
 100

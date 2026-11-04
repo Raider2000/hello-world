@@ -553,7 +553,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-52C
+528
   9
 $SURFTAB1
  70
@@ -3329,7 +3329,7 @@ ACAD
   0
 APPID
   5
-529
+525
 330
 3
 100
@@ -3343,7 +3343,7 @@ HATCHBACKGROUNDCOLOR
   0
 APPID
   5
-52A
+526
 330
 3
 100
@@ -35907,9 +35907,9 @@ A_UNGEPRUEFT
 100
 AcDbCircle
  10
-14.4
+13.25
  20
-5.65
+9.3
  30
 0.0
  40
@@ -35927,19 +35927,19 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-14.6
+13.45
  20
-5.65
+9.3
  30
 0.0
  40
 0.12
   1
-17 Wand Kochen/Wohnen WE6 (2,17 m) im Aufteilungsplan 2014 gelb = Abbruch; als offen gezeichnet, Raumgrenze bei y = 5,51/5,78 m nach Wand. Ausführung nicht belegt.
+17 Bad WE6: Türöffnung zum Vorraum im Aufteilungsplan gelb/gestrichelt (geplant); Türblatt nicht gezeichnet, Raumgrenze an der Wandflucht.
  11
-14.6
+13.45
  21
-5.65
+9.3
  31
 0.0
 100
@@ -35948,106 +35948,6 @@ AcDbText
 CIRCLE
   5
 51F
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbCircle
- 10
-13.25
- 20
-9.3
- 30
-0.0
- 40
-0.15
-  0
-TEXT
-  5
-520
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbText
- 10
-13.45
- 20
-9.3
- 30
-0.0
- 40
-0.12
-  1
-18 Bad WE6: Türöffnung zum Vorraum im Aufteilungsplan gelb/gestrichelt (geplant); Türblatt nicht gezeichnet, Raumgrenze an der Wandflucht.
- 11
-13.45
- 21
-9.3
- 31
-0.0
-100
-AcDbText
-  0
-CIRCLE
-  5
-521
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbCircle
- 10
-10.0
- 20
-3.3
- 30
-0.0
- 40
-0.15
-  0
-TEXT
-  5
-522
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbText
- 10
-10.2
- 20
-3.3
- 30
-0.0
- 40
-0.12
-  1
-19 Darstellung = Zielzustand des Aufteilungsplans 2014: rote Wände (Neubau 2014) schraffiert als „neu“, gelbe Wände (Abbruch 2014) weggelassen, gestrichelte Türen (geplant/entfallend) nicht gezeichnet. Ob die Maßnahmen ausgeführt wurden, ist außer für WE05 (Sanierung 2026) nicht belegt.
- 11
-10.2
- 21
-3.3
- 31
-0.0
-100
-AcDbText
-  0
-CIRCLE
-  5
-523
 330
 17
 100
@@ -36067,7 +35967,7 @@ AcDbCircle
   0
 TEXT
   5
-524
+520
 330
 17
 100
@@ -36085,7 +35985,7 @@ AcDbText
  40
 0.12
   1
-20 Wandtyp „tragend“ (load-bearing) nicht belegt: Wände, die im Aufteilungsplan 2014 in KG, EG, 1. OG und 2. OG übereinanderstehen (Überdeckung ≥ 60 %, Toleranz 6 cm), sind als tragend gezeichnet – plausibel, aber ohne Statik/Aufmaß nicht geprüft.
+18 Wandtyp „tragend“ (load-bearing) nicht belegt: Wände, die im Aufteilungsplan 2014 in KG, EG, 1. OG und 2. OG übereinanderstehen (Überdeckung ≥ 60 %, Toleranz 6 cm), sind als tragend gezeichnet – plausibel, aber ohne Statik/Aufmaß nicht geprüft.
  11
 12.91
  21
@@ -36097,7 +35997,7 @@ AcDbText
   0
 CIRCLE
   5
-525
+521
 330
 17
 100
@@ -36117,7 +36017,7 @@ AcDbCircle
   0
 TEXT
   5
-526
+522
 330
 17
 100
@@ -36135,7 +36035,7 @@ AcDbText
  40
 0.12
   1
-21 WE05 Wand Wohnen/Schlafen: laut Eigentümer wahrscheinlich tragend, als load-bearing gezeichnet; nicht belegt (steht in allen Geschossen übereinander).
+19 WE05 Wand Wohnen/Schlafen: laut Eigentümer wahrscheinlich tragend, als load-bearing gezeichnet; nicht belegt (steht in allen Geschossen übereinander).
  11
 3.6500000000000004
  21
@@ -36147,7 +36047,7 @@ AcDbText
   0
 CIRCLE
   5
-527
+523
 330
 17
 100
@@ -36167,7 +36067,7 @@ AcDbCircle
   0
 TEXT
   5
-528
+524
 330
 17
 100
@@ -36185,7 +36085,7 @@ AcDbText
  40
 0.12
   1
-22 WE05 Flurwände (Schlafen/Flur, Küche/Flur und deren Flucht Essen/Wohnen): laut Eigentümer wahrscheinlich tragend, als load-bearing gezeichnet; nicht belegt.
+20 WE05 Flurwände (Schlafen/Flur, Küche/Flur und deren Flucht Essen/Wohnen): laut Eigentümer wahrscheinlich tragend, als load-bearing gezeichnet; nicht belegt.
  11
 5.3
  21
@@ -37285,7 +37185,7 @@ CREATED_BY_EZDXF
   3
 WRITTEN_BY_EZDXF
 350
-52B
+527
   0
 DICTIONARYVAR
   5
@@ -43851,7 +43751,7 @@ strokes_ogs.tif
   0
 DICTIONARYVAR
   5
-52B
+527
 330
 2D
 100

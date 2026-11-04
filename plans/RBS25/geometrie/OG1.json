@@ -6,7 +6,7 @@
   "source": {
     "file": "plans/RBS25/quelle/20140801-Aufteilungsplan_Grundrisse_RB25.pdf",
     "date": "2014-08-01",
-    "version": "Aufteilungsplan 2014, Ausschnitt 1. OG (Zielzustand 2014)",
+    "version": "Aufteilungsplan 2014, Ausschnitt 1. OG (Umbau 2014, laut Eigentümer ausgeführt)",
     "transformation": "Quelle: Vektor-PDF 20140801-Aufteilungsplan_Grundrisse_RB25.pdf (1 Seite, 2965 x 1701 pt, M 1:100, y nach unten), Ausschnitt 1. OG. Gemeinsames System aller Geschosse: Meter, y nach oben, Ursprung = linke untere Rohbau-Außenecke des Hauptbaukörpers (Brandwand zu Haus Nr. 23 / Straßenfassade). x_m = (x_pt - 241.2) / 28.3465, y_m = (491.88 - y_pt) / 28.3465 (1 m = 28,3465 pt bei 1:100), gerundet auf mm. Wandflächen = graue (Bestand) und rote (Neubau 2014) Füllungen des Plans, gelbe Füllungen (Abbruch 2014) entfallen. Türen aus den Aufschlagbögen, Fenster aus den Lücken der Außenwände, Räume = Freiflächen zwischen den Wänden.",
     "reference": ["plans/RBS25/quelle/Grundriss_WE05_urspruenglich_bemasst.pdf (2. OG, Achsen übereinander)"]
   },
@@ -163,9 +163,7 @@
     {"pos": [13.767, 12.9], "text": "0,12", "size": 1.5}
   ],
   "unverified": [
-    {"pos": [10.0, 3.3], "short": "", "text": "Darstellung = Zielzustand des Aufteilungsplans 2014: rote Wände (Neubau 2014) schraffiert als „neu“, gelbe Wände (Abbruch 2014) weggelassen, gestrichelte Türen (geplant/entfallend) nicht gezeichnet. Ob die Maßnahmen ausgeführt wurden, ist außer für WE05 (Sanierung 2026) nicht belegt."},
     {"pos": [12.71, 2.3], "short": "", "text": "Wandtyp „tragend“ (load-bearing) nicht belegt: Wände, die im Aufteilungsplan 2014 in KG, EG, 1. OG und 2. OG übereinanderstehen (Überdeckung ≥ 60 %, Toleranz 6 cm), sind als tragend gezeichnet – plausibel, aber ohne Statik/Aufmaß nicht geprüft."},
-    {"pos": [1.7, 5.68], "short": "", "text": "WE3: Wände Essen/Wohnen (2,25 m) und Essen/Kochen im Aufteilungsplan 2014 gelb = Abbruch; offen gezeichnet, Raumgrenzen in der Wandflucht. Ausführung nicht belegt."},
     {"pos": [14.4, 5.65], "short": "", "text": "WE4: Wand Kochen/Wohnen (2,17 m) gelb = Abbruch 2014; offen gezeichnet, Raumgrenze in der Wandflucht. Bad-Türöffnung zum Vorraum gelb/gestrichelt, ohne Türblatt."},
     {"pos": [1.63, 10.6], "short": "", "text": "Balkone WE3/WE4: Fläche aus der Geometrie (3,00 x 2,50 m); Mietflächenanteil (½ wie bei WE05/WE06) nicht belegt."},
     {"pos": [12.29, 7.55], "short": "", "text": "WE4 – WC einschließlich Vorraum zum Bad (Grenze WC/Vorraum im Plan offen)."},

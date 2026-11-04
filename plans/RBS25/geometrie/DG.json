@@ -6,7 +6,7 @@
   "source": {
     "file": "plans/RBS25/quelle/20140801-Aufteilungsplan_Grundrisse_RB25.pdf",
     "date": "2014-08-01",
-    "version": "Aufteilungsplan 2014, Ausschnitt Dachgeschoss (DG-Ausbau, Zielzustand 2014)",
+    "version": "Aufteilungsplan 2014, Ausschnitt Dachgeschoss (DG-Ausbau, Umbau 2014 laut Eigentümer ausgeführt)",
     "transformation": "Quelle: Vektor-PDF 20140801-Aufteilungsplan_Grundrisse_RB25.pdf (1 Seite, 2965 x 1701 pt, M 1:100, y nach unten), Ausschnitt Dachgeschoss. Gemeinsames System aller Geschosse: Meter, y nach oben, Ursprung = linke untere Rohbau-Außenecke des Hauptbaukörpers (Brandwand zu Haus Nr. 23 / Straßenfassade). x_m = (x_pt - 2104.44) / 28.3465, y_m = (495.0 - y_pt) / 28.3465 (1 m = 28,3465 pt bei 1:100), gerundet auf mm. Wandflächen = graue (Bestand) und rote (Neubau 2014) Füllungen des Plans, gelbe Füllungen (Abbruch 2014) entfallen. Türen aus den Aufschlagbögen, Fenster aus den Lücken der Außenwände, Räume = Freiflächen zwischen den Wänden. Ursprung an der Außenkante der Giebelwand (Brandwand Haus Nr. 23) und an der Traufkante unten. Kniestock-/Abseitenwände sind im Plan nur als Doppellinie (5 cm) gezeichnet und hier als 0,051 m starke Wände übernommen.",
     "reference": []
   },
@@ -85,7 +85,6 @@
     {"pos": [-1.12, 8.467], "text": "0,05", "size": 1.5, "anchor": "end"}
   ],
   "unverified": [
-    {"pos": [3.3, 2.0], "short": "", "text": "Darstellung = Zielzustand des Aufteilungsplans 2014: rote Wände (Neubau 2014) schraffiert als „neu“, gelbe Wände (Abbruch 2014) weggelassen, gestrichelte Türen (geplant/entfallend) nicht gezeichnet. Ob die Maßnahmen ausgeführt wurden, ist außer für WE05 (Sanierung 2026) nicht belegt. Für das DG bedeutet das: Ausbau (rote Wände) laut Plan 2014; ob und wie ausgeführt, ist nicht belegt."},
     {"pos": [8.2, 1.6], "short": "", "text": "Treppenhauswände im DG-Ausschnitt ca. 0,08–0,10 m gegenüber den Obergeschossen nach rechts versetzt und 0,28 m stark (Zeichenungenauigkeit oder Bestand); unverändert übernommen. Als tragend gezeichnet (stehen in allen Geschossen übereinander)."},
     {"pos": [12.0, 1.0], "short": "", "text": "Raumgrenzen an den Kniestock-/Abseitenwänden (Doppellinie 5 cm). Gepunktete Höhenlinien der Dachschräge, Dachflächenfenster und Kamine (gelb, Abbruch) nicht übernommen. Flächen = Grundfläche ohne Abzug nach WoFlV (Dachschräge)."},
     {"pos": [6.82, 5.8], "short": "", "text": "Grenze Wohnen/Essen/Kochen zu Diele in der Flucht der Treppenhauswand angenommen; die Tür dort ist im Plan gestrichelt (geplant)."},

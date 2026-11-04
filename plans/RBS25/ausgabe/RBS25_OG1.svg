@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="290.6mm" height="250.4mm" viewBox="0 0 290.6 250.4">
+<svg xmlns="http://www.w3.org/2000/svg" width="290.6mm" height="242.3mm" viewBox="0 0 290.6 242.3">
 <title>RBS25 – 1. Obergeschoss – gesamte Etage (WE3, WE4, Treppenhaus)</title>
 <style>text{font-family:Arial,Helvetica,sans-serif}</style>
 <rect width="100%" height="100%" fill="#ffffff"/>
@@ -1183,25 +1183,20 @@
 <text x="193.97" y="34.00" font-size="1.5" text-anchor="middle">0,12</text>
 </g>
 <g id="A_UNGEPRUEFT" font-size="1.5" font-weight="bold" text-anchor="middle">
-<circle cx="156.30" cy="130.00" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="156.30" y="130.55" fill="#d00000">1</text>
-<circle cx="183.40" cy="140.00" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="183.40" y="140.55" fill="#d00000">2</text>
-<circle cx="73.30" cy="106.20" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="73.30" y="106.75" fill="#d00000">3</text>
-<circle cx="200.30" cy="106.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="200.30" y="107.05" fill="#d00000">4</text>
-<circle cx="72.60" cy="57.00" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="72.60" y="57.55" fill="#d00000">5</text>
-<circle cx="179.20" cy="87.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="179.20" y="88.05" fill="#d00000">6</text>
-<circle cx="137.10" cy="147.00" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="137.10" y="147.55" fill="#d00000">7</text>
+<circle cx="183.40" cy="140.00" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="183.40" y="140.55" fill="#d00000">1</text>
+<circle cx="200.30" cy="106.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="200.30" y="107.05" fill="#d00000">2</text>
+<circle cx="72.60" cy="57.00" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="72.60" y="57.55" fill="#d00000">3</text>
+<circle cx="179.20" cy="87.50" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="179.20" y="88.05" fill="#d00000">4</text>
+<circle cx="137.10" cy="147.00" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="137.10" y="147.55" fill="#d00000">5</text>
 </g>
 <g id="SCHRIFTFELD" font-size="2.6" fill="#000"><text x="34.0" y="216.4" font-weight="bold">RBS25 · 1. Obergeschoss – gesamte Etage (WE3, WE4, Treppenhaus) · M 1:100</text>
 <text x="34.0" y="220.4" font-size="2">Quelle: 20140801-Aufteilungsplan_Grundrisse_RB25.pdf (2014-08-01) · Maße in m · Neuzeichnung, ohne Gewähr – rot nummerierte Punkte sind ungeprüft (Legende)</text>
 </g>
 <g id="LEGENDE_UNGEPRUEFT" font-size="1.8" fill="#333"><text x="34.0" y="226.6" font-weight="bold" fill="#d00000">Ungeprüfte bzw. angenommene Werte</text>
-<text x="34.0" y="229.5">1 Darstellung = Zielzustand des Aufteilungsplans 2014: rote Wände (Neubau 2014) schraffiert als „neu“, gelbe Wände (Abbruch 2014) weggelassen, gestrichelte Türen (geplant/entfallend) nicht gezeichnet. Ob die Maßnahmen ausgeführt wurden, ist außer für WE05 (Sanierung 2026)</text>
-<text x="37.0" y="232.2">nicht belegt.</text>
-<text x="34.0" y="234.9">2 Wandtyp „tragend“ (load-bearing) nicht belegt: Wände, die im Aufteilungsplan 2014 in KG, EG, 1. OG und 2. OG übereinanderstehen (Überdeckung ≥ 60 %, Toleranz 6 cm), sind als tragend gezeichnet – plausibel, aber ohne Statik/Aufmaß nicht geprüft.</text>
-<text x="34.0" y="237.6">3 WE3: Wände Essen/Wohnen (2,25 m) und Essen/Kochen im Aufteilungsplan 2014 gelb = Abbruch; offen gezeichnet, Raumgrenzen in der Wandflucht. Ausführung nicht belegt.</text>
-<text x="34.0" y="240.3">4 WE4: Wand Kochen/Wohnen (2,17 m) gelb = Abbruch 2014; offen gezeichnet, Raumgrenze in der Wandflucht. Bad-Türöffnung zum Vorraum gelb/gestrichelt, ohne Türblatt.</text>
-<text x="34.0" y="243.0">5 Balkone WE3/WE4: Fläche aus der Geometrie (3,00 x 2,50 m); Mietflächenanteil (½ wie bei WE05/WE06) nicht belegt.</text>
-<text x="34.0" y="245.7">6 WE4 – WC einschließlich Vorraum zum Bad (Grenze WC/Vorraum im Plan offen).</text>
-<text x="34.0" y="248.4">7 Kein bemaßter Plan für das 1. OG: alle Maße aus dem Aufteilungsplan (M 1:100) abgegriffen, Flächen berechnet (keine Planflächen vorhanden).</text>
+<text x="34.0" y="229.5">1 Wandtyp „tragend“ (load-bearing) nicht belegt: Wände, die im Aufteilungsplan 2014 in KG, EG, 1. OG und 2. OG übereinanderstehen (Überdeckung ≥ 60 %, Toleranz 6 cm), sind als tragend gezeichnet – plausibel, aber ohne Statik/Aufmaß nicht geprüft.</text>
+<text x="34.0" y="232.2">2 WE4: Wand Kochen/Wohnen (2,17 m) gelb = Abbruch 2014; offen gezeichnet, Raumgrenze in der Wandflucht. Bad-Türöffnung zum Vorraum gelb/gestrichelt, ohne Türblatt.</text>
+<text x="34.0" y="234.9">3 Balkone WE3/WE4: Fläche aus der Geometrie (3,00 x 2,50 m); Mietflächenanteil (½ wie bei WE05/WE06) nicht belegt.</text>
+<text x="34.0" y="237.6">4 WE4 – WC einschließlich Vorraum zum Bad (Grenze WC/Vorraum im Plan offen).</text>
+<text x="34.0" y="240.3">5 Kein bemaßter Plan für das 1. OG: alle Maße aus dem Aufteilungsplan (M 1:100) abgegriffen, Flächen berechnet (keine Planflächen vorhanden).</text>
 </g>
 </svg>

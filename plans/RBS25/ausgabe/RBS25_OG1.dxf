@@ -553,7 +553,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-6CA
+6C6
   9
 $SURFTAB1
  70
@@ -3329,7 +3329,7 @@ ACAD
   0
 APPID
   5
-6C7
+6C3
 330
 3
 100
@@ -3343,7 +3343,7 @@ HATCHBACKGROUNDCOLOR
   0
 APPID
   5
-6C8
+6C4
 330
 3
 100
@@ -45151,9 +45151,9 @@ A_UNGEPRUEFT
 100
 AcDbCircle
  10
-10.0
+12.71
  20
-3.3
+2.3
  30
 0.0
  40
@@ -45171,19 +45171,19 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
-10.2
+12.91
  20
-3.3
+2.3
  30
 0.0
  40
 0.12
   1
-1 Darstellung = Zielzustand des Aufteilungsplans 2014: rote Wände (Neubau 2014) schraffiert als „neu“, gelbe Wände (Abbruch 2014) weggelassen, gestrichelte Türen (geplant/entfallend) nicht gezeichnet. Ob die Maßnahmen ausgeführt wurden, ist außer für WE05 (Sanierung 2026) nicht belegt.
+1 Wandtyp „tragend“ (load-bearing) nicht belegt: Wände, die im Aufteilungsplan 2014 in KG, EG, 1. OG und 2. OG übereinanderstehen (Überdeckung ≥ 60 %, Toleranz 6 cm), sind als tragend gezeichnet – plausibel, aber ohne Statik/Aufmaß nicht geprüft.
  11
-10.2
+12.91
  21
-3.3
+2.3
  31
 0.0
 100
@@ -45192,106 +45192,6 @@ AcDbText
 CIRCLE
   5
 6BB
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbCircle
- 10
-12.71
- 20
-2.3
- 30
-0.0
- 40
-0.15
-  0
-TEXT
-  5
-6BC
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbText
- 10
-12.91
- 20
-2.3
- 30
-0.0
- 40
-0.12
-  1
-2 Wandtyp „tragend“ (load-bearing) nicht belegt: Wände, die im Aufteilungsplan 2014 in KG, EG, 1. OG und 2. OG übereinanderstehen (Überdeckung ≥ 60 %, Toleranz 6 cm), sind als tragend gezeichnet – plausibel, aber ohne Statik/Aufmaß nicht geprüft.
- 11
-12.91
- 21
-2.3
- 31
-0.0
-100
-AcDbText
-  0
-CIRCLE
-  5
-6BD
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbCircle
- 10
-1.7
- 20
-5.68
- 30
-0.0
- 40
-0.15
-  0
-TEXT
-  5
-6BE
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbText
- 10
-1.9
- 20
-5.68
- 30
-0.0
- 40
-0.12
-  1
-3 WE3: Wände Essen/Wohnen (2,25 m) und Essen/Kochen im Aufteilungsplan 2014 gelb = Abbruch; offen gezeichnet, Raumgrenzen in der Wandflucht. Ausführung nicht belegt.
- 11
-1.9
- 21
-5.68
- 31
-0.0
-100
-AcDbText
-  0
-CIRCLE
-  5
-6BF
 330
 17
 100
@@ -45311,7 +45211,7 @@ AcDbCircle
   0
 TEXT
   5
-6C0
+6BC
 330
 17
 100
@@ -45329,7 +45229,7 @@ AcDbText
  40
 0.12
   1
-4 WE4: Wand Kochen/Wohnen (2,17 m) gelb = Abbruch 2014; offen gezeichnet, Raumgrenze in der Wandflucht. Bad-Türöffnung zum Vorraum gelb/gestrichelt, ohne Türblatt.
+2 WE4: Wand Kochen/Wohnen (2,17 m) gelb = Abbruch 2014; offen gezeichnet, Raumgrenze in der Wandflucht. Bad-Türöffnung zum Vorraum gelb/gestrichelt, ohne Türblatt.
  11
 14.6
  21
@@ -45341,7 +45241,7 @@ AcDbText
   0
 CIRCLE
   5
-6C1
+6BD
 330
 17
 100
@@ -45361,7 +45261,7 @@ AcDbCircle
   0
 TEXT
   5
-6C2
+6BE
 330
 17
 100
@@ -45379,7 +45279,7 @@ AcDbText
  40
 0.12
   1
-5 Balkone WE3/WE4: Fläche aus der Geometrie (3,00 x 2,50 m); Mietflächenanteil (½ wie bei WE05/WE06) nicht belegt.
+3 Balkone WE3/WE4: Fläche aus der Geometrie (3,00 x 2,50 m); Mietflächenanteil (½ wie bei WE05/WE06) nicht belegt.
  11
 1.8299999999999998
  21
@@ -45391,7 +45291,7 @@ AcDbText
   0
 CIRCLE
   5
-6C3
+6BF
 330
 17
 100
@@ -45411,7 +45311,7 @@ AcDbCircle
   0
 TEXT
   5
-6C4
+6C0
 330
 17
 100
@@ -45429,7 +45329,7 @@ AcDbText
  40
 0.12
   1
-6 WE4 – WC einschließlich Vorraum zum Bad (Grenze WC/Vorraum im Plan offen).
+4 WE4 – WC einschließlich Vorraum zum Bad (Grenze WC/Vorraum im Plan offen).
  11
 12.489999999999998
  21
@@ -45441,7 +45341,7 @@ AcDbText
   0
 CIRCLE
   5
-6C5
+6C1
 330
 17
 100
@@ -45461,7 +45361,7 @@ AcDbCircle
   0
 TEXT
   5
-6C6
+6C2
 330
 17
 100
@@ -45479,7 +45379,7 @@ AcDbText
  40
 0.12
   1
-7 Kein bemaßter Plan für das 1. OG: alle Maße aus dem Aufteilungsplan (M 1:100) abgegriffen, Flächen berechnet (keine Planflächen vorhanden).
+5 Kein bemaßter Plan für das 1. OG: alle Maße aus dem Aufteilungsplan (M 1:100) abgegriffen, Flächen berechnet (keine Planflächen vorhanden).
  11
 8.28
  21
@@ -46579,7 +46479,7 @@ CREATED_BY_EZDXF
   3
 WRITTEN_BY_EZDXF
 350
-6C9
+6C5
   0
 DICTIONARYVAR
   5
@@ -53145,7 +53045,7 @@ strokes_ogs.tif
   0
 DICTIONARYVAR
   5
-6C9
+6C5
 330
 2D
 100

@@ -33,10 +33,9 @@ Aufteilungsplan 2014 (Vektor-PDF, M 1:100 → 1 m = 28,3465 pt); je Geschoss nur
 
 Erzeugt mit `python3 tools/render_plan.py plans/RBS25/geometrie/<G>.json` (alle Exit 0). Der Renderer wurde nicht geändert.
 
-**Darstellungsstand:** Die Geschosse zeigen den Zielzustand des Aufteilungsplans 2014 – rote Wände (Neubau 2014)
-schraffiert als `new`, gelbe Wände (Abbruch 2014) weggelassen, gestrichelte (geplante/entfallende) Türen nicht gezeichnet.
-Ausnahme WE05: Zustand nach Sanierung (12.09.2026). Ob die 2014 geplanten Maßnahmen in den übrigen Wohnungen
-ausgeführt sind, ist nicht belegt (je Geschoss in `unverified`).
+**Darstellungsstand:** Die Geschosse zeigen den Zustand nach dem Umbau gemäß Aufteilungsplan 2014 – laut Eigentümer
+(04.11.2026) ausgeführt. Rote Wände (Neubau 2014) schraffiert als `new`, gelbe Wände (Abbruch 2014) weggelassen,
+gestrichelte (entfallene) Türen nicht gezeichnet. WE05: Zustand nach Sanierung (12.09.2026).
 
 **Tragende Wände:** Außenwände `exterior`; Wände, die in KG, EG, 1. OG und 2. OG des Aufteilungsplans
 übereinanderstehen (Überdeckung ≥ 60 %, Toleranz 6 cm), sowie die Treppenhauswände sind `load-bearing` – plausibel,
@@ -90,12 +89,13 @@ rechts: Kind, WC, Bad, Kochen, Flur, Schlafen, Wohnen/Essen, Balkon (Ostseite, 3
 - **Flächen Essen, Kochen, Bad**: kein neues Aufmaß; Flächen werden aus der Neuzeichnung berechnet und als „berechnet“ gekennzeichnet.
 - **Tragende Wände**: nicht belegt; wahrscheinlich tragend sind die Wand Wohnen/Schlafen und die Flurwände – als tragend gezeichnet, in `unverified` vermerkt.
 
+- **Umbauten 2014** (Aufteilungsplan rot/gelb) in WE1–WE4, WE6 und DG: ausgeführt (Eigentümer, 04.11.2026).
+
 ## Offene Punkte
 
 - Die „ca.“-Maße aus dem Vorgänger (WE05) stimmen mit dem Aufteilungsplan 2014 auf ≤ 1 cm überein (Wohnen 4,97⁵, Essen 3,44, Schlafen 3,64);
   sie bleiben in `unverified`, weil kein Aufmaß vorliegt.
 - WE6: Kochen (8,57 m² berechnet / 9,12 m² bemaßt) und WC (2,63 m² / „Flur 2“ 2,92 m²) weichen ab – bemaßter Plan zeigt einen anderen Zustand.
 - Balkone außer WE05/WE06: Mietflächenanteil (½?) nicht belegt.
-- Zuordnung der Kellerabteile K1–K8 zu den Wohnungen fehlt.
-- Ausführungsstand der 2014 geplanten Umbauten (rot/gelb) in WE1–WE4, WE6 und im DG (WE7) klären.
+- Zuordnung der Kellerabteile K1–K8 zu den Wohnungen fehlt – steht laut Eigentümer in der Teilungserklärung (noch nicht hochgeladen, ca. 33 MB).
 - Sanitärobjekte und Waschmaschinenstellplatz nur schematisch; Fensterbänke und Balkongeländer nicht gezeichnet.

@@ -6,7 +6,7 @@
   "source": {
     "file": "plans/RBS25/quelle/20140801-Aufteilungsplan_Grundrisse_RB25.pdf",
     "date": "2014-08-01",
-    "version": "Aufteilungsplan 2014, Ausschnitt Erdgeschoss mit Außenanlagen (nur Gebäude übernommen, Zielzustand 2014)",
+    "version": "Aufteilungsplan 2014, Ausschnitt Erdgeschoss mit Außenanlagen (nur Gebäude übernommen, Umbau 2014 laut Eigentümer ausgeführt)",
     "transformation": "Quelle: Vektor-PDF 20140801-Aufteilungsplan_Grundrisse_RB25.pdf (1 Seite, 2965 x 1701 pt, M 1:100, y nach unten), Ausschnitt Erdgeschoss. Gemeinsames System aller Geschosse: Meter, y nach oben, Ursprung = linke untere Rohbau-Außenecke des Hauptbaukörpers (Brandwand zu Haus Nr. 23 / Straßenfassade). x_m = (x_pt - 271.8) / 28.3465, y_m = (1318.56 - y_pt) / 28.3465 (1 m = 28,3465 pt bei 1:100), gerundet auf mm. Wandflächen = graue (Bestand) und rote (Neubau 2014) Füllungen des Plans, gelbe Füllungen (Abbruch 2014) entfallen. Türen aus den Aufschlagbögen, Fenster aus den Lücken der Außenwände, Räume = Freiflächen zwischen den Wänden.",
     "reference": ["plans/RBS25/quelle/Grundriss_WE05_urspruenglich_bemasst.pdf (2. OG, Achsen übereinander)"]
   },
@@ -168,7 +168,6 @@
     {"pos": [13.991, 12.9], "text": "0,12", "size": 1.5}
   ],
   "unverified": [
-    {"pos": [10.0, 3.3], "short": "", "text": "Darstellung = Zielzustand des Aufteilungsplans 2014: rote Wände (Neubau 2014) schraffiert als „neu“, gelbe Wände (Abbruch 2014) weggelassen, gestrichelte Türen (geplant/entfallend) nicht gezeichnet. Ob die Maßnahmen ausgeführt wurden, ist außer für WE05 (Sanierung 2026) nicht belegt."},
     {"pos": [12.71, 2.3], "short": "", "text": "Wandtyp „tragend“ (load-bearing) nicht belegt: Wände, die im Aufteilungsplan 2014 in KG, EG, 1. OG und 2. OG übereinanderstehen (Überdeckung ≥ 60 %, Toleranz 6 cm), sind als tragend gezeichnet – plausibel, aber ohne Statik/Aufmaß nicht geprüft."},
     {"pos": [8.08, 1.6], "short": "", "text": "Kein bemaßter Plan für das Erdgeschoss: alle Maße aus dem Aufteilungsplan (M 1:100) abgegriffen, Flächen berechnet. Außenanlagen (Stellplätze, Zaun, Müll, Flurstücksgrenzen) nicht übernommen."},
     {"pos": [1.63, 10.6], "short": "", "text": "Balkone WE1/WE2 (EG, mit Außentreppe): Fläche aus der Geometrie; Mietflächenanteil nicht belegt."}
