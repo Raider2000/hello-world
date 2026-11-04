@@ -493,7 +493,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461349.10306713
+2461349.1107060187
   9
 $TDUCREATE
  40
@@ -501,7 +501,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461349.103078704
+2461349.1107060187
   9
 $TDUUPDATE
  40
@@ -553,7 +553,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-8FA
+8F6
   9
 $SURFTAB1
  70
@@ -933,11 +933,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{6816A1C3-DD15-43A1-BBC2-650950253D13}
+{457AE59B-3F21-4914-BDB0-A0319067E802}
   9
 $VERSIONGUID
   2
-{84B73A59-2897-4509-A245-E1BBC9A6611B}
+{18D3B51D-F47B-45B3-98AD-36D9845D37BC}
   9
 $EXTNAMES
 290
@@ -3281,7 +3281,7 @@ ACAD
   0
 APPID
   5
-8F7
+8F3
 330
 3
 100
@@ -3295,7 +3295,7 @@ HATCHBACKGROUNDCOLOR
   0
 APPID
   5
-8F8
+8F4
 330
 3
 100
@@ -44095,7 +44095,7 @@ AcDbText
  40
 0.2
   1
-NF lt. Plan 4,49 m² (?)
+Podest lt. Plan 4,49 m²
  72
 1
  11
@@ -45501,7 +45501,7 @@ AcDbText
  40
 0.25
   1
-2. RW?
+Anleiterstelle
  72
 1
  11
@@ -45535,7 +45535,7 @@ AcDbText
  40
 0.2
   1
-gestrichelt
+2. Rettungsweg
  72
 1
  11
@@ -46041,7 +46041,7 @@ AcDbText
  40
 0.13
   1
-Dusche lt. Dashboard
+Dusche (Bad)
  72
 1
  11
@@ -53481,56 +53481,6 @@ A_UNGEPRUEFT
 100
 AcDbCircle
  10
-1.0
- 20
-7.225
- 30
-0.0
- 40
-0.25
-  0
-TEXT
-  5
-8DE
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbText
- 10
-1.3
- 20
-7.225
- 30
-0.0
- 40
-0.2
-  1
-Treppenhaus: Stempel NF 4,49 m² passt nicht zur Grundfläche 2,355 × 4,21 = 9,91 m² (Bezug unklar, evtl. nur anteilig/ohne Treppe). Keine Flächenprüfung.
- 11
-1.3
- 21
-7.225
- 31
-0.0
-100
-AcDbText
-  0
-CIRCLE
-  5
-8DF
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbCircle
- 10
 7.08
  20
 3.425
@@ -53541,7 +53491,7 @@ AcDbCircle
   0
 TEXT
   5
-8E0
+8DE
 330
 17
 100
@@ -53571,7 +53521,7 @@ AcDbText
   0
 CIRCLE
   5
-8E1
+8DF
 330
 17
 100
@@ -53591,7 +53541,7 @@ AcDbCircle
   0
 TEXT
   5
-8E2
+8E0
 330
 17
 100
@@ -53621,7 +53571,7 @@ AcDbText
   0
 CIRCLE
   5
-8E3
+8E1
 330
 17
 100
@@ -53641,7 +53591,7 @@ AcDbCircle
   0
 TEXT
   5
-8E4
+8E2
 330
 17
 100
@@ -53659,7 +53609,7 @@ AcDbText
  40
 0.2
   1
-Installationsvorwände WC (20 cm): Breite laut Kette oben (0,20), Lage der Nordvorwand (yd 1,455–1,655) aus Scan abgegriffen; Bad 7,54 / WC 1,50 m² bestätigen die Lage. WC/AR-Stempel stehen im Scan auf dem Flachdach.
+Trockenbauwand WC/Dusche bzw. Installationsvorwände WC (20 cm), Dusche gehört laut Eigentümer zum Bad: Breite laut Kette oben (0,20), Lage der Nordvorwand (yd 1,455–1,655) aus Scan abgegriffen; Bad 7,54 / WC 1,50 m² bestätigen die Lage. WC/AR-Stempel stehen im Scan auf dem Flachdach.
  11
 5.35
  21
@@ -53671,7 +53621,7 @@ AcDbText
   0
 CIRCLE
   5
-8E5
+8E3
 330
 17
 100
@@ -53691,7 +53641,7 @@ AcDbCircle
   0
 TEXT
   5
-8E6
+8E4
 330
 17
 100
@@ -53721,57 +53671,7 @@ AcDbText
   0
 CIRCLE
   5
-8E7
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbCircle
- 10
--0.585
- 20
-6.675
- 30
-0.0
- 40
-0.25
-  0
-TEXT
-  5
-8E8
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbText
- 10
--0.285
- 20
-6.675
- 30
-0.0
- 40
-0.2
-  1
-Gestricheltes Rechteck vor dem Küchenfenster (1,17 × ca. 2,64 m, Text 'Rollladen 2.RW'): Bedeutung unklar (Anleiterstelle 2. Rettungsweg? Bauteil darüber/darunter?), Maße abgegriffen.
- 11
--0.285
- 21
-6.675
- 31
-0.0
-100
-AcDbText
-  0
-CIRCLE
-  5
-8E9
+8E5
 330
 17
 100
@@ -53791,7 +53691,7 @@ AcDbCircle
   0
 TEXT
   5
-8EA
+8E6
 330
 17
 100
@@ -53821,7 +53721,7 @@ AcDbText
   0
 CIRCLE
   5
-8EB
+8E7
 330
 17
 100
@@ -53841,7 +53741,7 @@ AcDbCircle
   0
 TEXT
   5
-8EC
+8E8
 330
 17
 100
@@ -53871,7 +53771,7 @@ AcDbText
   0
 CIRCLE
   5
-8ED
+8E9
 330
 17
 100
@@ -53891,7 +53791,7 @@ AcDbCircle
   0
 TEXT
   5
-8EE
+8EA
 330
 17
 100
@@ -53921,7 +53821,7 @@ AcDbText
   0
 CIRCLE
   5
-8EF
+8EB
 330
 17
 100
@@ -53941,7 +53841,7 @@ AcDbCircle
   0
 TEXT
   5
-8F0
+8EC
 330
 17
 100
@@ -53971,7 +53871,7 @@ AcDbText
   0
 CIRCLE
   5
-8F1
+8ED
 330
 17
 100
@@ -53991,7 +53891,7 @@ AcDbCircle
   0
 TEXT
   5
-8F2
+8EE
 330
 17
 100
@@ -54021,7 +53921,7 @@ AcDbText
   0
 CIRCLE
   5
-8F3
+8EF
 330
 17
 100
@@ -54041,7 +53941,7 @@ AcDbCircle
   0
 TEXT
   5
-8F4
+8F0
 330
 17
 100
@@ -54071,7 +53971,7 @@ AcDbText
   0
 CIRCLE
   5
-8F5
+8F1
 330
 17
 100
@@ -54091,7 +53991,7 @@ AcDbCircle
   0
 TEXT
   5
-8F6
+8F2
 330
 17
 100
@@ -55209,7 +55109,7 @@ CREATED_BY_EZDXF
   3
 WRITTEN_BY_EZDXF
 350
-8F9
+8F5
   0
 DICTIONARYVAR
   5
@@ -55221,7 +55121,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T02:28:25.977019+00:00
+1.4.5 @ 2026-11-04T02:39:25.619323+00:00
   0
 VISUALSTYLE
   5
@@ -61775,7 +61675,7 @@ strokes_ogs.tif
   0
 DICTIONARYVAR
   5
-8F9
+8F5
 330
 2D
 100
@@ -61783,7 +61683,7 @@ DictionaryVariables
 280
 0
   1
-1.4.5 @ 2026-11-04T02:28:26.099679+00:00
+1.4.5 @ 2026-11-04T02:39:25.705217+00:00
   0
 ENDSEC
   0

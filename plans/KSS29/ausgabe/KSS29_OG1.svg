@@ -898,7 +898,7 @@
 </g>
 <g id="A_TEXT" font-size="2.6" text-anchor="middle" fill="#000">
 <text x="102.70" y="140.40" font-weight="bold">Treppenhaus</text>
-<text x="102.70" y="143.60" font-size="2.2">NF lt. Plan 4,49 m² (?)</text>
+<text x="102.70" y="143.60" font-size="2.2">Podest lt. Plan 4,49 m²</text>
 <text x="123.90" y="112.40" font-weight="bold">Garderobe</text>
 <text x="123.90" y="115.60" font-size="2.2">3,67 m²</text>
 <text x="137.75" y="121.90" font-weight="bold">Toilette</text>
@@ -925,8 +925,8 @@
 <text x="78.10" y="122.60" font-size="2.2">Beton 22 cm</text>
 <text x="117.10" y="83.40" font-weight="bold">Flachdach</text>
 <text x="117.10" y="86.60" font-size="2.2">begrünt (über EG)</text>
-<text x="81.35" y="159.40" font-weight="bold">2. RW?</text>
-<text x="81.35" y="162.60" font-size="2.2">gestrichelt</text>
+<text x="81.35" y="159.40" font-weight="bold">Anleiterstelle</text>
+<text x="81.35" y="162.60" font-size="2.2">2. Rettungsweg</text>
 <text x="118.30" y="126.90" font-weight="bold"> </text>
 <text x="102.40" y="133.90" font-weight="bold"> </text>
 <text x="102.70" y="107.90" font-size="1.8" text-anchor="middle" font-weight="bold">Treppe gewendelt</text>
@@ -939,7 +939,7 @@
 <text x="118.30" y="119.90" font-size="1.1" text-anchor="middle">Schacht E 20/20</text>
 <text x="123.90" y="118.90" font-size="1.4" text-anchor="middle">(Scan: AR)</text>
 <text x="137.75" y="127.90" font-size="1.3" text-anchor="middle">(Scan: WC)</text>
-<text x="137.70" y="108.90" font-size="1.3" text-anchor="middle">Dusche lt. Dashboard</text>
+<text x="137.70" y="108.90" font-size="1.3" text-anchor="middle">Dusche (Bad)</text>
 <text x="137.70" y="115.25" font-size="1.1" text-anchor="middle">Inst.-Wand</text>
 <text x="157.20" y="123.40" font-size="1.3" text-anchor="middle">Feinsteinzeug · ∇ +2,90 · ▼ +2,75</text>
 <text x="187.00" y="130.90" font-size="1.4" text-anchor="middle">Parkett · ∇ +2,90 · ▼ +2,75</text>
@@ -960,12 +960,10 @@
 <circle cx="252.80" cy="222.15" r="2.5"/>
 <text x="255.80" y="222.15" fill="#d00000" stroke="none">Σ Teilketten 11,68</text>
 <circle cx="102.70" cy="122.40" r="2.5"/>
-<circle cx="97.20" cy="143.90" r="2.5"/>
 <circle cx="158.00" cy="181.90" r="2.5"/>
 <circle cx="142.95" cy="155.40" r="2.5"/>
 <circle cx="137.70" cy="113.40" r="2.5"/>
 <circle cx="118.30" cy="119.40" r="2.5"/>
-<circle cx="81.35" cy="149.40" r="2.5"/>
 <circle cx="117.10" cy="70.40" r="2.5"/>
 <circle cx="86.90" cy="209.40" r="2.5"/>
 <circle cx="214.40" cy="201.40" r="2.5"/>
@@ -974,5 +972,5 @@
 <circle cx="78.10" cy="104.40" r="2.5"/>
 <circle cx="92.20" cy="161.40" r="2.5"/>
 </g>
-<g id="SCHRIFTFELD" font-size="2.6" fill="#000"><text x="69.0" y="289.1" font-weight="bold">KSS29 · 1. Obergeschoss – Kastenssestraße 29 · M 1:100</text><text x="69.0" y="293.1" font-size="2">Quelle: plans/KSS29/quelle/Grundriss_1.OG_Kastenssestrasse_29.pdf (ohne Datum (Scan)) · Maße in m · Neuzeichnung, ohne Gewähr – rot markierte Werte ungeprüft</text></g>
+<g id="SCHRIFTFELD" font-size="2.6" fill="#000"><text x="69.0" y="289.1" font-weight="bold">KSS29 · 1. Obergeschoss – Kastenssestraße 29 · M 1:100</text><text x="69.0" y="293.1" font-size="2">Quelle: plans/KSS29/quelle/Grundriss_1.OG_Kastenssestrasse_29.pdf (undatiert; laut Eigentümer aktueller Stand (Baujahr 2020/2021)) · Maße in m · Neuzeichnung, ohne Gewähr – rot markierte Werte ungeprüft</text></g>
 </svg>

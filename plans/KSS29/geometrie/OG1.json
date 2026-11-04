@@ -4,7 +4,7 @@
   "floor_name": "1. Obergeschoss – Kastenssestraße 29",
   "source": {
     "file": "plans/KSS29/quelle/Grundriss_1.OG_Kastenssestrasse_29.pdf",
-    "date": "ohne Datum (Scan)",
+    "date": "undatiert; laut Eigentümer aktueller Stand (Baujahr 2020/2021)",
     "version": "Werkplan-Scan A3 300 dpi, Raumnutzung lt. dashboard/gen_plan.py v3",
     "transformation": "Scan (JPEG 4960 x 3507 px, 300 dpi) liegt wie das Dashboard: Norden/Flachdach oben, Straße links (West), Garten rechts (Ost); nur die Texte stehen quer. Keine Drehung nötig. Maßstab im Scan ca. 137,9 px/m (x) bzw. 137,2 px/m (y), Nord-West-Außenecke bei ca. px (1491, 1083), Scan um ca. 0,2° verdreht. Alle Maße aus den Maßketten (Rohbau), nur wenige Lagen abgegriffen (siehe unverified). Arbeitskoordinaten wie gen_plan.py: x nach Osten, yd nach Süden ab Nord-Außenkante (m). Neu: x_m = x, y_m = 11,675 - yd (Ursprung SW-Rohbau-Außenecke, y nach Norden).",
     "reference": [
@@ -29,7 +29,7 @@
     {"id": "IW-AR-WC", "a": [4.438, 11.31], "b": [4.438, 8.66], "thickness": 0.115, "align": "center", "type": "interior"},
     {"id": "IW-Schlafen-Kind1", "a": [8.37, 6.718], "b": [11.595, 6.718], "thickness": 0.115, "align": "center", "type": "interior"},
     {"id": "IW-Wohnen-Kind2", "a": [7.082, 3.85], "b": [7.082, 0.365], "thickness": 0.115, "align": "center", "type": "interior"},
-    {"id": "VW-WC-Nord", "a": [4.495, 10.12], "b": [5.815, 10.12], "thickness": 0.2, "align": "center", "type": "interior"},
+    {"id": "TB-WC-Dusche", "name": "Trockenbauwand WC/Dusche", "a": [4.495, 10.12], "b": [5.815, 10.12], "thickness": 0.2, "align": "center", "type": "interior"},
     {"id": "VW-WC-Ost", "a": [5.715, 10.02], "b": [5.715, 8.66], "thickness": 0.2, "align": "center", "type": "interior"}
   ],
   "wall_polygons": [
@@ -60,7 +60,7 @@
     {"id": "T8", "name": "Tür Kind 2 0,88/2,135 mit Glasausschnitt", "type": "door", "wall": "IW-Diele-Sued", "offset": 1.2575, "width": 0.88, "hinge": "end", "side": "right"}
   ],
   "rooms": [
-    {"name": "Treppenhaus", "polygon": [[0.365, 11.31], [2.72, 11.31], [2.72, 7.1], [0.365, 7.1]], "label_pos": [1.55, 7.575], "subtitle": "NF lt. Plan 4,49 m² (?)"},
+    {"name": "Treppenhaus", "polygon": [[0.365, 11.31], [2.72, 11.31], [2.72, 7.1], [0.365, 7.1]], "label_pos": [1.55, 7.575], "subtitle": "Podest lt. Plan 4,49 m²"},
     {"name": "Garderobe", "polygon": [[2.96, 11.31], [4.38, 11.31], [4.38, 8.545], [3.26, 8.545], [3.26, 9.51], [2.96, 9.51]], "area_stated": 3.67, "label_pos": [3.67, 10.375]},
     {"name": "Toilette", "polygon": [[4.495, 10.02], [5.615, 10.02], [5.615, 8.66], [4.495, 8.66]], "area_stated": 1.5, "label_pos": [5.055, 9.425]},
     {"name": "Badezimmer", "polygon": [[4.495, 11.31], [8.195, 11.31], [8.195, 8.66], [5.815, 8.66], [5.815, 10.22], [4.495, 10.22]], "area_stated": 7.54, "label_pos": [7.0, 9.925]},
@@ -74,7 +74,7 @@
     {"name": "Balkon Garten", "polygon": [[11.96, 5.945], [13.48, 5.945], [13.48, 1.195], [11.96, 1.195]], "area_stated": 7.37, "label_pos": [12.72, 4.675], "outline": true},
     {"name": "Vordach", "polygon": [[-1.82, 11.41], [0.0, 11.41], [0.0, 6.91], [-1.82, 6.91]], "label_pos": [-0.91, 9.675], "subtitle": "Beton 22 cm", "outline": true},
     {"name": "Flachdach", "polygon": [[0.0, 14.715], [5.975, 14.715], [5.975, 11.675], [0.0, 11.675]], "label_pos": [2.99, 13.275], "subtitle": "begrünt (über EG)", "outline": true},
-    {"name": "2. RW?", "polygon": [[-1.17, 6.845], [0.0, 6.845], [0.0, 4.205], [-1.17, 4.205]], "label_pos": [-0.585, 5.675], "subtitle": "gestrichelt", "outline": true},
+    {"name": "Anleiterstelle", "polygon": [[-1.17, 6.845], [0.0, 6.845], [0.0, 4.205], [-1.17, 4.205]], "label_pos": [-0.585, 5.675], "subtitle": "2. Rettungsweg", "outline": true},
     {"name": " ", "polygon": [[2.96, 9.51], [3.26, 9.51], [3.26, 8.66], [2.96, 8.66]], "label_pos": [3.11, 8.925], "show_area": false, "outline": true},
     {"name": " ", "polygon": [[1.41, 10.235], [1.63, 10.235], [1.63, 8.455], [1.41, 8.455]], "label_pos": [1.52, 8.225], "show_area": false, "outline": true}
   ],
@@ -217,7 +217,7 @@
     {"pos": [3.11, 9.625], "text": "Schacht E 20/20", "size": 1.1},
     {"pos": [3.67, 9.725], "text": "(Scan: AR)", "size": 1.4},
     {"pos": [5.055, 8.825], "text": "(Scan: WC)", "size": 1.3},
-    {"pos": [5.05, 10.725], "text": "Dusche lt. Dashboard", "size": 1.3},
+    {"pos": [5.05, 10.725], "text": "Dusche (Bad)", "size": 1.3},
     {"pos": [5.05, 10.09], "text": "Inst.-Wand", "size": 1.1},
     {"pos": [7.0, 9.275], "text": "Feinsteinzeug · ∇ +2,90 · ▼ +2,75", "size": 1.3},
     {"pos": [9.98, 8.525], "text": "Parkett · ∇ +2,90 · ▼ +2,75", "size": 1.4},
@@ -237,12 +237,10 @@
   "unverified": [
     {"pos": [16.56, -0.6], "short": "Σ Teilketten 11,68", "text": "Gesamtmaß Tiefe: Gesamtkette 11,67⁵, alle Teilketten links/rechts summieren aber 11,68. Übernommen: 11,675; die 5 mm sind in den südlichen Raumtiefen (Wohnen/Kind 2: 3,485 statt 3,49; Loggia 3,23 statt 3,235) aufgefangen."},
     {"pos": [1.55, 9.375], "short": "", "text": "Treppe: im Scan halbgewendelt mit Schnittlinie, 2 × 16 Stg. 18,1/27 (Lauf von EG und Lauf zum DG überlagert). Stufen nicht gezeichnet (Renderer hat keine freien Linien); nur Treppenauge (BD/DD Treppe, ca. 0,22 × 1,78 m, aus Scan abgegriffen) als Kontur."},
-    {"pos": [1.0, 7.225], "short": "", "text": "Treppenhaus: Stempel NF 4,49 m² passt nicht zur Grundfläche 2,355 × 4,21 = 9,91 m² (Bezug unklar, evtl. nur anteilig/ohne Treppe). Keine Flächenprüfung."},
     {"pos": [7.08, 3.425], "short": "", "text": "Diele-Türen: Kette 17⁵/11/88/28/88/11/17⁵ = 2,61 m, verfügbar 2,58 m (5,79–8,37). Türen symmetrisch zur Wand Wohnen/Kind 2 gesetzt (Stich je ca. 0,095); Pixelmessung bestätigt Lage auf ±2 cm."},
     {"pos": [5.575, 6.075], "short": "", "text": "Kamin 40/70: x laut Kette (43 bis Küchenwand Ost), Tiefe 0,70 und Lage an der Küchennordwand aus Bezeichnung/Scan abgegriffen."},
-    {"pos": [5.05, 10.275], "short": "", "text": "Installationsvorwände WC (20 cm): Breite laut Kette oben (0,20), Lage der Nordvorwand (yd 1,455–1,655) aus Scan abgegriffen; Bad 7,54 / WC 1,50 m² bestätigen die Lage. WC/AR-Stempel stehen im Scan auf dem Flachdach."},
+    {"pos": [5.05, 10.275], "short": "", "text": "Trockenbauwand WC/Dusche bzw. Installationsvorwände WC (20 cm), Dusche gehört laut Eigentümer zum Bad: Breite laut Kette oben (0,20), Lage der Nordvorwand (yd 1,455–1,655) aus Scan abgegriffen; Bad 7,54 / WC 1,50 m² bestätigen die Lage. WC/AR-Stempel stehen im Scan auf dem Flachdach."},
     {"pos": [3.11, 9.675], "short": "", "text": "Schacht BD/DD E 20/20 im AR: Kontur 0,30 × 0,85 aus Kette (30) und Scan abgegriffen."},
-    {"pos": [-0.585, 6.675], "short": "", "text": "Gestricheltes Rechteck vor dem Küchenfenster (1,17 × ca. 2,64 m, Text 'Rollladen 2.RW'): Bedeutung unklar (Anleiterstelle 2. Rettungsweg? Bauteil darüber/darunter?), Maße abgegriffen."},
     {"pos": [2.99, 14.575], "short": "", "text": "Flachdach (begrünt) nördlich vor AR/Bad: keine Maßkette, Kontur (ca. 5,975 × 3,04 m, Außenlinie der Doppellinie) aus dem Scan abgegriffen."},
     {"pos": [-0.03, 0.675], "short": "", "text": "Loggia/Balkon 2: gezeichnet bis Innenkante Geländer (2,07 × 3,23 = 6,69 m²); BF 6,88 laut Plan bezieht vermutlich Geländerachse ein. Geländer 10 cm als graue Brüstung dargestellt (Detail BA.03, 06)."},
     {"pos": [12.72, 1.475], "short": "", "text": "Balkon 1: gezeichnet bis Innenkante Geländer (1,52 × 4,75 = 7,22 m²); BF 7,37 laut Plan (= 1,52 × 4,85, also bis Geländerachse in Längsrichtung?). Balkonplatte Nord/Süd-Rand (5,63 / 10,58) aus Scan abgegriffen."},
