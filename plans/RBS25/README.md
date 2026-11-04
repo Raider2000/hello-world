@@ -18,13 +18,23 @@ Originale laut Prüfprotokoll: `Grundriss WE05 ursprünglich bemaßt.pdf`, `Grun
 
 ## Geschosse
 
-| Geschoss | Geometrie | SVG | DXF | Flächenprüfung |
-|----------|-----------|-----|-----|----------------|
-| OG2 (WE05, Zustand nach Sanierung) | `geometrie/OG2.json` | `ausgabe/RBS25_OG2.svg` | `ausgabe/RBS25_OG2.dxf` | Wohnen +0,2 %, Schlafen +0,3 %, Flur +0,5 % (alle < 3 %); Maßkette 3,25 / 0,15 / 3,21 / 0,24 = 6,85 m, Tiefe 9,84 m ✔ |
+Gemeinsames Koordinatensystem aller Geschosse: Meter, y nach oben, Ursprung = linke untere
+Rohbau-Außenecke des Hauptbaukörpers (Brandwand zu Haus Nr. 23 / Straßenfassade). Grundlage ist der
+Aufteilungsplan 2014 (Vektor-PDF, M 1:100 → 1 m = 28,3465 pt); je Geschoss nur eine Verschiebung
+(Ursprung in pt, siehe `source.transformation`), kein Drehen/Skalieren.
 
-Transformation aus dem Vorgänger (mm, y nach unten) ins Repo-System (m, y nach oben,
-Ursprung = linke untere Rohbau-Außenecke): `x_m = (x + 135) / 1000`, `y_m = (9840 − y) / 1000`.
-Die 6,85-m-Kette liegt dadurch bei x = 0,135 … 6,985 m. Erzeugt mit `python3 tools/render_plan.py plans/RBS25/geometrie/OG2.json`.
+| Geschoss | Geometrie | SVG / DXF | Wohnungen | Flächenprüfung |
+|----------|-----------|-----------|-----------|----------------|
+| OG2 (gesamte Etage) | `geometrie/OG2.json` | `ausgabe/RBS25_OG2.svg` / `.dxf` | WE5 (nach Sanierung), WE6 | WE5 Wohnen +0,2 %, Schlafen +0,3 %, Flur +0,5 %; WE6 Kind +0,1 %, Bad −1,2 %, Flur −0,7 %, Schlafen ±0,0 %, Wohnen/Essen +0,2 % (Sollwerte bemaßter Plan) |
+
+### OG2 – Transformation und Kontrollmaße
+
+- Aufteilungsplan: `x_m = (x_pt − 1192,44) / 28,3465`, `y_m = (494,16 − y_pt) / 28,3465`.
+- WE05 (Sanierungszustand) aus der bisherigen `OG2.json`: `x_neu = x_alt − 0,010`, `y_neu = y_alt`.
+  Die Brandwand links ist damit 0,125 m stark (16,515 − Kettensumme 16,39); die 6,85-m-Kette liegt bei x = 0,125 … 6,975.
+- Kontrollmaße soll (bemaßter Plan) / ist (Zeichnung): Kette unten 3,25 / 3,21 / 2,20 / 3,22 / 3,16 → 3,250 / 3,210 / 2,203 / 3,217 / 3,168;
+  Gesamtbreite 16,515 / 16,527; Tiefe links 9,84 / 9,84 (WE05) bzw. 9,83 (Aufteilungsplan); rechte Seite 11,395 / 11,405
+  (0,57 / 4,94 / 0,27 / 3,23 / 0,30 / 1,86 / 0,225 → 0,572 / 4,940 / 0,271 / 3,230 / 0,300 / 1,859 / 0,233); 12,15 / 12,167.
 
 ## Klärungen (Eigentümer, 04.11.2026)
 
