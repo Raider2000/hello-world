@@ -13,6 +13,7 @@
 
 | Geschoss | Geometrie | SVG | DXF | Flächenprüfung |
 |----------|-----------|-----|-----|----------------|
+| KG | `geometrie/KG.json` | `ausgabe/KFS31_KG.svg` | `ausgabe/KFS31_KG.dxf` | 9 Abweichungen > 3 % (Kellerverschläge schematisch, s. u.) |
 | EG | `geometrie/EG.json` | `ausgabe/KFS31_EG.svg` | `ausgabe/KFS31_EG.dxf` | 3 Abweichungen > 3 % (dokumentiert, s. u.) |
 | OG1 | `geometrie/OG1.json` | `ausgabe/KFS31_OG1.svg` | `ausgabe/KFS31_OG1.dxf` | 1 Abweichung > 3 % (Bad WE 3, s. u.) |
 | OG2 | `geometrie/OG2.json` | `ausgabe/KFS31_OG2.svg` | `ausgabe/KFS31_OG2.dxf` | 2 Abweichungen > 3 % (Bad WE 6, Flur WE 8) |
@@ -22,10 +23,14 @@
 
 | Geschoss | 2010 (Raumaufteilung, WE) | 1999 (Maße) | 2026 |
 |----------|---------------------------|-------------|------|
+| KG | S. 3 | S. 2 + S. 3 | – |
 | EG | S. 4 | S. 4 (Neubau/West) + S. 5 (Altbau/Ost) | WE 1 |
 | OG1 | S. 5 | S. 6 + S. 7 | – |
 | OG2 | S. 6 | S. 8 + S. 9 | – |
 | DG | S. 7 | S. 10 + S. 11 | – |
+| SB | – (kein Grundriss 2010) | S. 12/13 (nicht ausgewertet) | – |
+
+Ansichten (2010 S. 8–10), Schnitt (S. 11) und Lageplan (S. 1–2) wurden nicht neu gezeichnet.
 
 ## Koordinatensystem (alle Geschosse gleich)
 
@@ -33,6 +38,8 @@
   Raimundstraße, y nach Norden entlang der Karl-Ferlemann-Straße.
 - Neubau (Westteil) x = 0 … 12,39, Fuge 0,02, Altbau x = 12,41 … 26,91 (14,50 lt. 1999).
 - Ecke Raimund-/Karl-Ferlemann-Straße abgeschrägt: (24,76 | 0) → (26,91 | 2,15).
+- KG lt. 1999 größer: 14,60 × 14,10 (Ostkante x = 27,01, Nordkante y = 14,10, Abschrägung 2,185),
+  Außenwände 0,65–0,75. Der Neubau ist nicht unterkellert.
 - Brandwand Nachbar (Nord) Außenkante y = 14,05.
 
 ## Arbeitsweise
@@ -83,3 +90,12 @@ Maßketten 1999. Der Plan 2026 (WE 1) wurde über die Fensterachsen 1999 skalier
 - Neubau-Südfenster lt. Maßkette 1999 S. 10 (Doppelfenster); Altbau-Fenster wie OG übernommen
   (1999 bemaßt im DG abweichende Öffnungen).
 - Bad WE 9: wie in OG1/OG2 (Zickzackwand), 5,61 statt 6,85 m².
+
+### KG
+- Die Kellerverschläge sind Lattenverschläge (ca. 0,07) und im Scan 2010 nur schematisch erkennbar.
+  Die Trennwände sind aus dem entzerrten Scan abgegriffen; die Flächen weichen bis ca. 25 % ab
+  (Keller 2/3/4/5/6/7, ELT, AR, HR/Technik +3,6 %). Wohnungszuordnung der Keller unleserlich →
+  Räume heißen „Keller (1)“ … „Keller (8)“.
+- Nördlicher Raum (11,60–13,40) ohne Bezeichnung; Hofbereich westlich des AR (Schacht?) unklar.
+- Spitzboden: Die Bauantragsblätter 1999 S. 12/13 wurden nicht neu gezeichnet; 2010 enthält keinen
+  Spitzboden-Grundriss.
