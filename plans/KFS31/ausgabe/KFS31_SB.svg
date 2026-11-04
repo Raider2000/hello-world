@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="392.3mm" height="302.7mm" viewBox="0 0 392.3 302.7">
+<title>KFS31 – Spitzboden</title>
+<style>text{font-family:Arial,Helvetica,sans-serif}</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g id="A_RAUM" fill="none">
+<polygon points="40.00,139.30 161.50,139.30 161.50,110.90 40.00,110.90" fill="#f4f4f4" stroke="#555" stroke-width="0.25" stroke-dasharray="2,1"/>
+<polygon points="168.60,139.30 252.30,139.30 252.30,121.71 241.49,110.90 168.60,110.90" fill="#f4f4f4" stroke="#555" stroke-width="0.25" stroke-dasharray="2,1"/>
+<polygon points="234.40,38.50 269.40,38.50 269.40,139.00 253.30,139.00 253.30,121.29 234.40,102.39" fill="#f4f4f4" stroke="#555" stroke-width="0.25" stroke-dasharray="2,1"/>
+</g>
+<g id="A_WAND_TRAGEND" fill="#000000" stroke="#000" stroke-width="0.35">
+<polygon points="163.90,178.80 163.90,101.10 161.50,101.10 161.50,178.80"/>
+<polygon points="168.60,179.00 168.60,101.10 164.10,101.10 164.10,179.00"/>
+</g>
+<g id="A_WAND" fill="#9a9a9a" stroke="#000" stroke-width="0.35">
+<polygon points="234.15,103.55 252.45,121.85 253.15,121.15 234.85,102.85"/>
+<polygon points="252.30,121.50 252.30,139.30 253.30,139.30 253.30,121.50"/>
+</g>
+<g id="A_OEFFNUNG" fill="none" stroke="#000" stroke-width="0.18">
+</g>
+<g id="A_TREPPE" stroke="#000" stroke-width="0.12" fill="none">
+<line x1="136.90" y1="114.60" x2="151.00" y2="111.00"/>
+<line x1="136.90" y1="114.60" x2="151.00" y2="118.20"/>
+<polygon points="136.90,118.20 151.00,118.20 151.00,111.00 136.90,111.00" fill="none"/>
+<line x1="192.80" y1="129.35" x2="205.60" y2="125.70"/>
+<line x1="192.80" y1="129.35" x2="205.60" y2="133.00"/>
+<polygon points="192.80,133.00 205.60,133.00 205.60,125.70 192.80,125.70" fill="none"/>
+<line x1="260.90" y1="82.90" x2="257.30" y2="97.10"/>
+<line x1="260.90" y1="82.90" x2="264.50" y2="97.10"/>
+<polygon points="257.30,97.10 264.50,97.10 264.50,82.90 257.30,82.90" fill="none"/>
+</g>
+<g id="A_SYMBOL" stroke="#000" stroke-width="0.12" fill="none">
+<line x1="40.00" y1="178.80" x2="163.90" y2="178.80"/>
+<line x1="163.90" y1="178.80" x2="163.90" y2="101.10"/>
+<line x1="163.90" y1="101.10" x2="40.00" y2="101.10"/>
+<line x1="40.00" y1="101.10" x2="40.00" y2="178.80"/>
+<line x1="164.10" y1="179.00" x2="287.60" y2="179.00"/>
+<line x1="287.60" y1="179.00" x2="309.10" y2="157.50"/>
+<line x1="309.10" y1="157.50" x2="309.10" y2="38.50"/>
+<line x1="309.10" y1="38.50" x2="204.40" y2="38.50"/>
+<line x1="204.40" y1="38.50" x2="204.40" y2="89.00"/>
+<line x1="204.40" y1="89.00" x2="197.10" y2="89.00"/>
+<line x1="197.10" y1="89.00" x2="197.10" y2="101.50"/>
+<line x1="197.10" y1="101.50" x2="164.10" y2="101.50"/>
+<line x1="164.10" y1="101.50" x2="164.10" y2="179.00"/>
+<line x1="252.30" y1="139.30" x2="252.30" y2="168.00"/>
+<line x1="253.30" y1="139.30" x2="253.30" y2="168.00"/>
+<line x1="234.50" y1="103.20" x2="229.00" y2="98.30"/>
+<line x1="229.00" y1="98.30" x2="204.40" y2="98.30"/>
+</g>
+<g id="A_BEMASSUNG" stroke="#333" stroke-width="0.13" font-size="2.2" fill="#333">
+<line x1="40.00" y1="191.00" x2="161.50" y2="191.00"/>
+<line x1="40.00" y1="179.00" x2="40.00" y2="191.00"/>
+<line x1="39.20" y1="191.80" x2="40.80" y2="190.20" stroke-width="0.35"/>
+<line x1="161.50" y1="179.00" x2="161.50" y2="191.00"/>
+<line x1="160.70" y1="191.80" x2="162.30" y2="190.20" stroke-width="0.35"/>
+<text x="100.75" y="190.20" text-anchor="middle" stroke="none" transform="rotate(-0.0 100.75 191.00)">12,150</text>
+<line x1="161.50" y1="191.00" x2="163.90" y2="191.00"/>
+<line x1="161.50" y1="179.00" x2="161.50" y2="191.00"/>
+<line x1="160.70" y1="191.80" x2="162.30" y2="190.20" stroke-width="0.35"/>
+<line x1="163.90" y1="179.00" x2="163.90" y2="191.00"/>
+<line x1="163.10" y1="191.80" x2="164.70" y2="190.20" stroke-width="0.35"/>
+<text x="162.70" y="190.20" text-anchor="middle" stroke="none" transform="rotate(-0.0 162.70 191.00)"> </text>
+<line x1="163.90" y1="191.00" x2="164.10" y2="191.00"/>
+<line x1="163.90" y1="179.00" x2="163.90" y2="191.00"/>
+<line x1="163.10" y1="191.80" x2="164.70" y2="190.20" stroke-width="0.35"/>
+<line x1="164.10" y1="179.00" x2="164.10" y2="191.00"/>
+<line x1="163.30" y1="191.80" x2="164.90" y2="190.20" stroke-width="0.35"/>
+<text x="164.00" y="190.20" text-anchor="middle" stroke="none" transform="rotate(-0.0 164.00 191.00)"> </text>
+<line x1="164.10" y1="191.00" x2="168.60" y2="191.00"/>
+<line x1="164.10" y1="179.00" x2="164.10" y2="191.00"/>
+<line x1="163.30" y1="191.80" x2="164.90" y2="190.20" stroke-width="0.35"/>
+<line x1="168.60" y1="179.00" x2="168.60" y2="191.00"/>
+<line x1="167.80" y1="191.80" x2="169.40" y2="190.20" stroke-width="0.35"/>
+<text x="166.35" y="190.20" text-anchor="middle" stroke="none" transform="rotate(-0.0 166.35 191.00)"> </text>
+<line x1="161.50" y1="184.00" x2="168.60" y2="184.00"/>
+<line x1="161.50" y1="179.00" x2="161.50" y2="184.00"/>
+<line x1="160.70" y1="184.80" x2="162.30" y2="183.20" stroke-width="0.35"/>
+<line x1="168.60" y1="179.00" x2="168.60" y2="184.00"/>
+<line x1="167.80" y1="184.80" x2="169.40" y2="183.20" stroke-width="0.35"/>
+<text x="165.05" y="183.20" text-anchor="middle" stroke="none" transform="rotate(-0.0 165.05 184.00)">0,24 / 0,02 / 0,45</text>
+<line x1="168.60" y1="191.00" x2="309.10" y2="191.00"/>
+<line x1="168.60" y1="179.00" x2="168.60" y2="191.00"/>
+<line x1="167.80" y1="191.80" x2="169.40" y2="190.20" stroke-width="0.35"/>
+<line x1="309.10" y1="179.00" x2="309.10" y2="191.00"/>
+<line x1="308.30" y1="191.80" x2="309.90" y2="190.20" stroke-width="0.35"/>
+<text x="238.85" y="190.20" text-anchor="middle" stroke="none" transform="rotate(-0.0 238.85 191.00)">14,050</text>
+<line x1="40.00" y1="201.00" x2="309.10" y2="201.00"/>
+<line x1="40.00" y1="179.00" x2="40.00" y2="201.00"/>
+<line x1="39.20" y1="201.80" x2="40.80" y2="200.20" stroke-width="0.35"/>
+<line x1="309.10" y1="179.00" x2="309.10" y2="201.00"/>
+<line x1="308.30" y1="201.80" x2="309.90" y2="200.20" stroke-width="0.35"/>
+<text x="174.55" y="200.20" text-anchor="middle" stroke="none" transform="rotate(-0.0 174.55 201.00)">26,910</text>
+<line x1="323.10" y1="179.00" x2="323.10" y2="38.50"/>
+<line x1="309.10" y1="179.00" x2="323.10" y2="179.00"/>
+<line x1="322.30" y1="179.80" x2="323.90" y2="178.20" stroke-width="0.35"/>
+<line x1="309.10" y1="38.50" x2="323.10" y2="38.50"/>
+<line x1="322.30" y1="39.30" x2="323.90" y2="37.70" stroke-width="0.35"/>
+<text x="323.10" y="107.95" text-anchor="middle" stroke="none" transform="rotate(-90.0 323.10 108.75)">14,050</text>
+<line x1="30.00" y1="139.30" x2="30.00" y2="110.90"/>
+<line x1="40.00" y1="139.30" x2="30.00" y2="139.30"/>
+<line x1="29.20" y1="140.10" x2="30.80" y2="138.50" stroke-width="0.35"/>
+<line x1="40.00" y1="110.90" x2="30.00" y2="110.90"/>
+<line x1="29.20" y1="111.70" x2="30.80" y2="110.10" stroke-width="0.35"/>
+<text x="30.00" y="124.30" text-anchor="middle" stroke="none" transform="rotate(-90.0 30.00 125.10)">2,84 lichte Höhe ≥ 1 m</text>
+<line x1="234.40" y1="29.50" x2="269.40" y2="29.50"/>
+<line x1="234.40" y1="38.50" x2="234.40" y2="29.50"/>
+<line x1="233.60" y1="30.30" x2="235.20" y2="28.70" stroke-width="0.35"/>
+<line x1="269.40" y1="38.50" x2="269.40" y2="29.50"/>
+<line x1="268.60" y1="30.30" x2="270.20" y2="28.70" stroke-width="0.35"/>
+<text x="251.90" y="28.70" text-anchor="middle" stroke="none" transform="rotate(-0.0 251.90 29.50)">3,50 lichte Höhe ≥ 1 m</text>
+</g>
+<g id="A_TEXT" font-size="2.6" text-anchor="middle" fill="#000">
+<text x="92.00" y="123.00" font-weight="bold">Spitzboden W11</text>
+<text x="92.00" y="126.20" font-size="2.2">34,51 m² mit lichter Höhe ≥ 1 m (F = 17,26 m²)</text>
+<text x="206.00" y="118.50" font-weight="bold" font-size="2.20">Spitzboden W8 (Sondernutzung)</text>
+<text x="206.00" y="121.21" font-size="1.86">23,10 m² mit lichter Höhe ≥ 1 m (A = 11,55 m²)</text>
+<text x="251.90" y="63.00" font-weight="bold" font-size="2.00">Spitzboden W7 (Sondernutzung)</text>
+<text x="251.90" y="65.46" font-size="1.69">30,52 m² (≥ 1 m), F = 15,26 m²</text>
+<text x="105.00" y="74.00" font-size="3" text-anchor="middle">Hof</text>
+<text x="175.00" y="221.00" font-size="3" text-anchor="middle">Raimundstraße</text>
+<text x="340.00" y="109.00" font-size="3" text-anchor="middle">Karl-Ferlemann-Straße</text>
+<text x="257.00" y="35.00" font-size="1.8" text-anchor="end">vorhandene Nachbarbebauung</text>
+<text x="35.00" y="87.00" font-size="1.8" text-anchor="start">vorh. Nachbarbebauung</text>
+<text x="144.00" y="121.50" font-size="1.6" text-anchor="middle">Bodentreppe</text>
+<text x="199.20" y="136.00" font-size="1.6" text-anchor="middle">Bodentreppe</text>
+<text x="260.90" y="100.50" font-size="1.6" text-anchor="middle">Bodentreppe</text>
+<text x="173.50" y="127.50" font-size="1.6" text-anchor="start">Höhenkote +13,22</text>
+<text x="247.50" y="109.50" font-size="1.4" text-anchor="start">Trennwand F 90</text>
+<text x="101.00" y="155.00" font-size="1.8" text-anchor="middle">Dachfläche (lichte Höhe &lt; 1 m)</text>
+<text x="101.00" y="165.00" font-size="1.4" text-anchor="middle">Neubau: Kehlbalken UK +12,94, First +15,22, Dachneigung 60°/20° (Schnitt A-A)</text>
+<text x="210.00" y="155.00" font-size="1.8" text-anchor="middle">Dachfläche (lichte Höhe &lt; 1 m)</text>
+<text x="289.00" y="69.00" font-size="1.8" text-anchor="middle">Dachfläche</text>
+</g>
+<g id="A_UNGEPRUEFT" font-size="1.5" font-weight="bold" text-anchor="middle">
+<circle cx="46.00" cy="116.00" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="46.00" y="116.55" fill="#d00000">1</text>
+<circle cx="180.00" cy="135.00" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="180.00" y="135.55" fill="#d00000">2</text>
+<circle cx="240.00" cy="44.00" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="240.00" y="44.55" fill="#d00000">3</text>
+<circle cx="242.00" cy="115.00" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="242.00" y="115.55" fill="#d00000">4</text>
+<circle cx="220.00" cy="129.00" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="220.00" y="129.55" fill="#d00000">5</text>
+<circle cx="70.00" cy="135.00" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="70.00" y="135.55" fill="#d00000">6</text>
+<circle cx="155.00" cy="116.00" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="155.00" y="116.55" fill="#d00000">7</text>
+<circle cx="166.40" cy="163.00" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="166.40" y="163.55" fill="#d00000">8</text>
+<circle cx="300.00" cy="169.00" r="1.25" fill="#ffffff" fill-opacity="0.85" stroke="#d00000" stroke-width="0.25"/><text x="300.00" y="169.55" fill="#d00000">9</text>
+</g>
+<g id="SCHRIFTFELD" font-size="2.6" fill="#000"><text x="35.0" y="266.0" font-weight="bold">KFS31 · Spitzboden · M 1:100</text>
+<text x="35.0" y="270.0" font-size="2">Quelle: 19990111-Grundrisse-Karl_Ferlemann_Str_31.pdf S. 12/13 (Grundriss Spitzboden -Gesamt-, M 1:100) · S. 18 (Schnitt A-A) (1999-01-11 (Plan 01.07.96 / 21.12.98)) · Maße in m · Neuzeichnung, ohne Gewähr – rot nummerierte Punkte sind ungeprüft (Legende)</text>
+</g>
+<g id="LEGENDE_UNGEPRUEFT" font-size="1.8" fill="#333"><text x="35.0" y="276.2" font-weight="bold" fill="#d00000">Ungeprüfte bzw. angenommene Werte</text>
+<text x="35.0" y="279.1">1 Lage der Spitzbodenstreifen in y (3,97–6,81) aus dem entzerrten Scan abgegriffen (±5 cm); bemaßt ist nur die Breite 2,84 (lichte Höhe ≥ 1 m). Die Fläche 34,51 = 12,15 × 2,84 bestätigt Länge und Breite.</text>
+<text x="35.0" y="281.8">2 Spitzboden Altbau Süd: Länge nicht bemaßt, Ostgrenze = Trennwand (x 21,23) abgegriffen; Fläche lt. Plan 23,10 m² stimmt mit der Zeichnung auf 0,4 % überein.</text>
+<text x="35.0" y="284.5">3 Spitzboden Ost: x 19,44–22,94 abgegriffen (Breite 3,50 bemaßt), Südgrenze y 4,00 abgegriffen, Nordgrenze an der Brandwand y 14,05 angenommen.</text>
+<text x="35.0" y="287.2">4 Trennwand zwischen den Altbau-Spitzböden: Beschriftung „…KA F90“ schlecht lesbar (F 90 oder F 30); Stärke 0,10 und Lage abgegriffen. Südlich der 1-m-Linie und nach Nordwesten bis zur Hoffassade im Plan nur gestrichelt (dünn dargestellt).</text>
+<text x="35.0" y="289.9">5 Zuordnung W7/W8: Kennzeichen im Süd-Spitzboden als „8“ gelesen, im Ost-Spitzboden unleserlich. Im DG-Plan 1999 (S. 10) liegt W8 im Südwestteil des Altbaus, W7 umfasste Nord- und Ostteil. Der Aufteilungsplan 2010 nummeriert W7 = Süd, W8 = Nord; ob die Sondernutzungsrechte durch die Nachträge 2010/2011 angepasst wurden, ist offen.</text>
+<text x="35.0" y="292.6">6 W11: Teilungserklärung 1999 Nr. 1.2.11 nennt den über eine Bodentreppe erreichbaren Spitzboden „dazugehörend … ebenfalls mit W 11 bezeichnet“, anders als bei W7/W8 nicht ausdrücklich als Sondernutzungsrecht.</text>
+<text x="35.0" y="295.3">7 Bodentreppen nicht bemaßt; Lage und Größe abgegriffen (ca. 1,41 × 0,72 / 1,28 × 0,73 / 0,72 × 1,42 m).</text>
+<text x="35.0" y="298.0">8 Brandwand/Giebel an der Fuge: Stärken lt. Maßkette (0,24 / 0,02 / 0,45); im Plan geschwärzt (über Dach) y 2,98–7,84, Umriss bis Traufe. Länge wie DG angenommen. Kamine sind im Plan nicht erkennbar.</text>
+<text x="35.0" y="300.7">9 Außenkontur aus DG.json übernommen; der Spitzbodenplan zeigt Traufen mit Überstand (Süd ca. y −0,46, Ost ca. x 27,4). Dachgauben (Süd- und Ostseite) und Dachflächen sind nicht bemaßt und deshalb nicht gezeichnet.</text>
+</g>
+</svg>

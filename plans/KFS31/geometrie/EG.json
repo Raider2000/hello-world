@@ -1,0 +1,1831 @@
+{
+ "object": "KFS31",
+ "floor": "EG",
+ "floor_name": "Erdgeschoss",
+ "source": {
+  "file": "20101111-Grundrisse-Karl_Ferlemann_Str_31.pdf S. 4 (Raum/WE) · 19990111-…pdf S. 4/5 (Maße) · 2026-…WE1-vereinfacht.svg (WE 1)",
+  "date": "2010-11-11 / 1999-01-11 / 2026",
+  "version": "Aufteilungsplan WE 1–11, Bl. 02"
+ },
+ "walls": [
+  {
+   "id": "A1",
+   "a": [
+    12.41,
+    0
+   ],
+   "b": [
+    24.76,
+    0
+   ],
+   "thickness": 0.55,
+   "align": "left",
+   "type": "exterior"
+  },
+  {
+   "id": "A2",
+   "a": [
+    24.76,
+    0
+   ],
+   "b": [
+    26.91,
+    2.15
+   ],
+   "thickness": 0.55,
+   "align": "left",
+   "type": "exterior"
+  },
+  {
+   "id": "A3",
+   "a": [
+    26.91,
+    2.15
+   ],
+   "b": [
+    26.91,
+    14.05
+   ],
+   "thickness": 0.55,
+   "align": "left",
+   "type": "exterior"
+  },
+  {
+   "id": "A4",
+   "a": [
+    26.91,
+    14.05
+   ],
+   "b": [
+    16.42,
+    14.05
+   ],
+   "thickness": 0.65,
+   "align": "left",
+   "type": "exterior"
+  },
+  {
+   "id": "A5",
+   "a": [
+    16.42,
+    14.05
+   ],
+   "b": [
+    16.42,
+    9.36
+   ],
+   "thickness": 0.56,
+   "align": "left",
+   "type": "exterior"
+  },
+  {
+   "id": "A6",
+   "a": [
+    15.71,
+    9.02
+   ],
+   "b": [
+    16.98,
+    9.02
+   ],
+   "thickness": 0.68,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "A7",
+   "a": [
+    15.985,
+    7.2
+   ],
+   "b": [
+    15.985,
+    8.68
+   ],
+   "thickness": 0.55,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "A8",
+   "a": [
+    13.89,
+    7.39
+   ],
+   "b": [
+    15.71,
+    7.39
+   ],
+   "thickness": 0.48,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "A9",
+   "a": [
+    14.16,
+    5.78
+   ],
+   "b": [
+    14.16,
+    7.15
+   ],
+   "thickness": 0.54,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "A10",
+   "a": [
+    12.41,
+    5.495
+   ],
+   "b": [
+    14.43,
+    5.495
+   ],
+   "thickness": 0.57,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "A11",
+   "a": [
+    12.685,
+    0.55
+   ],
+   "b": [
+    12.685,
+    5.21
+   ],
+   "thickness": 0.55,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "L1",
+   "a": [
+    14.43,
+    5.495
+   ],
+   "b": [
+    21.35,
+    5.495
+   ],
+   "thickness": 0.57,
+   "align": "center",
+   "type": "load-bearing"
+  },
+  {
+   "id": "L2",
+   "a": [
+    21.35,
+    5.33
+   ],
+   "b": [
+    26.36,
+    5.33
+   ],
+   "thickness": 0.24,
+   "align": "center",
+   "type": "load-bearing"
+  },
+  {
+   "id": "L3",
+   "a": [
+    21.5,
+    5.45
+   ],
+   "b": [
+    21.5,
+    8.68
+   ],
+   "thickness": 0.3,
+   "align": "center",
+   "type": "load-bearing"
+  },
+  {
+   "id": "L4",
+   "a": [
+    16.98,
+    8.835
+   ],
+   "b": [
+    21.35,
+    8.835
+   ],
+   "thickness": 0.31,
+   "align": "center",
+   "type": "load-bearing"
+  },
+  {
+   "id": "L5",
+   "a": [
+    16.98,
+    11.275
+   ],
+   "b": [
+    26.36,
+    11.275
+   ],
+   "thickness": 0.45,
+   "align": "center",
+   "type": "load-bearing"
+  },
+  {
+   "id": "I1",
+   "a": [
+    16.2,
+    5.78
+   ],
+   "b": [
+    16.2,
+    7.15
+   ],
+   "thickness": 0.16,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "I2",
+   "a": [
+    14.985,
+    2.96
+   ],
+   "b": [
+    14.985,
+    5.21
+   ],
+   "thickness": 0.11,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "I3",
+   "a": [
+    18.915,
+    0.55
+   ],
+   "b": [
+    18.915,
+    5.21
+   ],
+   "thickness": 0.15,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "I4",
+   "a": [
+    18.99,
+    3.85
+   ],
+   "b": [
+    21.34,
+    3.85
+   ],
+   "thickness": 0.1,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "I5",
+   "a": [
+    21.44,
+    0.55
+   ],
+   "b": [
+    21.44,
+    3.9
+   ],
+   "thickness": 0.2,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "I6",
+   "a": [
+    21.54,
+    3.85
+   ],
+   "b": [
+    22.42,
+    3.85
+   ],
+   "thickness": 0.1,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "I7",
+   "a": [
+    22.52,
+    3.8
+   ],
+   "b": [
+    22.52,
+    5.21
+   ],
+   "thickness": 0.2,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "I81",
+   "a": [
+    22.435,
+    3.8
+   ],
+   "b": [
+    23.27,
+    2.96
+   ],
+   "thickness": 0.19,
+   "align": "left",
+   "type": "interior"
+  },
+  {
+   "id": "I82",
+   "a": [
+    23.27,
+    2.96
+   ],
+   "b": [
+    22.61,
+    2.3
+   ],
+   "thickness": 0.32,
+   "align": "left",
+   "type": "interior"
+  },
+  {
+   "id": "I83",
+   "a": [
+    22.61,
+    2.3
+   ],
+   "b": [
+    24.355,
+    0.55
+   ],
+   "thickness": 0.18,
+   "align": "left",
+   "type": "interior"
+  },
+  {
+   "id": "I84",
+   "a": [
+    23.44,
+    0.55
+   ],
+   "b": [
+    23.82,
+    1.08
+   ],
+   "thickness": 0.74,
+   "align": "right",
+   "type": "interior"
+  },
+  {
+   "id": "I9",
+   "a": [
+    19.725,
+    8.99
+   ],
+   "b": [
+    19.725,
+    11.05
+   ],
+   "thickness": 0.17,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "I10",
+   "a": [
+    21.575,
+    8.99
+   ],
+   "b": [
+    21.575,
+    11.05
+   ],
+   "thickness": 0.15,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "I11",
+   "a": [
+    23.15,
+    7.995
+   ],
+   "b": [
+    26.36,
+    7.995
+   ],
+   "thickness": 0.15,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "I12",
+   "a": [
+    23.225,
+    5.45
+   ],
+   "b": [
+    23.225,
+    7.92
+   ],
+   "thickness": 0.15,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "N1a",
+   "a": [
+    0,
+    0.17
+   ],
+   "b": [
+    6.405,
+    0.17
+   ],
+   "thickness": 0.3,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "N1b",
+   "a": [
+    9.415,
+    0.17
+   ],
+   "b": [
+    12.39,
+    0.17
+   ],
+   "thickness": 0.3,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "N2",
+   "a": [
+    0.12,
+    0.32
+   ],
+   "b": [
+    0.12,
+    7.79
+   ],
+   "thickness": 0.24,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "N3",
+   "a": [
+    12.27,
+    0.32
+   ],
+   "b": [
+    12.27,
+    7.79
+   ],
+   "thickness": 0.24,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "N4",
+   "a": [
+    10.01,
+    0.32
+   ],
+   "b": [
+    10.01,
+    3.2
+   ],
+   "thickness": 0.12,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "N5",
+   "a": [
+    10.07,
+    1.21
+   ],
+   "b": [
+    12.15,
+    1.21
+   ],
+   "thickness": 0.1,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "N6",
+   "a": [
+    10.07,
+    2.15
+   ],
+   "b": [
+    12.15,
+    2.15
+   ],
+   "thickness": 0.1,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "N7",
+   "a": [
+    10.07,
+    3.12
+   ],
+   "b": [
+    12.15,
+    3.12
+   ],
+   "thickness": 0.16,
+   "align": "center",
+   "type": "interior"
+  }
+ ],
+ "openings": [
+  {
+   "id": "F_S1",
+   "wall": "A1",
+   "type": "window",
+   "offset": 1.1,
+   "width": 0.9
+  },
+  {
+   "id": "F_S2",
+   "wall": "A1",
+   "type": "window",
+   "offset": 3.2,
+   "width": 0.9
+  },
+  {
+   "id": "F_S3",
+   "wall": "A1",
+   "type": "window",
+   "offset": 5.05,
+   "width": 0.9
+  },
+  {
+   "id": "F_S4",
+   "wall": "A1",
+   "type": "window",
+   "offset": 6.9,
+   "width": 0.9
+  },
+  {
+   "id": "F_S5",
+   "wall": "A1",
+   "type": "window",
+   "offset": 10.15,
+   "width": 0.9
+  },
+  {
+   "id": "F_E1",
+   "wall": "A2",
+   "type": "window",
+   "offset": 1.07,
+   "width": 0.9
+  },
+  {
+   "id": "F_O1",
+   "wall": "A3",
+   "type": "window",
+   "offset": 1.35,
+   "width": 0.9
+  },
+  {
+   "id": "F_O2",
+   "wall": "A3",
+   "type": "window",
+   "offset": 4.6,
+   "width": 0.9
+  },
+  {
+   "id": "F_O3",
+   "wall": "A3",
+   "type": "window",
+   "offset": 6.4,
+   "width": 0.9
+  },
+  {
+   "id": "F_O4",
+   "wall": "A3",
+   "type": "window",
+   "offset": 8.1,
+   "width": 0.9
+  },
+  {
+   "id": "T_FR1",
+   "wall": "A3",
+   "type": "door",
+   "offset": 9.6,
+   "width": 1.55,
+   "hinge": "start",
+   "side": "left"
+  },
+  {
+   "id": "T_FR2",
+   "wall": "A5",
+   "type": "door",
+   "offset": 0.89,
+   "width": 1.51,
+   "hinge": "end",
+   "side": "left"
+  },
+  {
+   "id": "F_W1",
+   "wall": "A5",
+   "type": "window",
+   "offset": 3.035,
+   "width": 0.635
+  },
+  {
+   "id": "T_HE",
+   "wall": "A7",
+   "type": "door",
+   "offset": 0.46,
+   "width": 1.01,
+   "hinge": "start",
+   "side": "right"
+  },
+  {
+   "id": "T_WE1",
+   "wall": "L1",
+   "type": "door",
+   "offset": 5.32,
+   "width": 1.26,
+   "hinge": "start",
+   "side": "right"
+  },
+  {
+   "id": "T_WE2",
+   "wall": "L4",
+   "type": "door",
+   "offset": 3.27,
+   "width": 1.01,
+   "hinge": "end",
+   "side": "left"
+  },
+  {
+   "id": "T_AR",
+   "wall": "I1",
+   "type": "door",
+   "offset": 0.2,
+   "width": 0.885,
+   "hinge": "start",
+   "side": "left"
+  },
+  {
+   "id": "T_WZ",
+   "wall": "I3",
+   "type": "door",
+   "offset": 3.7,
+   "width": 0.885,
+   "hinge": "end",
+   "side": "left"
+  },
+  {
+   "id": "T_GB",
+   "wall": "I4",
+   "type": "door",
+   "offset": 0.07,
+   "width": 0.885,
+   "hinge": "start",
+   "side": "right"
+  },
+  {
+   "id": "T_BD",
+   "wall": "I6",
+   "type": "door",
+   "offset": 0.06,
+   "width": 0.76,
+   "hinge": "start",
+   "side": "right"
+  },
+  {
+   "id": "T_SZ",
+   "wall": "I7",
+   "type": "door",
+   "offset": 0.45,
+   "width": 0.885,
+   "hinge": "end",
+   "side": "right"
+  },
+  {
+   "id": "T_B2",
+   "wall": "I9",
+   "type": "door",
+   "offset": 0.23,
+   "width": 0.76,
+   "hinge": "end",
+   "side": "left"
+  },
+  {
+   "id": "T_W2",
+   "wall": "I10",
+   "type": "door",
+   "offset": 0.31,
+   "width": 0.885,
+   "hinge": "end",
+   "side": "left"
+  },
+  {
+   "id": "T_S2",
+   "wall": "I11",
+   "type": "door",
+   "offset": 0.96,
+   "width": 0.885,
+   "hinge": "start",
+   "side": "right"
+  },
+  {
+   "id": "F_N1",
+   "wall": "N1a",
+   "type": "window",
+   "offset": 2.25,
+   "width": 1.0
+  },
+  {
+   "id": "T_AR9",
+   "wall": "N4",
+   "type": "door",
+   "offset": 0.04,
+   "width": 0.76,
+   "hinge": "end",
+   "side": "right"
+  },
+  {
+   "id": "T_AR10",
+   "wall": "N4",
+   "type": "door",
+   "offset": 0.98,
+   "width": 0.76,
+   "hinge": "end",
+   "side": "right"
+  },
+  {
+   "id": "T_AR11",
+   "wall": "N4",
+   "type": "door",
+   "offset": 1.92,
+   "width": 0.76,
+   "hinge": "end",
+   "side": "right"
+  }
+ ],
+ "rooms": [
+  {
+   "name": "WE 1 – Küche",
+   "polygon": [
+    [
+     12.96,
+     2.96
+    ],
+    [
+     14.93,
+     2.96
+    ],
+    [
+     14.93,
+     5.21
+    ],
+    [
+     12.96,
+     5.21
+    ]
+   ],
+   "area_stated": 4.4
+  },
+  {
+   "name": "WE 1 – Wohn-/Esszimmer",
+   "polygon": [
+    [
+     12.96,
+     0.55
+    ],
+    [
+     18.84,
+     0.55
+    ],
+    [
+     18.84,
+     5.21
+    ],
+    [
+     15.04,
+     5.21
+    ],
+    [
+     15.04,
+     2.96
+    ],
+    [
+     12.96,
+     2.96
+    ]
+   ],
+   "area_stated": 23.35,
+   "label_pos": [
+    15.9,
+    1.6
+   ]
+  },
+  {
+   "name": "WE 1 – Gast/Büro",
+   "polygon": [
+    [
+     18.99,
+     0.55
+    ],
+    [
+     21.34,
+     0.55
+    ],
+    [
+     21.34,
+     3.8
+    ],
+    [
+     18.99,
+     3.8
+    ]
+   ],
+   "area_stated": 7.75
+  },
+  {
+   "name": "WE 1 – Flur",
+   "polygon": [
+    [
+     18.99,
+     3.9
+    ],
+    [
+     22.42,
+     3.9
+    ],
+    [
+     22.42,
+     5.21
+    ],
+    [
+     18.99,
+     5.21
+    ]
+   ],
+   "area_stated": 4.55
+  },
+  {
+   "name": "WE 1 – Bad/WC", "area_note": "Plan nennt 6,35, Wände 2026 ergeben ca. 5,2; 2026 „ca. 6 m²“; Aufmaß offen",
+   "polygon": [
+    [
+     21.54,
+     0.55
+    ],
+    [
+     23.44,
+     0.55
+    ],
+    [
+     23.82,
+     1.08
+    ],
+    [
+     22.61,
+     2.3
+    ],
+    [
+     23.27,
+     2.96
+    ],
+    [
+     22.435,
+     3.8
+    ],
+    [
+     21.54,
+     3.8
+    ]
+   ],
+   "area_stated": 6.35,
+   "label_pos": [
+    22.05,
+    2.6
+   ]
+  },
+  {
+   "name": "WE 1 – Schlafzimmer",
+   "polygon": [
+    [
+     22.62,
+     5.21
+    ],
+    [
+     22.62,
+     3.883
+    ],
+    [
+     23.63,
+     2.867
+    ],
+    [
+     22.963,
+     2.201
+    ],
+    [
+     24.609,
+     0.55
+    ],
+    [
+     24.532,
+     0.55
+    ],
+    [
+     26.36,
+     2.378
+    ],
+    [
+     26.36,
+     5.21
+    ]
+   ],
+   "area_stated": 13.0,
+   "label_pos": [
+    24.9,
+    3.3
+   ]
+  },
+  {
+   "name": "WE 2 – Bad",
+   "polygon": [
+    [
+     16.98,
+     8.99
+    ],
+    [
+     19.64,
+     8.99
+    ],
+    [
+     19.64,
+     11.05
+    ],
+    [
+     16.98,
+     11.05
+    ]
+   ],
+   "area_stated": 5.6
+  },
+  {
+   "name": "WE 2 – Flur",
+   "polygon": [
+    [
+     19.81,
+     8.99
+    ],
+    [
+     21.5,
+     8.99
+    ],
+    [
+     21.5,
+     11.05
+    ],
+    [
+     19.81,
+     11.05
+    ]
+   ],
+   "area_stated": 3.5
+  },
+  {
+   "name": "WE 2 – Wohnen", "area_note": "Plan 2010 widersprüchlich; Summe Wohnen+Schlafen stimmt",
+   "polygon": [
+    [
+     21.65,
+     7.92
+    ],
+    [
+     23.15,
+     7.92
+    ],
+    [
+     23.15,
+     8.07
+    ],
+    [
+     26.36,
+     8.07
+    ],
+    [
+     26.36,
+     11.05
+    ],
+    [
+     21.65,
+     11.05
+    ]
+   ],
+   "area_stated": 15.05,
+   "label_pos": [
+    24.2,
+    9.6
+   ]
+  },
+  {
+   "name": "WE 2 – Kochen",
+   "polygon": [
+    [
+     21.65,
+     5.45
+    ],
+    [
+     23.15,
+     5.45
+    ],
+    [
+     23.15,
+     7.92
+    ],
+    [
+     21.65,
+     7.92
+    ]
+   ],
+   "area_stated": 3.8
+  },
+  {
+   "name": "WE 2 – Schlafen", "area_note": "Plan 2010 widersprüchlich; Summe Wohnen+Schlafen stimmt",
+   "polygon": [
+    [
+     23.3,
+     5.45
+    ],
+    [
+     26.36,
+     5.45
+    ],
+    [
+     26.36,
+     7.92
+    ],
+    [
+     23.3,
+     7.92
+    ]
+   ],
+   "area_stated": 7.25
+  },
+  {
+   "name": "AR",
+   "polygon": [
+    [
+     14.43,
+     5.78
+    ],
+    [
+     16.12,
+     5.78
+    ],
+    [
+     16.12,
+     7.15
+    ],
+    [
+     14.43,
+     7.15
+    ]
+   ],
+   "area_stated": 2.3
+  },
+  {
+   "name": "Fahrradabstellraum",
+   "polygon": [
+    [
+     16.98,
+     11.5
+    ],
+    [
+     26.36,
+     11.5
+    ],
+    [
+     26.36,
+     13.4
+    ],
+    [
+     16.98,
+     13.4
+    ]
+   ],
+   "area_stated": 17.8
+  },
+  {
+   "name": "Treppenhaus",
+   "polygon": [
+    [
+     16.26,
+     5.78
+    ],
+    [
+     21.35,
+     5.78
+    ],
+    [
+     21.35,
+     8.68
+    ],
+    [
+     16.26,
+     8.68
+    ]
+   ],
+   "show_area": false,
+   "label_pos": [
+    17.0,
+    6.6
+   ]
+  },
+  {
+   "name": "Treppe",
+   "polygon": [
+    [
+     17.75,
+     5.78
+    ],
+    [
+     20.15,
+     5.78
+    ],
+    [
+     20.15,
+     8.68
+    ],
+    [
+     17.75,
+     8.68
+    ]
+   ],
+   "outline": true,
+   "show_area": false,
+   "subtitle": "KG ↓ / OG ↑"
+  },
+  {
+   "name": "AR 9",
+   "polygon": [
+    [
+     10.07,
+     0.32
+    ],
+    [
+     12.15,
+     0.32
+    ],
+    [
+     12.15,
+     1.16
+    ],
+    [
+     10.07,
+     1.16
+    ]
+   ],
+   "area_stated": 1.75
+  },
+  {
+   "name": "AR 10",
+   "polygon": [
+    [
+     10.07,
+     1.26
+    ],
+    [
+     12.15,
+     1.26
+    ],
+    [
+     12.15,
+     2.1
+    ],
+    [
+     10.07,
+     2.1
+    ]
+   ],
+   "area_stated": 1.75
+  },
+  {
+   "name": "AR 11",
+   "polygon": [
+    [
+     10.07,
+     2.2
+    ],
+    [
+     12.15,
+     2.2
+    ],
+    [
+     12.15,
+     3.04
+    ],
+    [
+     10.07,
+     3.04
+    ]
+   ],
+   "area_stated": 1.75
+  },
+  {
+   "name": "Stellplatzanlage",
+   "polygon": [
+    [
+     0.24,
+     0.32
+    ],
+    [
+     9.95,
+     0.32
+    ],
+    [
+     9.95,
+     3.2
+    ],
+    [
+     12.15,
+     3.2
+    ],
+    [
+     12.15,
+     7.79
+    ],
+    [
+     0.24,
+     7.79
+    ]
+   ],
+   "show_area": false,
+   "label_pos": [
+    7.6,
+    5.0
+   ],
+   "subtitle": "offen, Neubau darüber"
+  },
+  {
+   "name": "Stellplatz 1",
+   "polygon": [
+    [
+     0.24,
+     0.32
+    ],
+    [
+     5.54,
+     0.32
+    ],
+    [
+     5.54,
+     2.8
+    ],
+    [
+     0.24,
+     2.8
+    ]
+   ],
+   "outline": true,
+   "show_area": false,
+   "subtitle": "Parklift"
+  },
+  {
+   "name": "Stellplatz 2",
+   "polygon": [
+    [
+     0.24,
+     2.8
+    ],
+    [
+     5.54,
+     2.8
+    ],
+    [
+     5.54,
+     5.29
+    ],
+    [
+     0.24,
+     5.29
+    ]
+   ],
+   "outline": true,
+   "show_area": false,
+   "subtitle": "Parklift"
+  },
+  {
+   "name": "Stellplatz 3",
+   "polygon": [
+    [
+     0.24,
+     5.29
+    ],
+    [
+     5.54,
+     5.29
+    ],
+    [
+     5.54,
+     7.79
+    ],
+    [
+     0.24,
+     7.79
+    ]
+   ],
+   "outline": true,
+   "show_area": false,
+   "subtitle": "Parklift"
+  }
+ ],
+ "dimensions": [
+  {
+   "a": [
+    0,
+    0
+   ],
+   "b": [
+    12.39,
+    0
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    12.39,
+    0
+   ],
+   "b": [
+    12.41,
+    0
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    12.41,
+    0
+   ],
+   "b": [
+    26.91,
+    0
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    0,
+    0
+   ],
+   "b": [
+    26.91,
+    0
+   ],
+   "offset": -2.2
+  },
+  {
+   "a": [
+    12.41,
+    0
+   ],
+   "b": [
+    13.51,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    13.51,
+    0
+   ],
+   "b": [
+    14.41,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    14.41,
+    0
+   ],
+   "b": [
+    15.61,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    15.61,
+    0
+   ],
+   "b": [
+    16.51,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    16.51,
+    0
+   ],
+   "b": [
+    17.46,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    17.46,
+    0
+   ],
+   "b": [
+    18.36,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    18.36,
+    0
+   ],
+   "b": [
+    19.31,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    19.31,
+    0
+   ],
+   "b": [
+    20.21,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    20.21,
+    0
+   ],
+   "b": [
+    22.56,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    22.56,
+    0
+   ],
+   "b": [
+    23.46,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    23.46,
+    0
+   ],
+   "b": [
+    24.76,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    0
+   ],
+   "b": [
+    26.91,
+    2.15
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    26.91,
+    2.15
+   ],
+   "b": [
+    26.91,
+    14.05
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    26.91,
+    2.15
+   ],
+   "b": [
+    26.91,
+    3.5
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    3.5
+   ],
+   "b": [
+    26.91,
+    4.4
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    4.4
+   ],
+   "b": [
+    26.91,
+    6.75
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    6.75
+   ],
+   "b": [
+    26.91,
+    7.65
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    7.65
+   ],
+   "b": [
+    26.91,
+    8.55
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    8.55
+   ],
+   "b": [
+    26.91,
+    9.45
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    9.45
+   ],
+   "b": [
+    26.91,
+    10.25
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    10.25
+   ],
+   "b": [
+    26.91,
+    11.15
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    11.15
+   ],
+   "b": [
+    26.91,
+    11.75
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    11.75
+   ],
+   "b": [
+    26.91,
+    13.3
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    13.3
+   ],
+   "b": [
+    26.91,
+    14.05
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    0,
+    0.02
+   ],
+   "b": [
+    0,
+    7.79
+   ],
+   "offset": 1.0
+  },
+  {
+   "a": [
+    16.42,
+    14.05
+   ],
+   "b": [
+    26.91,
+    14.05
+   ],
+   "offset": 0.8
+  }
+ ],
+ "notes": [
+  {
+   "pos": [
+    14.6,
+    10.8
+   ],
+   "text": "Hof",
+   "size": 3
+  },
+  {
+   "pos": [
+    19.5,
+    -3.2
+   ],
+   "text": "Raimundstraße",
+   "size": 3
+  },
+  {
+   "pos": [
+    29.6,
+    7.0
+   ],
+   "text": "Karl-Ferlemann-Straße",
+   "size": 3
+  },
+  {
+   "pos": [
+    6.2,
+    8.3
+   ],
+   "text": "Nordseite offen (Unterzug / Außenwand OG darüber)",
+   "size": 2
+  },
+  {
+   "pos": [
+    15.2,
+    12.6
+   ],
+   "text": "Durchgang 1,66",
+   "size": 2
+  },
+  {
+   "pos": [
+    12.8,
+    6.7
+   ],
+   "text": "Müll",
+   "size": 2
+  }
+ ],
+ "unverified": [
+  {
+   "pos": [
+    20.0,
+    5.5
+   ],
+   "text": "Nordwand WE 1: Innenkante 5,21 aus Plan 2010 abgegriffen; Bestandsplan 1999 und Plan 2026 zeigen 5,40",
+   "short": "Innenkante 5,21 (1999: 5,40)"
+  },
+  {
+   "pos": [
+    23.4,
+    2.2
+   ],
+   "text": "Zickzackwand Bad/Schlafzimmer und Mauerpfeiler aus Plan 2026 (unbemaßt) übernommen, Maßstab über Fensterachsen 1999 (131,6 px/m), Lage ±10 cm. Bad damit 5,2 m² statt 6,35 m² (2010) bzw. ca. 6 m² (2026): Plan 2010 zeigt eine diagonal gestellte Wanne mit abweichender Wandführung, die im Scan nicht eindeutig lesbar ist",
+   "short": "Bad lt. 2026 – Fläche abw."
+  },
+  {
+   "pos": [
+    14.98,
+    4.6
+   ],
+   "text": "Küchenwand: im Plan 2026 als Wand, im Plan 2010 nur als Linie – Dicke 0,11 angenommen",
+   "short": "Dicke angenommen"
+  },
+  {
+   "pos": [
+    20.5,
+    4.6
+   ],
+   "text": "Türbreiten (Rohbaurichtmaße) in den Scans unleserlich – Standardmaße 0,76/0,885/1,01 angenommen, Lage abgegriffen",
+   "short": "Türmaße angenommen"
+  },
+  {
+   "pos": [
+    21.6,
+    13.75
+   ],
+   "text": "Nordwand: Innenkante 13,40 (2010 abgegriffen), 1999: 13,50; Außenkante 14,05 lt. 1999",
+   "short": "13,40 / 1999: 13,50"
+  },
+  {
+   "pos": [
+    24.0,
+    11.28
+   ],
+   "text": "Wand WE 2/Fahrradraum: 11,05–11,50 aus 2010 abgegriffen, 1999: 11,25–11,55",
+   "short": "11,05–11,50 (1999 abw.)"
+  },
+  {
+   "pos": [
+    24.2,
+    9.0
+   ],
+   "text": "WE 2 Wohnen/Schlafen: lt. Plan 15,05 / 7,25 m²; die im Plan 2010 gezeichnete Trennwand (7,92–8,07) ergibt 14,26 / 7,56 m². Summe beider Räume stimmt auf 2 % – Plan 2010 in sich widersprüchlich",
+   "short": "Flächen abw. (Plan 2010 widersprüchlich)"
+  },
+  {
+   "pos": [
+    0.12,
+    4.0
+   ],
+   "text": "Neubau-Wanddicken lt. Bauantrag 1999 (0,24 / 0,30); Plan 2010 zeichnet ca. 0,36",
+   "short": "Wanddicke lt. 1999"
+  },
+  {
+   "pos": [
+    16.7,
+    10.7
+   ],
+   "text": "Fenster Bad WE 2 zum Hof: Breite abgegriffen (ca. 0,64), Maßzahl unleserlich",
+   "short": "Breite abgegriffen"
+  },
+  {
+   "pos": [
+    2.75,
+    -0.35
+   ],
+   "text": "Öffnung in der Neubau-Südwand EG: Lage/Breite (ca. 1,00) aus Plan 2010 abgegriffen, Art (Fenster/Lüftung) unklar",
+   "short": "Öffnung abgegriffen"
+  },
+  {
+   "pos": [
+    12.4,
+    3.0
+   ],
+   "text": "Fuge Neubau/Altbau 2 cm lt. 1999; Giebelwand Altbau 0,55 lt. 1999 (Plan 2026 zeichnet dünner)",
+   "short": ""
+  }
+ ]
+}

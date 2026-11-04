@@ -13,6 +13,8 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import os
+import re
 import sys
 from pathlib import Path
 from xml.sax.saxutils import escape
@@ -169,8 +171,26 @@ def bbox(plan):
         pts += [pt for pg in sy.get("polygons", []) for pt in pg["points"]]
         for c in sy.get("circles", []):
             pts += [(c["c"][0] - c["r"], c["c"][1] - c["r"]), (c["c"][0] + c["r"], c["c"][1] + c["r"])]
+    for nt in plan.get("notes", []):  # Notizen (z. B. Straßennamen) nicht abschneiden
+        w = len(nt["text"]) * nt.get("size", 2.2) * 0.055
+        x, y = nt["pos"]
+        a = nt.get("anchor", "middle")
+        lo = x - w / 2 if a == "middle" else (x - w if a == "end" else x)
+        pts += [(lo, y), (lo + w, y)]
     xs, ys = [p[0] for p in pts], [p[1] for p in pts]
     return min(xs), min(ys), max(xs), max(ys)
+
+
+def wrap(text, max_chars):
+    """Einfacher Zeilenumbruch für Fußzeilen und Legenden."""
+    lines, cur = [], ""
+    for word in text.split():
+        if cur and len(cur) + 1 + len(word) > max_chars:
+            lines.append(cur)
+            cur = word
+        else:
+            cur = f"{cur} {word}".strip()
+    return lines + ([cur] if cur else [])
 
 
 def margin_for(plan):
@@ -193,7 +213,15 @@ def room_report(plan):
 def render_svg(plan, geo, path):
     x0, y0, x1, y1 = bbox(plan)
     margin = plan.get("margin") or margin_for(plan)  # m; "margin" überschreibt die Automatik
-    W, H = x1 - x0 + 2 * margin, y1 - y0 + 2 * margin + 2.0
+    W = x1 - x0 + 2 * margin
+    max_chars = max(60, int(W * MM_PER_M / 1.05))  # ca. Zeichen je Zeile bei Schrift 2,0
+    src = plan.get("source", {})
+    footer = wrap(f'Quelle: {re.sub(r"plans/[^/ ]+/quelle/", "", src.get("file", "?"))} ({src.get("date", "?")}) · Maße in m · '
+                  f'Neuzeichnung, ohne Gewähr – rot nummerierte Punkte sind ungeprüft (Legende)', max_chars)
+    unv = plan.get("unverified", [])
+    legend = [wrap(f'{i}  {u["text"]}', max_chars - 4) for i, u in enumerate(unv, 1)]
+    legend_lines = sum(len(x) for x in legend)
+    H = y1 - y0 + 2 * margin + 1.0 + (len(footer) + 1) * 0.32 + (legend_lines * 0.27 + 0.6 if unv else 0)
     tx = lambda p: ((p[0] - x0 + margin) * MM_PER_M, (y1 - p[1] + margin) * MM_PER_M)
     pts = lambda poly: " ".join(f"{tx(p)[0]:.2f},{tx(p)[1]:.2f}" for p in poly)
     o = []
@@ -304,27 +332,34 @@ def render_svg(plan, geo, path):
                  f'text-anchor="{nt.get("anchor", "middle")}"{bold}>{escape(nt["text"])}</text>')
     o.append('</g>')
 
-    unv = plan.get("unverified", [])
     if unv:
-        o.append('<g id="A_UNGEPRUEFT" fill="none" stroke="#d00000" stroke-width="0.3" font-size="2" >')
-        for u in unv:
+        o.append('<g id="A_UNGEPRUEFT" font-size="1.5" font-weight="bold" text-anchor="middle">')
+        for i, u in enumerate(unv, 1):
             cx, cy = tx(u["pos"])
-            o.append(f'<circle cx="{cx:.2f}" cy="{cy:.2f}" r="2.5"/>')
-            # optional: "short" ist die Kurzfassung im Plan ("" = nur Kreis); "text" bleibt die volle Begründung
-            shown = u.get("short", u["text"])
-            if shown:
-                o.append(f'<text x="{cx+3:.2f}" y="{cy:.2f}" fill="#d00000" stroke="none">{escape(shown)}</text>')
+            o.append(f'<circle cx="{cx:.2f}" cy="{cy:.2f}" r="1.25" fill="#ffffff" fill-opacity="0.85" '
+                     f'stroke="#d00000" stroke-width="0.25"/>'
+                     f'<text x="{cx:.2f}" y="{cy + 0.55:.2f}" fill="#d00000">{i}</text>')
         o.append('</g>')
 
-    # Schriftfeld
-    src = plan.get("source", {})
-    by = (H - 1.6) * MM_PER_M
+    # Schriftfeld, Fußzeile und Legende der ungeprüften Punkte
+    by = (y1 - y0 + 2 * margin + 1.0) * MM_PER_M
+    lx = margin * MM_PER_M
     o.append(f'<g id="SCHRIFTFELD" font-size="2.6" fill="#000">'
-             f'<text x="{margin*MM_PER_M:.1f}" y="{by:.1f}" font-weight="bold">'
-             f'{escape(plan["object"])} · {escape(plan["floor_name"])} · M 1:100</text>'
-             f'<text x="{margin*MM_PER_M:.1f}" y="{by+4:.1f}" font-size="2">'
-             f'Quelle: {escape(src.get("file", "?"))} ({escape(src.get("date", "?"))}) · Maße in m · '
-             f'Neuzeichnung, ohne Gewähr – rot markierte Werte ungeprüft</text></g>')
+             f'<text x="{lx:.1f}" y="{by:.1f}" font-weight="bold">'
+             f'{escape(plan["object"])} · {escape(plan["floor_name"])} · M 1:100</text>')
+    for k, line in enumerate(footer):
+        o.append(f'<text x="{lx:.1f}" y="{by + 4 + k * 3.2:.1f}" font-size="2">{escape(line)}</text>')
+    o.append('</g>')
+    if unv:
+        ly = by + 4 + len(footer) * 3.2 + 3
+        o.append(f'<g id="LEGENDE_UNGEPRUEFT" font-size="1.8" fill="#333">'
+                 f'<text x="{lx:.1f}" y="{ly:.1f}" font-weight="bold" fill="#d00000">Ungeprüfte bzw. angenommene Werte</text>')
+        ly += 2.9
+        for item in legend:
+            for k, line in enumerate(item):
+                o.append(f'<text x="{lx + (0 if k == 0 else 3):.1f}" y="{ly:.1f}">{escape(line)}</text>')
+                ly += 2.7
+        o.append('</g>')
     o.append('</svg>')
     path.write_text("\n".join(o), encoding="utf-8")
 
@@ -333,6 +368,7 @@ def render_svg(plan, geo, path):
 def render_dxf(plan, geo, path):
     import ezdxf
 
+    ezdxf.options.write_fixed_meta_data_for_testing = True  # reproduzierbar: keine Zeitstempel/GUIDs
     doc = ezdxf.new("R2018", setup=True)
     doc.units = ezdxf.units.M
     msp = doc.modelspace()
@@ -399,10 +435,10 @@ def render_dxf(plan, geo, path):
         dim = msp.add_aligned_dim(p1=d["a"], p2=d["b"], distance=off, dimstyle="EZ_M_100_H25_CM",
                                   dxfattribs={"layer": "A_BEMASSUNG"})
         dim.render()
-    for u in plan.get("unverified", []):
-        msp.add_circle(u["pos"], 0.25, dxfattribs={"layer": "A_UNGEPRUEFT"})
-        msp.add_text(u["text"], height=0.2, dxfattribs={"layer": "A_UNGEPRUEFT"}).set_placement(
-            (u["pos"][0] + 0.3, u["pos"][1]))  # im DXF immer die volle Begründung
+    for i, u in enumerate(plan.get("unverified", []), 1):
+        msp.add_circle(u["pos"], 0.15, dxfattribs={"layer": "A_UNGEPRUEFT"})
+        msp.add_text(f"{i} {u['text']}", height=0.12, dxfattribs={"layer": "A_UNGEPRUEFT"}).set_placement(
+            (u["pos"][0] + 0.2, u["pos"][1]))  # im DXF die volle Begründung mit Nummer
     doc.saveas(path)
 
 
@@ -417,10 +453,14 @@ def render(json_path: Path):
     render_dxf(plan, geo, out_dir / f"{stem}.dxf")
     print(f"{json_path.relative_to(ROOT)} -> ausgabe/{stem}.svg, .dxf")
     bad = False
+    notes = {r["name"]: r.get("area_note") for r in plan.get("rooms", [])}
     for name, calc, stated, dev in room_report(plan):
         flag = ""
         if dev is not None and abs(dev) > 3:
-            flag, bad = "  <-- Abweichung > 3 %", True
+            if notes.get(name):  # optional: "area_note" begründet die Abweichung
+                flag = f"  (Abweichung begründet: {notes[name]})"
+            else:
+                flag, bad = "  <-- Abweichung > 3 %", True
         st = "—" if stated is None else f"{stated:.2f}"
         dv = "" if dev is None else f"{dev:+.1f} %"
         print(f"   {name:<24} berechnet {calc:7.2f} m²  laut Plan {st:>7}  {dv}{flag}")
@@ -428,6 +468,10 @@ def render(json_path: Path):
 
 
 def main():
+    # Reproduzierbare DXF-Dateien: ezdxf sortiert manche Objekte über Mengen -> fester Hash-Seed
+    if os.environ.get("PYTHONHASHSEED") != "0":
+        os.environ["PYTHONHASHSEED"] = "0"
+        os.execv(sys.executable, [sys.executable] + sys.argv)
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("files", nargs="*", type=Path)
     ap.add_argument("--all", action="store_true", help="alle plans/*/geometrie/*.json rendern")

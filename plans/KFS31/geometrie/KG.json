@@ -1,0 +1,1523 @@
+{
+ "object": "KFS31",
+ "floor": "KG",
+ "floor_name": "Kellergeschoss",
+ "source": {
+  "file": "20101111-Grundrisse-Karl_Ferlemann_Str_31.pdf S. 3 (Raumaufteilung) · 19990111-…pdf S. 2/3 (Maße)",
+  "date": "2010-11-11 / 1999-01-11",
+  "version": "Aufteilungsplan, Kellergeschoss",
+  "kellerzuordnung": "Aufteilungsplan 2010 S. 3: Keller 1–8 mit Flächentabelle (7,70 / 5,10 / 6,80 / 7,50 / 8,20 / 7,70 / 7,65 / 8,10 m²); Keller n gehört zu Wohnung W n, W9–W11 haben die Abstellräume AR 9–11 im EG."
+ },
+ "walls": [
+  {
+   "id": "A1",
+   "a": [
+    12.41,
+    0
+   ],
+   "b": [
+    24.825,
+    0
+   ],
+   "thickness": 0.75,
+   "align": "left",
+   "type": "exterior"
+  },
+  {
+   "id": "A2",
+   "a": [
+    24.825,
+    0
+   ],
+   "b": [
+    27.01,
+    2.185
+   ],
+   "thickness": 0.75,
+   "align": "left",
+   "type": "exterior"
+  },
+  {
+   "id": "A3",
+   "a": [
+    27.01,
+    2.185
+   ],
+   "b": [
+    27.01,
+    14.1
+   ],
+   "thickness": 0.75,
+   "align": "left",
+   "type": "exterior"
+  },
+  {
+   "id": "A4",
+   "a": [
+    27.01,
+    14.1
+   ],
+   "b": [
+    16.46,
+    14.1
+   ],
+   "thickness": 0.7,
+   "align": "left",
+   "type": "exterior"
+  },
+  {
+   "id": "A5",
+   "a": [
+    16.785,
+    8.59
+   ],
+   "b": [
+    16.785,
+    13.4
+   ],
+   "thickness": 0.65,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "A6",
+   "a": [
+    15.75,
+    8.915
+   ],
+   "b": [
+    16.46,
+    8.915
+   ],
+   "thickness": 0.65,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "A7",
+   "a": [
+    16.025,
+    5.89
+   ],
+   "b": [
+    16.025,
+    8.59
+   ],
+   "thickness": 0.55,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "A8",
+   "a": [
+    13.06,
+    5.61
+   ],
+   "b": [
+    15.75,
+    5.61
+   ],
+   "thickness": 0.56,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "A9",
+   "a": [
+    12.735,
+    0.75
+   ],
+   "b": [
+    12.735,
+    5.89
+   ],
+   "thickness": 0.65,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "L1",
+   "a": [
+    16.3,
+    5.64
+   ],
+   "b": [
+    21.2,
+    5.64
+   ],
+   "thickness": 0.46,
+   "align": "center",
+   "type": "load-bearing"
+  },
+  {
+   "id": "L2",
+   "a": [
+    21.425,
+    0.78
+   ],
+   "b": [
+    21.425,
+    3.0
+   ],
+   "thickness": 0.45,
+   "align": "center",
+   "type": "load-bearing"
+  },
+  {
+   "id": "L2b",
+   "a": [
+    21.425,
+    4.05
+   ],
+   "b": [
+    21.425,
+    6.54
+   ],
+   "thickness": 0.45,
+   "align": "center",
+   "type": "load-bearing"
+  },
+  {
+   "id": "L3",
+   "a": [
+    21.23,
+    8.59
+   ],
+   "b": [
+    21.23,
+    11.14
+   ],
+   "thickness": 0.34,
+   "align": "center",
+   "type": "load-bearing"
+  },
+  {
+   "id": "L4",
+   "a": [
+    17.11,
+    11.37
+   ],
+   "b": [
+    26.26,
+    11.37
+   ],
+   "thickness": 0.46,
+   "align": "center",
+   "type": "load-bearing"
+  },
+  {
+   "id": "L5",
+   "a": [
+    16.3,
+    8.81
+   ],
+   "b": [
+    21.06,
+    8.81
+   ],
+   "thickness": 0.44,
+   "align": "center",
+   "type": "load-bearing"
+  },
+  {
+   "id": "L6",
+   "a": [
+    22.97,
+    2.98
+   ],
+   "b": [
+    23.79,
+    2.98
+   ],
+   "thickness": 0.06,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "L7",
+   "a": [
+    23.79,
+    2.62
+   ],
+   "b": [
+    26.26,
+    2.62
+   ],
+   "thickness": 0.06,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "L8",
+   "a": [
+    23.0,
+    3.01
+   ],
+   "b": [
+    23.0,
+    5.45
+   ],
+   "thickness": 0.06,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "L9",
+   "a": [
+    23.03,
+    5.59
+   ],
+   "b": [
+    26.26,
+    5.59
+   ],
+   "thickness": 0.36,
+   "align": "center",
+   "type": "load-bearing"
+  },
+  {
+   "id": "L10",
+   "a": [
+    23.31,
+    5.77
+   ],
+   "b": [
+    23.31,
+    7.8
+   ],
+   "thickness": 0.48,
+   "align": "center",
+   "type": "load-bearing"
+  },
+  {
+   "id": "L11",
+   "a": [
+    22.84,
+    8.0
+   ],
+   "b": [
+    24.26,
+    8.0
+   ],
+   "thickness": 0.4,
+   "align": "center",
+   "type": "load-bearing"
+  },
+  {
+   "id": "L12",
+   "a": [
+    23.315,
+    8.2
+   ],
+   "b": [
+    23.315,
+    11.14
+   ],
+   "thickness": 0.19,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "L13",
+   "a": [
+    23.41,
+    9.745
+   ],
+   "b": [
+    26.26,
+    9.745
+   ],
+   "thickness": 0.35,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "V1",
+   "a": [
+    14.855,
+    0.78
+   ],
+   "b": [
+    14.855,
+    4.14
+   ],
+   "thickness": 0.23,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "V2",
+   "a": [
+    16.615,
+    0.78
+   ],
+   "b": [
+    16.615,
+    3.64
+   ],
+   "thickness": 0.07,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "V3",
+   "a": [
+    18.955,
+    0.78
+   ],
+   "b": [
+    18.955,
+    3.64
+   ],
+   "thickness": 0.07,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "V4",
+   "a": [
+    14.97,
+    3.865
+   ],
+   "b": [
+    21.2,
+    3.865
+   ],
+   "thickness": 0.45,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "V5",
+   "a": [
+    14.74,
+    5.25
+   ],
+   "b": [
+    14.97,
+    5.25
+   ],
+   "thickness": 0.16,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "V6",
+   "a": [
+    21.65,
+    2.98
+   ],
+   "b": [
+    22.97,
+    2.98
+   ],
+   "thickness": 0.06,
+   "align": "center",
+   "type": "interior"
+  }
+ ],
+ "openings": [
+  {
+   "id": "F_S1",
+   "wall": "A1",
+   "type": "window",
+   "offset": 1.25,
+   "width": 0.7
+  },
+  {
+   "id": "F_S2",
+   "wall": "A1",
+   "type": "window",
+   "offset": 3.1,
+   "width": 0.7
+  },
+  {
+   "id": "F_S3",
+   "wall": "A1",
+   "type": "window",
+   "offset": 5.2,
+   "width": 0.7
+  },
+  {
+   "id": "F_S4",
+   "wall": "A1",
+   "type": "window",
+   "offset": 7.05,
+   "width": 0.7
+  },
+  {
+   "id": "F_S5",
+   "wall": "A1",
+   "type": "window",
+   "offset": 10.3,
+   "width": 0.7
+  },
+  {
+   "id": "F_E1",
+   "wall": "A2",
+   "type": "window",
+   "offset": 1.195,
+   "width": 0.7
+  },
+  {
+   "id": "F_O1",
+   "wall": "A3",
+   "type": "window",
+   "offset": 1.465,
+   "width": 0.7
+  },
+  {
+   "id": "F_O2",
+   "wall": "A3",
+   "type": "window",
+   "offset": 4.715,
+   "width": 0.7
+  },
+  {
+   "id": "F_O3",
+   "wall": "A3",
+   "type": "window",
+   "offset": 6.515,
+   "width": 0.7
+  },
+  {
+   "id": "F_O4",
+   "wall": "A3",
+   "type": "window",
+   "offset": 8.215,
+   "width": 0.7
+  },
+  {
+   "id": "T_K77",
+   "wall": "L8",
+   "type": "door",
+   "offset": 0.39,
+   "width": 0.8,
+   "hinge": "end",
+   "side": "left"
+  },
+  {
+   "id": "T_HR",
+   "wall": "L10",
+   "type": "door",
+   "offset": 0.29,
+   "width": 0.87,
+   "hinge": "start",
+   "side": "right"
+  },
+  {
+   "id": "T_K2",
+   "wall": "V4",
+   "type": "door",
+   "offset": 0.1,
+   "width": 0.88,
+   "hinge": "start",
+   "side": "right"
+  },
+  {
+   "id": "T_K3",
+   "wall": "V4",
+   "type": "door",
+   "offset": 2.37,
+   "width": 0.84,
+   "hinge": "start",
+   "side": "right"
+  },
+  {
+   "id": "T_K4",
+   "wall": "V4",
+   "type": "door",
+   "offset": 4.77,
+   "width": 0.84,
+   "hinge": "end",
+   "side": "right"
+  }
+ ],
+ "rooms": [
+  {
+   "name": "Keller 1 (W1)",
+   "polygon": [
+    [
+     13.06,
+     0.78
+    ],
+    [
+     14.74,
+     0.78
+    ],
+    [
+     14.74,
+     5.33
+    ],
+    [
+     13.06,
+     5.33
+    ]
+   ],
+   "area_stated": 7.7
+  },
+  {
+   "name": "Keller 2 (W2)",
+   "area_note": "Kellerverschläge im Scan nur schematisch, Innenmaße abgegriffen",
+   "polygon": [
+    [
+     14.97,
+     0.78
+    ],
+    [
+     16.58,
+     0.78
+    ],
+    [
+     16.58,
+     3.64
+    ],
+    [
+     14.97,
+     3.64
+    ]
+   ],
+   "area_stated": 5.1
+  },
+  {
+   "name": "Keller 3 (W3)",
+   "area_note": "Kellerverschläge im Scan nur schematisch, Innenmaße abgegriffen",
+   "polygon": [
+    [
+     16.65,
+     0.78
+    ],
+    [
+     18.92,
+     0.78
+    ],
+    [
+     18.92,
+     3.64
+    ],
+    [
+     16.65,
+     3.64
+    ]
+   ],
+   "area_stated": 6.8
+  },
+  {
+   "name": "Keller 4 (W4)",
+   "area_note": "Kellerverschläge im Scan nur schematisch, Innenmaße abgegriffen",
+   "polygon": [
+    [
+     18.99,
+     0.78
+    ],
+    [
+     21.2,
+     0.78
+    ],
+    [
+     21.2,
+     3.64
+    ],
+    [
+     18.99,
+     3.64
+    ]
+   ],
+   "area_stated": 7.5
+  },
+  {
+   "name": "Keller 5 (W5)",
+   "area_note": "Kellerverschläge im Scan nur schematisch, Innenmaße abgegriffen",
+   "polygon": [
+    [
+     21.65,
+     0.78
+    ],
+    [
+     24.544,
+     0.78
+    ],
+    [
+     26.354,
+     2.59
+    ],
+    [
+     23.79,
+     2.59
+    ],
+    [
+     23.79,
+     2.95
+    ],
+    [
+     21.65,
+     2.95
+    ]
+   ],
+   "area_stated": 8.2,
+   "label_pos": [
+    23.0,
+    1.7
+   ]
+  },
+  {
+   "name": "Keller 6 (W6)",
+   "area_note": "Kellerverschläge im Scan nur schematisch, Innenmaße abgegriffen",
+   "polygon": [
+    [
+     23.03,
+     3.01
+    ],
+    [
+     23.79,
+     3.01
+    ],
+    [
+     23.79,
+     2.65
+    ],
+    [
+     26.26,
+     2.65
+    ],
+    [
+     26.26,
+     5.41
+    ],
+    [
+     23.03,
+     5.41
+    ]
+   ],
+   "area_stated": 7.7
+  },
+  {
+   "name": "HR/Technik",
+   "area_note": "Kellerverschläge im Scan nur schematisch, Innenmaße abgegriffen",
+   "polygon": [
+    [
+     23.55,
+     5.77
+    ],
+    [
+     26.26,
+     5.77
+    ],
+    [
+     26.26,
+     9.57
+    ],
+    [
+     23.41,
+     9.57
+    ],
+    [
+     23.41,
+     8.2
+    ],
+    [
+     24.26,
+     8.2
+    ],
+    [
+     24.26,
+     7.8
+    ],
+    [
+     23.55,
+     7.8
+    ]
+   ],
+   "area_stated": 9.85,
+   "label_pos": [
+    25.0,
+    6.8
+   ]
+  },
+  {
+   "name": "Keller 7 (W7)",
+   "polygon": [
+    [
+     21.4,
+     8.2
+    ],
+    [
+     23.22,
+     8.2
+    ],
+    [
+     23.22,
+     11.14
+    ],
+    [
+     21.4,
+     11.14
+    ]
+   ],
+   "subtitle": "lt. Plan 2010: 4,65 (Stempel) / 7,65 m² (Tabelle)"
+  },
+  {
+   "name": "ELT",
+   "area_note": "Kellerverschläge im Scan nur schematisch, Innenmaße abgegriffen",
+   "polygon": [
+    [
+     23.41,
+     9.92
+    ],
+    [
+     26.26,
+     9.92
+    ],
+    [
+     26.26,
+     11.14
+    ],
+    [
+     23.41,
+     11.14
+    ]
+   ],
+   "area_stated": 3.8
+  },
+  {
+   "name": "Keller 8 (W8)",
+   "polygon": [
+    [
+     17.11,
+     9.03
+    ],
+    [
+     21.06,
+     9.03
+    ],
+    [
+     21.06,
+     11.14
+    ],
+    [
+     17.11,
+     11.14
+    ]
+   ],
+   "area_stated": 8.1
+  },
+  {
+   "name": "AR",
+   "area_note": "Kellerverschläge im Scan nur schematisch, Innenmaße abgegriffen",
+   "polygon": [
+    [
+     16.3,
+     5.87
+    ],
+    [
+     17.92,
+     5.87
+    ],
+    [
+     17.92,
+     8.59
+    ],
+    [
+     16.3,
+     8.59
+    ]
+   ],
+   "area_stated": 5.85
+  },
+  {
+   "name": "Treppe",
+   "polygon": [
+    [
+     17.92,
+     5.87
+    ],
+    [
+     20.05,
+     5.87
+    ],
+    [
+     20.05,
+     8.59
+    ],
+    [
+     17.92,
+     8.59
+    ]
+   ],
+   "outline": true,
+   "show_area": false,
+   "subtitle": "↑ EG"
+  },
+  {
+   "name": "Kellerflur",
+   "polygon": [
+    [
+     14.97,
+     4.09
+    ],
+    [
+     21.2,
+     4.09
+    ],
+    [
+     21.2,
+     5.41
+    ],
+    [
+     14.97,
+     5.41
+    ]
+   ],
+   "show_area": false
+  },
+  {
+   "name": "Flur",
+   "polygon": [
+    [
+     21.65,
+     3.01
+    ],
+    [
+     22.97,
+     3.01
+    ],
+    [
+     22.97,
+     5.45
+    ],
+    [
+     23.03,
+     5.45
+    ],
+    [
+     23.03,
+     5.77
+    ],
+    [
+     23.07,
+     5.77
+    ],
+    [
+     23.07,
+     7.8
+    ],
+    [
+     22.84,
+     7.8
+    ],
+    [
+     22.84,
+     8.2
+    ],
+    [
+     21.4,
+     8.2
+    ],
+    [
+     21.4,
+     8.59
+    ],
+    [
+     21.2,
+     8.59
+    ],
+    [
+     21.2,
+     6.54
+    ],
+    [
+     21.65,
+     6.54
+    ]
+   ],
+   "show_area": false,
+   "label_pos": [
+    22.2,
+    6.8
+   ]
+  },
+  {
+   "name": "Raum ohne Bezeichnung",
+   "polygon": [
+    [
+     17.11,
+     11.6
+    ],
+    [
+     26.26,
+     11.6
+    ],
+    [
+     26.26,
+     13.4
+    ],
+    [
+     17.11,
+     13.4
+    ]
+   ],
+   "show_area": false
+  },
+  {
+   "name": "Schacht/Hof (nicht unterkellert)",
+   "polygon": [
+    [
+     13.06,
+     5.89
+    ],
+    [
+     15.75,
+     5.89
+    ],
+    [
+     15.75,
+     7.72
+    ],
+    [
+     13.91,
+     7.72
+    ],
+    [
+     13.91,
+     5.89
+    ]
+   ],
+   "outline": true,
+   "show_area": false,
+   "label_pos": [
+    14.8,
+    6.8
+   ]
+  }
+ ],
+ "dimensions": [
+  {
+   "a": [
+    12.41,
+    0
+   ],
+   "b": [
+    27.01,
+    0
+   ],
+   "offset": -2.0
+  },
+  {
+   "a": [
+    12.41,
+    0
+   ],
+   "b": [
+    13.66,
+    0
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    13.66,
+    0
+   ],
+   "b": [
+    14.36,
+    0
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    14.36,
+    0
+   ],
+   "b": [
+    15.51,
+    0
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    15.51,
+    0
+   ],
+   "b": [
+    16.21,
+    0
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    16.21,
+    0
+   ],
+   "b": [
+    17.61,
+    0
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    17.61,
+    0
+   ],
+   "b": [
+    18.31,
+    0
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    18.31,
+    0
+   ],
+   "b": [
+    19.46,
+    0
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    19.46,
+    0
+   ],
+   "b": [
+    20.16,
+    0
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    20.16,
+    0
+   ],
+   "b": [
+    22.71,
+    0
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    22.71,
+    0
+   ],
+   "b": [
+    23.41,
+    0
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    23.41,
+    0
+   ],
+   "b": [
+    24.825,
+    0
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    12.41,
+    0.78
+   ],
+   "b": [
+    13.06,
+    0.78
+   ],
+   "offset": -0.4
+  },
+  {
+   "a": [
+    13.06,
+    0.78
+   ],
+   "b": [
+    16.31,
+    0.78
+   ],
+   "offset": -0.4
+  },
+  {
+   "a": [
+    16.31,
+    0.78
+   ],
+   "b": [
+    16.76,
+    0.78
+   ],
+   "offset": -0.4
+  },
+  {
+   "a": [
+    16.76,
+    0.78
+   ],
+   "b": [
+    18.86,
+    0.78
+   ],
+   "offset": -0.4
+  },
+  {
+   "a": [
+    18.86,
+    0.78
+   ],
+   "b": [
+    19.21,
+    0.78
+   ],
+   "offset": -0.4
+  },
+  {
+   "a": [
+    19.21,
+    0.78
+   ],
+   "b": [
+    21.26,
+    0.78
+   ],
+   "offset": -0.4
+  },
+  {
+   "a": [
+    21.26,
+    0.78
+   ],
+   "b": [
+    21.71,
+    0.78
+   ],
+   "offset": -0.4
+  },
+  {
+   "a": [
+    21.71,
+    0.78
+   ],
+   "b": [
+    26.26,
+    0.78
+   ],
+   "offset": -0.4
+  },
+  {
+   "a": [
+    26.26,
+    0.78
+   ],
+   "b": [
+    27.01,
+    0.78
+   ],
+   "offset": -0.4
+  },
+  {
+   "a": [
+    27.01,
+    0
+   ],
+   "b": [
+    27.01,
+    2.185
+   ],
+   "offset": -2.0
+  },
+  {
+   "a": [
+    27.01,
+    2.185
+   ],
+   "b": [
+    27.01,
+    14.1
+   ],
+   "offset": -2.0
+  },
+  {
+   "a": [
+    27.01,
+    2.185
+   ],
+   "b": [
+    27.01,
+    3.65
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    27.01,
+    3.65
+   ],
+   "b": [
+    27.01,
+    4.35
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    27.01,
+    4.35
+   ],
+   "b": [
+    27.01,
+    6.9
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    27.01,
+    6.9
+   ],
+   "b": [
+    27.01,
+    7.6
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    27.01,
+    7.6
+   ],
+   "b": [
+    27.01,
+    8.7
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    27.01,
+    8.7
+   ],
+   "b": [
+    27.01,
+    9.4
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    27.01,
+    9.4
+   ],
+   "b": [
+    27.01,
+    10.4
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    27.01,
+    10.4
+   ],
+   "b": [
+    27.01,
+    11.1
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    27.01,
+    11.1
+   ],
+   "b": [
+    27.01,
+    14.1
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    26.26,
+    0
+   ],
+   "b": [
+    26.26,
+    0.75
+   ],
+   "offset": -0.4
+  },
+  {
+   "a": [
+    26.26,
+    0.75
+   ],
+   "b": [
+    26.26,
+    5.45
+   ],
+   "offset": -0.4
+  },
+  {
+   "a": [
+    26.26,
+    5.45
+   ],
+   "b": [
+    26.26,
+    5.8
+   ],
+   "offset": -0.4
+  },
+  {
+   "a": [
+    26.26,
+    5.8
+   ],
+   "b": [
+    26.26,
+    7.8
+   ],
+   "offset": -0.4
+  },
+  {
+   "a": [
+    26.26,
+    7.8
+   ],
+   "b": [
+    26.26,
+    8.2
+   ],
+   "offset": -0.4
+  },
+  {
+   "a": [
+    26.26,
+    8.2
+   ],
+   "b": [
+    26.26,
+    11.3
+   ],
+   "offset": -0.4
+  },
+  {
+   "a": [
+    26.26,
+    11.3
+   ],
+   "b": [
+    26.26,
+    11.75
+   ],
+   "offset": -0.4
+  },
+  {
+   "a": [
+    26.26,
+    11.75
+   ],
+   "b": [
+    26.26,
+    13.4
+   ],
+   "offset": -0.4
+  },
+  {
+   "a": [
+    26.26,
+    13.4
+   ],
+   "b": [
+    26.26,
+    14.1
+   ],
+   "offset": -0.4
+  }
+ ],
+ "notes": [
+  {
+   "pos": [
+    12.3,
+    3.0
+   ],
+   "text": "← Neubau nicht unterkellert (Grube Parklift)",
+   "size": 2.2,
+   "anchor": "end"
+  },
+  {
+   "pos": [
+    19.5,
+    -3.4
+   ],
+   "text": "Raimundstraße",
+   "size": 3
+  },
+  {
+   "pos": [
+    30.0,
+    7.0
+   ],
+   "text": "Karl-Ferlemann-Straße",
+   "size": 3
+  }
+ ],
+ "unverified": [
+  {
+   "pos": [
+    17.0,
+    2.2
+   ],
+   "text": "Kellerverschläge als Lattenverschläge ca. 0,07, Lage aus Plan 2010 abgegriffen, Flächen nur näherungsweise. Zuordnung Keller n ↔ Wohnung W n aus dem Aufteilungsplan 2010 (Keller 1–8 nummeriert; W9–W11 haben stattdessen AR 9–11 im EG).",
+   "short": "Verschläge schematisch"
+  },
+  {
+   "pos": [
+    21.4,
+    13.6
+   ],
+   "text": "Innenwände/Innenkanten aus Plan 2010 abgegriffen (±5 cm); Maßketten 1999 weichen teils ab (z. B. tragende Wand 21,26–21,71 statt 21,20–21,65)",
+   "short": "Innenmaße abgegriffen"
+  },
+  {
+   "pos": [
+    14.8,
+    6.3
+   ],
+   "text": "Bereich Hof/Schacht zwischen Kellerflur und AR: im Plan 2010 nur Umriss mit Quadrat (Schacht?), nicht bezeichnet",
+   "short": "Schacht?"
+  },
+  {
+   "pos": [
+    17.1,
+    7.2
+   ],
+   "text": "AR 5,85 m² lt. Plan, gezeichnete Abgrenzung zur Treppe ergibt 4,41 m² – Treppenbreite/Lage unsicher",
+   "short": "Fläche abw."
+  },
+  {
+   "pos": [
+    22.3,
+    9.4
+   ],
+   "text": "Keller 7 (W7): Begrenzung im Scan unklar (Wandstummel, Tür bei y 9,93); als 21,40–23,22 × 8,20–11,14 angenommen Flächenangabe widersprüchlich: Raumstempel 4,65 m², Flächentabelle 7,65 m², Geometrie 5,35 m² → aufmessen.",
+   "short": "Begrenzung angenommen"
+  },
+  {
+   "pos": [
+    21.7,
+    12.5
+   ],
+   "text": "Nördlicher Raum 17,11–26,26 × 11,60–13,40 ohne Bezeichnung und Flächenangabe (evtl. nicht nutzbar/verfüllt)",
+   "short": "ohne Bez."
+  }
+ ]
+}

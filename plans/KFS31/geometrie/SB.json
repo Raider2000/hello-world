@@ -1,0 +1,800 @@
+{
+ "object": "KFS31",
+ "floor": "SB",
+ "floor_name": "Spitzboden",
+ "source": {
+  "file": "19990111-Grundrisse-Karl_Ferlemann_Str_31.pdf S. 12/13 (Grundriss Spitzboden -Gesamt-, M 1:100) · S. 18 (Schnitt A-A)",
+  "date": "1999-01-11 (Plan 01.07.96 / 21.12.98)",
+  "version": "Abgeschlossenheitsbescheinigung Reg.-Nr. 1999-009",
+  "transformation": "Scan S. 12 über Maßkette Raimundstraße (0 / 12,15 / 12,40 / 12,86) und Kettenhöhe aus S. 13 (Maßkette 14,05 Karl-Ferlemann-Straße, Endpunkt 26,91) entzerrt; Scherung/Verzug des Blatts linear ausgeglichen (Restfehler ca. ±5 cm). Außenkontur aus DG.json übernommen.",
+  "flaechen": "Plan nennt je Spitzboden F = halbe Grundfläche (anrechenbar, lichte Höhe 1–2 m) und in Klammern die Grundfläche mit lichter Höhe ≥ 1 m; als area_stated dient der Klammerwert."
+ },
+ "walls": [
+  {
+   "id": "G1",
+   "a": [
+    12.27,
+    0.02
+   ],
+   "b": [
+    12.27,
+    7.79
+   ],
+   "thickness": 0.24,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "G2",
+   "a": [
+    12.635,
+    0.0
+   ],
+   "b": [
+    12.635,
+    7.79
+   ],
+   "thickness": 0.45,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "T1",
+   "a": [
+    19.45,
+    7.58
+   ],
+   "b": [
+    21.28,
+    5.75
+   ],
+   "thickness": 0.1,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "T2",
+   "a": [
+    21.28,
+    5.75
+   ],
+   "b": [
+    21.28,
+    3.97
+   ],
+   "thickness": 0.1,
+   "align": "center",
+   "type": "interior"
+  }
+ ],
+ "openings": [],
+ "rooms": [
+  {
+   "name": "Spitzboden W11",
+   "polygon": [
+    [
+     0.0,
+     3.97
+    ],
+    [
+     12.15,
+     3.97
+    ],
+    [
+     12.15,
+     6.81
+    ],
+    [
+     0.0,
+     6.81
+    ]
+   ],
+   "area_stated": 34.51,
+   "outline": true,
+   "subtitle": "34,51 m² mit lichter Höhe ≥ 1 m (F = 17,26 m²)",
+   "label_pos": [
+    5.2,
+    5.6
+   ]
+  },
+  {
+   "name": "Spitzboden W8 (Sondernutzung)",
+   "polygon": [
+    [
+     12.86,
+     3.97
+    ],
+    [
+     21.23,
+     3.97
+    ],
+    [
+     21.23,
+     5.729
+    ],
+    [
+     20.149,
+     6.81
+    ],
+    [
+     12.86,
+     6.81
+    ]
+   ],
+   "area_stated": 23.1,
+   "outline": true,
+   "name_size": 2.2,
+   "subtitle": "23,10 m² mit lichter Höhe ≥ 1 m (A = 11,55 m²)",
+   "label_pos": [
+    16.6,
+    6.05
+   ]
+  },
+  {
+   "name": "Spitzboden W7 (Sondernutzung)",
+   "polygon": [
+    [
+     19.44,
+     14.05
+    ],
+    [
+     22.94,
+     14.05
+    ],
+    [
+     22.94,
+     4.0
+    ],
+    [
+     21.33,
+     4.0
+    ],
+    [
+     21.33,
+     5.771
+    ],
+    [
+     19.44,
+     7.661
+    ]
+   ],
+   "area_stated": 30.52,
+   "outline": true,
+   "name_size": 2.0,
+   "subtitle": "30,52 m² (≥ 1 m), F = 15,26 m²",
+   "label_pos": [
+    21.19,
+    11.6
+   ]
+  }
+ ],
+ "symbols": [
+  {
+   "id": "UMRISS",
+   "layer": "A_SYMBOL",
+   "lines": [
+    [
+     [
+      0.0,
+      0.02
+     ],
+     [
+      12.39,
+      0.02
+     ]
+    ],
+    [
+     [
+      12.39,
+      0.02
+     ],
+     [
+      12.39,
+      7.79
+     ]
+    ],
+    [
+     [
+      12.39,
+      7.79
+     ],
+     [
+      0.0,
+      7.79
+     ]
+    ],
+    [
+     [
+      0.0,
+      7.79
+     ],
+     [
+      0.0,
+      0.02
+     ]
+    ],
+    [
+     [
+      12.41,
+      0.0
+     ],
+     [
+      24.76,
+      0.0
+     ]
+    ],
+    [
+     [
+      24.76,
+      0.0
+     ],
+     [
+      26.91,
+      2.15
+     ]
+    ],
+    [
+     [
+      26.91,
+      2.15
+     ],
+     [
+      26.91,
+      14.05
+     ]
+    ],
+    [
+     [
+      26.91,
+      14.05
+     ],
+     [
+      16.44,
+      14.05
+     ]
+    ],
+    [
+     [
+      16.44,
+      14.05
+     ],
+     [
+      16.44,
+      9.0
+     ]
+    ],
+    [
+     [
+      16.44,
+      9.0
+     ],
+     [
+      15.71,
+      9.0
+     ]
+    ],
+    [
+     [
+      15.71,
+      9.0
+     ],
+     [
+      15.71,
+      7.75
+     ]
+    ],
+    [
+     [
+      15.71,
+      7.75
+     ],
+     [
+      12.41,
+      7.75
+     ]
+    ],
+    [
+     [
+      12.41,
+      7.75
+     ],
+     [
+      12.41,
+      0.0
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "TW_GESTRICHELT",
+   "layer": "A_SYMBOL",
+   "lines": [
+    [
+     [
+      21.23,
+      3.97
+     ],
+     [
+      21.23,
+      1.1
+     ]
+    ],
+    [
+     [
+      21.33,
+      3.97
+     ],
+     [
+      21.33,
+      1.1
+     ]
+    ],
+    [
+     [
+      19.45,
+      7.58
+     ],
+     [
+      18.9,
+      8.07
+     ]
+    ],
+    [
+     [
+      18.9,
+      8.07
+     ],
+     [
+      16.44,
+      8.07
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "BT_W11",
+   "layer": "A_TREPPE",
+   "polygons": [
+    {
+     "points": [
+      [
+       9.69,
+       6.08
+      ],
+      [
+       11.1,
+       6.08
+      ],
+      [
+       11.1,
+       6.8
+      ],
+      [
+       9.69,
+       6.8
+      ]
+     ]
+    }
+   ],
+   "lines": [
+    [
+     [
+      9.69,
+      6.44
+     ],
+     [
+      11.1,
+      6.8
+     ]
+    ],
+    [
+     [
+      9.69,
+      6.44
+     ],
+     [
+      11.1,
+      6.08
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "BT_SUED",
+   "layer": "A_TREPPE",
+   "polygons": [
+    {
+     "points": [
+      [
+       15.28,
+       4.6
+      ],
+      [
+       16.56,
+       4.6
+      ],
+      [
+       16.56,
+       5.33
+      ],
+      [
+       15.28,
+       5.33
+      ]
+     ]
+    }
+   ],
+   "lines": [
+    [
+     [
+      15.28,
+      4.965
+     ],
+     [
+      16.56,
+      5.33
+     ]
+    ],
+    [
+     [
+      15.28,
+      4.965
+     ],
+     [
+      16.56,
+      4.6
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "BT_OST",
+   "layer": "A_TREPPE",
+   "polygons": [
+    {
+     "points": [
+      [
+       21.73,
+       8.19
+      ],
+      [
+       22.45,
+       8.19
+      ],
+      [
+       22.45,
+       9.61
+      ],
+      [
+       21.73,
+       9.61
+      ]
+     ]
+    }
+   ],
+   "lines": [
+    [
+     [
+      22.09,
+      9.61
+     ],
+     [
+      21.73,
+      8.19
+     ]
+    ],
+    [
+     [
+      22.09,
+      9.61
+     ],
+     [
+      22.45,
+      8.19
+     ]
+    ]
+   ]
+  }
+ ],
+ "dimensions": [
+  {
+   "a": [
+    0,
+    0
+   ],
+   "b": [
+    12.15,
+    0
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    12.15,
+    0
+   ],
+   "b": [
+    12.39,
+    0
+   ],
+   "offset": -1.2,
+   "label": " "
+  },
+  {
+   "a": [
+    12.39,
+    0
+   ],
+   "b": [
+    12.41,
+    0
+   ],
+   "offset": -1.2,
+   "label": " "
+  },
+  {
+   "a": [
+    12.41,
+    0
+   ],
+   "b": [
+    12.86,
+    0
+   ],
+   "offset": -1.2,
+   "label": " "
+  },
+  {
+   "a": [
+    12.15,
+    0
+   ],
+   "b": [
+    12.86,
+    0
+   ],
+   "offset": -0.5,
+   "label": "0,24 / 0,02 / 0,45"
+  },
+  {
+   "a": [
+    12.86,
+    0
+   ],
+   "b": [
+    26.91,
+    0
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    0,
+    0
+   ],
+   "b": [
+    26.91,
+    0
+   ],
+   "offset": -2.2
+  },
+  {
+   "a": [
+    26.91,
+    0
+   ],
+   "b": [
+    26.91,
+    14.05
+   ],
+   "offset": -1.4
+  },
+  {
+   "a": [
+    0,
+    3.97
+   ],
+   "b": [
+    0,
+    6.81
+   ],
+   "offset": 1.0,
+   "label": "2,84 lichte Höhe ≥ 1 m"
+  },
+  {
+   "a": [
+    19.44,
+    14.05
+   ],
+   "b": [
+    22.94,
+    14.05
+   ],
+   "offset": 0.9,
+   "label": "3,50 lichte Höhe ≥ 1 m"
+  }
+ ],
+ "notes": [
+  {
+   "pos": [
+    6.5,
+    10.5
+   ],
+   "text": "Hof",
+   "size": 3
+  },
+  {
+   "pos": [
+    13.5,
+    -4.2
+   ],
+   "text": "Raimundstraße",
+   "size": 3
+  },
+  {
+   "pos": [
+    30.0,
+    7.0
+   ],
+   "text": "Karl-Ferlemann-Straße",
+   "size": 3
+  },
+  {
+   "pos": [
+    21.7,
+    14.4
+   ],
+   "text": "vorhandene Nachbarbebauung",
+   "size": 1.8,
+   "anchor": "end"
+  },
+  {
+   "pos": [
+    -0.5,
+    9.2
+   ],
+   "text": "vorh. Nachbarbebauung",
+   "size": 1.8,
+   "anchor": "start"
+  },
+  {
+   "pos": [
+    10.4,
+    5.75
+   ],
+   "text": "Bodentreppe",
+   "size": 1.6
+  },
+  {
+   "pos": [
+    15.92,
+    4.3
+   ],
+   "text": "Bodentreppe",
+   "size": 1.6
+  },
+  {
+   "pos": [
+    22.09,
+    7.85
+   ],
+   "text": "Bodentreppe",
+   "size": 1.6
+  },
+  {
+   "pos": [
+    13.35,
+    5.15
+   ],
+   "text": "Höhenkote +13,22",
+   "size": 1.6,
+   "anchor": "start"
+  },
+  {
+   "pos": [
+    20.75,
+    6.95
+   ],
+   "text": "Trennwand F 90",
+   "size": 1.4,
+   "anchor": "start"
+  },
+  {
+   "pos": [
+    6.1,
+    2.4
+   ],
+   "text": "Dachfläche (lichte Höhe < 1 m)",
+   "size": 1.8
+  },
+  {
+   "pos": [
+    6.1,
+    1.4
+   ],
+   "text": "Neubau: Kehlbalken UK +12,94, First +15,22, Dachneigung 60°/20° (Schnitt A-A)",
+   "size": 1.4
+  },
+  {
+   "pos": [
+    17.0,
+    2.4
+   ],
+   "text": "Dachfläche (lichte Höhe < 1 m)",
+   "size": 1.8
+  },
+  {
+   "pos": [
+    24.9,
+    11.0
+   ],
+   "text": "Dachfläche",
+   "size": 1.8
+  }
+ ],
+ "unverified": [
+  {
+   "pos": [
+    0.6,
+    6.3
+   ],
+   "text": "Lage der Spitzbodenstreifen in y (3,97–6,81) aus dem entzerrten Scan abgegriffen (±5 cm); bemaßt ist nur die Breite 2,84 (lichte Höhe ≥ 1 m). Die Fläche 34,51 = 12,15 × 2,84 bestätigt Länge und Breite."
+  },
+  {
+   "pos": [
+    14.0,
+    4.4
+   ],
+   "text": "Spitzboden Altbau Süd: Länge nicht bemaßt, Ostgrenze = Trennwand (x 21,23) abgegriffen; Fläche lt. Plan 23,10 m² stimmt mit der Zeichnung auf 0,4 % überein."
+  },
+  {
+   "pos": [
+    20.0,
+    13.5
+   ],
+   "text": "Spitzboden Ost: x 19,44–22,94 abgegriffen (Breite 3,50 bemaßt), Südgrenze y 4,00 abgegriffen, Nordgrenze an der Brandwand y 14,05 angenommen."
+  },
+  {
+   "pos": [
+    20.2,
+    6.4
+   ],
+   "text": "Trennwand zwischen den Altbau-Spitzböden: Beschriftung „…KA F90“ schlecht lesbar (F 90 oder F 30); Stärke 0,10 und Lage abgegriffen. Südlich der 1-m-Linie und nach Nordwesten bis zur Hoffassade im Plan nur gestrichelt (dünn dargestellt)."
+  },
+  {
+   "pos": [
+    18.0,
+    5.0
+   ],
+   "text": "Zuordnung W7/W8: Kennzeichen im Süd-Spitzboden als „8“ gelesen, im Ost-Spitzboden unleserlich. Im DG-Plan 1999 (S. 10) liegt W8 im Südwestteil des Altbaus, W7 umfasste Nord- und Ostteil. Der Aufteilungsplan 2010 nummeriert W7 = Süd, W8 = Nord; ob die Sondernutzungsrechte durch die Nachträge 2010/2011 angepasst wurden, ist offen."
+  },
+  {
+   "pos": [
+    3.0,
+    4.4
+   ],
+   "text": "W11: Teilungserklärung 1999 Nr. 1.2.11 nennt den über eine Bodentreppe erreichbaren Spitzboden „dazugehörend … ebenfalls mit W 11 bezeichnet“, anders als bei W7/W8 nicht ausdrücklich als Sondernutzungsrecht."
+  },
+  {
+   "pos": [
+    11.5,
+    6.3
+   ],
+   "text": "Bodentreppen nicht bemaßt; Lage und Größe abgegriffen (ca. 1,41 × 0,72 / 1,28 × 0,73 / 0,72 × 1,42 m)."
+  },
+  {
+   "pos": [
+    12.64,
+    1.6
+   ],
+   "text": "Brandwand/Giebel an der Fuge: Stärken lt. Maßkette (0,24 / 0,02 / 0,45); im Plan geschwärzt (über Dach) y 2,98–7,84, Umriss bis Traufe. Länge wie DG angenommen. Kamine sind im Plan nicht erkennbar."
+  },
+  {
+   "pos": [
+    26.0,
+    1.0
+   ],
+   "text": "Außenkontur aus DG.json übernommen; der Spitzbodenplan zeigt Traufen mit Überstand (Süd ca. y −0,46, Ost ca. x 27,4). Dachgauben (Süd- und Ostseite) und Dachflächen sind nicht bemaßt und deshalb nicht gezeichnet."
+  }
+ ]
+}

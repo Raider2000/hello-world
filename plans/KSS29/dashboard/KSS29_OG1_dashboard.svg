@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" font-family="system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+<title>KSS29 · 1. OG · Dashboard</title>
+<desc>Erzeugt mit tools/ha_dashboard.py aus plans/KSS29/geometrie/OG1.json · Maßstab 60.8 px/m</desc>
+<g id="umgebung">
+<rect x="24" y="24" width="96" height="752" rx="3" fill="#8f8f8f" fill-opacity="0.07"/>
+<line x1="110" y1="24" x2="110" y2="776" stroke="#8f8f8f" stroke-opacity="0.25" stroke-width="1.5"/>
+<line x1="67" y1="38" x2="67" y2="762" stroke="#8f8f8f" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="14 12"/>
+<text x="55" y="400" transform="rotate(-90 55 400)" text-anchor="middle" font-size="13" letter-spacing="3" fill="#8f8f8f" fill-opacity="0.75">KASTENSSESTRASSE</text>
+<text x="140" y="716" transform="rotate(-90 140 716)" text-anchor="start" font-size="10" letter-spacing="2" fill="#8f8f8f" fill-opacity="0.5">VORGARTEN</text>
+<rect x="1136" y="24" width="120" height="752" rx="3" fill="#8f8f8f" fill-opacity="0.05"/>
+<circle cx="1178" cy="144" r="22" fill="#8f8f8f" fill-opacity="0.06" stroke="#8f8f8f" stroke-opacity="0.22" stroke-width="1.2"/>
+<circle cx="1210" cy="325" r="16" fill="#8f8f8f" fill-opacity="0.06" stroke="#8f8f8f" stroke-opacity="0.22" stroke-width="1.2"/>
+<circle cx="1182" cy="535" r="26" fill="#8f8f8f" fill-opacity="0.06" stroke="#8f8f8f" stroke-opacity="0.22" stroke-width="1.2"/>
+<circle cx="1215" cy="686" r="18" fill="#8f8f8f" fill-opacity="0.06" stroke="#8f8f8f" stroke-opacity="0.22" stroke-width="1.2"/>
+<text x="1196" y="400" transform="rotate(-90 1196 400)" text-anchor="middle" font-size="13" letter-spacing="3" fill="#8f8f8f" fill-opacity="0.75">GARTEN</text>
+<g transform="translate(1116 50) rotate(0)" fill="#8f8f8f" fill-opacity="0.7"><path d="M0,-16 L6,8 L0,4 L-6,8 Z"/><text y="22" text-anchor="middle" font-size="10">N</text></g>
+</g>
+<g id="raeume" fill="#8f8f8f" stroke="none">
+<polygon id="raum-treppenhaus" points="292.8,67.4 435.9,67.4 435.9,323.3 292.8,323.3" fill-opacity="0.045"/>
+<polygon id="raum-garderobe" points="450.5,67.4 536.8,67.4 536.8,235.5 468.8,235.5 468.8,176.8 450.5,176.8" fill-opacity="0.045"/>
+<polygon id="raum-toilette" points="543.8,145.8 611.9,145.8 611.9,228.5 543.8,228.5" fill-opacity="0.045"/>
+<polygon id="raum-badezimmer" points="543.8,67.4 768.7,67.4 768.7,228.5 624.0,228.5 624.0,133.7 543.8,133.7" fill-opacity="0.045"/>
+<polygon id="raum-schlafzimmer" points="779.3,67.4 975.4,67.4 975.4,343.0 779.3,343.0" fill-opacity="0.045"/>
+<polygon id="raum-flur" points="450.5,235.5 768.7,235.5 768.7,510.2 633.2,510.2 633.2,323.3 450.5,323.3" fill-opacity="0.045"/>
+<polygon id="raum-kueche" points="292.8,337.9 596.4,337.9 596.4,380.4 622.5,380.4 622.5,514.1 292.8,514.1" fill-opacity="0.045"/>
+<polygon id="raum-buero" points="779.3,350.0 975.4,350.0 975.4,510.2 779.3,510.2" fill-opacity="0.045"/>
+<polygon id="raum-wohnen" points="353.6,514.1 622.5,514.1 622.5,520.8 697.6,520.8 697.6,732.6 353.6,732.6" fill-opacity="0.045"/>
+<polygon id="raum-kinderzimmer" points="704.6,520.8 975.4,520.8 975.4,732.6 704.6,732.6" fill-opacity="0.045"/>
+<polygon id="raum-balkon_strasse" points="205.6,536.3 331.4,536.3 331.4,732.6 205.6,732.6" fill-opacity="0.1" stroke="#8f8f8f" stroke-opacity="0.55" stroke-width="1.5"/>
+<polygon id="raum-balkon_garten" points="997.5,393.5 1089.9,393.5 1089.9,682.2 997.5,682.2" fill-opacity="0.1" stroke="#8f8f8f" stroke-opacity="0.55" stroke-width="1.5"/>
+<polygon id="raum-vordach" points="160.0,61.3 270.6,61.3 270.6,334.8 160.0,334.8" fill-opacity="0.04" stroke="#8f8f8f" stroke-opacity="0.55" stroke-width="1.5" stroke-dasharray="6 5"/>
+</g>
+<g id="aussenwaende" fill="#8f8f8f" opacity="0.85">
+<polygon points="270.6,67.4 470.0,67.4 470.0,45.2 270.6,45.2"/>
+<polygon points="524.7,67.4 664.5,67.4 664.5,45.2 524.7,45.2"/>
+<polygon points="737.4,67.4 997.5,67.4 997.5,45.2 737.4,45.2"/>
+<polygon points="270.6,754.8 582.4,754.8 582.4,732.6 270.6,732.6"/>
+<polygon points="691.8,754.8 798.2,754.8 798.2,732.6 691.8,732.6"/>
+<polygon points="907.6,754.8 997.5,754.8 997.5,732.6 907.6,732.6"/>
+<polygon points="270.6,45.2 270.6,242.7 292.8,242.7 292.8,45.2"/>
+<polygon points="270.6,315.7 270.6,400.2 292.8,400.2 292.8,315.7"/>
+<polygon points="270.6,473.1 270.6,536.3 292.8,536.3 292.8,473.1"/>
+<polygon points="975.3,45.2 975.3,124.8 997.5,124.8 997.5,45.2"/>
+<polygon points="975.3,234.2 975.3,400.2 997.5,400.2 997.5,234.2"/>
+<polygon points="975.3,473.1 975.3,566.1 997.5,566.1 997.5,473.1"/>
+<polygon points="975.3,675.5 975.3,754.8 997.5,754.8 997.5,675.5"/>
+<polygon points="270.6,536.3 353.6,536.3 353.6,514.1 270.6,514.1"/>
+<polygon points="331.4,536.3 331.4,566.1 353.6,566.1 353.6,536.3"/>
+<polygon points="331.4,675.5 331.4,732.6 353.6,732.6 353.6,675.5"/>
+</g>
+<g id="innenwaende" fill="#8f8f8f" opacity="0.45">
+<polygon points="435.9,67.4 435.9,254.3 450.5,254.3 450.5,67.4"/>
+<polygon points="435.9,315.7 435.9,323.3 450.5,323.3 450.5,315.7"/>
+<polygon points="292.8,337.9 523.2,337.9 523.2,323.3 292.8,323.3"/>
+<polygon points="576.9,337.9 633.2,337.9 633.2,323.3 576.9,323.3"/>
+<polygon points="622.5,337.9 622.5,520.8 633.1,520.8 633.1,337.9"/>
+<polygon points="633.2,520.8 639.1,520.8 639.1,510.1 633.2,510.1"/>
+<polygon points="692.6,520.8 709.6,520.8 709.6,510.1 692.6,510.1"/>
+<polygon points="763.1,520.8 975.4,520.8 975.4,510.1 763.1,510.1"/>
+<polygon points="768.7,67.4 768.7,243.7 779.3,243.7 779.3,67.4"/>
+<polygon points="768.7,297.5 768.7,398.6 779.3,398.6 779.3,297.5"/>
+<polygon points="768.7,452.4 768.7,510.2 779.3,510.2 779.3,452.4"/>
+<polygon points="536.8,235.4 547.5,235.4 547.5,228.4 536.8,228.4"/>
+<polygon points="593.7,235.4 654.1,235.4 654.1,228.4 593.7,228.4"/>
+<polygon points="707.9,235.4 768.7,235.4 768.7,228.4 707.9,228.4"/>
+<polygon points="450.5,235.4 468.8,235.4 468.8,228.4 450.5,228.4"/>
+<polygon points="536.9,67.4 536.9,228.5 543.9,228.5 543.9,67.4"/>
+<polygon points="779.3,350.0 975.4,350.0 975.4,343.0 779.3,343.0"/>
+<polygon points="697.6,520.8 697.6,732.6 704.6,732.6 704.6,520.8"/>
+<polygon points="543.8,145.8 624.0,145.8 624.0,133.7 543.8,133.7"/>
+<polygon points="611.9,145.8 611.9,228.5 624.0,228.5 624.0,145.8"/>
+<polygon points="596.4,337.9 622.5,337.9 622.5,380.4 596.4,380.4"/>
+<polygon points="199.5,530.2 270.6,530.2 270.6,536.3 205.6,536.3 205.6,732.6 270.6,732.6 270.6,738.7 199.5,738.7"/>
+<polygon points="997.5,387.4 1096.0,387.4 1096.0,688.3 997.5,688.3 997.5,682.2 1089.9,682.2 1089.9,393.5 997.5,393.5"/>
+</g>
+<g id="fenster" stroke="#8f8f8f" fill="none">
+<line x1="470.0" y1="56.3" x2="524.7" y2="56.3" stroke-width="2" stroke-opacity="0.9"/>
+<line x1="470.0" y1="67.4" x2="470.0" y2="45.2" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="524.7" y1="67.4" x2="524.7" y2="45.2" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="664.5" y1="56.3" x2="737.4" y2="56.3" stroke-width="2" stroke-opacity="0.9"/>
+<line x1="664.5" y1="67.4" x2="664.5" y2="45.2" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="737.4" y1="67.4" x2="737.4" y2="45.2" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="582.4" y1="743.7" x2="691.8" y2="743.7" stroke-width="2" stroke-opacity="0.9"/>
+<line x1="582.4" y1="754.8" x2="582.4" y2="732.6" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="691.8" y1="754.8" x2="691.8" y2="732.6" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="798.2" y1="743.7" x2="907.6" y2="743.7" stroke-width="2" stroke-opacity="0.9"/>
+<line x1="798.2" y1="754.8" x2="798.2" y2="732.6" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="907.6" y1="754.8" x2="907.6" y2="732.6" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="281.7" y1="242.7" x2="281.7" y2="315.7" stroke-width="2" stroke-opacity="0.9"/>
+<line x1="270.6" y1="242.7" x2="292.8" y2="242.7" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="270.6" y1="315.7" x2="292.8" y2="315.7" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="281.7" y1="400.2" x2="281.7" y2="473.1" stroke-width="2" stroke-opacity="0.9"/>
+<line x1="270.6" y1="400.2" x2="292.8" y2="400.2" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="270.6" y1="473.1" x2="292.8" y2="473.1" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="986.4" y1="124.8" x2="986.4" y2="234.2" stroke-width="2" stroke-opacity="0.9"/>
+<line x1="975.3" y1="124.8" x2="997.5" y2="124.8" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="975.3" y1="234.2" x2="997.5" y2="234.2" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="986.4" y1="400.2" x2="986.4" y2="473.1" stroke-width="2" stroke-opacity="0.9"/>
+<line x1="975.3" y1="400.2" x2="997.5" y2="400.2" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="975.3" y1="473.1" x2="997.5" y2="473.1" stroke-width="1" stroke-opacity="0.6"/>
+</g>
+<g id="tueren" fill="none" stroke="#8f8f8f">
+<line x1="975.3" y1="566.1" x2="920.6" y2="566.1" stroke-width="1.6" stroke-opacity="0.65"/>
+<path d="M920.6,566.1 A54.7,54.7 0 0 0 975.3,620.8" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="3 3"/>
+<line x1="975.3" y1="675.5" x2="920.6" y2="675.5" stroke-width="1.6" stroke-opacity="0.65"/>
+<path d="M920.6,675.5 A54.7,54.7 0 0 1 975.3,620.8" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="3 3"/>
+<line x1="353.6" y1="566.1" x2="408.3" y2="566.1" stroke-width="1.6" stroke-opacity="0.65"/>
+<path d="M408.3,566.1 A54.7,54.7 0 0 1 353.6,620.8" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="3 3"/>
+<line x1="353.6" y1="675.5" x2="408.3" y2="675.5" stroke-width="1.6" stroke-opacity="0.65"/>
+<path d="M408.3,675.5 A54.7,54.7 0 0 0 353.6,620.8" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="3 3"/>
+<line x1="450.5" y1="315.7" x2="511.9" y2="315.7" stroke-width="1.6" stroke-opacity="0.65"/>
+<path d="M511.9,315.7 A61.4,61.4 0 0 0 450.5,254.3" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="3 3"/>
+<line x1="576.9" y1="337.9" x2="576.9" y2="391.7" stroke-width="1.6" stroke-opacity="0.65"/>
+<path d="M576.9,391.7 A53.8,53.8 0 0 1 523.2,337.9" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="3 3"/>
+<line x1="547.5" y1="235.4" x2="547.5" y2="281.6" stroke-width="1.6" stroke-opacity="0.65"/>
+<path d="M547.5,281.6 A46.2,46.2 0 0 0 593.7,235.4" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="3 3"/>
+<line x1="654.1" y1="235.4" x2="654.1" y2="289.2" stroke-width="1.6" stroke-opacity="0.65"/>
+<path d="M654.1,289.2 A53.8,53.8 0 0 0 707.9,235.4" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="3 3"/>
+<line x1="779.3" y1="297.5" x2="833.1" y2="297.5" stroke-width="1.6" stroke-opacity="0.65"/>
+<path d="M833.1,297.5 A53.8,53.8 0 0 0 779.3,243.7" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="3 3"/>
+<line x1="779.3" y1="398.6" x2="833.1" y2="398.6" stroke-width="1.6" stroke-opacity="0.65"/>
+<path d="M833.1,398.6 A53.8,53.8 0 0 1 779.3,452.4" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="3 3"/>
+<line x1="639.1" y1="520.8" x2="639.1" y2="574.3" stroke-width="1.6" stroke-opacity="0.65"/>
+<path d="M639.1,574.3 A53.5,53.5 0 0 0 692.6,520.8" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="3 3"/>
+<line x1="763.1" y1="520.8" x2="763.1" y2="574.3" stroke-width="1.6" stroke-opacity="0.65"/>
+<path d="M763.1,574.3 A53.5,53.5 0 0 1 709.6,520.8" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="3 3"/>
+</g>
+<g id="beschriftung" fill="#8f8f8f">
+<text x="302.8" y="89.4" font-size="13" fill-opacity="0.8">Treppenhaus</text>
+<text x="460.5" y="89.4" font-size="13" fill-opacity="0.8">Garderobe</text>
+<text x="561.8" y="218.5" font-size="13" fill-opacity="0.8" transform="rotate(-90 561.8 218.5)">Toilette</text>
+<text x="553.8" y="89.4" font-size="13" fill-opacity="0.8">Badezimmer</text>
+<text x="789.3" y="89.4" font-size="13" fill-opacity="0.8">Schlafzimmer</text>
+<text x="662.6" y="256.4" font-size="13" fill-opacity="0.8">Flur</text>
+<text x="302.8" y="359.9" font-size="13" fill-opacity="0.8">Küche</text>
+<text x="789.3" y="372.0" font-size="13" fill-opacity="0.8">Büro</text>
+<text x="363.6" y="536.1" font-size="13" fill-opacity="0.8">Wohnen</text>
+<text x="814.6" y="545.1" font-size="13" fill-opacity="0.8">Kinderzimmer</text>
+<text x="215.6" y="558.3" font-size="13" fill-opacity="0.75">Balkon Straße</text>
+<text x="1015.5" y="672.2" font-size="13" fill-opacity="0.75" transform="rotate(-90 1015.5 672.2)">Balkon Garten</text>
+<text x="170.0" y="83.3" font-size="13" fill-opacity="0.75">Vordach</text>
+</g>
+</svg>

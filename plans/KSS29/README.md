@@ -4,10 +4,14 @@
 
 | Datei | Inhalt | Planstand | Status |
 |-------|--------|-----------|--------|
-| `quelle/Grundriss_1.OG_Kastenssestrasse_29.pdf` | 1. OG, Scan A3 300 dpi, vollständig bemaßt (Ausführungs-/Werkplan) | – (ohne Datum) | **Maßquelle** |
+| `quelle/Grundriss_1.OG_Kastenssestrasse_29.pdf` | 1. OG, Scan A3 300 dpi, vollständig bemaßt (Ausführungs-/Werkplan) | undatiert, laut Eigentümer aktueller Stand (Baujahr 2020/2021) | **Maßquelle** |
 | `quelle/Grundriss_1.OG_bearbeitet.xcf` | GIMP-Datei auf Basis des Scans (4961 × 3508 px) | – | Referenz, nicht verwendet |
 | `quelle/dashboard/gen_plan.py` | Abstrahierter Grundriss als Home-Assistant-Hintergrund, Geometrie in m (v3) | 2026 | **neueste Raumnutzung**, Maße vereinfacht |
 | `quelle/dashboard/floor_plan_floor_1_dashboard.svg` | Ausgabe von gen_plan.py, in Inkscape nachbearbeitet | 2026 | Referenz |
+
+## Home-Assistant-Dashboard
+
+Neu erzeugter Dashboard-Hintergrund aus der Neuzeichnung: [`dashboard/`](dashboard/README.md) (`tools/ha_dashboard.py`).
 
 ## Geschosse
 
@@ -56,6 +60,13 @@
 | Balkontür Kinderzimmer | y 8,40–10,20 | y 8,57–10,37 |
 | Fenster Süd Wohnen / Kinderzimmer | x 3,96–5,76 / 8,47–10,27 | x 5,13–6,93 / 8,68–10,48 |
 
+## Klärungen (Eigentümer, 04.11.2026)
+
+- Treppenhaus-Stempel 4,49 m² bezieht sich wahrscheinlich nur auf das Podest; keine Flächenprüfung für das Treppenhaus.
+- Gestricheltes Rechteck vor dem Küchenfenster = Anleiterstelle für den 2. Rettungsweg.
+- Die Dusche gehört zum Badezimmer und ist durch eine Trockenbauwand vom WC getrennt.
+- Der Scan entspricht dem heutigen Stand; Baujahr 2020/2021.
+
 ## 3D-Modell
 
 Begehbares Modell mit Möbeln, Bildern und Sonnenstand: [`3d/`](3d/README.md)
@@ -66,8 +77,5 @@ Erzeugt mit `python3 tools/build_3d.py plans/KSS29/geometrie/OG1.json --viewer`.
 
 - Weitere Geschosse: keine Quellen vorhanden.
 - OG1: Gesamtmaß Tiefe 11,67⁵ ↔ Summe aller Teilketten 11,68 (5 mm in den Südräumen aufgefangen).
-- OG1: Treppenhaus-NF 4,49 m² passt nicht zur Grundfläche (9,91 m²), Bezug unklar.
-- OG1: Bedeutung des gestrichelten Rechtecks vor dem Küchenfenster („Rollladen 2.RW“) unklar.
 - OG1: Balkonflächen (BF 6,88 / 7,37) nur mit Geländerachse erreichbar, gezeichnet bis Innenkante Geländer.
-- OG1: Treppenstufen nicht gezeichnet (der Renderer kennt keine freien Linien), nur Treppenauge und Hinweise.
 - Alle weiteren Annahmen stehen in `geometrie/OG1.json` unter `unverified`.

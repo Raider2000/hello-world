@@ -1,0 +1,2182 @@
+{
+ "object": "KFS31",
+ "floor": "OG1",
+ "floor_name": "1. Obergeschoss",
+ "source": {
+  "file": "20101111-Grundrisse-Karl_Ferlemann_Str_31.pdf S. 5 (Raum/WE) · 19990111-…pdf S. 6/7 (Maße)",
+  "date": "2010-11-11 / 1999-01-11",
+  "version": "Aufteilungsplan WE 1–11",
+  "wohnungsnummern": "Laut Flächentabellen im Aufteilungsplan 2010 (S. 4–7): EG W1/W2, 1. OG W3/W4/W9, 2. OG W5/W6/W10, DG W7/W8/W11 (Altbau Süd/Altbau Nord/Neubau); bestätigt Teilungserklärung 1999 Abschnitt 1.2 (Geschosszuordnung)."
+ },
+ "walls": [
+  {
+   "id": "A1",
+   "a": [
+    12.41,
+    0
+   ],
+   "b": [
+    24.76,
+    0
+   ],
+   "thickness": 0.45,
+   "align": "left",
+   "type": "exterior"
+  },
+  {
+   "id": "A2",
+   "a": [
+    24.76,
+    0
+   ],
+   "b": [
+    26.91,
+    2.15
+   ],
+   "thickness": 0.45,
+   "align": "left",
+   "type": "exterior"
+  },
+  {
+   "id": "A3",
+   "a": [
+    26.91,
+    2.15
+   ],
+   "b": [
+    26.91,
+    14.05
+   ],
+   "thickness": 0.45,
+   "align": "left",
+   "type": "exterior"
+  },
+  {
+   "id": "A4",
+   "a": [
+    26.91,
+    14.05
+   ],
+   "b": [
+    16.44,
+    14.05
+   ],
+   "thickness": 0.45,
+   "align": "left",
+   "type": "exterior"
+  },
+  {
+   "id": "A5",
+   "a": [
+    16.44,
+    14.05
+   ],
+   "b": [
+    16.44,
+    9.0
+   ],
+   "thickness": 0.45,
+   "align": "left",
+   "type": "exterior"
+  },
+  {
+   "id": "A6",
+   "a": [
+    15.945,
+    7.56
+   ],
+   "b": [
+    15.945,
+    9.0
+   ],
+   "thickness": 0.47,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "A7",
+   "a": [
+    12.41,
+    7.655
+   ],
+   "b": [
+    15.71,
+    7.655
+   ],
+   "thickness": 0.19,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "A8",
+   "a": [
+    12.64,
+    0.45
+   ],
+   "b": [
+    12.64,
+    5.85
+   ],
+   "thickness": 0.46,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "A9",
+   "a": [
+    12.41,
+    5.985
+   ],
+   "b": [
+    13.86,
+    5.985
+   ],
+   "thickness": 0.27,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "L1",
+   "a": [
+    12.87,
+    5.615
+   ],
+   "b": [
+    21.35,
+    5.615
+   ],
+   "thickness": 0.47,
+   "align": "center",
+   "type": "load-bearing"
+  },
+  {
+   "id": "L2",
+   "a": [
+    21.35,
+    5.5
+   ],
+   "b": [
+    26.46,
+    5.5
+   ],
+   "thickness": 0.24,
+   "align": "center",
+   "type": "load-bearing"
+  },
+  {
+   "id": "L3",
+   "a": [
+    21.5,
+    5.62
+   ],
+   "b": [
+    21.5,
+    8.71
+   ],
+   "thickness": 0.3,
+   "align": "center",
+   "type": "load-bearing"
+  },
+  {
+   "id": "L4",
+   "a": [
+    16.18,
+    8.855
+   ],
+   "b": [
+    21.65,
+    8.855
+   ],
+   "thickness": 0.29,
+   "align": "center",
+   "type": "load-bearing"
+  },
+  {
+   "id": "I2",
+   "a": [
+    15.0,
+    2.99
+   ],
+   "b": [
+    15.0,
+    5.38
+   ],
+   "thickness": 0.14,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "I3",
+   "a": [
+    18.915,
+    0.45
+   ],
+   "b": [
+    18.915,
+    5.38
+   ],
+   "thickness": 0.17,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "I4",
+   "a": [
+    19.0,
+    3.945
+   ],
+   "b": [
+    21.34,
+    3.945
+   ],
+   "thickness": 0.13,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "I5",
+   "a": [
+    21.43,
+    0.45
+   ],
+   "b": [
+    21.43,
+    4.01
+   ],
+   "thickness": 0.18,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "I6",
+   "a": [
+    21.52,
+    3.945
+   ],
+   "b": [
+    22.52,
+    3.945
+   ],
+   "thickness": 0.13,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "I7",
+   "a": [
+    22.57,
+    3.88
+   ],
+   "b": [
+    22.57,
+    5.38
+   ],
+   "thickness": 0.1,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "I81",
+   "a": [
+    22.435,
+    3.88
+   ],
+   "b": [
+    23.27,
+    3.04
+   ],
+   "thickness": 0.19,
+   "align": "left",
+   "type": "interior"
+  },
+  {
+   "id": "I82",
+   "a": [
+    23.27,
+    3.04
+   ],
+   "b": [
+    22.61,
+    2.38
+   ],
+   "thickness": 0.32,
+   "align": "left",
+   "type": "interior"
+  },
+  {
+   "id": "I83",
+   "a": [
+    22.61,
+    2.38
+   ],
+   "b": [
+    24.535,
+    0.45
+   ],
+   "thickness": 0.18,
+   "align": "left",
+   "type": "interior"
+  },
+  {
+   "id": "I84",
+   "a": [
+    23.44,
+    0.45
+   ],
+   "b": [
+    23.86,
+    1.04
+   ],
+   "thickness": 0.74,
+   "align": "right",
+   "type": "interior"
+  },
+  {
+   "id": "I10",
+   "a": [
+    23.195,
+    5.62
+   ],
+   "b": [
+    23.195,
+    7.95
+   ],
+   "thickness": 0.15,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "I11",
+   "a": [
+    22.85,
+    8.03
+   ],
+   "b": [
+    26.46,
+    8.03
+   ],
+   "thickness": 0.16,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "I12",
+   "a": [
+    22.925,
+    8.11
+   ],
+   "b": [
+    22.925,
+    9.89
+   ],
+   "thickness": 0.15,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "I13",
+   "a": [
+    21.65,
+    9.945
+   ],
+   "b": [
+    26.46,
+    9.945
+   ],
+   "thickness": 0.11,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "I14",
+   "a": [
+    21.57,
+    10.0
+   ],
+   "b": [
+    21.57,
+    13.6
+   ],
+   "thickness": 0.16,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "N1",
+   "a": [
+    0,
+    0.17
+   ],
+   "b": [
+    12.39,
+    0.17
+   ],
+   "thickness": 0.3,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "N2",
+   "a": [
+    0,
+    7.64
+   ],
+   "b": [
+    12.39,
+    7.64
+   ],
+   "thickness": 0.3,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "N3",
+   "a": [
+    0.12,
+    0.32
+   ],
+   "b": [
+    0.12,
+    7.49
+   ],
+   "thickness": 0.24,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "N4",
+   "a": [
+    12.27,
+    0.32
+   ],
+   "b": [
+    12.27,
+    7.49
+   ],
+   "thickness": 0.24,
+   "align": "center",
+   "type": "exterior"
+  },
+  {
+   "id": "N5",
+   "a": [
+    3.01,
+    0.32
+   ],
+   "b": [
+    3.01,
+    4.7
+   ],
+   "thickness": 0.12,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "N6",
+   "a": [
+    0.24,
+    4.63
+   ],
+   "b": [
+    2.95,
+    4.63
+   ],
+   "thickness": 0.14,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "N7",
+   "a": [
+    3.07,
+    4.165
+   ],
+   "b": [
+    5.36,
+    4.165
+   ],
+   "thickness": 0.09,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "N8",
+   "a": [
+    3.07,
+    2.92
+   ],
+   "b": [
+    5.36,
+    2.92
+   ],
+   "thickness": 0.1,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "N9",
+   "a": [
+    5.475,
+    0.32
+   ],
+   "b": [
+    5.475,
+    2.97
+   ],
+   "thickness": 0.23,
+   "align": "center",
+   "type": "load-bearing"
+  },
+  {
+   "id": "N10",
+   "a": [
+    5.475,
+    4.12
+   ],
+   "b": [
+    5.475,
+    7.49
+   ],
+   "thickness": 0.23,
+   "align": "center",
+   "type": "load-bearing"
+  },
+  {
+   "id": "N11",
+   "a": [
+    9.605,
+    0.32
+   ],
+   "b": [
+    9.605,
+    7.49
+   ],
+   "thickness": 0.11,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "N12",
+   "a": [
+    10.53,
+    3.88
+   ],
+   "b": [
+    12.15,
+    3.88
+   ],
+   "thickness": 0.14,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "N13",
+   "a": [
+    10.58,
+    3.95
+   ],
+   "b": [
+    10.58,
+    5.98
+   ],
+   "thickness": 0.1,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "N14",
+   "a": [
+    10.63,
+    5.94
+   ],
+   "b": [
+    12.15,
+    5.94
+   ],
+   "thickness": 0.08,
+   "align": "center",
+   "type": "interior"
+  },
+  {
+   "id": "N15",
+   "a": [
+    9.66,
+    4.885
+   ],
+   "b": [
+    10.53,
+    4.885
+   ],
+   "thickness": 0.13,
+   "align": "center",
+   "type": "interior"
+  }
+ ],
+ "openings": [
+  {
+   "id": "F_S1",
+   "wall": "A1",
+   "type": "window",
+   "offset": 1.1,
+   "width": 0.9
+  },
+  {
+   "id": "F_S2",
+   "wall": "A1",
+   "type": "window",
+   "offset": 3.2,
+   "width": 0.9
+  },
+  {
+   "id": "F_S3",
+   "wall": "A1",
+   "type": "window",
+   "offset": 5.05,
+   "width": 0.9
+  },
+  {
+   "id": "F_S4",
+   "wall": "A1",
+   "type": "window",
+   "offset": 6.9,
+   "width": 0.9
+  },
+  {
+   "id": "F_S5",
+   "wall": "A1",
+   "type": "window",
+   "offset": 10.15,
+   "width": 0.9
+  },
+  {
+   "id": "F_E1",
+   "wall": "A2",
+   "type": "window",
+   "offset": 1.07,
+   "width": 0.9
+  },
+  {
+   "id": "F_O1",
+   "wall": "A3",
+   "type": "window",
+   "offset": 1.35,
+   "width": 0.9
+  },
+  {
+   "id": "F_O2",
+   "wall": "A3",
+   "type": "window",
+   "offset": 4.6,
+   "width": 0.9
+  },
+  {
+   "id": "F_O3",
+   "wall": "A3",
+   "type": "window",
+   "offset": 6.4,
+   "width": 0.9
+  },
+  {
+   "id": "F_O4",
+   "wall": "A3",
+   "type": "window",
+   "offset": 8.1,
+   "width": 0.9
+  },
+  {
+   "id": "F_O5",
+   "wall": "A3",
+   "type": "window",
+   "offset": 9.9,
+   "width": 0.9
+  },
+  {
+   "id": "T_BK",
+   "wall": "A5",
+   "type": "door",
+   "offset": 2.965,
+   "width": 0.885,
+   "hinge": "start",
+   "side": "left"
+  },
+  {
+   "id": "T_WES",
+   "wall": "L1",
+   "type": "door",
+   "offset": 7.38,
+   "width": 1.01,
+   "hinge": "start",
+   "side": "right"
+  },
+  {
+   "id": "T_WEN",
+   "wall": "L3",
+   "type": "door",
+   "offset": 1.14,
+   "width": 0.885,
+   "hinge": "start",
+   "side": "right"
+  },
+  {
+   "id": "T_WZ",
+   "wall": "I3",
+   "type": "door",
+   "offset": 3.85,
+   "width": 0.885,
+   "hinge": "end",
+   "side": "left"
+  },
+  {
+   "id": "T_KI",
+   "wall": "I4",
+   "type": "door",
+   "offset": 0.06,
+   "width": 0.885,
+   "hinge": "start",
+   "side": "right"
+  },
+  {
+   "id": "T_BD",
+   "wall": "I6",
+   "type": "door",
+   "offset": 0.08,
+   "width": 0.76,
+   "hinge": "start",
+   "side": "right"
+  },
+  {
+   "id": "T_SZ",
+   "wall": "I7",
+   "type": "door",
+   "offset": 0.42,
+   "width": 0.885,
+   "hinge": "end",
+   "side": "right"
+  },
+  {
+   "id": "T_B2",
+   "wall": "I10",
+   "type": "door",
+   "offset": 0.78,
+   "width": 0.76,
+   "hinge": "start",
+   "side": "right"
+  },
+  {
+   "id": "T_K2",
+   "wall": "I12",
+   "type": "door",
+   "offset": 0.94,
+   "width": 0.76,
+   "hinge": "end",
+   "side": "right"
+  },
+  {
+   "id": "T_S2",
+   "wall": "I13",
+   "type": "door",
+   "offset": 0.1,
+   "width": 0.885,
+   "hinge": "start",
+   "side": "left"
+  },
+  {
+   "id": "F_NS1",
+   "wall": "N1",
+   "type": "window",
+   "offset": 1.74,
+   "width": 1.01
+  },
+  {
+   "id": "F_NS2",
+   "wall": "N1",
+   "type": "window",
+   "offset": 3.615,
+   "width": 1.01
+  },
+  {
+   "id": "F_NS3",
+   "wall": "N1",
+   "type": "window",
+   "offset": 6.765,
+   "width": 2.26
+  },
+  {
+   "id": "F_NS4",
+   "wall": "N1",
+   "type": "window",
+   "offset": 10.14,
+   "width": 1.01
+  },
+  {
+   "id": "F_NN1",
+   "wall": "N2",
+   "type": "window",
+   "offset": 3.365,
+   "width": 1.01
+  },
+  {
+   "id": "T_NBK",
+   "wall": "N2",
+   "type": "door",
+   "offset": 7.7,
+   "width": 1.01,
+   "hinge": "end",
+   "side": "right"
+  },
+  {
+   "id": "F_NN2",
+   "wall": "N2",
+   "type": "window",
+   "offset": 10.9,
+   "width": 0.75
+  },
+  {
+   "id": "T_WEW",
+   "wall": "N4",
+   "type": "door",
+   "offset": 5.8,
+   "width": 1.01,
+   "hinge": "end",
+   "side": "left"
+  },
+  {
+   "id": "T_NSZ",
+   "wall": "N5",
+   "type": "door",
+   "offset": 2.72,
+   "width": 0.885,
+   "hinge": "end",
+   "side": "right"
+  },
+  {
+   "id": "T_NKI",
+   "wall": "N7",
+   "type": "door",
+   "offset": 0.33,
+   "width": 0.885,
+   "hinge": "end",
+   "side": "left"
+  },
+  {
+   "id": "T_NBD",
+   "wall": "N8",
+   "type": "door",
+   "offset": 0.38,
+   "width": 0.76,
+   "hinge": "end",
+   "side": "right"
+  },
+  {
+   "id": "T_NKU",
+   "wall": "N11",
+   "type": "door",
+   "offset": 1.44,
+   "width": 0.8,
+   "hinge": "start",
+   "side": "right"
+  },
+  {
+   "id": "T_NFL",
+   "wall": "N11",
+   "type": "door",
+   "offset": 5.67,
+   "width": 0.8,
+   "hinge": "end",
+   "side": "left"
+  },
+  {
+   "id": "T_NDU",
+   "wall": "N14",
+   "type": "door",
+   "offset": 0.07,
+   "width": 0.76,
+   "hinge": "start",
+   "side": "right"
+  }
+ ],
+ "rooms": [
+  {
+   "name": "WE 3 – Kochen",
+   "polygon": [
+    [
+     12.87,
+     3.47
+    ],
+    [
+     14.93,
+     3.47
+    ],
+    [
+     14.93,
+     5.38
+    ],
+    [
+     12.87,
+     5.38
+    ]
+   ],
+   "area_stated": 4.0
+  },
+  {
+   "name": "WE 3 – Wohnen/Essen",
+   "polygon": [
+    [
+     12.87,
+     0.45
+    ],
+    [
+     18.83,
+     0.45
+    ],
+    [
+     18.83,
+     5.38
+    ],
+    [
+     15.07,
+     5.38
+    ],
+    [
+     15.07,
+     2.99
+    ],
+    [
+     14.93,
+     2.99
+    ],
+    [
+     14.93,
+     3.47
+    ],
+    [
+     12.87,
+     3.47
+    ]
+   ],
+   "area_stated": 25.4,
+   "label_pos": [
+    15.9,
+    1.6
+   ]
+  },
+  {
+   "name": "WE 3 – Kind",
+   "polygon": [
+    [
+     19.0,
+     0.45
+    ],
+    [
+     21.34,
+     0.45
+    ],
+    [
+     21.34,
+     3.88
+    ],
+    [
+     19.0,
+     3.88
+    ]
+   ],
+   "area_stated": 8.0
+  },
+  {
+   "name": "WE 3 – Flur",
+   "polygon": [
+    [
+     19.0,
+     4.01
+    ],
+    [
+     22.52,
+     4.01
+    ],
+    [
+     22.52,
+     5.38
+    ],
+    [
+     19.0,
+     5.38
+    ]
+   ],
+   "area_stated": 4.9
+  },
+  {
+   "name": "WE 3 – Bad",
+   "area_note": "Planfläche größer als gezeichnete Zickzackwand ergibt; Aufmaß offen",
+   "polygon": [
+    [
+     21.52,
+     0.45
+    ],
+    [
+     23.44,
+     0.45
+    ],
+    [
+     23.86,
+     1.04
+    ],
+    [
+     22.61,
+     2.38
+    ],
+    [
+     23.27,
+     3.04
+    ],
+    [
+     22.435,
+     3.88
+    ],
+    [
+     21.52,
+     3.88
+    ]
+   ],
+   "area_stated": 6.65,
+   "label_pos": [
+    22.05,
+    2.6
+   ]
+  },
+  {
+   "name": "WE 3 – Schlafen",
+   "polygon": [
+    [
+     22.62,
+     5.38
+    ],
+    [
+     22.62,
+     3.963
+    ],
+    [
+     23.63,
+     2.947
+    ],
+    [
+     22.963,
+     2.281
+    ],
+    [
+     24.789,
+     0.45
+    ],
+    [
+     24.574,
+     0.45
+    ],
+    [
+     26.46,
+     2.336
+    ],
+    [
+     26.46,
+     5.38
+    ]
+   ],
+   "area_stated": 13.95,
+   "label_pos": [
+    24.9,
+    3.3
+   ]
+  },
+  {
+   "name": "WE 4 – Wohnen",
+   "polygon": [
+    [
+     16.89,
+     9.0
+    ],
+    [
+     20.75,
+     9.0
+    ],
+    [
+     20.75,
+     10.0
+    ],
+    [
+     21.49,
+     10.0
+    ],
+    [
+     21.49,
+     13.6
+    ],
+    [
+     16.89,
+     13.6
+    ]
+   ],
+   "area_stated": 21.0
+  },
+  {
+   "name": "WE 4 – Schlafen",
+   "polygon": [
+    [
+     21.65,
+     10.0
+    ],
+    [
+     26.46,
+     10.0
+    ],
+    [
+     26.46,
+     13.6
+    ],
+    [
+     21.65,
+     13.6
+    ]
+   ],
+   "area_stated": 17.0
+  },
+  {
+   "name": "WE 4 – Flur",
+   "polygon": [
+    [
+     21.65,
+     5.62
+    ],
+    [
+     23.12,
+     5.62
+    ],
+    [
+     23.12,
+     7.95
+    ],
+    [
+     22.85,
+     7.95
+    ],
+    [
+     22.85,
+     9.89
+    ],
+    [
+     21.65,
+     9.89
+    ],
+    [
+     21.65,
+     10.0
+    ],
+    [
+     20.75,
+     10.0
+    ],
+    [
+     20.75,
+     9.0
+    ],
+    [
+     21.65,
+     9.0
+    ]
+   ],
+   "area_stated": 6.6,
+   "label_pos": [
+    22.2,
+    8.9
+   ]
+  },
+  {
+   "name": "WE 4 – Kochen",
+   "polygon": [
+    [
+     23.0,
+     8.11
+    ],
+    [
+     26.46,
+     8.11
+    ],
+    [
+     26.46,
+     9.89
+    ],
+    [
+     23.0,
+     9.89
+    ]
+   ],
+   "area_stated": 6.0
+  },
+  {
+   "name": "WE 4 – Bad",
+   "polygon": [
+    [
+     23.27,
+     5.62
+    ],
+    [
+     26.46,
+     5.62
+    ],
+    [
+     26.46,
+     7.95
+    ],
+    [
+     23.27,
+     7.95
+    ]
+   ],
+   "area_stated": 7.5
+  },
+  {
+   "name": "WE 4 – Balkon",
+   "polygon": [
+    [
+     14.96,
+     9.38
+    ],
+    [
+     16.44,
+     9.38
+    ],
+    [
+     16.44,
+     13.6
+    ],
+    [
+     14.96,
+     13.6
+    ]
+   ],
+   "area_stated": 6.3,
+   "outline": true
+  },
+  {
+   "name": "WE 9 – Kind",
+   "polygon": [
+    [
+     0.24,
+     4.7
+    ],
+    [
+     3.07,
+     4.7
+    ],
+    [
+     3.07,
+     4.21
+    ],
+    [
+     5.36,
+     4.21
+    ],
+    [
+     5.36,
+     7.49
+    ],
+    [
+     0.24,
+     7.49
+    ]
+   ],
+   "area_stated": 15.45
+  },
+  {
+   "name": "WE 9 – Schlafen",
+   "polygon": [
+    [
+     0.24,
+     0.32
+    ],
+    [
+     2.95,
+     0.32
+    ],
+    [
+     2.95,
+     4.56
+    ],
+    [
+     0.24,
+     4.56
+    ]
+   ],
+   "area_stated": 11.5
+  },
+  {
+   "name": "WE 9 – Flur",
+   "polygon": [
+    [
+     3.07,
+     2.97
+    ],
+    [
+     5.59,
+     2.97
+    ],
+    [
+     5.59,
+     4.12
+    ],
+    [
+     3.07,
+     4.12
+    ]
+   ],
+   "area_stated": 2.6,
+   "area_note": "Flächentabelle 2010: 2,60 m²; Raumstempel 2,85; Geometrie 2,90 – Aufmaß offen"
+  },
+  {
+   "name": "WE 9 – Bad",
+   "polygon": [
+    [
+     3.07,
+     0.32
+    ],
+    [
+     5.36,
+     0.32
+    ],
+    [
+     5.36,
+     2.87
+    ],
+    [
+     3.07,
+     2.87
+    ]
+   ],
+   "area_stated": 5.9
+  },
+  {
+   "name": "WE 9 – Wohnen",
+   "polygon": [
+    [
+     5.59,
+     0.32
+    ],
+    [
+     9.55,
+     0.32
+    ],
+    [
+     9.55,
+     7.49
+    ],
+    [
+     5.59,
+     7.49
+    ]
+   ],
+   "area_stated": 28.3
+  },
+  {
+   "name": "WE 9 – Kochen",
+   "polygon": [
+    [
+     9.66,
+     0.32
+    ],
+    [
+     12.15,
+     0.32
+    ],
+    [
+     12.15,
+     3.81
+    ],
+    [
+     9.66,
+     3.81
+    ]
+   ],
+   "area_stated": 8.75
+  },
+  {
+   "name": "WE 9 – Garderobe",
+   "polygon": [
+    [
+     9.66,
+     4.95
+    ],
+    [
+     10.53,
+     4.95
+    ],
+    [
+     10.53,
+     5.98
+    ],
+    [
+     9.66,
+     5.98
+    ]
+   ],
+   "area_stated": 0.9,
+   "show_area": false
+  },
+  {
+   "name": "WE 9 – Du/WC",
+   "polygon": [
+    [
+     10.63,
+     3.95
+    ],
+    [
+     12.15,
+     3.95
+    ],
+    [
+     12.15,
+     5.9
+    ],
+    [
+     10.63,
+     5.9
+    ]
+   ],
+   "area_stated": 3.0
+  },
+  {
+   "name": "WE 9 – Flur 2",
+   "polygon": [
+    [
+     9.66,
+     5.98
+    ],
+    [
+     12.15,
+     5.98
+    ],
+    [
+     12.15,
+     7.49
+    ],
+    [
+     9.66,
+     7.49
+    ]
+   ],
+   "area_stated": 3.75
+  },
+  {
+   "name": "WE 9 – Balkon",
+   "polygon": [
+    [
+     7.03,
+     7.79
+    ],
+    [
+     9.54,
+     7.79
+    ],
+    [
+     9.54,
+     9.29
+    ],
+    [
+     7.03,
+     9.29
+    ]
+   ],
+   "area_stated": 3.76,
+   "outline": true,
+   "subtitle": "3,76 m² (Fläche zur Hälfte)"
+  },
+  {
+   "name": "Treppenhaus",
+   "polygon": [
+    [
+     13.86,
+     5.85
+    ],
+    [
+     21.35,
+     5.85
+    ],
+    [
+     21.35,
+     8.71
+    ],
+    [
+     16.18,
+     8.71
+    ],
+    [
+     16.18,
+     7.56
+    ],
+    [
+     13.86,
+     7.56
+    ]
+   ],
+   "show_area": false,
+   "label_pos": [
+    20.5,
+    7.4
+   ]
+  },
+  {
+   "name": "Treppe",
+   "polygon": [
+    [
+     17.6,
+     5.85
+    ],
+    [
+     19.95,
+     5.85
+    ],
+    [
+     19.95,
+     8.71
+    ],
+    [
+     17.6,
+     8.71
+    ]
+   ],
+   "outline": true,
+   "show_area": false,
+   "subtitle": "↓ / ↑"
+  },
+  {
+   "name": "Lauf",
+   "polygon": [
+    [
+     13.86,
+     6.5
+    ],
+    [
+     16.18,
+     6.5
+    ],
+    [
+     16.18,
+     7.56
+    ],
+    [
+     13.86,
+     7.56
+    ]
+   ],
+   "outline": true,
+   "show_area": false,
+   "subtitle": "Halbgeschoss Neubau"
+  },
+  {
+   "name": "Laubengang",
+   "polygon": [
+    [
+     12.41,
+     6.12
+    ],
+    [
+     13.86,
+     6.12
+    ],
+    [
+     13.86,
+     7.56
+    ],
+    [
+     12.41,
+     7.56
+    ]
+   ],
+   "show_area": false,
+   "label_pos": [
+    13.1,
+    6.7
+   ]
+  }
+ ],
+ "dimensions": [
+  {
+   "a": [
+    0,
+    0
+   ],
+   "b": [
+    12.39,
+    0
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    12.39,
+    0
+   ],
+   "b": [
+    12.41,
+    0
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    12.41,
+    0
+   ],
+   "b": [
+    26.91,
+    0
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    0,
+    0
+   ],
+   "b": [
+    26.91,
+    0
+   ],
+   "offset": -2.2
+  },
+  {
+   "a": [
+    12.41,
+    0
+   ],
+   "b": [
+    13.51,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    13.51,
+    0
+   ],
+   "b": [
+    14.41,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    14.41,
+    0
+   ],
+   "b": [
+    15.61,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    15.61,
+    0
+   ],
+   "b": [
+    16.51,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    16.51,
+    0
+   ],
+   "b": [
+    17.46,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    17.46,
+    0
+   ],
+   "b": [
+    18.36,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    18.36,
+    0
+   ],
+   "b": [
+    19.31,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    19.31,
+    0
+   ],
+   "b": [
+    20.21,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    20.21,
+    0
+   ],
+   "b": [
+    22.56,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    22.56,
+    0
+   ],
+   "b": [
+    23.46,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    23.46,
+    0
+   ],
+   "b": [
+    24.76,
+    0
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    0,
+    0.02
+   ],
+   "b": [
+    1.74,
+    0.02
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    1.74,
+    0.02
+   ],
+   "b": [
+    2.75,
+    0.02
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    2.75,
+    0.02
+   ],
+   "b": [
+    3.615,
+    0.02
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    3.615,
+    0.02
+   ],
+   "b": [
+    4.625,
+    0.02
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    4.625,
+    0.02
+   ],
+   "b": [
+    6.765,
+    0.02
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    6.765,
+    0.02
+   ],
+   "b": [
+    9.025,
+    0.02
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    9.025,
+    0.02
+   ],
+   "b": [
+    10.14,
+    0.02
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    10.14,
+    0.02
+   ],
+   "b": [
+    11.15,
+    0.02
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    11.15,
+    0.02
+   ],
+   "b": [
+    12.39,
+    0.02
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    0
+   ],
+   "b": [
+    26.91,
+    2.15
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    26.91,
+    2.15
+   ],
+   "b": [
+    26.91,
+    14.05
+   ],
+   "offset": -1.2
+  },
+  {
+   "a": [
+    26.91,
+    2.15
+   ],
+   "b": [
+    26.91,
+    3.5
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    3.5
+   ],
+   "b": [
+    26.91,
+    4.4
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    4.4
+   ],
+   "b": [
+    26.91,
+    6.75
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    6.75
+   ],
+   "b": [
+    26.91,
+    7.65
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    7.65
+   ],
+   "b": [
+    26.91,
+    8.55
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    8.55
+   ],
+   "b": [
+    26.91,
+    9.45
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    9.45
+   ],
+   "b": [
+    26.91,
+    10.25
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    10.25
+   ],
+   "b": [
+    26.91,
+    11.15
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    11.15
+   ],
+   "b": [
+    26.91,
+    12.05
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    12.05
+   ],
+   "b": [
+    26.91,
+    12.95
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    26.91,
+    12.95
+   ],
+   "b": [
+    26.91,
+    14.05
+   ],
+   "offset": -0.6
+  },
+  {
+   "a": [
+    0,
+    0.02
+   ],
+   "b": [
+    0,
+    7.79
+   ],
+   "offset": 1.0
+  },
+  {
+   "a": [
+    0,
+    7.79
+   ],
+   "b": [
+    3.365,
+    7.79
+   ],
+   "offset": 0.8
+  },
+  {
+   "a": [
+    3.365,
+    7.79
+   ],
+   "b": [
+    4.375,
+    7.79
+   ],
+   "offset": 0.8
+  },
+  {
+   "a": [
+    4.375,
+    7.79
+   ],
+   "b": [
+    7.03,
+    7.79
+   ],
+   "offset": 0.8
+  },
+  {
+   "a": [
+    7.03,
+    7.79
+   ],
+   "b": [
+    9.54,
+    7.79
+   ],
+   "offset": 0.8
+  },
+  {
+   "a": [
+    9.54,
+    7.79
+   ],
+   "b": [
+    10.9,
+    7.79
+   ],
+   "offset": 0.8
+  },
+  {
+   "a": [
+    10.9,
+    7.79
+   ],
+   "b": [
+    11.65,
+    7.79
+   ],
+   "offset": 0.8
+  },
+  {
+   "a": [
+    11.65,
+    7.79
+   ],
+   "b": [
+    12.39,
+    7.79
+   ],
+   "offset": 0.8
+  },
+  {
+   "a": [
+    16.44,
+    14.05
+   ],
+   "b": [
+    26.91,
+    14.05
+   ],
+   "offset": 0.8
+  }
+ ],
+ "notes": [
+  {
+   "pos": [
+    14.0,
+    10.8
+   ],
+   "text": "Hof",
+   "size": 3
+  },
+  {
+   "pos": [
+    19.5,
+    -3.2
+   ],
+   "text": "Raimundstraße",
+   "size": 3
+  },
+  {
+   "pos": [
+    29.6,
+    7.0
+   ],
+   "text": "Karl-Ferlemann-Straße",
+   "size": 3
+  }
+ ],
+ "unverified": [
+  {
+   "pos": [
+    23.2,
+    2.3
+   ],
+   "text": "Zickzackwand Bad/Schlafen wie EG (Stand 2026 WE 1) übernommen; Plan 2010 zeigt hier dieselbe Wandführung, Lage ±10 cm",
+   "short": "Lage wie EG"
+  },
+  {
+   "pos": [
+    20.6,
+    4.7
+   ],
+   "text": "Türbreiten/Aufschläge unleserlich – Standardmaße angenommen, Lage abgegriffen",
+   "short": "Türmaße angenommen"
+  },
+  {
+   "pos": [
+    5.0,
+    0.0
+   ],
+   "text": "Fenster Neubau Süd lt. Maßkette 1999; Plan 2010 zeigt sie ca. 0,24 m weiter westlich und das Wohnzimmerfenster zweiteilig",
+   "short": "Fenster lt. 1999"
+  },
+  {
+   "pos": [
+    21.0,
+    9.5
+   ],
+   "text": "Flur WE Nord: offener Übergang zum Wohnen; Raumgrenze bei x = 20,75 so angenommen, dass beide Flächen lt. Plan passen",
+   "short": "Flur-Abgrenzung"
+  },
+  {
+   "pos": [
+    13.1,
+    7.2
+   ],
+   "text": "Laubengang/Treppe West: Wandführung im Scan 2010 nur schematisch, Brüstungen angenommen",
+   "short": "angenommen"
+  },
+  {
+   "pos": [
+    8.3,
+    9.3
+   ],
+   "text": "Balkon Neubau: Tiefe 1,50 aus Plan 2010 abgegriffen, Breite 2,51 lt. 1999",
+   "short": "Tiefe abgegriffen"
+  }
+ ]
+}

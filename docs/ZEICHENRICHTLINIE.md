@@ -33,10 +33,13 @@ Geschosskürzel: `KG`, `EG`, `OG1`, `OG2`, …, `DG`, `SB` (Spitzboden).
    Türen: `hinge` (`start`/`end`) und `side` (`left`/`right` relativ zu a→b).
 5. **Räume**: Polygon in Fertigmaßen der Innenkanten, `area_stated` = Fläche laut Plan.
    Der Renderer vergleicht berechnete und angegebene Fläche; **> 3 % Abweichung**
-   bricht mit Exit-Code 1 ab und muss geklärt oder dokumentiert werden.
+   bricht mit Exit-Code 1 ab und muss geklärt oder dokumentiert werden. Eine geklärte, aber nicht
+   behebbare Abweichung (z. B. widersprüchlicher Plan, Dachschräge nach WoFlV) wird im Raum mit
+   `area_note` begründet; dann meldet der Renderer sie nur noch als „begründet“.
 6. **Nichts erfinden**: Unleserliche oder widersprüchliche Maße werden plausibel
    angenommen **und** in `unverified` mit Position und Text eingetragen
-   (erscheint rot im Plan, Layer `A_UNGEPRUEFT`).
+   (erscheint als kleiner roter, nummerierter Marker im Plan; der volle Text steht in der Legende
+   unter dem Schriftfeld, im DXF neben dem Marker – Layer `A_UNGEPRUEFT`).
 7. **Abgleich**: SVG rendern, neben das Original legen (Overlay auf gleichen Maßstab),
    Abweichungen korrigieren. Erst dann committen.
 
@@ -60,8 +63,9 @@ Für Bestandsfassaden mit abgeschrägten Laibungen und für Sanierungspläne:
 - **`notes`**: `{"pos","text"}` plus optional `size`, `anchor` (`start`/`middle`/`end`), `bold`;
   Notes erscheinen auch im DXF (Layer `A_TEXT`). Maßketten: `label` überschreibt den Wert
   (z. B. „ca. 2,30“); ein Leerzeichen zeigt nur die Maßkette ohne Text.
-- **`unverified`**: `text` ist die volle Begründung, optional `short` die Kurzfassung im SVG
-  (`""` = nur roter Kreis). Im DXF steht immer der volle Text.
+- **`unverified`**: `text` ist die volle Begründung. Im SVG nummerierter Marker + Legende, im DXF
+  Nummer und voller Text. (`short` aus älteren Dateien wird ignoriert.)
+- **Räume**: `area_note` begründet eine Flächenabweichung > 3 % (kein Exit 1).
 - **`source.transformation`**: Freitext zur Koordinatentransformation, wenn eine bestehende
   Zeichnung (z. B. mm, y nach unten) übernommen wurde. Das Rohdaten-Original bleibt in `quelle/`.
 
@@ -94,3 +98,15 @@ python3 tools/render_plan.py --all
 ```
 
 Ein vollständiges Schema-Beispiel liegt in `tools/beispiel/geometrie/EG.json`.
+
+## Reproduzierbarkeit
+
+`render_plan.py` erzeugt bei gleicher Eingabe byte-identische SVG- und DXF-Dateien (fester
+Hash-Seed, keine Zeitstempel im DXF). Ausgaben nach jeder Geometrieänderung mit
+`python3 tools/render_plan.py --all` neu erzeugen und mitcommitten.
+
+## Home-Assistant-Dashboard
+
+`python3 tools/ha_dashboard.py <config.json>` erzeugt aus einer Geschossgeometrie einen reduzierten
+Grundriss als Dashboard-Hintergrund samt Positionsliste für `picture-elements`.
+Beispiel: `plans/KSS29/dashboard/`.
