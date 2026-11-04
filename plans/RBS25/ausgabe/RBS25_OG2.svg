@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="136.6mm" height="197.7mm" viewBox="0 0 136.6 197.7">
+<title>RBS25 – 2. Obergeschoss – Wohnung WE05 (Zustand nach Sanierung)</title>
+<style>text{font-family:Arial,Helvetica,sans-serif}</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g id="A_RAUM" fill="none">
+<polygon points="28.50,95.05 61.00,95.05 61.00,144.85 28.50,144.85" fill="#f4f4f4" stroke="none"/>
+<polygon points="62.50,108.35 94.60,108.35 94.60,144.85 62.50,144.85" fill="#f4f4f4" stroke="none"/>
+<polygon points="62.50,95.05 94.60,95.05 94.60,106.60 62.50,106.60" fill="#f4f4f4" stroke="none"/>
+<polygon points="28.50,57.95 61.00,57.95 61.00,92.35 28.50,92.35" fill="#f4f4f4" stroke="none"/>
+<polygon points="62.50,57.95 79.05,57.95 79.05,92.35 62.50,92.35" fill="#f4f4f4" stroke="none"/>
+<polygon points="82.30,57.95 105.30,57.95 105.30,92.35 82.30,92.35" fill="#f4f4f4" stroke="none"/>
+<polygon points="30.50,27.15 60.50,27.15 60.50,52.15 30.50,52.15" fill="#f4f4f4" stroke="#555" stroke-width="0.25" stroke-dasharray="2,1"/>
+</g>
+<defs><pattern id="schraffur-neu" width="1.6" height="1.6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="1.6" height="1.6" fill="#ffffff"/><line x1="0" y1="0" x2="0" y2="1.6" stroke="#000" stroke-width="0.5"/></pattern></defs>
+<g id="A_WAND_TRAGEND" fill="#000000" stroke="#000" stroke-width="0.35">
+<polygon points="94.60,96.45 97.00,96.45 97.00,95.05 94.60,95.05"/>
+<polygon points="27.15,52.15 41.25,52.15 41.25,55.25 40.95,57.95 28.50,57.95 28.50,144.85 40.75,144.85 41.05,147.45 41.05,150.55 27.15,150.55"/>
+<polygon points="53.25,52.15 66.20,52.15 66.20,54.05 65.45,57.95 53.55,57.95 53.25,55.25"/>
+<polygon points="71.15,52.15 81.90,52.15 81.90,55.25 81.60,57.95 71.80,57.95 71.15,54.05"/>
+<polygon points="93.90,52.15 109.50,52.15 109.50,95.05 90.30,95.05 90.30,92.35 106.80,92.35 106.80,57.95 94.20,57.95 93.90,55.25"/>
+<polygon points="53.35,144.85 72.30,144.85 72.60,147.45 72.60,150.55 53.05,150.55 53.05,147.45"/>
+<polygon points="84.90,144.85 94.60,144.85 94.60,105.45 97.00,105.45 97.00,150.55 84.60,150.55 84.60,147.45"/>
+</g>
+<g id="A_WAND" fill="#9a9a9a" stroke="#000" stroke-width="0.35">
+<polygon points="28.50,95.05 33.50,95.05 33.50,92.35 28.50,92.35"/>
+<polygon points="62.50,65.45 62.50,57.95 61.00,57.95 61.00,65.45"/>
+<polygon points="62.50,144.85 62.50,105.45 61.00,105.45 61.00,144.85"/>
+<polygon points="62.50,108.34 73.30,108.34 73.30,106.59 62.50,106.59"/>
+<polygon points="82.30,108.34 94.60,108.34 94.60,106.59 82.30,106.59"/>
+<polygon points="70.70,95.05 80.80,95.05 80.80,92.35 70.70,92.35"/>
+<polygon points="72.55,59.45 75.55,59.45 75.55,57.95 72.55,57.95"/>
+<polygon points="56.00,92.35 61.00,92.35 61.00,88.75 62.50,88.75 62.50,96.45 61.00,96.45 61.00,95.05 56.00,95.05"/>
+</g>
+<g id="A_WAND_NEU" fill="url(#schraffur-neu)" stroke="#000" stroke-width="0.35">
+<polygon points="62.50,95.05 70.70,95.05 70.70,92.35 62.50,92.35"/>
+<polygon points="106.80,92.35 106.80,57.95 105.30,57.95 105.30,92.35"/>
+<polygon points="94.80,83.80 105.30,83.80 105.30,82.75 94.80,82.75"/>
+<polygon points="75.55,57.95 80.80,57.95 80.80,92.35 79.05,92.35 79.05,59.45 75.55,59.45"/>
+</g>
+<g id="A_OEFFNUNG" fill="none" stroke="#000" stroke-width="0.18">
+<line x1="66.20" y1="54.50" x2="71.15" y2="54.50"/>
+<line x1="66.20" y1="53.60" x2="71.15" y2="53.60"/>
+<line x1="66.20" y1="54.25" x2="71.15" y2="54.25"/>
+<line x1="66.20" y1="53.85" x2="71.15" y2="53.85"/>
+<line x1="66.20" y1="54.50" x2="66.20" y2="53.60"/>
+<line x1="71.15" y1="54.50" x2="71.15" y2="53.60"/>
+<line x1="81.90" y1="55.70" x2="93.90" y2="55.70"/>
+<line x1="81.90" y1="54.80" x2="93.90" y2="54.80"/>
+<line x1="81.90" y1="55.45" x2="93.90" y2="55.45"/>
+<line x1="81.90" y1="55.05" x2="93.90" y2="55.05"/>
+<line x1="81.90" y1="55.70" x2="81.90" y2="54.80"/>
+<line x1="93.90" y1="55.70" x2="93.90" y2="54.80"/>
+<line x1="41.05" y1="147.90" x2="53.05" y2="147.90"/>
+<line x1="41.05" y1="147.00" x2="53.05" y2="147.00"/>
+<line x1="41.05" y1="147.65" x2="53.05" y2="147.65"/>
+<line x1="41.05" y1="147.25" x2="53.05" y2="147.25"/>
+<line x1="41.05" y1="147.90" x2="41.05" y2="147.00"/>
+<line x1="53.05" y1="147.90" x2="53.05" y2="147.00"/>
+<line x1="72.60" y1="147.90" x2="84.60" y2="147.90"/>
+<line x1="72.60" y1="147.00" x2="84.60" y2="147.00"/>
+<line x1="72.60" y1="147.65" x2="84.60" y2="147.65"/>
+<line x1="72.60" y1="147.25" x2="84.60" y2="147.25"/>
+<line x1="72.60" y1="147.90" x2="72.60" y2="147.00"/>
+<line x1="84.60" y1="147.90" x2="84.60" y2="147.00"/>
+<line x1="41.25" y1="55.70" x2="53.25" y2="55.70"/>
+<line x1="41.25" y1="54.80" x2="53.25" y2="54.80"/>
+<line x1="41.25" y1="55.45" x2="53.25" y2="55.45"/>
+<line x1="41.25" y1="55.05" x2="53.25" y2="55.05"/>
+<line x1="41.25" y1="55.70" x2="41.25" y2="54.80"/>
+<line x1="53.25" y1="55.70" x2="53.25" y2="54.80"/>
+<line x1="52.95" y1="55.70" x2="52.95" y2="66.80"/>
+<line x1="80.80" y1="95.05" x2="80.80" y2="85.55"/>
+<line x1="62.50" y1="96.45" x2="53.50" y2="96.45"/>
+<line x1="73.30" y1="106.60" x2="73.30" y2="115.60"/>
+<line x1="94.60" y1="96.45" x2="85.60" y2="96.45"/>
+<path d="M52.95,66.80 A11.10,11.10 0 0 1 41.85,55.70" stroke-dasharray="1,0.8"/>
+<path d="M80.80,85.55 A9.50,9.50 0 0 1 90.30,95.05" stroke-dasharray="1,0.8"/>
+<path d="M53.50,96.45 A9.00,9.00 0 0 0 62.50,105.45" stroke-dasharray="1,0.8"/>
+<path d="M73.30,115.60 A9.00,9.00 0 0 0 82.30,106.60" stroke-dasharray="1,0.8"/>
+<path d="M85.60,96.45 A9.00,9.00 0 0 0 94.60,105.45" stroke-dasharray="1,0.8"/>
+</g>
+<g id="A_BEMASSUNG" stroke="#333" stroke-width="0.13" font-size="2.2" fill="#333">
+<line x1="28.50" y1="156.65" x2="61.00" y2="156.65"/>
+<line x1="28.50" y1="150.55" x2="28.50" y2="156.65"/>
+<line x1="27.70" y1="157.45" x2="29.30" y2="155.85" stroke-width="0.35"/>
+<line x1="61.00" y1="150.55" x2="61.00" y2="156.65"/>
+<line x1="60.20" y1="157.45" x2="61.80" y2="155.85" stroke-width="0.35"/>
+<text x="44.75" y="155.85" text-anchor="middle" stroke="none" transform="rotate(-0.0 44.75 156.65)">3,25</text>
+<line x1="61.00" y1="156.65" x2="62.50" y2="156.65"/>
+<line x1="61.00" y1="150.55" x2="61.00" y2="156.65"/>
+<line x1="60.20" y1="157.45" x2="61.80" y2="155.85" stroke-width="0.35"/>
+<line x1="62.50" y1="150.55" x2="62.50" y2="156.65"/>
+<line x1="61.70" y1="157.45" x2="63.30" y2="155.85" stroke-width="0.35"/>
+<text x="61.75" y="155.85" text-anchor="middle" stroke="none" transform="rotate(-0.0 61.75 156.65)"> </text>
+<line x1="62.50" y1="156.65" x2="94.60" y2="156.65"/>
+<line x1="62.50" y1="150.55" x2="62.50" y2="156.65"/>
+<line x1="61.70" y1="157.45" x2="63.30" y2="155.85" stroke-width="0.35"/>
+<line x1="94.60" y1="150.55" x2="94.60" y2="156.65"/>
+<line x1="93.80" y1="157.45" x2="95.40" y2="155.85" stroke-width="0.35"/>
+<text x="78.55" y="155.85" text-anchor="middle" stroke="none" transform="rotate(-0.0 78.55 156.65)">3,21</text>
+<line x1="94.60" y1="156.65" x2="97.00" y2="156.65"/>
+<line x1="94.60" y1="150.55" x2="94.60" y2="156.65"/>
+<line x1="93.80" y1="157.45" x2="95.40" y2="155.85" stroke-width="0.35"/>
+<line x1="97.00" y1="150.55" x2="97.00" y2="156.65"/>
+<line x1="96.20" y1="157.45" x2="97.80" y2="155.85" stroke-width="0.35"/>
+<text x="95.80" y="155.85" text-anchor="middle" stroke="none" transform="rotate(-0.0 95.80 156.65)"> </text>
+<line x1="28.50" y1="164.65" x2="97.00" y2="164.65"/>
+<line x1="28.50" y1="150.55" x2="28.50" y2="164.65"/>
+<line x1="27.70" y1="165.45" x2="29.30" y2="163.85" stroke-width="0.35"/>
+<line x1="97.00" y1="150.55" x2="97.00" y2="164.65"/>
+<line x1="96.20" y1="165.45" x2="97.80" y2="163.85" stroke-width="0.35"/>
+<text x="62.75" y="163.85" text-anchor="middle" stroke="none" transform="rotate(-0.0 62.75 164.65)">6,85</text>
+<line x1="62.50" y1="73.85" x2="79.05" y2="73.85"/>
+<line x1="62.50" y1="68.15" x2="62.50" y2="73.85"/>
+<line x1="61.70" y1="74.65" x2="63.30" y2="73.05" stroke-width="0.35"/>
+<line x1="79.05" y1="68.15" x2="79.05" y2="73.85"/>
+<line x1="78.25" y1="74.65" x2="79.85" y2="73.05" stroke-width="0.35"/>
+<text x="70.78" y="73.05" text-anchor="middle" stroke="none" transform="rotate(-0.0 70.78 73.85)">ca. 1,66</text>
+<line x1="82.30" y1="65.85" x2="105.30" y2="65.85"/>
+<line x1="82.30" y1="65.05" x2="82.30" y2="65.85"/>
+<line x1="81.50" y1="66.65" x2="83.10" y2="65.05" stroke-width="0.35"/>
+<line x1="105.30" y1="65.05" x2="105.30" y2="65.85"/>
+<line x1="104.50" y1="66.65" x2="106.10" y2="65.05" stroke-width="0.35"/>
+<text x="93.80" y="65.05" text-anchor="middle" stroke="none" transform="rotate(-0.0 93.80 65.85)">ca. 2,30</text>
+<line x1="33.50" y1="87.85" x2="56.00" y2="87.85"/>
+<line x1="33.50" y1="92.35" x2="33.50" y2="87.85"/>
+<line x1="32.70" y1="88.65" x2="34.30" y2="87.05" stroke-width="0.35"/>
+<line x1="56.00" y1="92.35" x2="56.00" y2="87.85"/>
+<line x1="55.20" y1="88.65" x2="56.80" y2="87.05" stroke-width="0.35"/>
+<text x="44.75" y="87.05" text-anchor="middle" stroke="none" transform="rotate(-0.0 44.75 87.85)">ca. 2,25</text>
+<line x1="30.50" y1="22.95" x2="60.50" y2="22.95"/>
+<line x1="30.50" y1="27.15" x2="30.50" y2="22.95"/>
+<line x1="29.70" y1="23.75" x2="31.30" y2="22.15" stroke-width="0.35"/>
+<line x1="60.50" y1="27.15" x2="60.50" y2="22.95"/>
+<line x1="59.70" y1="23.75" x2="61.30" y2="22.15" stroke-width="0.35"/>
+<text x="45.50" y="22.15" text-anchor="middle" stroke="none" transform="rotate(-0.0 45.50 22.95)">ca. 3,00</text>
+<line x1="25.00" y1="52.15" x2="25.00" y2="27.15"/>
+<line x1="30.50" y1="52.15" x2="25.00" y2="52.15"/>
+<line x1="24.20" y1="52.95" x2="25.80" y2="51.35" stroke-width="0.35"/>
+<line x1="30.50" y1="27.15" x2="25.00" y2="27.15"/>
+<line x1="24.20" y1="27.95" x2="25.80" y2="26.35" stroke-width="0.35"/>
+<text x="25.00" y="38.85" text-anchor="middle" stroke="none" transform="rotate(-90.0 25.00 39.65)">ca. 2,50</text>
+<line x1="13.00" y1="150.55" x2="13.00" y2="52.15"/>
+<line x1="27.15" y1="150.55" x2="13.00" y2="150.55"/>
+<line x1="12.20" y1="151.35" x2="13.80" y2="149.75" stroke-width="0.35"/>
+<line x1="27.15" y1="52.15" x2="13.00" y2="52.15"/>
+<line x1="12.20" y1="52.95" x2="13.80" y2="51.35" stroke-width="0.35"/>
+<text x="13.00" y="100.55" text-anchor="middle" stroke="none" transform="rotate(-90.0 13.00 101.35)">9,84</text>
+<line x1="21.00" y1="92.35" x2="21.00" y2="57.95"/>
+<line x1="28.50" y1="92.35" x2="21.00" y2="92.35"/>
+<line x1="20.20" y1="93.15" x2="21.80" y2="91.55" stroke-width="0.35"/>
+<line x1="28.50" y1="57.95" x2="21.00" y2="57.95"/>
+<line x1="20.20" y1="58.75" x2="21.80" y2="57.15" stroke-width="0.35"/>
+<text x="21.00" y="74.35" text-anchor="middle" stroke="none" transform="rotate(-90.0 21.00 75.15)">ca. 3,44</text>
+<line x1="21.00" y1="144.85" x2="21.00" y2="95.05"/>
+<line x1="28.50" y1="144.85" x2="21.00" y2="144.85"/>
+<line x1="20.20" y1="145.65" x2="21.80" y2="144.05" stroke-width="0.35"/>
+<line x1="28.50" y1="95.05" x2="21.00" y2="95.05"/>
+<line x1="20.20" y1="95.85" x2="21.80" y2="94.25" stroke-width="0.35"/>
+<text x="21.00" y="119.15" text-anchor="middle" stroke="none" transform="rotate(-90.0 21.00 119.95)">ca. 4,98</text>
+<line x1="102.80" y1="144.85" x2="102.80" y2="108.35"/>
+<line x1="97.00" y1="144.85" x2="102.80" y2="144.85"/>
+<line x1="102.00" y1="145.65" x2="103.60" y2="144.05" stroke-width="0.35"/>
+<line x1="97.00" y1="108.35" x2="102.80" y2="108.35"/>
+<line x1="102.00" y1="109.15" x2="103.60" y2="107.55" stroke-width="0.35"/>
+<text x="102.80" y="125.80" text-anchor="middle" stroke="none" transform="rotate(-90.0 102.80 126.60)">ca. 3,65</text>
+<line x1="115.60" y1="92.35" x2="115.60" y2="57.95"/>
+<line x1="109.50" y1="92.35" x2="115.60" y2="92.35"/>
+<line x1="114.80" y1="93.15" x2="116.40" y2="91.55" stroke-width="0.35"/>
+<line x1="109.50" y1="57.95" x2="115.60" y2="57.95"/>
+<line x1="114.80" y1="58.75" x2="116.40" y2="57.15" stroke-width="0.35"/>
+<text x="115.60" y="74.35" text-anchor="middle" stroke="none" transform="rotate(-90.0 115.60 75.15)">ca. 3,44</text>
+</g>
+<g id="A_TEXT" font-size="2.6" text-anchor="middle" fill="#000">
+<text x="44.50" y="124.45" font-weight="bold">Wohnen</text>
+<text x="44.50" y="127.65" font-size="2.2">16,15 m²</text>
+<text x="78.50" y="127.85" font-weight="bold">Schlafen</text>
+<text x="78.50" y="131.05" font-size="2.2">11,68 m²</text>
+<text x="77.00" y="101.15" font-weight="bold">Flur</text>
+<text x="77.00" y="104.35" font-size="2.2">3,69 m²</text>
+<text x="44.50" y="76.15" font-weight="bold">Essen</text>
+<text x="44.50" y="79.35" font-size="2.2">11,18 m²</text>
+<text x="70.60" y="67.75" font-weight="bold">Kochen</text>
+<text x="70.60" y="70.95" font-size="2.2">5,69 m²</text>
+<text x="92.20" y="75.95" font-weight="bold">Bad</text>
+<text x="92.20" y="79.15" font-size="2.2">7,91 m²</text>
+<text x="45.50" y="39.15" font-weight="bold">Balkon</text>
+<text x="45.50" y="42.35" font-size="2.2">Metallkonstruktion</text>
+<text x="61.75" y="159.95" font-size="1.6" text-anchor="middle">0,15</text>
+<text x="95.80" y="159.95" font-size="1.6" text-anchor="middle">0,24</text>
+<text x="98.60" y="100.45" font-size="2.2" text-anchor="start" font-weight="bold">← Zugang WE05 (Treppenhaus)</text>
+<text x="84.50" y="62.60" font-size="1.5" text-anchor="middle">WC</text>
+<text x="84.30" y="73.95" font-size="1.5" text-anchor="middle">WT</text>
+<text x="101.55" y="74.35" font-size="1.5" text-anchor="middle">Wanne</text>
+<text x="100.05" y="88.15" font-size="1.5" text-anchor="middle">Dusche</text>
+<text x="102.30" y="62.25" font-size="1.5" text-anchor="middle">WM</text>
+</g>
+<g id="A_UNGEPRUEFT" fill="none" stroke="#d00000" stroke-width="0.3" font-size="2" >
+<circle cx="70.77" cy="68.15" r="2.5"/>
+<circle cx="93.80" cy="65.05" r="2.5"/>
+<circle cx="44.75" cy="87.85" r="2.5"/>
+<circle cx="45.50" cy="22.95" r="2.5"/>
+<circle cx="25.00" cy="39.65" r="2.5"/>
+<circle cx="21.00" cy="75.15" r="2.5"/>
+<circle cx="21.00" cy="119.95" r="2.5"/>
+<circle cx="102.80" cy="126.60" r="2.5"/>
+<circle cx="115.60" cy="75.15" r="2.5"/>
+<circle cx="31.50" cy="45.65" r="2.5"/>
+<text x="34.50" y="45.65" fill="#d00000" stroke="none">Fläche unklar (3,75 / 7,5 m2)</text>
+<circle cx="77.00" cy="104.35" r="2.5"/>
+<circle cx="44.50" cy="79.35" r="2.5"/>
+<circle cx="70.60" cy="70.95" r="2.5"/>
+<circle cx="92.20" cy="79.15" r="2.5"/>
+<circle cx="52.95" cy="61.15" r="2.5"/>
+<circle cx="79.90" cy="75.15" r="2.5"/>
+<circle cx="66.60" cy="93.70" r="2.5"/>
+<circle cx="95.50" cy="69.15" r="2.5"/>
+</g>
+<g id="SCHRIFTFELD" font-size="2.6" fill="#000"><text x="27.1" y="181.7" font-weight="bold">RBS25 · 2. Obergeschoss – Wohnung WE05 (Zustand nach Sanierung) · M 1:100</text><text x="27.1" y="185.7" font-size="2">Quelle: plans/RBS25/quelle/vorgaenger_WE05/build_plan.py (2026-09-12) · Maße in m · Neuzeichnung, ohne Gewähr – rot markierte Werte ungeprüft</text></g>
+</svg>

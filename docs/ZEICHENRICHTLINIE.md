@@ -40,12 +40,40 @@ Geschosskürzel: `KG`, `EG`, `OG1`, `OG2`, …, `DG`, `SB` (Spitzboden).
 7. **Abgleich**: SVG rendern, neben das Original legen (Overlay auf gleichen Maßstab),
    Abweichungen korrigieren. Erst dann committen.
 
+## Erweiterungen des Schemas (alle optional, abwärtskompatibel)
+
+Für Bestandsfassaden mit abgeschrägten Laibungen und für Sanierungspläne:
+
+- **`wall_polygons`**: `[{"id", "type", "polygon": [[x,y], …]}]` – Wände als freies Polygon
+  (Meter, wie alles andere), wenn Achse + Stärke die Form nicht abbilden (Laibungen,
+  Wandwinkel). Layer-Logik wie bei `walls`. Die Öffnung liegt dann als Lücke im Polygon.
+- **Wandtyp `new`**: neue/zu errichtende Wände und zugemauerte Öffnungen. Layer `A_WAND_NEU`,
+  im SVG schraffiert, im DXF mit Schraffur ANSI31. Gilt für `walls` und `wall_polygons`.
+  Typen `exterior`/`load-bearing` → `A_WAND_TRAGEND`, alles andere → `A_WAND`.
+- **Freie Öffnungen**: statt `"wall": "<id>"` ein `"host": {"a","b","thickness","align"}`
+  (Hilfsachse, `thickness` darf 0 sein). `offset`/`width`/`hinge`/`side` wie bei Wandöffnungen,
+  geschnitten wird nichts. Für Türen: `a` = Angel, `b` = Schließlage, `side` = Seite des Aufschlags
+  relativ zu a→b.
+- **Räume**: `subtitle` ersetzt die Flächenzeile (z. B. „Metallkonstruktion“), `show_area: false`
+  blendet sie aus, `outline: true` zeichnet eine gestrichelte Kontur (Balkon außerhalb der Wände).
+  Räume zählen zur Zeichenfläche, der Zeichenrand wächst mit weit abgesetzten Maßketten.
+- **`notes`**: `{"pos","text"}` plus optional `size`, `anchor` (`start`/`middle`/`end`), `bold`;
+  Notes erscheinen auch im DXF (Layer `A_TEXT`). Maßketten: `label` überschreibt den Wert
+  (z. B. „ca. 2,30“); ein Leerzeichen zeigt nur die Maßkette ohne Text.
+- **`unverified`**: `text` ist die volle Begründung, optional `short` die Kurzfassung im SVG
+  (`""` = nur roter Kreis). Im DXF steht immer der volle Text.
+- **`source.transformation`**: Freitext zur Koordinatentransformation, wenn eine bestehende
+  Zeichnung (z. B. mm, y nach unten) übernommen wurde. Das Rohdaten-Original bleibt in `quelle/`.
+
+Beispiel: `plans/RBS25/geometrie/OG2.json`.
+
 ## Layer (SVG-Gruppen = DXF-Layer)
 
 | Layer            | Inhalt                         |
 |------------------|--------------------------------|
 | `A_WAND_TRAGEND` | Außen- und tragende Wände      |
 | `A_WAND`         | nichttragende Innenwände       |
+| `A_WAND_NEU`     | neue Wände (Typ `new`, schraffiert) |
 | `A_OEFFNUNG`     | Türen (mit Aufschlag), Fenster |
 | `A_RAUM`         | Raumpolygone                   |
 | `A_BEMASSUNG`    | Maßketten                      |

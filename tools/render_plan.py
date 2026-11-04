@@ -23,6 +23,7 @@ ROOT = Path(__file__).resolve().parent.parent
 LAYERS = {
     "A_WAND_TRAGEND": (7, "#000000"),
     "A_WAND": (8, "#000000"),
+    "A_WAND_NEU": (4, "#000000"),
     "A_OEFFNUNG": (1, "#000000"),
     "A_RAUM": (3, "#555555"),
     "A_BEMASSUNG": (5, "#333333"),
@@ -65,6 +66,27 @@ def wall_segments(wall, openings):
     return polys, (ux, uy), (nx, ny), (lo, hi)
 
 
+def wall_layer(wtype):
+    """Wandtyp -> Layer. exterior/load-bearing tragend, new = neue Wand, sonst nichttragend."""
+    if wtype in ("exterior", "load-bearing"):
+        return "A_WAND_TRAGEND"
+    if wtype == "new":
+        return "A_WAND_NEU"
+    return "A_WAND"
+
+
+def host_frame(host):
+    """Laufrichtung u, Normale n (links von a->b) und Band (lo, hi) einer Achse.
+
+    Dient freien Öffnungen (``"host"`` statt ``"wall"``), die in ``wall_polygons``
+    liegen und deshalb keine Achswand haben. ``thickness`` darf 0 sein (Türen).
+    """
+    (ux, uy), _ = norm(vec(host["a"], host["b"]))
+    t = host.get("thickness", 0.0)
+    lo, hi = {"center": (-t / 2, t / 2), "left": (0, t), "right": (-t, 0)}[host.get("align", "center")]
+    return (ux, uy), (-uy, ux), (lo, hi)
+
+
 def shoelace(poly):
     return abs(sum(poly[i][0] * poly[i - 1][1] - poly[i - 1][0] * poly[i][1]
                    for i in range(len(poly)))) / 2
@@ -100,28 +122,48 @@ def opening_geometry(wall, op, u, n, band):
 
 
 def build(plan):
-    walls = {w["id"]: w for w in plan["walls"]}
+    walls = {w["id"]: w for w in plan.get("walls", [])}
     ops_by_wall = {}
+    free_ops = []
     for op in plan.get("openings", []):
+        if "host" in op:  # freie Öffnung ohne Achswand (z. B. in wall_polygons)
+            free_ops.append(op)
+            continue
         if op["wall"] not in walls:
             raise ValueError(f"Öffnung {op.get('id')} verweist auf unbekannte Wand {op['wall']}")
         ops_by_wall.setdefault(op["wall"], []).append(op)
     out = {"walls": [], "lines": [], "arcs": []}
     for wid, wall in walls.items():
         polys, u, n, band = wall_segments(wall, ops_by_wall.get(wid, []))
-        layer = "A_WAND_TRAGEND" if wall.get("type") in ("exterior", "load-bearing") else "A_WAND"
+        layer = wall_layer(wall.get("type"))
         out["walls"] += [(layer, poly) for poly in polys]
         for op in ops_by_wall.get(wid, []):
             ls, ars = opening_geometry(wall, op, u, n, band)
             out["lines"] += [("A_OEFFNUNG", l) for l in ls]
             out["arcs"] += [("A_OEFFNUNG", a) for a in ars]
+    for wp in plan.get("wall_polygons", []):
+        out["walls"].append((wall_layer(wp.get("type")), wp["polygon"]))
+    for op in free_ops:
+        u, n, band = host_frame(op["host"])
+        ls, ars = opening_geometry(op["host"], op, u, n, band)
+        out["lines"] += [("A_OEFFNUNG", l) for l in ls]
+        out["arcs"] += [("A_OEFFNUNG", a) for a in ars]
     return out
 
 
 def bbox(plan):
-    pts = [pt for w in plan["walls"] for pt in (w["a"], w["b"])]
+    pts = [pt for w in plan.get("walls", []) for pt in (w["a"], w["b"])]
+    pts += [pt for wp in plan.get("wall_polygons", []) for pt in wp["polygon"]]
+    # Räume außerhalb der Wände (z. B. Balkon) gehören zur Zeichenfläche
+    pts += [pt for r in plan.get("rooms", []) for pt in r["polygon"]]
     xs, ys = [p[0] for p in pts], [p[1] for p in pts]
     return min(xs), min(ys), max(xs), max(ys)
+
+
+def margin_for(plan):
+    """Zeichenrand in m: mindestens 2,5; wächst mit weit abgesetzten Maßketten."""
+    offs = [abs(d.get("offset", 1.0)) for d in plan.get("dimensions", [])]
+    return max(2.5, max(offs, default=0) + 1.3)
 
 
 def room_report(plan):
@@ -137,7 +179,7 @@ def room_report(plan):
 # ---------------------------------------------------------------------- SVG
 def render_svg(plan, geo, path):
     x0, y0, x1, y1 = bbox(plan)
-    margin = 2.5  # m
+    margin = margin_for(plan)  # m
     W, H = x1 - x0 + 2 * margin, y1 - y0 + 2 * margin + 2.0
     tx = lambda p: ((p[0] - x0 + margin) * MM_PER_M, (y1 - p[1] + margin) * MM_PER_M)
     pts = lambda poly: " ".join(f"{tx(p)[0]:.2f},{tx(p)[1]:.2f}" for p in poly)
@@ -150,13 +192,24 @@ def render_svg(plan, geo, path):
 
     o.append('<g id="A_RAUM" fill="none">')
     for r in plan.get("rooms", []):
-        o.append(f'<polygon points="{pts(r["polygon"])}" fill="#f4f4f4" stroke="none"/>')
+        if r.get("outline"):  # optional: gestrichelte Kontur (z. B. Balkon außerhalb der Wände)
+            o.append(f'<polygon points="{pts(r["polygon"])}" fill="#f4f4f4" stroke="#555" '
+                     f'stroke-width="0.25" stroke-dasharray="2,1"/>')
+        else:
+            o.append(f'<polygon points="{pts(r["polygon"])}" fill="#f4f4f4" stroke="none"/>')
     o.append('</g>')
 
-    for layer in ("A_WAND_TRAGEND", "A_WAND"):
-        fill = "#000000" if layer == "A_WAND_TRAGEND" else "#9a9a9a"
+    if any(lay == "A_WAND_NEU" for lay, _ in geo["walls"]):
+        o.append('<defs><pattern id="schraffur-neu" width="1.6" height="1.6" patternUnits="userSpaceOnUse" '
+                 'patternTransform="rotate(45)"><rect width="1.6" height="1.6" fill="#ffffff"/>'
+                 '<line x1="0" y1="0" x2="0" y2="1.6" stroke="#000" stroke-width="0.5"/></pattern></defs>')
+    for layer in ("A_WAND_TRAGEND", "A_WAND", "A_WAND_NEU"):
+        fill = {"A_WAND_TRAGEND": "#000000", "A_WAND": "#9a9a9a", "A_WAND_NEU": "url(#schraffur-neu)"}[layer]
+        members = [poly for lay, poly in geo["walls"] if lay == layer]
+        if layer == "A_WAND_NEU" and not members:
+            continue
         o.append(f'<g id="{layer}" fill="{fill}" stroke="#000" stroke-width="0.35">')
-        o += [f'<polygon points="{pts(poly)}"/>' for lay, poly in geo["walls"] if lay == layer]
+        o += [f'<polygon points="{pts(poly)}"/>' for poly in members]
         o.append('</g>')
 
     o.append('<g id="A_OEFFNUNG" fill="none" stroke="#000" stroke-width="0.18">')
@@ -198,11 +251,17 @@ def render_svg(plan, geo, path):
         cx, cy = tx(r.get("label_pos") or centroid(r["polygon"]))
         area = r.get("area_stated") or shoelace(r["polygon"])
         o.append(f'<text x="{cx:.2f}" y="{cy:.2f}" font-weight="bold">{escape(r["name"])}</text>')
-        area_txt = f"{area:.2f}".replace(".", ",")
-        o.append(f'<text x="{cx:.2f}" y="{cy+3.2:.2f}" font-size="2.2">{area_txt} m²</text>')
+        # optional: "subtitle" ersetzt die Flächenzeile, "show_area": false blendet sie aus
+        if r.get("subtitle"):
+            o.append(f'<text x="{cx:.2f}" y="{cy+3.2:.2f}" font-size="2.2">{escape(r["subtitle"])}</text>')
+        elif r.get("show_area", True):
+            area_txt = f"{area:.2f}".replace(".", ",")
+            o.append(f'<text x="{cx:.2f}" y="{cy+3.2:.2f}" font-size="2.2">{area_txt} m²</text>')
     for nt in plan.get("notes", []):
         cx, cy = tx(nt["pos"])
-        o.append(f'<text x="{cx:.2f}" y="{cy:.2f}" font-size="2.2">{escape(nt["text"])}</text>')
+        bold = ' font-weight="bold"' if nt.get("bold") else ""
+        o.append(f'<text x="{cx:.2f}" y="{cy:.2f}" font-size="{nt.get("size", 2.2)}" '
+                 f'text-anchor="{nt.get("anchor", "middle")}"{bold}>{escape(nt["text"])}</text>')
     o.append('</g>')
 
     unv = plan.get("unverified", [])
@@ -211,7 +270,10 @@ def render_svg(plan, geo, path):
         for u in unv:
             cx, cy = tx(u["pos"])
             o.append(f'<circle cx="{cx:.2f}" cy="{cy:.2f}" r="2.5"/>')
-            o.append(f'<text x="{cx+3:.2f}" y="{cy:.2f}" fill="#d00000" stroke="none">{escape(u["text"])}</text>')
+            # optional: "short" ist die Kurzfassung im Plan ("" = nur Kreis); "text" bleibt die volle Begründung
+            shown = u.get("short", u["text"])
+            if shown:
+                o.append(f'<text x="{cx+3:.2f}" y="{cy:.2f}" fill="#d00000" stroke="none">{escape(shown)}</text>')
         o.append('</g>')
 
     # Schriftfeld
@@ -238,8 +300,10 @@ def render_dxf(plan, geo, path):
         doc.layers.add(name, color=color)
     for layer, poly in geo["walls"]:
         msp.add_lwpolyline(poly, close=True, dxfattribs={"layer": layer})
-        h = msp.add_hatch(color=7 if layer == "A_WAND_TRAGEND" else 8, dxfattribs={"layer": layer})
+        h = msp.add_hatch(color={"A_WAND_TRAGEND": 7, "A_WAND": 8}.get(layer, 4), dxfattribs={"layer": layer})
         h.paths.add_polyline_path(poly, is_closed=True)
+        if layer == "A_WAND_NEU":  # neue Wände: Schraffur statt Vollfläche
+            h.set_pattern_fill("ANSI31", scale=0.05)
     for layer, (a, b) in geo["lines"]:
         msp.add_line(a, b, dxfattribs={"layer": layer})
     for layer, arc in geo["arcs"]:
@@ -255,8 +319,16 @@ def render_dxf(plan, geo, path):
         area = r.get("area_stated") or shoelace(r["polygon"])
         msp.add_text(r["name"], height=0.25, dxfattribs={"layer": "A_TEXT"}).set_placement(
             (cx, cy), align=ezdxf.enums.TextEntityAlignment.MIDDLE_CENTER)
-        msp.add_text(f"{area:.2f} m²".replace(".", ","), height=0.2, dxfattribs={"layer": "A_TEXT"}).set_placement(
-            (cx, cy - 0.35), align=ezdxf.enums.TextEntityAlignment.MIDDLE_CENTER)
+        if r.get("subtitle") or r.get("show_area", True):
+            msp.add_text(r.get("subtitle") or f"{area:.2f} m²".replace(".", ","), height=0.2,
+                         dxfattribs={"layer": "A_TEXT"}).set_placement(
+                (cx, cy - 0.35), align=ezdxf.enums.TextEntityAlignment.MIDDLE_CENTER)
+    for nt in plan.get("notes", []):
+        al = {"middle": ezdxf.enums.TextEntityAlignment.MIDDLE_CENTER,
+              "start": ezdxf.enums.TextEntityAlignment.MIDDLE_LEFT,
+              "end": ezdxf.enums.TextEntityAlignment.MIDDLE_RIGHT}[nt.get("anchor", "middle")]
+        msp.add_text(nt["text"], height=nt.get("size", 2.2) / 10, dxfattribs={"layer": "A_TEXT"}).set_placement(
+            nt["pos"], align=al)
     for d in plan.get("dimensions", []):
         (ux, uy), _ = norm(vec(d["a"], d["b"]))
         off = d.get("offset", 1.0)
@@ -267,7 +339,7 @@ def render_dxf(plan, geo, path):
     for u in plan.get("unverified", []):
         msp.add_circle(u["pos"], 0.25, dxfattribs={"layer": "A_UNGEPRUEFT"})
         msp.add_text(u["text"], height=0.2, dxfattribs={"layer": "A_UNGEPRUEFT"}).set_placement(
-            (u["pos"][0] + 0.3, u["pos"][1]))
+            (u["pos"][0] + 0.3, u["pos"][1]))  # im DXF immer die volle Begründung
     doc.saveas(path)
 
 
