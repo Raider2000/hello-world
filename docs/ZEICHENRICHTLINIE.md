@@ -56,7 +56,7 @@ Geschosskürzel: `KG`, `EG`, `OG1`, `OG2`, …, `DG`, `SB` (Spitzboden).
 
 ```bash
 pip install -r tools/requirements.txt
-python3 tools/render_plan.py plans/KFS29/geometrie/EG.json
+python3 tools/render_plan.py plans/KFS31/geometrie/EG.json
 python3 tools/render_plan.py --all
 ```
 

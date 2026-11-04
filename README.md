@@ -4,7 +4,7 @@ Maßgetreue Neuzeichnungen der Bestandsgrundrisse als offene Formate (SVG + DXF)
 
 | Objekt | Ordner |
 |--------|--------|
-| KFS29  | [plans/KFS29](plans/KFS29) |
+| KFS31  | [plans/KFS31](plans/KFS31) |
 | WBS3   | [plans/WBS3](plans/WBS3)   |
 | RBS25  | [plans/RBS25](plans/RBS25) |
 | KSS29  | [plans/KSS29](plans/KSS29) |
