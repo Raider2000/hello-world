@@ -110,11 +110,11 @@ Maßketten 1999. Der Plan 2026 (WE 1) wurde über die Fensterachsen 1999 skalier
 ### KG
 - Die Kellerverschläge sind Lattenverschläge (ca. 0,07) und im Scan 2010 nur schematisch erkennbar.
   Die Trennwände sind aus dem entzerrten Scan abgegriffen; die Flächen weichen bis ca. 25 % ab
-  (Keller 2/3/4/5/6/7, ELT, AR, HR/Technik +3,6 %). Wohnungszuordnung der Keller unleserlich →
-  Räume heißen „Keller (1)“ … „Keller (8)“. Laut Teilungserklärung 1999 gehört zu W2–W6 und W9–W11 je ein
-  Kellerraum (W2–W4 „mit Vorraum“) – das sind 8 Keller; W1 hat stattdessen einen Abstellraum im EG,
-  W7/W8 den Spitzboden. Welcher Keller (1)–(8) zu welcher Wohnung gehört, ist im Scan nicht lesbar;
-  durch die Nachträge 2010/2011 kann sich die Zuordnung geändert haben.
+  (Keller 2/3/4/5/6, ELT, AR, HR/Technik +3,6 %).
+- **Kellerzuordnung (geklärt):** Der Aufteilungsplan 2010 (S. 3) nummeriert die Keller 1–8 mit Flächentabelle;
+  Keller n gehört zu Wohnung W n. Die Neubau-Wohnungen W9–W11 haben stattdessen die Abstellräume AR 9–11 im EG.
+  (Die Teilungserklärung 1999 ordnete noch anders zu; maßgeblich ist die Aufteilung 2010/2011.)
+- Keller 7: Raumstempel 4,65 m², Flächentabelle 7,65 m², Geometrie 5,35 m² – widersprüchlich, aufmessen.
 - Nördlicher Raum (11,60–13,40) ohne Bezeichnung; Hofbereich westlich des AR (Schacht?) unklar.
 - Spitzboden: Die Bauantragsblätter 1999 S. 12/13 wurden nicht neu gezeichnet; 2010 enthält keinen
   Spitzboden-Grundriss. Laut Teilungserklärung 1999 Sondernutzungsrecht für W7, W8 (Altbau) und W11 (Neubau).

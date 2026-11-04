@@ -22243,7 +22243,7 @@ AcDbText
  40
 0.25
   1
-Keller (1)
+Keller 1 (W1)
  72
 1
  11
@@ -22343,7 +22343,7 @@ AcDbText
  40
 0.25
   1
-Keller (2)
+Keller 2 (W2)
  72
 1
  11
@@ -22443,7 +22443,7 @@ AcDbText
  40
 0.25
   1
-Keller (3)
+Keller 3 (W3)
  72
 1
  11
@@ -22543,7 +22543,7 @@ AcDbText
  40
 0.25
   1
-Keller (4)
+Keller 4 (W4)
  72
 1
  11
@@ -22651,7 +22651,7 @@ AcDbText
  40
 0.25
   1
-Keller (5)
+Keller 5 (W5)
  72
 1
  11
@@ -22759,7 +22759,7 @@ AcDbText
  40
 0.25
   1
-Keller (6)
+Keller 6 (W6)
  72
 1
  11
@@ -22975,7 +22975,7 @@ AcDbText
  40
 0.25
   1
-Keller (7)
+Keller 7 (W7)
  72
 1
  11
@@ -23009,7 +23009,7 @@ AcDbText
  40
 0.2
   1
-6,85 m²
+lt. Plan 2010: 4,65 (Stempel) / 7,65 m² (Tabelle)
  72
 1
  11
@@ -23175,7 +23175,7 @@ AcDbText
  40
 0.25
   1
-Keller (8)
+Keller 8 (W8)
  72
 1
  11
@@ -26087,7 +26087,7 @@ AcDbText
  40
 0.12
   1
-1 Kellerverschläge: Zuordnung zu den WE in 2010 unleserlich (1999: W 3, W 4, W 6, W 9–W 11 …); Trennwände als Lattenverschläge ca. 0,07, Lage aus Plan 2010 abgegriffen, Flächen nur näherungsweise
+1 Kellerverschläge als Lattenverschläge ca. 0,07, Lage aus Plan 2010 abgegriffen, Flächen nur näherungsweise. Zuordnung Keller n ↔ Wohnung W n aus dem Aufteilungsplan 2010 (Keller 1–8 nummeriert; W9–W11 haben stattdessen AR 9–11 im EG).
  11
 17.2
  21
@@ -26287,7 +26287,7 @@ AcDbText
  40
 0.12
   1
-5 Keller 6,85: Begrenzung im Scan unklar (Wandstummel, Tür bei y 9,93); als 21,40–23,22 × 8,20–11,14 angenommen
+5 Keller 7 (W7): Begrenzung im Scan unklar (Wandstummel, Tür bei y 9,93); als 21,40–23,22 × 8,20–11,14 angenommen Flächenangabe widersprüchlich: Raumstempel 4,65 m², Flächentabelle 7,65 m², Geometrie 5,35 m² → aufmessen.
  11
 22.5
  21

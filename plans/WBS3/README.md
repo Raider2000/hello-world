@@ -18,13 +18,13 @@
 ## Zeichnung OG1
 
 - Transformation: mm, y nach unten (Quelle) -> m, y nach oben, Ursprung linke untere Rohbau-Außenecke (Quelle 2600/16200); Details in `source.transformation`.
-- Kontrollmaße: Gesamtbreite 14,535 m (Kette), alle 12 Maßketten der Quelle stimmen mit den Messpunkten überein; linke Gebäudetiefe 11,835 m (Wandecken) gegen Kette 11,805 m, siehe `unverified`.
+- Kontrollmaße: Gesamtbreite 14,535 m (Kette, bestätigt durch Aufteilungsplan 1998), alle Teilketten stimmen mit den Messpunkten überein; linke Tiefe 11,835 m, rechte Tiefe 11,745 m.
 - Abgleich: Overlay Original gegen Neuzeichnung (Playwright, gleicher Maßstab) deckungsgleich, Abweichungen nur in Strichstärken.
 - Renderer-Erweiterungen (abwärtskompatibel): `symbols` (Treppe, Nordpfeil), `holes` in `wall_polygons`, `margin`, `name_size` je Raum.
 
 ## Offene Punkte
 
-- Maßkette 11,805 m links um 0,03 m gegenüber den Wandecken versetzt; Nordfassade um 0,09 m schräg (aus Quelle übernommen). Der historische Grundriss der Teilungserklärung ist laut Eigentümer zu schlecht lesbar, um das zu klären – offen bis zu einem Aufmaß.
+- **Tiefe (geklärt):** Links 11,835 m – die Teilkette des Plans 2026 ergibt genau diesen Wert, das dort angegebene Gesamtmaß „11,805“ ist ein Rechenfehler (in der Neuzeichnung auf 11,83⁵ korrigiert). Rechts 11,745 m, bestätigt durch den Aufteilungsplan 1998 (Blatt 7). Die Nordfassade verläuft damit tatsächlich 9 cm schräg.
 - Aussparung in der rechten Außenwand (0,175 × 0,19 m): laut Eigentümer vermutlich ein Wand-Einbauschrank mit Tür.
 
 - Weitere Geschosse: keine Quellen vorhanden.

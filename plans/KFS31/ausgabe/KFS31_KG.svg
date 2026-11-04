@@ -389,25 +389,25 @@
 <text x="229.84" y="35.70" text-anchor="middle" stroke="none" transform="rotate(-90.0 229.84 36.50)">0,700</text>
 </g>
 <g id="A_TEXT" font-size="2.6" text-anchor="middle" fill="#000">
-<text x="102.24" y="143.45" font-weight="bold">Keller (1)</text>
+<text x="102.24" y="143.45" font-weight="bold">Keller 1 (W1)</text>
 <text x="102.24" y="146.65" font-size="2.2">7,70 m²</text>
-<text x="120.99" y="151.90" font-weight="bold">Keller (2)</text>
+<text x="120.99" y="151.90" font-weight="bold">Keller 2 (W2)</text>
 <text x="120.99" y="155.10" font-size="2.2">5,10 m²</text>
-<text x="141.09" y="151.90" font-weight="bold">Keller (3)</text>
+<text x="141.09" y="151.90" font-weight="bold">Keller 3 (W3)</text>
 <text x="141.09" y="155.10" font-size="2.2">6,80 m²</text>
-<text x="164.19" y="151.90" font-weight="bold">Keller (4)</text>
+<text x="164.19" y="151.90" font-weight="bold">Keller 4 (W4)</text>
 <text x="164.19" y="155.10" font-size="2.2">7,50 m²</text>
-<text x="193.24" y="157.00" font-weight="bold">Keller (5)</text>
+<text x="193.24" y="157.00" font-weight="bold">Keller 5 (W5)</text>
 <text x="193.24" y="160.20" font-size="2.2">8,20 m²</text>
-<text x="206.84" y="137.10" font-weight="bold">Keller (6)</text>
+<text x="206.84" y="137.10" font-weight="bold">Keller 6 (W6)</text>
 <text x="206.84" y="140.30" font-size="2.2">7,70 m²</text>
 <text x="213.24" y="106.00" font-weight="bold">HR/Technik</text>
 <text x="213.24" y="109.20" font-size="2.2">9,85 m²</text>
-<text x="186.34" y="77.30" font-weight="bold">Keller (7)</text>
-<text x="186.34" y="80.50" font-size="2.2">6,85 m²</text>
+<text x="186.34" y="77.30" font-weight="bold">Keller 7 (W7)</text>
+<text x="186.34" y="80.50" font-size="2.2">lt. Plan 2010: 4,65 (Stempel) / 7,65 m² (Tabelle)</text>
 <text x="211.59" y="68.70" font-weight="bold">ELT</text>
 <text x="211.59" y="71.90" font-size="2.2">3,80 m²</text>
-<text x="154.09" y="73.15" font-weight="bold">Keller (8)</text>
+<text x="154.09" y="73.15" font-weight="bold">Keller 8 (W8)</text>
 <text x="154.09" y="76.35" font-size="2.2">8,10 m²</text>
 <text x="134.34" y="101.70" font-weight="bold">AR</text>
 <text x="134.34" y="104.90" font-size="2.2">5,85 m²</text>
@@ -433,11 +433,11 @@
 <text x="33.0" y="255.0" font-size="2">Quelle: 20101111-Grundrisse-Karl_Ferlemann_Str_31.pdf S. 3 (Raumaufteilung) · 19990111-…pdf S. 2/3 (Maße) (2010-11-11 / 1999-01-11) · Maße in m · Neuzeichnung, ohne Gewähr – rot nummerierte Punkte sind ungeprüft (Legende)</text>
 </g>
 <g id="LEGENDE_UNGEPRUEFT" font-size="1.8" fill="#333"><text x="33.0" y="261.2" font-weight="bold" fill="#d00000">Ungeprüfte bzw. angenommene Werte</text>
-<text x="33.0" y="264.1">1 Kellerverschläge: Zuordnung zu den WE in 2010 unleserlich (1999: W 3, W 4, W 6, W 9–W 11 …); Trennwände als Lattenverschläge ca. 0,07, Lage aus Plan 2010 abgegriffen, Flächen nur näherungsweise</text>
+<text x="33.0" y="264.1">1 Kellerverschläge als Lattenverschläge ca. 0,07, Lage aus Plan 2010 abgegriffen, Flächen nur näherungsweise. Zuordnung Keller n ↔ Wohnung W n aus dem Aufteilungsplan 2010 (Keller 1–8 nummeriert; W9–W11 haben stattdessen AR 9–11 im EG).</text>
 <text x="33.0" y="266.8">2 Innenwände/Innenkanten aus Plan 2010 abgegriffen (±5 cm); Maßketten 1999 weichen teils ab (z. B. tragende Wand 21,26–21,71 statt 21,20–21,65)</text>
 <text x="33.0" y="269.5">3 Bereich Hof/Schacht zwischen Kellerflur und AR: im Plan 2010 nur Umriss mit Quadrat (Schacht?), nicht bezeichnet</text>
 <text x="33.0" y="272.2">4 AR 5,85 m² lt. Plan, gezeichnete Abgrenzung zur Treppe ergibt 4,41 m² – Treppenbreite/Lage unsicher</text>
-<text x="33.0" y="274.9">5 Keller 6,85: Begrenzung im Scan unklar (Wandstummel, Tür bei y 9,93); als 21,40–23,22 × 8,20–11,14 angenommen</text>
+<text x="33.0" y="274.9">5 Keller 7 (W7): Begrenzung im Scan unklar (Wandstummel, Tür bei y 9,93); als 21,40–23,22 × 8,20–11,14 angenommen Flächenangabe widersprüchlich: Raumstempel 4,65 m², Flächentabelle 7,65 m², Geometrie 5,35 m² → aufmessen.</text>
 <text x="33.0" y="277.6">6 Nördlicher Raum 17,11–26,26 × 11,60–13,40 ohne Bezeichnung und Flächenangabe (evtl. nicht nutzbar/verfüllt)</text>
 </g>
 </svg>

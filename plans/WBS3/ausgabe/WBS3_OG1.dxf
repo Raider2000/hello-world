@@ -553,7 +553,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-808
+804
   9
 $SURFTAB1
  70
@@ -3329,7 +3329,7 @@ ACAD
   0
 APPID
   5
-805
+801
 330
 3
 100
@@ -3343,7 +3343,7 @@ HATCHBACKGROUNDCOLOR
   0
 APPID
   5
-806
+802
 330
 3
 100
@@ -25793,13 +25793,13 @@ AcDbLine
  10
 -1.305
  20
-11.805
+11.835
  30
 0.0
  11
 -1.7249999999999999
  21
-11.805
+11.835
  31
 0.0
   0
@@ -25845,7 +25845,7 @@ _OBLIQUE
  10
 -1.3499999999999999
  20
-11.805
+11.835
  30
 0.0
  41
@@ -25875,7 +25875,7 @@ AcDbLine
  11
 -1.3499999999999999
  21
-11.805
+11.835
  31
 0.0
   0
@@ -25893,7 +25893,7 @@ AcDbMText
  10
 -1.575
  20
-5.9025
+5.9175
  30
 0.0
  40
@@ -25901,7 +25901,7 @@ AcDbMText
  71
 5
   1
-1180.5
+1183.5
   7
 OpenSansCondensed-Light
  50
@@ -25957,7 +25957,7 @@ AcDbPoint
  10
 -1.18
  20
-11.805
+11.835
  30
 0.0
   0
@@ -26013,13 +26013,13 @@ AcDbLine
  10
 -1.305
  20
-11.805
+11.835
  30
 0.0
  11
 -1.7249999999999999
  21
-11.805
+11.835
  31
 0.0
   0
@@ -26037,13 +26037,13 @@ AcDbLine
  10
 -1.305
  20
-13.57
+13.6
  30
 0.0
  11
 -1.7249999999999999
  21
-13.57
+13.6
  31
 0.0
   0
@@ -26063,7 +26063,7 @@ _OBLIQUE
  10
 -1.3499999999999999
  20
-11.805
+11.835
  30
 0.0
  41
@@ -26089,7 +26089,7 @@ _OBLIQUE
  10
 -1.3499999999999999
  20
-13.57
+13.6
  30
 0.0
  41
@@ -26113,13 +26113,13 @@ AcDbLine
  10
 -1.3499999999999999
  20
-11.805
+11.835
  30
 0.0
  11
 -1.3499999999999999
  21
-13.57
+13.6
  31
 0.0
   0
@@ -26137,7 +26137,7 @@ AcDbMText
  10
 -1.575
  20
-12.6875
+12.717500000000001
  30
 0.0
  40
@@ -26165,7 +26165,7 @@ AcDbPoint
  10
 -1.3499999999999999
  20
-11.805
+11.835
  30
 0.0
   0
@@ -26183,7 +26183,7 @@ AcDbPoint
  10
 -1.18
  20
-11.805
+11.835
  30
 0.0
   0
@@ -26201,7 +26201,7 @@ AcDbPoint
  10
 -1.18
  20
-13.57
+13.6
  30
 0.0
   0
@@ -48435,7 +48435,7 @@ EZ_M_100_H25_CM
  11
 -1.575
  21
-5.9025
+5.9175
  31
 0.0
  70
@@ -48455,7 +48455,7 @@ AcDbAlignedDimension
  14
 -1.18
  24
-11.805
+11.835
  34
 0.0
  50
@@ -48483,13 +48483,13 @@ EZ_M_100_H25_CM
  10
 -1.3499999999999999
  20
-11.805
+11.835
  30
 0.0
  11
 -1.575
  21
-12.6875
+12.717500000000001
  31
 0.0
  70
@@ -48503,13 +48503,13 @@ AcDbAlignedDimension
  13
 -1.18
  23
-11.805
+11.835
  33
 0.0
  14
 -1.18
  24
-13.57
+13.6
  34
 0.0
  50
@@ -49879,9 +49879,9 @@ A_UNGEPRUEFT
 100
 AcDbCircle
  10
--1.445
+14.4
  20
-5.902
+6.175
  30
 0.0
  40
@@ -49899,19 +49899,19 @@ A_UNGEPRUEFT
 100
 AcDbText
  10
--1.245
+14.6
  20
-5.902
+6.175
  30
 0.0
  40
 0.12
   1
-1 Maßkette links außen (x=1250): 11,805 m laut Plan, Messpunkte Quell-y 4395 und 16200. Die Wandaußenkante links liegt in der Quelle bei y=4365 (Kette x=1950 beginnt dort), geometrisch also 11,835 m. Kette in der Quelle um 0,03 m versetzt; Wand nach Geometrie gezeichnet, Kette nach Quelle beschriftet. Laut Eigentümer lassen sich die Maße aus dem historischen Grundriss (Teilungserklärung) wegen schlechter Qualität nicht sauber ablesen; Differenz bleibt bis zu einem Aufmaß offen.
+1 Aussparung mit Nische (0,175 x 0,19 m) in der rechten Außenwand: laut Eigentümer vermutlich ein Wand-Einbauschrank mit Tür (nicht bestätigt, Tür nicht gezeichnet).
  11
--1.245
+14.6
  21
-5.902
+6.175
  31
 0.0
 100
@@ -49920,106 +49920,6 @@ AcDbText
 CIRCLE
   5
 7F1
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbCircle
- 10
-5.3
- 20
-13.75
- 30
-0.0
- 40
-0.15
-  0
-TEXT
-  5
-7F2
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbText
- 10
-5.5
- 20
-13.75
- 30
-0.0
- 40
-0.12
-  1
-2 Nordfassade nicht rechtwinklig: Wandaußenkante links bei Quell-y 4365, rechts bei 4455 (0,09 m Versatz auf 14,535 m), ebenso Treppenhaus-Fassade. Unverändert aus der Quelle übernommen; ob Aufmaß oder Zeichenartefakt, ist offen.
- 11
-5.5
- 21
-13.75
- 31
-0.0
-100
-AcDbText
-  0
-CIRCLE
-  5
-7F3
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbCircle
- 10
-14.4
- 20
-6.175
- 30
-0.0
- 40
-0.15
-  0
-TEXT
-  5
-7F4
-330
-17
-100
-AcDbEntity
-  8
-A_UNGEPRUEFT
-100
-AcDbText
- 10
-14.6
- 20
-6.175
- 30
-0.0
- 40
-0.12
-  1
-3 Aussparung mit Nische (0,175 x 0,19 m) in der rechten Außenwand: laut Eigentümer vermutlich ein Wand-Einbauschrank mit Tür (nicht bestätigt, Tür nicht gezeichnet).
- 11
-14.6
- 21
-6.175
- 31
-0.0
-100
-AcDbText
-  0
-CIRCLE
-  5
-7F5
 330
 17
 100
@@ -50039,7 +49939,7 @@ AcDbCircle
   0
 TEXT
   5
-7F6
+7F2
 330
 17
 100
@@ -50057,7 +49957,7 @@ AcDbText
  40
 0.12
   1
-4 Nische im Pfeiler neben der Küche WE3 (0,50 x 0,45 m) von Quell-y 4465 bis 4915; darunter bleibt in der Quelle ein Restsaum von 0,026 m Wand stehen. Unverändert übernommen.
+2 Nische im Pfeiler neben der Küche WE3 (0,50 x 0,45 m) von Quell-y 4465 bis 4915; darunter bleibt in der Quelle ein Restsaum von 0,026 m Wand stehen. Unverändert übernommen.
  11
 5.4
  21
@@ -50069,7 +49969,7 @@ AcDbText
   0
 CIRCLE
   5
-7F7
+7F3
 330
 17
 100
@@ -50089,7 +49989,7 @@ AcDbCircle
   0
 TEXT
   5
-7F8
+7F4
 330
 17
 100
@@ -50107,7 +50007,7 @@ AcDbText
  40
 0.12
   1
-5 Treppenhaus: Treppe nach Ebene 23 der Quelle gezeichnet (zwei gegenläufige Läufe mit Mittelwand, 9 + 10 Stufen, Lauflinien mit Pfeil). Weder Stufenhöhe noch Raumfläche des Treppenhauses sind im Plan bemaßt.
+3 Treppenhaus: Treppe nach Ebene 23 der Quelle gezeichnet (zwei gegenläufige Läufe mit Mittelwand, 9 + 10 Stufen, Lauflinien mit Pfeil). Weder Stufenhöhe noch Raumfläche des Treppenhauses sind im Plan bemaßt.
  11
 6.8
  21
@@ -50119,7 +50019,7 @@ AcDbText
   0
 CIRCLE
   5
-7F9
+7F5
 330
 17
 100
@@ -50139,7 +50039,7 @@ AcDbCircle
   0
 TEXT
   5
-7FA
+7F6
 330
 17
 100
@@ -50157,7 +50057,7 @@ AcDbText
  40
 0.12
   1
-6 Wandtypen (Außenwand / tragend / nichttragend) nach Quell-Ebenen 10 (tragend), 11 (leicht), 12 (aufgemessen) und Lage zugeordnet; die Quelle unterscheidet Außen- und Innentragwände nicht ausdrücklich.
+4 Wandtypen (Außenwand / tragend / nichttragend) nach Quell-Ebenen 10 (tragend), 11 (leicht), 12 (aufgemessen) und Lage zugeordnet; die Quelle unterscheidet Außen- und Innentragwände nicht ausdrücklich.
  11
 9.25
  21
@@ -50169,7 +50069,7 @@ AcDbText
   0
 CIRCLE
   5
-7FB
+7F7
 330
 17
 100
@@ -50189,7 +50089,7 @@ AcDbCircle
   0
 TEXT
   5
-7FC
+7F8
 330
 17
 100
@@ -50207,7 +50107,7 @@ AcDbText
  40
 0.12
   1
-7 Türbreiten: Aus dem Türblatt (= Radius des Aufschlagbogens) übernommen, Rohbaurichtmaße sind im Plan nicht bemaßt. Aufschlag und Angel nach Quelle (Ebene 21).
+5 Türbreiten: Aus dem Türblatt (= Radius des Aufschlagbogens) übernommen, Rohbaurichtmaße sind im Plan nicht bemaßt. Aufschlag und Angel nach Quelle (Ebene 21).
  11
 2.1
  21
@@ -50219,7 +50119,7 @@ AcDbText
   0
 CIRCLE
   5
-7FD
+7F9
 330
 17
 100
@@ -50239,7 +50139,7 @@ AcDbCircle
   0
 TEXT
   5
-7FE
+7FA
 330
 17
 100
@@ -50257,7 +50157,7 @@ AcDbText
  40
 0.12
   1
-8 Fensterbreiten und -lage nach der Glaslinie (Ebene 20), Stärke 0,06 m schematisch; Laibungstiefen und Brüstungshöhen nicht im Plan.
+6 Fensterbreiten und -lage nach der Glaslinie (Ebene 20), Stärke 0,06 m schematisch; Laibungstiefen und Brüstungshöhen nicht im Plan.
  11
 3.3000000000000003
  21
@@ -50269,7 +50169,7 @@ AcDbText
   0
 CIRCLE
   5
-7FF
+7FB
 330
 17
 100
@@ -50289,7 +50189,7 @@ AcDbCircle
   0
 TEXT
   5
-800
+7FC
 330
 17
 100
@@ -50307,7 +50207,7 @@ AcDbText
  40
 0.12
   1
-9 Balkon WE3: Fläche im Plan als Hälfte (1,23 m²) angegeben; Lichtmaß-Polygon 2,453 m², Hälfte = 1,226 m² passt. Brüstung als graues Wandpolygon (Ebene 22) übernommen, Geländerhöhe unbekannt.
+7 Balkon WE3: Fläche im Plan als Hälfte (1,23 m²) angegeben; Lichtmaß-Polygon 2,453 m², Hälfte = 1,226 m² passt. Brüstung als graues Wandpolygon (Ebene 22) übernommen, Geländerhöhe unbekannt.
  11
 3.6
  21
@@ -50319,7 +50219,7 @@ AcDbText
   0
 CIRCLE
   5
-801
+7FD
 330
 17
 100
@@ -50339,7 +50239,7 @@ AcDbCircle
   0
 TEXT
   5
-802
+7FE
 330
 17
 100
@@ -50357,7 +50257,7 @@ AcDbText
  40
 0.12
   1
-10 Balkon rechte Wohnung: Fläche im Plan als Hälfte (1,21 m²) angegeben; Lichtmaß-Polygon 2,425 m², Hälfte = 1,213 m² passt. Brüstung wie links.
+8 Balkon rechte Wohnung: Fläche im Plan als Hälfte (1,21 m²) angegeben; Lichtmaß-Polygon 2,425 m², Hälfte = 1,213 m² passt. Brüstung wie links.
  11
 11.299999999999999
  21
@@ -50369,7 +50269,7 @@ AcDbText
   0
 CIRCLE
   5
-803
+7FF
 330
 17
 100
@@ -50389,7 +50289,7 @@ AcDbCircle
   0
 TEXT
   5
-804
+800
 330
 17
 100
@@ -50407,7 +50307,7 @@ AcDbText
  40
 0.12
   1
-11 Maßkette unten (y=18250): die Teilmaße 15 und 8 (Quell-x 9340/9490/9570) liegen eng beieinander, die Zahlen überlagern sich im Plan wie in der Quelle.
+9 Maßkette unten (y=18250): die Teilmaße 15 und 8 (Quell-x 9340/9490/9570) liegen eng beieinander, die Zahlen überlagern sich im Plan wie in der Quelle.
  11
 7.1000000000000005
  21
@@ -51507,7 +51407,7 @@ CREATED_BY_EZDXF
   3
 WRITTEN_BY_EZDXF
 350
-807
+803
   0
 DICTIONARYVAR
   5
@@ -58073,7 +57973,7 @@ strokes_ogs.tif
   0
 DICTIONARYVAR
   5
-807
+803
 330
 2D
 100
